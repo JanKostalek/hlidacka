@@ -1,0 +1,174 @@
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(180deg, #f7f8fa 0%, #eef2f7 100%);
+  color: #122033;
+}
+
+a {
+  color: #0f6bcf;
+}
+
+.page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  display: grid;
+  gap: 16px;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #dbe3ee;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 4px 18px rgba(15, 29, 48, 0.05);
+}
+
+.panel h1,
+.panel h2,
+.panel h3 {
+  margin-top: 0;
+}
+
+.stats {
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.group {
+  margin-bottom: 14px;
+}
+
+.adminHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.adminRow {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.adminGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.adminGrid label,
+.adminRow label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 11px;
+  border-radius: 10px;
+  border: 1px solid #c6d4e3;
+  background: #ffffff;
+}
+
+button {
+  border: 1px solid #0f6bcf;
+  color: #0f6bcf;
+  background: #f0f7ff;
+  border-radius: 10px;
+  padding: 9px 12px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.watchCard {
+  border: 1px solid #d8e2ef;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #fbfdff;
+}
+
+.marketplaces {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.checkboxLabel input {
+  width: auto;
+  padding: 0;
+}
+
+.dangerBtn {
+  margin-top: 12px;
+  border-color: #c23a3a;
+  color: #c23a3a;
+  background: #fff4f4;
+}
+
+.status {
+  margin: 8px 0 0;
+  color: #35516f;
+}
+
+.historyTableWrap {
+  overflow-x: auto;
+}
+
+.historyTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.historyTable th,
+.historyTable td {
+  border-bottom: 1px solid #dce5ef;
+  text-align: left;
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+
+.historyTable th {
+  color: #2c4764;
+  background: #f5f9ff;
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding: 14px 10px 30px;
+  }
+
+  .adminGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .adminRow {
+    grid-template-columns: 1fr;
+  }
+}

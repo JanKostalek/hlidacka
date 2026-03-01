@@ -1,0 +1,30 @@
+{
+  "watches": [
+    {
+      "id": "lego-star-wars",
+      "name": "LEGO Star Wars",
+      "keywords": ["lego", "star wars"],
+      "excludeKeywords": ["rezervace", "prodano"],
+      "sources": [
+        {
+          "id": "sbazar",
+          "name": "Sbazar",
+          "url": "https://www.sbazar.cz/hledej/lego%20star%20wars",
+          "itemSelector": "article",
+          "titleSelector": "h3, h2, a",
+          "linkSelector": "a[href]",
+          "priceSelector": "[class*='price'], [data-e2e*='price']"
+        },
+        {
+          "id": "bazos",
+          "name": "Bazos",
+          "url": "https://deti.bazos.cz/?hledat=lego+star+wars",
+          "itemSelector": ".inzeraty.inzeratyflex",
+          "titleSelector": ".nadpis",
+          "linkSelector": "a[href]",
+          "priceSelector": ".cena"
+        }
+      ]
+    }
+  ]
+}
