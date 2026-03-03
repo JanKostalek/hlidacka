@@ -25,7 +25,7 @@
         {
           "id": "sbazar",
           "name": "Sbazar",
-          "url": "https://www.sbazar.cz/hledej/Garmin",
+          "url": "https://www.sbazar.cz/hledej/garmin",
           "itemSelector": "article",
           "titleSelector": "h3, h2, a",
           "linkSelector": "a[href]",
@@ -96,7 +96,7 @@
         {
           "id": "sbazar",
           "name": "Sbazar",
-          "url": "https://www.sbazar.cz/hledej/Lego%20ninja",
+          "url": "https://www.sbazar.cz/hledej/lego%20ninja",
           "itemSelector": "article",
           "titleSelector": "h3, h2, a",
           "linkSelector": "a[href]",
