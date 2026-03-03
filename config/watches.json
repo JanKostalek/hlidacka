@@ -62,6 +62,27 @@
           "priceSelector": ".inzeratycena, .inzeratcena, .cena"
         }
       ]
+    },
+    {
+      "id": "lego",
+      "name": "lego",
+      "query": "lego ninja",
+      "keywords": [
+        "lego",
+        "ninja"
+      ],
+      "excludeKeywords": [],
+      "sources": [
+        {
+          "id": "bazos",
+          "name": "Bazos",
+          "url": "https://www.bazos.cz/search.php?hledat=lego%20ninja",
+          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
+          "titleSelector": ".nadpis",
+          "linkSelector": "a[href]",
+          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
+        }
+      ]
     }
   ]
 }
