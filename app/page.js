@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import RunEmailPreview from "./components/run-email-preview";
+import HistoryRunsTable from "./components/history-runs-table";
 
 async function loadResults() {
   const resultsPath = path.join(process.cwd(), "data", "latest-results.json");
@@ -49,8 +49,8 @@ export default async function Home() {
           <li>Posledni beh: {formatRunTime(results.runAt)}</li>
           <li>Dotazy: {results.summary?.totalWatches ?? 0}</li>
           <li>Zdroje: {results.summary?.totalSources ?? 0}</li>
+          <li>Nalezy celkem: {results.summary?.totalFoundItems ?? results.summary?.totalNewItems ?? 0}</li>
           <li>Nove inzeraty: {results.summary?.totalNewItems ?? 0}</li>
-          <li>Chyby: {results.summary?.errorCount ?? 0}</li>
         </ul>
       </section>
 
@@ -82,81 +82,8 @@ export default async function Home() {
       </section>
 
       <section className="panel">
-        <h2>Chyby pri poslednim behu</h2>
-        {results.errors?.length ? (
-          <ul>
-            {results.errors.map((err, idx) => (
-              <li key={`${err.watchId}-${idx}`}>
-                {err.watchName} / {err.sourceName}: {err.message}
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>Bez chyb.</p>
-        )}
-      </section>
-
-      <section className="panel">
-        <h2>Historie behu</h2>
-        {runs.length === 0 ? (
-          <p>Zatim bez historie.</p>
-        ) : (
-          <>
-            <div className="historyTableWrap">
-              <table className="historyTable">
-                <thead>
-                  <tr>
-                    <th>Cas</th>
-                    <th>Dotazy</th>
-                    <th>Zdroje</th>
-                    <th>Nalezy</th>
-                    <th>Chyby</th>
-                    <th>Detail</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {runs.map((run) => (
-                    <tr key={run.runAt}>
-                      <td title={run.runAt}>{formatRunTime(run.runAt)}</td>
-                      <td>{run.summary?.totalWatches ?? 0}</td>
-                      <td>{run.summary?.totalSources ?? 0}</td>
-                      <td>{run.summary?.totalNewItems ?? 0}</td>
-                      <td>{run.summary?.errorCount ?? 0}</td>
-                      <td>
-                        <details className="runDetails">
-                          <summary>Otevrit</summary>
-                          <div className="runDetailsBody">
-                            <div>
-                              <b>Predmet:</b> {run.emailSubject || "neuvedeno"}
-                            </div>
-                            <RunEmailPreview
-                              text={run.emailText || "Text e-mailu neni u tohoto behu ulozen."}
-                            />
-                          </div>
-                        </details>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <h3>Posledni beh - detail dotazu</h3>
-            {runs[0]?.watchStats?.length ? (
-              <ul>
-                {runs[0].watchStats.map((item) => (
-                  <li key={item.watchId}>
-                    {item.watchName}: hledano "{item.query || item.keywords.join(" ")}" | zdroje{" "}
-                    {item.sourcesChecked} | nove {item.newItems} | chyby {item.errorCount} |{" "}
-                    {item.found ? "nalezeno" : "nenalezeno"}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p>Bez detailu dotazu.</p>
-            )}
-          </>
-        )}
+        <h2>Historie vyhledavani</h2>
+        <HistoryRunsTable runs={runs} />
       </section>
     </main>
   );

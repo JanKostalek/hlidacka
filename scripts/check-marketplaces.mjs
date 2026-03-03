@@ -707,12 +707,14 @@ async function main() {
   const newItemsByWatch = [];
   const errors = [];
   let totalSources = 0;
+  let totalFoundItems = 0;
   const watchStats = [];
 
   for (const watch of config.watches || []) {
     const itemsForWatch = [];
     const watchSources = watch.sources || [];
     let watchErrors = 0;
+    let foundItemsForWatch = 0;
 
     for (const source of watchSources) {
       const sourceForRun = normalizeSourceForRuntime(source, watch);
@@ -753,6 +755,8 @@ async function main() {
             foundAt: nowIso
           });
         }
+        foundItemsForWatch += matchedForSource;
+        totalFoundItems += matchedForSource;
       } catch (err) {
         watchErrors += 1;
         errors.push({
@@ -779,6 +783,7 @@ async function main() {
       keywords: watch.keywords || [],
       excludeKeywords: watch.excludeKeywords || [],
       sourcesChecked: watchSources.length,
+      foundItems: foundItemsForWatch,
       newItems: itemsForWatch.length,
       found: itemsForWatch.length > 0,
       errorCount: watchErrors
@@ -790,6 +795,7 @@ async function main() {
     summary: {
       totalWatches: (config.watches || []).length,
       totalSources,
+      totalFoundItems,
       totalNewItems: newItemsByWatch.reduce((sum, g) => sum + g.items.length, 0),
       errorCount: errors.length
     },
@@ -819,7 +825,7 @@ async function main() {
       emailText: emailTextForRun
     },
     ...(runHistory.runs || [])
-  ].slice(0, 200);
+  ].slice(0, 20);
 
   const prunedSeen = pruneSeen(seen);
   await writeJson(STATE_PATH, { updatedAt: nowIso, seen: prunedSeen });
