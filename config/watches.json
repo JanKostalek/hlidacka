@@ -21,6 +21,15 @@
           "titleSelector": ".nadpis",
           "linkSelector": "a[href]",
           "priceSelector": ".inzeratycena, .inzeratcena, .cena"
+        },
+        {
+          "id": "sbazar",
+          "name": "Sbazar",
+          "url": "https://www.sbazar.cz/hledej/Garmin",
+          "itemSelector": "article",
+          "titleSelector": "h3, h2, a",
+          "linkSelector": "a[href]",
+          "priceSelector": "[class*='price'], [data-e2e*='price']"
         }
       ]
     },
@@ -83,6 +92,15 @@
           "titleSelector": ".nadpis",
           "linkSelector": "a[href]",
           "priceSelector": ".inzeratycena, .inzeratcena, .cena"
+        },
+        {
+          "id": "sbazar",
+          "name": "Sbazar",
+          "url": "https://www.sbazar.cz/hledej/Lego%20ninja",
+          "itemSelector": "article",
+          "titleSelector": "h3, h2, a",
+          "linkSelector": "a[href]",
+          "priceSelector": "[class*='price'], [data-e2e*='price']"
         }
       ]
     }
