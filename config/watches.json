@@ -6,18 +6,16 @@
     {
       "id": "garmin",
       "name": "Garmin",
-      "query": "Garmin",
+      "query": "Garming",
       "keywords": [
-        "Garmin",
-        "8",
-        "Fenix"
+        "Garmin 8"
       ],
       "excludeKeywords": [],
       "sources": [
         {
           "id": "bazos",
           "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=Garmin",
+          "url": "https://www.bazos.cz/search.php?hledat=Garming",
           "itemSelector": ".inzerat",
           "titleSelector": ".nadpis",
           "linkSelector": "a[href]",
