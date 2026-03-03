@@ -12,7 +12,7 @@ const RUN_HISTORY_PATH = path.join(ROOT, "data", "run-history.json");
 const FOUND_HISTORY_PATH = path.join(ROOT, "data", "found-history.json");
 
 const USER_AGENT =
-  "Mozilla/5.0 (compatible; HlidackaBazaru/1.0; +https://github.com/)";
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36";
 
 const nowIso = new Date().toISOString();
 
@@ -122,14 +122,81 @@ function extractItemsFromPage(html, source) {
   return Array.from(uniq.values());
 }
 
+function wait(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function buildRequestHeaders(url) {
+  const u = new URL(url);
+  const isSbazar = u.hostname.includes("sbazar.cz");
+  return {
+    "user-agent": USER_AGENT,
+    accept:
+      "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "accept-language": "cs-CZ,cs;q=0.9,en-US;q=0.8,en;q=0.7",
+    "cache-control": "no-cache",
+    pragma: "no-cache",
+    referer: `${u.protocol}//${u.hostname}/`,
+    ...(isSbazar
+      ? {
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "navigate",
+          "sec-fetch-dest": "document",
+          upgrade-insecure-requests: "1"
+        }
+      : {})
+  };
+}
+
+function describeFetchError(err) {
+  const message = err instanceof Error ? err.message : String(err);
+  const causeCode = err?.cause?.code ? ` | cause: ${err.cause.code}` : "";
+  return `${message}${causeCode}`;
+}
+
 async function fetchHtml(url) {
-  const res = await fetch(url, {
-    headers: { "user-agent": USER_AGENT, accept: "text/html" }
-  });
-  if (!res.ok) {
-    throw new Error(`HTTP ${res.status} (${url})`);
+  const attempts = [0, 1000, 2500];
+  const urlsToTry = [url];
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname.includes("sbazar.cz") && parsed.pathname.startsWith("/hledej/")) {
+      const rawQuery = decodeURIComponent(parsed.pathname.replace(/^\/hledej\//, ""));
+      urlsToTry.push(`${parsed.protocol}//${parsed.host}/search?query=${encodeURIComponent(rawQuery)}`);
+    }
+  } catch {
+    // Keep the original URL only.
   }
-  return await res.text();
+
+  let lastErr = null;
+
+  for (const candidateUrl of urlsToTry) {
+    for (let i = 0; i < attempts.length; i++) {
+      if (attempts[i] > 0) {
+        await wait(attempts[i]);
+      }
+
+      try {
+        const res = await fetch(candidateUrl, {
+          headers: buildRequestHeaders(candidateUrl),
+          redirect: "follow",
+          signal: AbortSignal.timeout(20000)
+        });
+
+        if (!res.ok) {
+          const bodyPreview = (await res.text()).slice(0, 180).replace(/\s+/g, " ").trim();
+          throw new Error(
+            `HTTP ${res.status} (${candidateUrl})${bodyPreview ? ` | ${bodyPreview}` : ""}`
+          );
+        }
+
+        return await res.text();
+      } catch (err) {
+        lastErr = err;
+      }
+    }
+  }
+
+  throw new Error(`Fetch failed (${url}): ${describeFetchError(lastErr)}`);
 }
 
 function pruneSeen(seenMap, maxAgeDays = 90, maxCount = 10000) {
