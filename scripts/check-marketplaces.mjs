@@ -635,8 +635,8 @@ function buildEmailHtml(config, results, alreadyDisplayedByWatch = {}) {
           <div style="font-size:22px;font-weight:700;">${results.summary.totalNewItems}</div>
         </div>
         <div style="background:white;border:1px solid #dbe5f0;border-radius:12px;padding:12px 14px;min-width:120px;">
-          <div style="font-size:12px;color:#49627c;">Chyby</div>
-          <div style="font-size:22px;font-weight:700;">${results.summary.errorCount}</div>
+          <div style="font-size:12px;color:#49627c;">Celkem inzeratu</div>
+          <div style="font-size:22px;font-weight:700;">${results.summary.totalFoundItems ?? results.summary.totalNewItems}</div>
         </div>
         <div style="background:white;border:1px solid #dbe5f0;border-radius:12px;padding:12px 14px;min-width:120px;">
           <div style="font-size:12px;color:#49627c;">Dotazy</div>

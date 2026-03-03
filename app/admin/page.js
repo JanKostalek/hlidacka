@@ -216,7 +216,7 @@ export default function AdminPage() {
       <section className="panel">
         <h1>Administrace hlidacky</h1>
         <p>Vyber bazary, zadej co hledat a uloz konfiguraci.</p>
-        <div className="adminRow">
+        <div className="adminRow adminRowToken">
           <label htmlFor="token">Admin token</label>
           <input
             id="token"
@@ -233,7 +233,7 @@ export default function AdminPage() {
             Nacist znovu
           </button>
         </div>
-        <div className="adminRow">
+        <div className="adminRow adminRowEmail">
           <label htmlFor="email_to">Cilovy e-mail</label>
           <input
             id="email_to"
@@ -244,9 +244,10 @@ export default function AdminPage() {
           />
           <span className="helpText">Pouzije se pri dalsim behu workflow.</span>
         </div>
-        <div className="adminRow">
+        <div className="adminRow adminRowNumber">
           <label htmlFor="schedule_start">Automatika od (hodina)</label>
           <input
+            className="numberInput"
             id="schedule_start"
             type="number"
             min={0}
@@ -257,9 +258,10 @@ export default function AdminPage() {
           />
           <span className="helpText">0-23, napr. 8 = prvni beh v 08:00.</span>
         </div>
-        <div className="adminRow">
+        <div className="adminRow adminRowNumber">
           <label htmlFor="schedule_interval">Opakovat kazdych (hodin)</label>
           <input
+            className="numberInput"
             id="schedule_interval"
             type="number"
             min={2}

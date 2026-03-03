@@ -75,6 +75,25 @@ a {
   font-size: 14px;
 }
 
+.adminRow .helpText {
+  justify-self: end;
+  text-align: right;
+}
+
+.adminRowToken input {
+  max-width: 620px;
+}
+
+.adminRowEmail input {
+  max-width: 510px;
+}
+
+.adminRowNumber .numberInput {
+  width: 88px;
+  max-width: 88px;
+  justify-self: start;
+}
+
 input {
   width: 100%;
   padding: 10px 11px;
@@ -214,5 +233,17 @@ button:disabled {
 
   .adminRow {
     grid-template-columns: 1fr;
+  }
+
+  .adminRow .helpText {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .adminRowToken input,
+  .adminRowEmail input,
+  .adminRowNumber .numberInput {
+    max-width: 100%;
+    width: 100%;
   }
 }
