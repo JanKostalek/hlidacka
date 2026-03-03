@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-03T11:50:01.447Z",
+  "updatedAt": "2026-03-03T12:06:59.662Z",
   "byWatch": {
     "garmin": [
       {
@@ -22,6 +22,15 @@
       }
     ],
     "iphone": [
+      {
+        "watchId": "iphone",
+        "watchName": "Iphone",
+        "sourceName": "Bazos",
+        "title": "APPLE IPHONE 13 128GB ZELENÝ, ZÁRUKA",
+        "price": "6 499 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215731922/apple-iphone-13-128gb-zeleny-zaruka.php",
+        "firstSeenAt": "2026-03-03T12:06:59.662Z"
+      },
       {
         "watchId": "iphone",
         "watchName": "Iphone",
@@ -168,6 +177,33 @@
       }
     ],
     "iphone-16": [
+      {
+        "watchId": "iphone-16",
+        "watchName": "iphone 16",
+        "sourceName": "Bazos",
+        "title": "APPLE IPHONE 16 128GB RŮŽOVÝ, ZÁRUKA, 100% BATERIE",
+        "price": "13 999 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215732752/apple-iphone-16-128gb-ruzovy-zaruka-100-baterie.php",
+        "firstSeenAt": "2026-03-03T12:06:59.662Z"
+      },
+      {
+        "watchId": "iphone-16",
+        "watchName": "iphone 16",
+        "sourceName": "Bazos",
+        "title": "ZÁNOVNÍ APPLE IPHONE 16 PRO MAX 256GB ZLATÝ,100% BATERIE",
+        "price": "19 999 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215733034/zanovni-apple-iphone-16-pro-max-256gb-zlaty100-baterie.php",
+        "firstSeenAt": "2026-03-03T12:06:59.662Z"
+      },
+      {
+        "watchId": "iphone-16",
+        "watchName": "iphone 16",
+        "sourceName": "Bazos",
+        "title": "APPLE IPHONE 16 PRO 128GB PŘÍRODNÍ TITAN,ZÁRUKA,100% BATERIE",
+        "price": "17 999 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215733239/apple-iphone-16-pro-128gb-prirodni-titanzaruka100-baterie.php",
+        "firstSeenAt": "2026-03-03T12:06:59.662Z"
+      },
       {
         "watchId": "iphone-16",
         "watchName": "iphone 16",
