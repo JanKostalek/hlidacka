@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "runAt": "2026-03-03T13:28:55.308Z",
+      "summary": {
+        "totalWatches": 1,
+        "totalSources": 2,
+        "totalNewItems": 0,
+        "errorCount": 0
+      },
+      "watchStats": [
+        {
+          "watchId": "garmin-new",
+          "watchName": "Garmin new",
+          "query": "Garmin",
+          "keywords": [
+            "Garmin",
+            "Fenix",
+            "8"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        }
+      ],
+      "emailSubject": "Hlidacka (Garmin new): zadne nove inzeraty",
+      "emailText": "Hlidacka bazaru - Výsledek vyhledávání\nČas vyhledávání: 2026-03-03T13:28:55.308Z\nNove inzeraty: 0\nChyby: 0\n\nAktivni dotazy:\n\n- Garmin new\n  co hledat: Garmin\n  klicova slova: Garmin, Fenix, 8\n  vyloucit slova: (zadna)\n  bazary: Sbazar, Bazos\n  vysledek: nove 0, jiz zobrazene 0, chyby 0\n\nZadne nove inzeraty.\n\nJiz zobrazene inzeraty:\n\nGarmin new (0)\n- zadne\n\nChyby: zadne\n"
+    },
+    {
       "runAt": "2026-03-03T13:26:45.007Z",
       "summary": {
         "totalWatches": 3,
