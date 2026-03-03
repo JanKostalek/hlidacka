@@ -370,8 +370,16 @@ async function main() {
   await writeJson(RESULTS_PATH, results);
   await writeJson(RUN_HISTORY_PATH, { runs: nextRuns });
   await fs.writeFile(REPORT_PATH, buildReport(results), "utf8");
-  await sendDiscordNotification(results);
-  await sendEmailNotification(config, results);
+  try {
+    await sendDiscordNotification(results);
+  } catch (err) {
+    console.error("Discord notification failed:", err);
+  }
+  try {
+    await sendEmailNotification(config, results);
+  } catch (err) {
+    console.error("Email notification failed:", err);
+  }
 
   console.log(
     `Done. New items: ${results.summary.totalNewItems}, errors: ${results.summary.errorCount}`
