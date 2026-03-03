@@ -142,7 +142,7 @@ function buildRequestHeaders(url) {
           "sec-fetch-site": "same-origin",
           "sec-fetch-mode": "navigate",
           "sec-fetch-dest": "document",
-          upgrade-insecure-requests: "1"
+          "upgrade-insecure-requests": "1"
         }
       : {})
   };
