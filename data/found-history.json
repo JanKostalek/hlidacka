@@ -1,4 +1,43 @@
 {
-  "updatedAt": null,
-  "byWatch": {}
+  "updatedAt": "2026-03-03T18:04:22.884Z",
+  "byWatch": {
+    "garmin": [
+      {
+        "watchId": "garmin",
+        "watchName": "Garmin",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 PRO AMOLED 51mm PREMIUM – týden staré",
+        "price": "29 500 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215457836/garmin-fenix-8-amoled-51mm-sapphire-titanium-tyden-stare.php",
+        "firstSeenAt": "2026-03-03T18:04:22.884Z"
+      },
+      {
+        "watchId": "garmin",
+        "watchName": "Garmin",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 SOLAR 51 mm, Sapphire Carbon Gray",
+        "price": "18 000 Kč",
+        "link": "https://sport.bazos.cz/inzerat/215631219/garmin-fenix-8-solar-51-mm-sapphire-carbon-gray.php",
+        "firstSeenAt": "2026-03-03T18:04:22.884Z"
+      },
+      {
+        "watchId": "garmin",
+        "watchName": "Garmin",
+        "sourceName": "Sbazar",
+        "title": "Garmin Fenix 7x Solar",
+        "price": "8 000 Kč",
+        "link": "https://www.sbazar.cz/inzerat/227933335-garmin-fenix-7x-solar",
+        "firstSeenAt": "2026-03-03T18:04:22.884Z"
+      },
+      {
+        "watchId": "garmin",
+        "watchName": "Garmin",
+        "sourceName": "Sbazar",
+        "title": "Garmin Fenix 8 Amoled 51mm",
+        "price": "15 500 Kč",
+        "link": "https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm",
+        "firstSeenAt": "2026-03-03T18:04:22.884Z"
+      }
+    ]
+  }
 }
