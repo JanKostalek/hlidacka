@@ -1,4 +1,4 @@
-import fs from "node:fs/promises";
+﻿import fs from "node:fs/promises";
 import path from "node:path";
 import { load } from "cheerio";
 import nodemailer from "nodemailer";
@@ -59,7 +59,7 @@ function buildSbazarSearchUrl(query) {
 function formatSbazarPrice(item) {
   if (!item || item.price_by_agreement) return "";
   if (typeof item.price !== "number" || !Number.isFinite(item.price)) return "";
-  return `${new Intl.NumberFormat("cs-CZ").format(item.price)} Kč`;
+  return `${new Intl.NumberFormat("cs-CZ").format(item.price)} KÄ`;
 }
 
 function mapSbazarItemToCandidate(item) {
@@ -432,8 +432,8 @@ function buildEmailText(config, results, alreadyDisplayedByWatch = {}) {
   );
 
   const lines = [];
-  lines.push(`Hlidacka bazaru - Výsledek vyhledávání`);
-  lines.push(`Čas vyhledávání: ${results.runAt}`);
+  lines.push(`Hlidacka bazaru - VÃ½sledek vyhledÃ¡vÃ¡nÃ­`);
+  lines.push(`ÄŒas vyhledÃ¡vÃ¡nÃ­: ${results.runAt}`);
   lines.push(`Nove inzeraty: ${results.summary.totalNewItems}`);
   lines.push(`Chyby: ${results.summary.errorCount}`);
   lines.push("");
@@ -544,108 +544,107 @@ function buildEmailHtml(config, results, alreadyDisplayedByWatch = {}) {
       );
       const errorsForWatch = (results.errors || []).filter((err) => err.watchId === watch.id);
       const newItems = newItemsByWatchId.get(watch.id) || [];
-      const keywords = (watch.keywords || []).join(", ") || "(zadna)";
-      const excluded = (watch.excludeKeywords || []).join(", ") || "(zadna)";
-      const sourceList = sources.join(", ") || "(zadny)";
+      const keywords = (watch.keywords || []).join(', ') || '(zadna)';
+      const excluded = (watch.excludeKeywords || []).join(', ') || '(zadna)';
+      const sourceList = sources.join(', ') || '(zadny)';
       const shownItems = alreadyDisplayedByWatch[watch.id] || [];
       const shownCount = shownItems.length;
 
       const itemList =
         newItems.length === 0
-          ? `<div style="color:#5c748e;font-size:13px;">Zadne nove inzeraty pro tento dotaz.</div>`
-          : `<ul style="margin:6px 0 0;padding-left:18px;font-size:13px;">${newItems
+          ? `<div style="color:#607089;font-size:13px;">Zadne nove inzeraty pro tento dotaz.</div>`
+          : `<ul style="margin:6px 0 0;padding-left:18px;font-size:13px;line-height:1.45;">${newItems
               .map((item) => {
-                const pricePart = item.price ? ` | ${escapeHtml(item.price)}` : "";
-                return `<li style="margin:4px 0;"><a style="color:#0f6bcf;text-decoration:none;" href="${escapeHtml(item.link)}">${escapeHtml(
+                const pricePart = item.price ? ` | ${escapeHtml(item.price)}` : '';
+                return `<li style="margin:5px 0;"><a style="color:#1f4de1;text-decoration:none;" href="${escapeHtml(item.link)}">${escapeHtml(
                   item.title
-                )}</a><span style="color:#5c748e;font-size:13px;"> (${escapeHtml(item.sourceName)}${pricePart})</span></li>`;
+                )}</a><span style="color:#607089;font-size:13px;"> (${escapeHtml(item.sourceName)}${pricePart})</span></li>`;
               })
-              .join("")}</ul>`;
+              .join('')}</ul>`;
 
       const errorList =
         errorsForWatch.length === 0
-          ? `<div style="color:#5c748e;font-size:13px;">Bez chyb.</div>`
-          : `<ul style="margin:6px 0 0;padding-left:18px;font-size:13px;">${errorsForWatch
+          ? `<div style="color:#607089;font-size:13px;">Bez chyb.</div>`
+          : `<ul style="margin:6px 0 0;padding-left:18px;font-size:13px;line-height:1.45;">${errorsForWatch
               .map(
                 (err) =>
-                  `<li style="margin:4px 0;">${escapeHtml(err.sourceName)}: ${escapeHtml(err.message)}</li>`
+                  `<li style="margin:5px 0;">${escapeHtml(err.sourceName)}: ${escapeHtml(err.message)}</li>`
               )
-              .join("")}</ul>`;
+              .join('')}</ul>`;
+
       const shownList =
         shownItems.length === 0
-          ? `<div style="color:#5c748e;font-size:13px;">Zadne drive zobrazene inzeraty.</div>`
-          : `<ul style="margin:6px 0 0;padding-left:18px;font-size:13px;">${shownItems
+          ? `<div style="color:#607089;font-size:13px;">Zadne drive zobrazene inzeraty.</div>`
+          : `<ul style="margin:6px 0 0;padding-left:18px;font-size:13px;line-height:1.45;">${shownItems
               .map((item) => {
-                const pricePart = item.price ? ` | ${escapeHtml(item.price)}` : "";
-                return `<li style="margin:4px 0;"><a style="color:#0f6bcf;text-decoration:none;" href="${escapeHtml(item.link)}">${escapeHtml(
+                const pricePart = item.price ? ` | ${escapeHtml(item.price)}` : '';
+                return `<li style="margin:5px 0;"><a style="color:#1f4de1;text-decoration:none;" href="${escapeHtml(item.link)}">${escapeHtml(
                   item.title
-                )}</a><span style="color:#5c748e;font-size:13px;"> (${escapeHtml(item.sourceName)}${pricePart})</span></li>`;
+                )}</a><span style="color:#607089;font-size:13px;"> (${escapeHtml(item.sourceName)}${pricePart})</span></li>`;
               })
-              .join("")}</ul>`;
+              .join('')}</ul>`;
 
       return `
-        <section style="background:#ffffff;border:1px solid #dbe5f0;border-radius:14px;padding:14px;margin-bottom:14px;box-shadow:0 4px 14px rgba(16,32,51,0.04);">
+        <section style="background:linear-gradient(165deg,rgba(255,255,255,0.97),rgba(246,251,255,0.97));border:1px solid #d4dfee;border-radius:16px;padding:15px;margin-bottom:14px;box-shadow:0 10px 24px rgba(15,23,42,0.08);">
           <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-            <h3>${escapeHtml(watch.name || watch.id)}</h3>
+            <h3 style="margin:0;font-size:19px;line-height:1.2;color:#0f172a;">${escapeHtml(watch.name || watch.id)}</h3>
           </div>
 
-          <div style="background:#f9fcff;border:1px solid #e2edf8;border-radius:10px;padding:10px;margin-top:10px;">
-            <h4>Vyhledavani</h4>
-            <div style="font-size:13px;margin:3px 0;"><b>Co hledat:</b> ${escapeHtml(watch.query || "(prazdne)")}</div>
+          <div style="background:#f7fbff;border:1px solid #dbe7f6;border-radius:12px;padding:11px;margin-top:10px;">
+            <h4 style="margin:0 0 7px;color:#1f3653;">Vyhledavani</h4>
+            <div style="font-size:13px;margin:3px 0;"><b>Co hledat:</b> ${escapeHtml(watch.query || '(prazdne)')}</div>
             <div style="font-size:13px;margin:3px 0;"><b>Klicova slova:</b> ${escapeHtml(keywords)}</div>
             <div style="font-size:13px;margin:3px 0;"><b>Vyloucit slova:</b> ${escapeHtml(excluded)}</div>
             <div style="font-size:13px;margin:3px 0;"><b>Bazary:</b> ${escapeHtml(sourceList)}</div>
             <div style="font-size:13px;margin:3px 0;"><b>Vysledek:</b> nove ${newItems.length}, jiz zobrazene ${shownCount}, chyby ${errorsForWatch.length}</div>
           </div>
 
-          <div style="background:#f9fcff;border:1px solid #e2edf8;border-radius:10px;padding:10px;margin-top:10px;">
-            <h4>Nove inzeraty</h4>
+          <div style="background:#f7fbff;border:1px solid #dbe7f6;border-radius:12px;padding:11px;margin-top:10px;">
+            <h4 style="margin:0 0 7px;color:#1f3653;">Nove inzeraty</h4>
             ${itemList}
           </div>
 
-          <div style="background:#f9fcff;border:1px solid #e2edf8;border-radius:10px;padding:10px;margin-top:10px;">
-            <h4>Jiz zobrazene inzeraty</h4>
+          <div style="background:#f7fbff;border:1px solid #dbe7f6;border-radius:12px;padding:11px;margin-top:10px;">
+            <h4 style="margin:0 0 7px;color:#1f3653;">Jiz zobrazene inzeraty</h4>
             ${shownList}
           </div>
 
-          <div style="background:#f9fcff;border:1px solid #e2edf8;border-radius:10px;padding:10px;margin-top:10px;">
-            <h4>Chyby</h4>
+          <div style="background:#f7fbff;border:1px solid #dbe7f6;border-radius:12px;padding:11px;margin-top:10px;">
+            <h4 style="margin:0 0 7px;color:#1f3653;">Chyby</h4>
             ${errorList}
           </div>
         </section>
       `;
     })
-    .join("");
+    .join('');
 
   return `<!doctype html>
 <html>
-  <body style="margin:0;padding:0;background:#eef2f7;font-family:Segoe UI,Arial,sans-serif;color:#102033;">
-    <div style="max-width:760px;margin:0 auto;padding:20px 12px;">
-      <div style="background:linear-gradient(120deg,#0f6bcf,#0ea5a8);color:white;border-radius:14px;padding:20px 18px;">
-        <div style="font-size:13px;opacity:.9;margin-bottom:6px;">Hlidacka bazaru</div>
-        <div style="font-size:24px;font-weight:700;line-height:1.2;">Výsledek vyhledávání</div>
-        <div style="margin-top:10px;font-size:14px;opacity:.95;">Čas vyhledávání: ${escapeHtml(
-          results.runAt
-        )}</div>
+  <body style="margin:0;padding:0;background:radial-gradient(1200px 600px at 85% -10%,rgba(14,165,168,0.16) 0%,transparent 60%),radial-gradient(1000px 520px at -10% 5%,rgba(37,99,235,0.14) 0%,transparent 60%),linear-gradient(170deg,#f6fbff 0%,#e9f2ff 100%);font-family:'DM Sans','Segoe UI',Arial,sans-serif;color:#0f172a;">
+    <div style="max-width:820px;margin:0 auto;padding:20px 12px;">
+      <div style="background:linear-gradient(125deg,#2563eb,#2456dd 52%,#0ea5a8);color:white;border-radius:18px;padding:22px 19px;box-shadow:0 14px 32px rgba(37,99,235,0.28);">
+        <div style="font-size:13px;opacity:.9;margin-bottom:7px;letter-spacing:.02em;">Hlidacka bazaru</div>
+        <div style="font-size:30px;font-weight:700;line-height:1.15;letter-spacing:-0.02em;">Vysledek vyhledavani</div>
+        <div style="margin-top:11px;font-size:14px;opacity:.95;">Cas vyhledavani: ${escapeHtml(results.runAt)}</div>
       </div>
 
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
-        <div style="background:white;border:1px solid #dbe5f0;border-radius:12px;padding:12px 14px;min-width:120px;">
-          <div style="font-size:12px;color:#49627c;">Nove inzeraty</div>
-          <div style="font-size:22px;font-weight:700;">${results.summary.totalNewItems}</div>
+        <div style="background:linear-gradient(170deg,rgba(255,255,255,0.97),rgba(245,251,255,0.97));border:1px solid #d4dfee;border-radius:14px;padding:12px 14px;min-width:140px;box-shadow:0 8px 18px rgba(15,23,42,0.08);">
+          <div style="font-size:12px;color:#607089;">Nove inzeraty</div>
+          <div style="font-size:24px;font-weight:700;">${results.summary.totalNewItems}</div>
         </div>
-        <div style="background:white;border:1px solid #dbe5f0;border-radius:12px;padding:12px 14px;min-width:120px;">
-          <div style="font-size:12px;color:#49627c;">Celkem inzeratu</div>
-          <div style="font-size:22px;font-weight:700;">${results.summary.totalFoundItems ?? results.summary.totalNewItems}</div>
+        <div style="background:linear-gradient(170deg,rgba(255,255,255,0.97),rgba(245,251,255,0.97));border:1px solid #d4dfee;border-radius:14px;padding:12px 14px;min-width:140px;box-shadow:0 8px 18px rgba(15,23,42,0.08);">
+          <div style="font-size:12px;color:#607089;">Celkem inzeratu</div>
+          <div style="font-size:24px;font-weight:700;">${results.summary.totalFoundItems ?? results.summary.totalNewItems}</div>
         </div>
-        <div style="background:white;border:1px solid #dbe5f0;border-radius:12px;padding:12px 14px;min-width:120px;">
-          <div style="font-size:12px;color:#49627c;">Dotazy</div>
-          <div style="font-size:22px;font-weight:700;">${results.summary.totalWatches}</div>
+        <div style="background:linear-gradient(170deg,rgba(255,255,255,0.97),rgba(245,251,255,0.97));border:1px solid #d4dfee;border-radius:14px;padding:12px 14px;min-width:140px;box-shadow:0 8px 18px rgba(15,23,42,0.08);">
+          <div style="font-size:12px;color:#607089;">Dotazy</div>
+          <div style="font-size:24px;font-weight:700;">${results.summary.totalWatches}</div>
         </div>
       </div>
 
       <div style="margin-top:12px;">
-        ${watchCards || '<div style="background:white;border:1px solid #dbe5f0;border-radius:12px;padding:14px;">Zadne aktivni dotazy.</div>'}
+        ${watchCards || '<div style="background:linear-gradient(170deg,rgba(255,255,255,0.97),rgba(245,251,255,0.97));border:1px solid #d4dfee;border-radius:14px;padding:14px;">Zadne aktivni dotazy.</div>'}
       </div>
     </div>
   </body>
@@ -853,4 +852,5 @@ main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
+
 

@@ -271,7 +271,7 @@ function adminModelToConfig(modelWatches, notificationEmail, existingConfig = {}
       const name = String(watch.name || "").trim();
       const query = String(watch.query || "").trim();
       const marketplaces = Array.isArray(watch.marketplaces)
-        ? watch.marketplaces.filter((m) => ["sbazar", "bazos"].includes(m))
+        ? watch.marketplaces.filter((m) => ["sbazar", "bazos", "paladix"].includes(m))
         : [];
 
       if (!name || !query || marketplaces.length === 0) return null;

@@ -1,6 +1,3 @@
-# Hlidacka bazaru - 2026-03-03T21:02:39.191Z
+# Hlidacka bazaru
 
-- Kontrolovano dotazu: **1**
-- Kontrolovano zdroju: **2**
-- Nalezeno novych inzeratu: **0**
-- Chyby: **0**
+Prvni beh jeste neprobel.
