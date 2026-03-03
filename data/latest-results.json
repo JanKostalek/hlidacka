@@ -1,11 +1,934 @@
 {
-  "runAt": "2026-03-03T13:06:55.439Z",
+  "runAt": "2026-03-03T13:22:16.390Z",
   "summary": {
     "totalWatches": 2,
     "totalSources": 4,
-    "totalNewItems": 0,
+    "totalNewItems": 91,
     "errorCount": 0
   },
-  "newItemsByWatch": [],
+  "newItemsByWatch": [
+    {
+      "watchId": "garmin",
+      "watchName": "Garmin",
+      "items": [
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin Tactix 7 Amoled",
+          "price": "18 900 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228317888-garmin-tactix-7-amoled",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin Fenix 8 Amoled 51mm",
+          "price": "15 500 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin epix 2 sapphire",
+          "price": "8 000 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228252116-garmin-epix-2-sapphire",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin vivoactive",
+          "price": "1 800 Kč",
+          "link": "https://www.sbazar.cz/inzerat/227826877-garmin-vivoactive",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin Force 57\"",
+          "price": "80 000 Kč",
+          "link": "https://www.sbazar.cz/inzerat/227878147-garmin-force-57",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Funkční navigace Garmin Nuvi 1390T Lifetime",
+          "price": "890 Kč",
+          "link": "https://www.sbazar.cz/inzerat/129300198-funkcni-navigace-garmin-nuvi-1390t-lifetime",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin -Silikonový řemínek 26mm",
+          "price": "80 Kč",
+          "link": "https://www.sbazar.cz/inzerat/216277084-garmin-silikonovy-reminek-26mm",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin Fenix 7x Solar",
+          "price": "8 000 Kč",
+          "link": "https://www.sbazar.cz/inzerat/227933335-garmin-fenix-7x-solar",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin Tactix 8 - 47mm AMOLED",
+          "price": "25 000 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228085567-garmin-tactix-8-47mm-amoled",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin Instinct 2 Solar černé, krásný stav",
+          "price": "3 800 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228213854-garmin-instinct-2-solar-cerne-krasny-stav",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "MERCEDES Navigace GARMIN MAP PILOT",
+          "price": "980 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228123893-mercedes-navigace-garmin-map-pilot",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin nuvi 2589",
+          "price": "300 Kč",
+          "link": "https://www.sbazar.cz/inzerat/223816678-garmin-nuvi-2589",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "GARMIN VIVOACTIVE 4",
+          "price": "1 800 Kč",
+          "link": "https://www.sbazar.cz/inzerat/226109962-garmin-vivoactive-4",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        }
+      ]
+    },
+    {
+      "watchId": "lego",
+      "watchName": "Lego",
+      "items": [
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago - Dragons rising Ninja sada",
+          "price": "239 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228227477-lego-ninjago-dragons-rising-ninja-sada",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Nové triko lego ninja 122/128",
+          "price": "199 Kč",
+          "link": "https://www.sbazar.cz/inzerat/137969769-nove-triko-lego-ninja-122128",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago 2516 - Ninja Training Outpost",
+          "price": "490 Kč",
+          "link": "https://www.sbazar.cz/inzerat/218957177-lego-ninjago-2516-ninja-training-outpost",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago s figurkou Hledání dobrodružství",
+          "price": "150 Kč",
+          "link": "https://www.sbazar.cz/inzerat/225978811-lego-ninjago-s-figurkou-hledani-dobrodruzstvi",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninja bojove vozidlo",
+          "price": "400 Kč",
+          "link": "https://www.sbazar.cz/inzerat/197973331-lego-ninja-bojove-vozidlo",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago",
+          "price": "1 000 Kč",
+          "link": "https://www.sbazar.cz/inzerat/223444624-lego-ninjago",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago 70641 Ninja Nightcrawler.",
+          "price": "1 490 Kč",
+          "link": "https://www.sbazar.cz/inzerat/227067688-lego-ninjago-70641-ninja-nightcrawler",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Sesit Lego Ninjago Hledani rozdilu s figurkou",
+          "price": "150 Kč",
+          "link": "https://www.sbazar.cz/inzerat/225978742-sesit-lego-ninjago-hledani-rozdilu-s-figurkou",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago - originální Lego figurky.",
+          "price": "100 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228251777-lego-ninjago-originalni-lego-figurky",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "lego ninjago",
+          "price": "2 300 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228209369-lego-ninjago",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Sada Lego Ninjago",
+          "price": "5 500 Kč",
+          "link": "https://www.sbazar.cz/inzerat/26253323-sada-lego-ninjago",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "LEGO NINJAGO 71712",
+          "price": "3 500 Kč",
+          "link": "https://www.sbazar.cz/inzerat/217194458-lego-ninjago-71712",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "LEGO Ninjago 70662 Spinjitzu Cole",
+          "price": "200 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228261971-lego-ninjago-70662-spinjitzu-cole",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago figurka \"Kai - Ninjago Movie\"(NJO349)",
+          "price": "69 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264008-lego-ninjago-figurka-kai-ninjago-movienjo349",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago vesnice",
+          "price": "1 000 Kč",
+          "link": "https://www.sbazar.cz/inzerat/219726966-lego-ninjago-vesnice",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago - 30675",
+          "price": "99 Kč",
+          "link": "https://www.sbazar.cz/inzerat/225816508-lego-ninjago-30675",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Venomari jedová kosa",
+          "price": "39 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264350-lego-dilky-ninjago-venomari-jedova-kosa",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Spinner - Koruna - (žlutá)",
+          "price": "29 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228295307-lego-dilky-ninjago-spinner-koruna-zluta",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Spinner - Koruna (modrá)",
+          "price": "10 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228295292-lego-dilky-ninjago-spinner-koruna-modra",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Spinner - Lasha (9562)",
+          "price": "99 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228295259-lego-dilky-ninjago-spinner-lasha-9562",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Spinner - Koruna -(fialová)",
+          "price": "29 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228295241-lego-dilky-ninjago-spinner-koruna-fialova",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Spinner - Koruna (stříbrná)",
+          "price": "11 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228295217-lego-dilky-ninjago-spinner-koruna-stribrna",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Spinner - Koruna - (zelená)",
+          "price": "15 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228295196-lego-dilky-ninjago-spinner-koruna-zelena",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Spinner - Lasha (9562)",
+          "price": "129 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228295130-lego-dilky-ninjago-spinner-lasha-9562",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Spinner - Garmadon (2256)",
+          "price": "119 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228295124-lego-dilky-ninjago-spinner-garmadon-2256",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Spinner - Nuckal (2173)",
+          "price": "119 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228295103-lego-dilky-ninjago-spinner-nuckal-2173",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Spinner - Nya (2172)",
+          "price": "139 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228295094-lego-dilky-ninjago-spinner-nya-2172",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Spinner - Rattla (9579)",
+          "price": "139 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228295067-lego-dilky-ninjago-spinner-rattla-9579",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Spinner - Snappa (9564)",
+          "price": "12 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228295052-lego-dilky-ninjago-spinner-snappa-9564",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago 4002021",
+          "price": "4 190 Kč",
+          "link": "https://www.sbazar.cz/inzerat/197765449-lego-ninjago-4002021",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "LEGO Ninjago 70662 Spinjitzu Cole",
+          "price": "200 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228216680-lego-ninjago-70662-spinjitzu-cole",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Sai (zlatý)",
+          "price": "8 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228265079-lego-dilky-ninjago-sai-zlaty",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - šavle (zlatá)",
+          "price": "9 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228265061-lego-dilky-ninjago-savle-zlata",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Shuriken (zlatý)",
+          "price": "11 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228265019-lego-dilky-ninjago-shuriken-zlaty",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Katana (zlatá)",
+          "price": "11 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228265010-lego-dilky-ninjago-katana-zlata",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Shuriken (stříbrný)",
+          "price": "12 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264986-lego-dilky-ninjago-shuriken-stribrny",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Katana (stříbrná)",
+          "price": "13 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264917-lego-dilky-ninjago-katana-stribrna",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "lego ninjago figurky",
+          "price": "1 200 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228195593-lego-ninjago-figurky",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago polybag 30650",
+          "price": "149 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228240980-lego-ninjago-polybag-30650",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "LEGO NINJAGO 2/26 - časopis + hračka",
+          "price": "70 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228273806-lego-ninjago-226-casopis-hracka",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago figurka \"Cole - Rebooted\" (NJO0270)",
+          "price": "259 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228294938-lego-ninjago-figurka-cole-rebooted-njo0270",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Spinnery - Aréna (červená)",
+          "price": "159 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228294887-lego-dilky-ninjago-spinnery-arena-cervena",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Spinnery - Aréna (zelená)",
+          "price": "189 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228294854-lego-dilky-ninjago-spinnery-arena-zelena",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago polybag 30535",
+          "price": "179 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228227960-lego-ninjago-polybag-30535",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago",
+          "price": "200 Kč",
+          "link": "https://www.sbazar.cz/inzerat/227504071-lego-ninjago",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago figurka\"Nya - Ninjago Movie\"(NJO0320)",
+          "price": "239 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228227387-lego-ninjago-figurkanya-ninjago-movienjo0320",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego NINJAGO",
+          "price": "59 Kč",
+          "link": "https://www.sbazar.cz/inzerat/221832359-lego-ninjago",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Nové lego ninjago",
+          "price": "109 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228184757-nove-lego-ninjago",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago figurka \"Nya\"",
+          "price": "239 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228227312-lego-ninjago-figurka-nya",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago figurka \"Dareth\"",
+          "price": "279 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228227105-lego-ninjago-figurka-dareth",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "LEGO NINJAGO sáček - 30674",
+          "price": "70 Kč",
+          "link": "https://www.sbazar.cz/inzerat/205925739-lego-ninjago-sacek-30674",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "LEGO NINJAGO sáčky 4x",
+          "price": "50 Kč",
+          "link": "https://www.sbazar.cz/inzerat/222696319-lego-ninjago-sacky-4x",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "LEGO NINJAGO sáčky 5x",
+          "price": "50 Kč",
+          "link": "https://www.sbazar.cz/inzerat/222696211-lego-ninjago-sacky-5x",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "LEGO 3856 Ninjago Hra",
+          "price": "1 050 Kč",
+          "link": "https://www.sbazar.cz/inzerat/105744437-lego-3856-ninjago-hra",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Nůž (šedý)",
+          "price": "13 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264938-lego-dilky-ninjago-nuz-sedy",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Katana (oranžová)",
+          "price": "15 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264884-lego-dilky-ninjago-katana-oranzova",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Katana (zelená)",
+          "price": "25 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264728-lego-dilky-ninjago-katana-zelena",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Zlatá kosa",
+          "price": "35 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264641-lego-dilky-ninjago-zlata-kosa",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Zlaté nunchaky",
+          "price": "35 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264608-lego-dilky-ninjago-zlate-nunchaky",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Fangpyre oštěp",
+          "price": "36 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264551-lego-dilky-ninjago-fangpyre-ostep",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Hypnobrai řemdih",
+          "price": "36 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264509-lego-dilky-ninjago-hypnobrai-remdih",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Constrictai kopí",
+          "price": "37 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264479-lego-dilky-ninjago-constrictai-kopi",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Zlaté kopí",
+          "price": "37 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264461-lego-dilky-ninjago-zlate-kopi",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Wave Amulet",
+          "price": "39 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264404-lego-dilky-ninjago-wave-amulet",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Storm Amulet",
+          "price": "39 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264395-lego-dilky-ninjago-storm-amulet",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Venomari řemdih",
+          "price": "39 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264332-lego-dilky-ninjago-venomari-remdih",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Anacondrai Blade",
+          "price": "39 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264317-lego-dilky-ninjago-anacondrai-blade",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego dílky - Ninjago - Lloydova kosa",
+          "price": "39 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228264299-lego-dilky-ninjago-lloydova-kosa",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago figurka \"Cole\" (NJO551)",
+          "price": "69 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228263939-lego-ninjago-figurka-cole-njo551",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago figurka \"Hausner\" (NJO578)",
+          "price": "69 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228263912-lego-ninjago-figurka-hausner-njo578",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago figurka \"Bucko\" (NJO0196)",
+          "price": "79 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228263783-lego-ninjago-figurka-bucko-njo0196",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago figurka \"Lloyd\" (NJO429)",
+          "price": "79 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228263597-lego-ninjago-figurka-lloyd-njo429",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago figurka \"Sqiffy\" (NJO0203)",
+          "price": "89 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228263333-lego-ninjago-figurka-sqiffy-njo0203",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago figurka \"Biker\" (NJO0414)",
+          "price": "89 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228263045-lego-ninjago-figurka-biker-njo0414",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago figurka \"Zane\" (COLTLNM10)",
+          "price": "139 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228261869-lego-ninjago-figurka-zane-coltlnm10",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago figurka \"Wyldfyre\" (NJO0923)",
+          "price": "89 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228263060-lego-ninjago-figurka-wyldfyre-njo0923",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago figurka \"Arin\" (NJO0822)",
+          "price": "99 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228262754-lego-ninjago-figurka-arin-njo0822",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Lego Ninjago figurka \"Sora\" (NJO0877)",
+          "price": "99 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228262736-lego-ninjago-figurka-sora-njo0877",
+          "foundAt": "2026-03-03T13:22:16.390Z"
+        }
+      ]
+    }
+  ],
   "errors": []
 }
