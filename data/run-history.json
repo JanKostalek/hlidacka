@@ -1,6 +1,65 @@
 {
   "runs": [
     {
+      "runAt": "2026-03-03T14:07:23.720Z",
+      "summary": {
+        "totalWatches": 3,
+        "totalSources": 5,
+        "totalFoundItems": 98,
+        "totalNewItems": 0,
+        "errorCount": 0
+      },
+      "watchStats": [
+        {
+          "watchId": "garmin-new",
+          "watchName": "Garmin new",
+          "query": "Garmin",
+          "keywords": [
+            "Garmin"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 84,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "g",
+          "watchName": "G",
+          "query": "Garmin",
+          "keywords": [
+            "Garmin",
+            "Fenix",
+            "8"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 3,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "lego",
+          "watchName": "lego",
+          "query": "lego ninja",
+          "keywords": [
+            "lego",
+            "ninja"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 1,
+          "foundItems": 11,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        }
+      ],
+      "emailSubject": "Hlidacka (Garmin new +2): zadne nove inzeraty",
+      "emailText": "Hlidacka bazaru - Výsledek vyhledávání\nČas vyhledávání: 2026-03-03T14:07:23.720Z\nNove inzeraty: 0\nChyby: 0\n\nAktivni dotazy:\n\n- Garmin new\n  co hledat: Garmin\n  klicova slova: Garmin\n  vyloucit slova: (zadna)\n  bazary: Sbazar, Bazos\n  vysledek: nove 0, jiz zobrazene 60, chyby 0\n\n- G\n  co hledat: Garmin\n  klicova slova: Garmin, Fenix, 8\n  vyloucit slova: (zadna)\n  bazary: Sbazar, Bazos\n  vysledek: nove 0, jiz zobrazene 3, chyby 0\n\n- lego\n  co hledat: lego ninja\n  klicova slova: lego, ninja\n  vyloucit slova: (zadna)\n  bazary: Bazos\n  vysledek: nove 0, jiz zobrazene 60, chyby 0\n\nZadne nove inzeraty.\n\nJiz zobrazene inzeraty:\n\nGarmin new (60)\n- Hodinky Garmin Fénix 7xpro Sapphire Solar | 11 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215600138/hodinky-garmin-fenix-7xpro-sapphire-solar.php\n- Garmin Fenix 8 SOLAR 51 mm, Sapphire Carbon Gray | 18 000 Kč | Bazos\n  https://sport.bazos.cz/inzerat/215631219/garmin-fenix-8-solar-51-mm-sapphire-carbon-gray.php\n- Echolot Garmin ech. ultra 122sv a Live sonda Panoptix PS30 | 68 000 Kč | Bazos\n  https://elektro.bazos.cz/inzerat/214212117/garmin-echomap-ultra-122sv-a-live-sonda-panoptix-ps30.php\n- Garmin Instinct 3 Tactical Solar | 6 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215684982/garmin-instinct-3-tactical-solar.php\n- GARMIN VIVOACTIVE 4 | 1 800 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/226109962-garmin-vivoactive-4\n- Garmin nuvi 2589 | 300 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/223816678-garmin-nuvi-2589\n- MERCEDES Navigace GARMIN MAP PILOT | 980 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228123893-mercedes-navigace-garmin-map-pilot\n- Garmin Instinct 2 Solar černé, krásný stav | 3 800 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228213854-garmin-instinct-2-solar-cerne-krasny-stav\n- Garmin Tactix 8 - 47mm AMOLED | 25 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228085567-garmin-tactix-8-47mm-amoled\n- Garmin Fenix 7x Solar | 8 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227933335-garmin-fenix-7x-solar\n- Garmin -Silikonový řemínek 26mm | 80 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/216277084-garmin-silikonovy-reminek-26mm\n- Funkční navigace Garmin Nuvi 1390T Lifetime | 890 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/129300198-funkcni-navigace-garmin-nuvi-1390t-lifetime\n- Garmin Force 57\" | 80 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227878147-garmin-force-57\n- Garmin vivoactive | 1 800 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227826877-garmin-vivoactive\n- Garmin epix 2 sapphire | 8 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228252116-garmin-epix-2-sapphire\n- Garmin Fenix 8 Amoled 51mm | 15 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm\n- Garmin Solar | 3 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228168815-garmin-solar\n- navigace GARMIN | 300 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228181673-navigace-garmin\n- Nabíjecí kabel Garmin | 70 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228270071-nabijeci-kabel-garmin\n- Garmin Fenix 7 Solar Sapphire Pro 51 | 10 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228308150-garmin-fenix-7-solar-sapphire-pro-51\n- GPS hodinky Garmin vivoactive 4 silver | 5 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/222761410-gps-hodinky-garmin-vivoactive-4-silver\n- GPS Navigace Garmin | 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228307358-gps-navigace-garmin\n- Garmin Fénix 6 PRO | 4 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228317270-garmin-fenix-6-pro\n- Garmin Tactix 7 Amoled | 18 900 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228317888-garmin-tactix-7-amoled\n- Garmin Fenix 5 plus 47 mm | 2 600 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215640959/garmin-fenix-5-plus-47-mm.php\n- GARMIN Fenix 7x solar | 10 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215215319/garmin-fenix-7x-solar.php\n- Chytré hodinky GARMIN Vivoactive 3 | 1 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228039499-chytre-hodinky-garmin-vivoactive-3\n- Garmin Forerunner 305 s nabíječkou | 200 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/113611521-garmin-forerunner-305-s-nabijeckou\n- Prodám hodinky Garmin VIVOMOVE HR | 1 200 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/225712924-prodam-hodinky-garmin-vivomove-hr\n- Garmin Forerunner 955 Solar | 5 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227828056-garmin-forerunner-955-solar\n- Garmin Vivoactive 3 | 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227862253-garmin-vivoactive-3\n- Navigace GARMIN | 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/186318848-navigace-garmin\n- Garmin Marq Captain | 11 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/225251401-garmin-marq-captain\n- Navigace GARMIN | 400 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/214972498-navigace-garmin\n- Chytré hodinky Garmin Vivoactive 3 | Sbazar\n  https://www.sbazar.cz/inzerat/215316133-chytre-hodinky-garmin-vivoactive-3\n- Garmin venu 2 plus | 2 900 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227868610-garmin-venu-2-plus\n- Navigace Garmin | 450 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/209630836-navigace-garmin\n- Navigace Garmin Nuvi 255W | 1 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227910169-navigace-garmin-nuvi-255w\n- Navigace Garmin nuvi 56 | 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/224057098-navigace-garmin-nuvi-56\n- Golfové hodinky Garmin Approach S2 | 990 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228021064-golfove-hodinky-garmin-approach-s2\n- Garmin Fenix 7 Sapphire Solar | 7 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228067723-garmin-fenix-7-sapphire-solar\n- Navigace GARMIN + Bezdrátová kamera | 2 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228081001-navigace-garmin-bezdratova-kamera\n- Garmin FR945 | 3 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227620474-garmin-fr945\n- Venu 3s Garmin ochranná fólie | Sbazar\n  https://www.sbazar.cz/inzerat/226324498-venu-3s-garmin-ochranna-folie\n- Venu 3s Garmin ochranná fólie | Sbazar\n  https://www.sbazar.cz/inzerat/226324507-venu-3s-garmin-ochranna-folie\n- Hodinky Garmin Instinct 350mm AMOLED black | 7 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228150746-hodinky-garmin-instinct-350mm-amoled-black\n- Navigace Garmin | 200 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227648830-navigace-garmin\n- Chytré hodinky Garmin Venu | 1 200 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228012448-chytre-hodinky-garmin-venu\n- Garmin - Řeminek, šíře 22mm | 70 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/216277096-garmin-reminek-sire-22mm\n- Garmin Vivoactive 3 | 900 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227999386-garmin-vivoactive-3\n- Garmin Forerunner 15 | 350 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/208790347-garmin-forerunner-15\n- Navigace Garmin | 100 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227773810-navigace-garmin\n- Pásek hodinek Garmin. | 125 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/182259761-pasek-hodinek-garmin\n- hodinky Garmin Fenix 6X Sapphire | 3 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228135542-hodinky-garmin-fenix-6x-sapphire\n- Garmin venu 2s | 1 400 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227806651-garmin-venu-2s\n- Navigace Garmin | 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227257867-navigace-garmin\n- Garmin 1040 Solar | 6 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227794102-garmin-1040-solar\n- Garmin Vivoactive 4s | 1 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227868808-garmin-vivoactive-4s\n- Nabíjecí kabel Garmin | 70 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227787730-nabijeci-kabel-garmin\n- Garmin venu 2s | 3 200 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227868766-garmin-venu-2s\n\nG (3)\n- Garmin Fenix 8 SOLAR 51 mm, Sapphire Carbon Gray | 18 000 Kč | Bazos\n  https://sport.bazos.cz/inzerat/215631219/garmin-fenix-8-solar-51-mm-sapphire-carbon-gray.php\n- Garmin Fenix 7x Solar | 8 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227933335-garmin-fenix-7x-solar\n- Garmin Fenix 8 Amoled 51mm | 15 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm\n\nlego (60)\n- LEGO Ninjago 71822 Zdrojový drak pohybu | 3 100 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215686463/lego-ninjago-71822-zdrojovy-drak-pohybu.php\n- LEGO Ninjago 30591 Titanový minirobot | 100 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215704726/lego-ninjago-30591-titanovy-minirobot.php\n- Ninjago lego nové | 109 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215705528/ninjago-lego-nove.php\n- Lego Ninjago Spinner 2ks 9579 s návody | 149 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215706461/lego-ninjago-spinner-2ks-9579-s-navody.php\n- lego ninjago 70638 | 450 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215711760/lego-ninjago-70638.php\n- Lego Ninjago Lord Garmadon njo078 Super Stav | 399 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215728022/lego-ninjago-lord-garmadon-njo078-super-stav.php\n- Zlatý Robot Lego Ninjago 70505 | 990 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215728260/zlaty-robot-lego-ninjago-70505.php\n- Lego ninjago 70590 Airjitzu Battle Grounds | 8 500 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215729603/lego-ninjago-70590-airjitzu-battle-grounds.php\n- Lego ninjago set 70736 Morro Dragon | 5 499 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215729707/lego-ninjago-set-70736-morro-dragon.php\n- Lego Ninjago sety Zane DX a Cole DX | 2 500 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215729807/lego-ninjago-sety-zane-dx-a-cole-dx.php\n- LEGO Ninja Turtles 79121 nebo 79115 dle fotek a popisu | 2 000 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215730758/lego-ninja-turtles-79121-nebo-79115-dle-fotek-a-popisu.php\n- Lego Ninjago žlutý letoun s figurkou | 450 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/215497483-lego-ninjago-zluty-letoun-s-figurkou\n- Lego Ninjago figurka \"Sora\" (NJO0877) | 99 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228262736-lego-ninjago-figurka-sora-njo0877\n- Lego Ninjago figurka \"Arin\" (NJO0822) | 99 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228262754-lego-ninjago-figurka-arin-njo0822\n- Lego Ninjago figurka \"Wyldfyre\" (NJO0923) | 89 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228263060-lego-ninjago-figurka-wyldfyre-njo0923\n- Lego Ninjago figurka \"Zane\" (COLTLNM10) | 139 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228261869-lego-ninjago-figurka-zane-coltlnm10\n- Lego Ninjago figurka \"Biker\" (NJO0414) | 89 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228263045-lego-ninjago-figurka-biker-njo0414\n- Lego Ninjago figurka \"Sqiffy\" (NJO0203) | 89 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228263333-lego-ninjago-figurka-sqiffy-njo0203\n- Lego Ninjago figurka \"Lloyd\" (NJO429) | 79 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228263597-lego-ninjago-figurka-lloyd-njo429\n- Lego Ninjago figurka \"Bucko\" (NJO0196) | 79 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228263783-lego-ninjago-figurka-bucko-njo0196\n- Lego Ninjago figurka \"Hausner\" (NJO578) | 69 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228263912-lego-ninjago-figurka-hausner-njo578\n- Lego Ninjago figurka \"Cole\" (NJO551) | 69 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228263939-lego-ninjago-figurka-cole-njo551\n- Lego dílky - Ninjago - Lloydova kosa | 39 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264299-lego-dilky-ninjago-lloydova-kosa\n- Lego dílky - Ninjago - Anacondrai Blade | 39 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264317-lego-dilky-ninjago-anacondrai-blade\n- Lego dílky - Ninjago - Venomari řemdih | 39 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264332-lego-dilky-ninjago-venomari-remdih\n- Lego dílky - Ninjago - Storm Amulet | 39 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264395-lego-dilky-ninjago-storm-amulet\n- Lego dílky - Ninjago - Wave Amulet | 39 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264404-lego-dilky-ninjago-wave-amulet\n- Lego dílky - Ninjago - Zlaté kopí | 37 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264461-lego-dilky-ninjago-zlate-kopi\n- Lego dílky - Ninjago - Constrictai kopí | 37 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264479-lego-dilky-ninjago-constrictai-kopi\n- Lego dílky - Ninjago - Hypnobrai řemdih | 36 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264509-lego-dilky-ninjago-hypnobrai-remdih\n- Lego dílky - Ninjago - Fangpyre oštěp | 36 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264551-lego-dilky-ninjago-fangpyre-ostep\n- Lego dílky - Ninjago - Zlaté nunchaky | 35 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264608-lego-dilky-ninjago-zlate-nunchaky\n- Lego dílky - Ninjago - Zlatá kosa | 35 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264641-lego-dilky-ninjago-zlata-kosa\n- Lego dílky - Ninjago - Katana (zelená) | 25 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264728-lego-dilky-ninjago-katana-zelena\n- Lego dílky - Ninjago - Katana (oranžová) | 15 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264884-lego-dilky-ninjago-katana-oranzova\n- Lego dílky - Ninjago - Nůž (šedý) | 13 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264938-lego-dilky-ninjago-nuz-sedy\n- LEGO 3856 Ninjago Hra | 1 050 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/105744437-lego-3856-ninjago-hra\n- LEGO NINJAGO sáčky 5x | 50 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/222696211-lego-ninjago-sacky-5x\n- LEGO NINJAGO sáčky 4x | 50 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/222696319-lego-ninjago-sacky-4x\n- LEGO NINJAGO sáček - 30674 | 70 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/205925739-lego-ninjago-sacek-30674\n- Lego Ninjago figurka \"Dareth\" | 279 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228227105-lego-ninjago-figurka-dareth\n- Lego Ninjago figurka \"Nya\" | 239 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228227312-lego-ninjago-figurka-nya\n- Nové lego ninjago | 109 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228184757-nove-lego-ninjago\n- Lego NINJAGO | 59 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/221832359-lego-ninjago\n- Lego Ninjago figurka\"Nya - Ninjago Movie\"(NJO0320) | 239 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228227387-lego-ninjago-figurkanya-ninjago-movienjo0320\n- Lego Ninjago | 200 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227504071-lego-ninjago\n- Lego Ninjago polybag 30535 | 179 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228227960-lego-ninjago-polybag-30535\n- Lego dílky - Ninjago - Spinnery - Aréna (zelená) | 189 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228294854-lego-dilky-ninjago-spinnery-arena-zelena\n- Lego dílky - Ninjago - Spinnery - Aréna (červená) | 159 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228294887-lego-dilky-ninjago-spinnery-arena-cervena\n- Lego Ninjago figurka \"Cole - Rebooted\" (NJO0270) | 259 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228294938-lego-ninjago-figurka-cole-rebooted-njo0270\n- LEGO NINJAGO 2/26 - časopis + hračka | 70 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228273806-lego-ninjago-226-casopis-hracka\n- Lego Ninjago polybag 30650 | 149 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228240980-lego-ninjago-polybag-30650\n- lego ninjago figurky | 1 200 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228195593-lego-ninjago-figurky\n- Lego dílky - Ninjago - Katana (stříbrná) | 13 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264917-lego-dilky-ninjago-katana-stribrna\n- Lego dílky - Ninjago - Shuriken (stříbrný) | 12 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228264986-lego-dilky-ninjago-shuriken-stribrny\n- Lego dílky - Ninjago - Katana (zlatá) | 11 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228265010-lego-dilky-ninjago-katana-zlata\n- Lego dílky - Ninjago - Shuriken (zlatý) | 11 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228265019-lego-dilky-ninjago-shuriken-zlaty\n- Lego dílky - Ninjago - šavle (zlatá) | 9 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228265061-lego-dilky-ninjago-savle-zlata\n- Lego dílky - Ninjago - Sai (zlatý) | 8 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228265079-lego-dilky-ninjago-sai-zlaty\n- LEGO Ninjago 70662 Spinjitzu Cole | 200 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228216680-lego-ninjago-70662-spinjitzu-cole\n\nChyby: zadne\n"
+    },
+    {
       "runAt": "2026-03-03T13:47:27.329Z",
       "summary": {
         "totalWatches": 3,
@@ -938,228 +997,6 @@
       ],
       "emailSubject": "Hlidacka (Garmin +3): 4 novych inzeratu",
       "emailText": "Hlidacka bazaru - Výsledek vyhledávání\nČas vyhledávání: 2026-03-03T12:06:59.662Z\nNove inzeraty: 4\nChyby: 0\n\nAktivni dotazy:\n\n- Garmin\n  co hledat: Garmin\n  klicova slova: Garmin, 8\n  vyloucit slova: (zadna)\n  bazary: Bazos\n  vysledek: nove 0, jiz zobrazene 2, chyby 0\n\n- Iphone\n  co hledat: iphone 13\n  klicova slova: iphone, 13\n  vyloucit slova: (zadna)\n  bazary: Bazos\n  vysledek: nove 1, jiz zobrazene 16, chyby 0\n\n- iphone 16\n  co hledat: Iphone 16\n  klicova slova: Iphone 16\n  vyloucit slova: (zadna)\n  bazary: Bazos\n  vysledek: nove 3, jiz zobrazene 12, chyby 0\n\n- Lego\n  co hledat: Lego ninja\n  klicova slova: lego, ninja\n  vyloucit slova: (zadna)\n  bazary: Bazos\n  vysledek: nove 0, jiz zobrazene 12, chyby 0\n\nNove inzeraty:\n\nIphone (1)\n- APPLE IPHONE 13 128GB ZELENÝ, ZÁRUKA | 6 499 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215731922/apple-iphone-13-128gb-zeleny-zaruka.php\n\niphone 16 (3)\n- APPLE IPHONE 16 PRO 128GB PŘÍRODNÍ TITAN,ZÁRUKA,100% BATERIE | 17 999 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215733239/apple-iphone-16-pro-128gb-prirodni-titanzaruka100-baterie.php\n- ZÁNOVNÍ APPLE IPHONE 16 PRO MAX 256GB ZLATÝ,100% BATERIE | 19 999 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215733034/zanovni-apple-iphone-16-pro-max-256gb-zlaty100-baterie.php\n- APPLE IPHONE 16 128GB RŮŽOVÝ, ZÁRUKA, 100% BATERIE | 13 999 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215732752/apple-iphone-16-128gb-ruzovy-zaruka-100-baterie.php\n\nJiz zobrazene inzeraty:\n\nGarmin (2)\n- Garmin Fenix 8 SOLAR 51 mm, Sapphire Carbon Gray | 18 000 Kč | Bazos\n  https://sport.bazos.cz/inzerat/215631219/garmin-fenix-8-solar-51-mm-sapphire-carbon-gray.php\n- Echolot Garmin ech. ultra 122sv a Live sonda Panoptix PS30 | 68 000 Kč | Bazos\n  https://elektro.bazos.cz/inzerat/214212117/garmin-echomap-ultra-122sv-a-live-sonda-panoptix-ps30.php\n\nIphone (16)\n- iPhone 13 PRO 128GB,Sierra Blue.Stav 10/10 | 7 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215461803/iphone-13-pro-128gbsierra-blue-stav-1010.php\n- IPhone 13 PRO 256GB horsky modrý | 10 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215507804/iphone-13-pro-256gb-horsky-modry.php\n- iPhone 13 modrý | 5 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/214244795/iphone-13-modry.php\n- iPhone 13 128GB s fakturou | 6 490 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215563957/iphone-13-128gb-s-fakturou.php\n- Prodám iPhone 13 Pro 128 gb | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/214102405/prodam-iphone-13-pro-128-gb.php\n- Apple iPhone 13 Pro Max Gold 256GB + příslušenství | 10 900 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215636349/apple-iphone-13-pro-max-gold-256gb-prislusenstvi.php\n- iPhone 13 128 gb | zelený | 6 900 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215640065/iphone-13-128-gb-zeleny.php\n- Apple Iphone 13 Pro 256GB 87% | 10 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215649964/apple-iphone-13-pro-256gb-87.php\n- Apple iPhone 13 Pro Max, 256gb, vesmírně šedá | 10 999 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215597387/apple-iphone-13-pro-max-256gb-vesmirne-seda.php\n- IPhone 13 256 GB | 6 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215679597/iphone-13-256-gb.php\n- Apple iPhone 13, 128GB, 90% BAT | 5 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215693820/apple-iphone-13-128gb-90-bat.php\n- iPhone 13 mini 128GB, modrý (rok záruka) | 5 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215676535/iphone-13-mini-128gb-modry-rok-zaruka.php\n- iPhone 13 mini 128GB, modrý, 99% bat., pouze na eSIM | 4 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215676685/iphone-13-mini-128gb-modry-99-bat-pouze-na-esim.php\n- iPhone 13 pro 128 GB | 6 490 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215672051/iphone-13-pro-128-gb.php\n- Apple iPhone 13 Pro 256GB černý - TOP STAV | 7 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215729786/apple-iphone-13-pro-256gb-cerny-top-stav.php\n- APPLE IPHONE 13 MINI 128 GB BÍLÝ,12 MĚS. ZÁRUKA,VELMI HEZKÝ | 6 490 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215541959/apple-iphone-13-mini-128-gb-bily12-mes-zarukavelmi-hezky.php\n\niphone 16 (12)\n- iPhone 16 Pro 512GB, černý, eSiM, 95% bat. (rok záruka) | 20 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215671787/iphone-16-pro-512gb-cerny-esim-95-bat-rok-zaruka.php\n- iPhone 16 Pro 512GB, pouštní Titan, eSIM (rok záruka) | 19 900 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215672072/iphone-16-pro-512gb-poustni-titan-esim-rok-zaruka.php\n- iPhone 16 Pro 128GB, desert titanium, eSIM (rok záruka) | 16 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215672633/iphone-16-pro-128gb-desert-titanium-esim-rok-zaruka.php\n- iPhone 16 Pro 256GB, bílý Titan, eSIM (rok záruka) | 19 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215672860/iphone-16-pro-256gb-bily-titan-esim-rok-zaruka.php\n- iPhone 16 Pro 256 GB Natural Titanium + MagSafe | 19 990 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215608313/iphone-16-pro-256-gb-natural-titanium-magsafe.php\n- Prodám nepoužitý IPhone 16 Pro, 512GB (white titanum) | 21 900 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215716574/prodam-nepouzity-iphone-16-pro-512gb-white-titanum.php\n- Apple iPhone 16 pro 256gb záruka 21 měsíců. | 19 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215719884/apple-iphone-16-pro-256gb-zaruka-21-mesicu.php\n- Apple iPhone 16 Pro Max 256 GB. | 20 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215542513/apple-iphone-16-pro-max-256-gb.php\n- Apple iPhone 16 – černá – 128 GB – NOVÝ – 15 900 | 15 900 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215499330/apple-iphone-16-cerna-128-gb-novy-19-900.php\n- iPhone 16e 128gb black. Baterie 100%. Záruka 6 měsíců | 8 800 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215475278/iphone-16e-128gb-black-baterie-100-zaruka-6-mesicu.php\n- IPhone 16e | 9 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215626372/iphone-16e.php\n- iPhone 16 Plus 128GB, STAV NOVÉHO, Baterie 100% | 15 999 Kč | Bazos\n  https://pc.bazos.cz/inzerat/215697139/ipad-pro-129-m2-6gen-128gb-wifi-zanovni.php\n\nLego (12)\n- LEGO NINJAGO 71795 Chrám dračích energetických jader | 2 600 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215685283/lego-ninjago-71795-chram-dracich-energetickych-jader.php\n- LEGO Ninjago 71822 Zdrojový drak pohybu | 3 100 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215686463/lego-ninjago-71822-zdrojovy-drak-pohybu.php\n- LEGO Ninjago 30591 Titanový minirobot | 100 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215704726/lego-ninjago-30591-titanovy-minirobot.php\n- Ninjago lego nové | 109 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215705528/ninjago-lego-nove.php\n- Lego Ninjago Spinner 2ks 9579 s návody | 149 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215706461/lego-ninjago-spinner-2ks-9579-s-navody.php\n- lego ninjago 70638 | 450 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215711760/lego-ninjago-70638.php\n- Lego Ninjago Lord Garmadon njo078 Super Stav | 399 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215728022/lego-ninjago-lord-garmadon-njo078-super-stav.php\n- Zlatý Robot Lego Ninjago 70505 | 990 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215728260/zlaty-robot-lego-ninjago-70505.php\n- Lego ninjago 70590 Airjitzu Battle Grounds | 8 500 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215729603/lego-ninjago-70590-airjitzu-battle-grounds.php\n- Lego ninjago set 70736 Morro Dragon | 5 499 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215729707/lego-ninjago-set-70736-morro-dragon.php\n- Lego Ninjago sety Zane DX a Cole DX | 2 500 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215729807/lego-ninjago-sety-zane-dx-a-cole-dx.php\n- LEGO Ninja Turtles 79121 nebo 79115 dle fotek a popisu | 2 000 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215730758/lego-ninja-turtles-79121-nebo-79115-dle-fotek-a-popisu.php\n\nChyby: zadne\n"
-    },
-    {
-      "runAt": "2026-03-03T11:50:01.447Z",
-      "summary": {
-        "totalWatches": 4,
-        "totalSources": 4,
-        "totalNewItems": 12,
-        "errorCount": 0
-      },
-      "watchStats": [
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "query": "Garmin",
-          "keywords": [
-            "Garmin",
-            "8"
-          ],
-          "excludeKeywords": [],
-          "sourcesChecked": 1,
-          "newItems": 0,
-          "found": false,
-          "errorCount": 0
-        },
-        {
-          "watchId": "iphone",
-          "watchName": "Iphone",
-          "query": "iphone 13",
-          "keywords": [
-            "iphone",
-            "13"
-          ],
-          "excludeKeywords": [],
-          "sourcesChecked": 1,
-          "newItems": 0,
-          "found": false,
-          "errorCount": 0
-        },
-        {
-          "watchId": "iphone-16",
-          "watchName": "iphone 16",
-          "query": "Iphone 16",
-          "keywords": [
-            "Iphone 16"
-          ],
-          "excludeKeywords": [],
-          "sourcesChecked": 1,
-          "newItems": 0,
-          "found": false,
-          "errorCount": 0
-        },
-        {
-          "watchId": "lego",
-          "watchName": "Lego",
-          "query": "Lego ninja",
-          "keywords": [
-            "lego",
-            "ninja"
-          ],
-          "excludeKeywords": [],
-          "sourcesChecked": 1,
-          "newItems": 12,
-          "found": true,
-          "errorCount": 0
-        }
-      ]
-    },
-    {
-      "runAt": "2026-03-03T11:47:31.133Z",
-      "summary": {
-        "totalWatches": 3,
-        "totalSources": 3,
-        "totalNewItems": 0,
-        "errorCount": 0
-      },
-      "watchStats": [
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "query": "Garmin",
-          "keywords": [
-            "Garmin",
-            "8"
-          ],
-          "excludeKeywords": [],
-          "sourcesChecked": 1,
-          "newItems": 0,
-          "found": false,
-          "errorCount": 0
-        },
-        {
-          "watchId": "iphone",
-          "watchName": "Iphone",
-          "query": "iphone 13",
-          "keywords": [
-            "iphone",
-            "13"
-          ],
-          "excludeKeywords": [],
-          "sourcesChecked": 1,
-          "newItems": 0,
-          "found": false,
-          "errorCount": 0
-        },
-        {
-          "watchId": "iphone-16",
-          "watchName": "iphone 16",
-          "query": "Iphone 16",
-          "keywords": [
-            "Iphone 16"
-          ],
-          "excludeKeywords": [],
-          "sourcesChecked": 1,
-          "newItems": 0,
-          "found": false,
-          "errorCount": 0
-        }
-      ]
-    },
-    {
-      "runAt": "2026-03-03T11:45:34.188Z",
-      "summary": {
-        "totalWatches": 3,
-        "totalSources": 3,
-        "totalNewItems": 0,
-        "errorCount": 0
-      },
-      "watchStats": [
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "query": "Garmin",
-          "keywords": [
-            "Garmin",
-            "8"
-          ],
-          "excludeKeywords": [],
-          "sourcesChecked": 1,
-          "newItems": 0,
-          "found": false,
-          "errorCount": 0
-        },
-        {
-          "watchId": "iphone",
-          "watchName": "Iphone",
-          "query": "iphone 13",
-          "keywords": [
-            "iphone",
-            "13"
-          ],
-          "excludeKeywords": [],
-          "sourcesChecked": 1,
-          "newItems": 0,
-          "found": false,
-          "errorCount": 0
-        },
-        {
-          "watchId": "iphone-16",
-          "watchName": "iphone 16",
-          "query": "Iphone 16",
-          "keywords": [
-            "Iphone 16"
-          ],
-          "excludeKeywords": [],
-          "sourcesChecked": 1,
-          "newItems": 0,
-          "found": false,
-          "errorCount": 0
-        }
-      ]
-    },
-    {
-      "runAt": "2026-03-03T11:44:48.408Z",
-      "summary": {
-        "totalWatches": 3,
-        "totalSources": 3,
-        "totalNewItems": 30,
-        "errorCount": 0
-      },
-      "watchStats": [
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "query": "Garmin",
-          "keywords": [
-            "Garmin",
-            "8"
-          ],
-          "excludeKeywords": [],
-          "sourcesChecked": 1,
-          "newItems": 2,
-          "found": true,
-          "errorCount": 0
-        },
-        {
-          "watchId": "iphone",
-          "watchName": "Iphone",
-          "query": "iphone 13",
-          "keywords": [
-            "iphone",
-            "13"
-          ],
-          "excludeKeywords": [],
-          "sourcesChecked": 1,
-          "newItems": 16,
-          "found": true,
-          "errorCount": 0
-        },
-        {
-          "watchId": "iphone-16",
-          "watchName": "iphone 16",
-          "query": "Iphone 16",
-          "keywords": [
-            "Iphone 16"
-          ],
-          "excludeKeywords": [],
-          "sourcesChecked": 1,
-          "newItems": 12,
-          "found": true,
-          "errorCount": 0
-        }
-      ]
     }
   ]
 }
