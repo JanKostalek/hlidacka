@@ -1,6 +1,36 @@
 {
   "runs": [
     {
+      "runAt": "2026-03-03T21:02:39.191Z",
+      "summary": {
+        "totalWatches": 1,
+        "totalSources": 2,
+        "totalFoundItems": 4,
+        "totalNewItems": 0,
+        "errorCount": 0
+      },
+      "watchStats": [
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "query": "Garmin",
+          "keywords": [
+            "Garmin",
+            "Fenix",
+            "8"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 4,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        }
+      ],
+      "emailSubject": "Hlidacka (Garmin): zadne nove inzeraty",
+      "emailText": "Hlidacka bazaru - Výsledek vyhledávání\nČas vyhledávání: 2026-03-03T21:02:39.191Z\nNove inzeraty: 0\nChyby: 0\n\nAktivni dotazy:\n\n- Garmin\n  co hledat: Garmin\n  klicova slova: Garmin, Fenix, 8\n  vyloucit slova: (zadna)\n  bazary: Sbazar, Bazos\n  vysledek: nove 0, jiz zobrazene 4, chyby 0\n\nZadne nove inzeraty.\n\nJiz zobrazene inzeraty:\n\nGarmin (4)\n- Garmin Fenix 8 PRO AMOLED 51mm PREMIUM – týden staré | 29 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215457836/garmin-fenix-8-amoled-51mm-sapphire-titanium-tyden-stare.php\n- Garmin Fenix 8 SOLAR 51 mm, Sapphire Carbon Gray | 18 000 Kč | Bazos\n  https://sport.bazos.cz/inzerat/215631219/garmin-fenix-8-solar-51-mm-sapphire-carbon-gray.php\n- Garmin Fenix 7x Solar | 8 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227933335-garmin-fenix-7x-solar\n- Garmin Fenix 8 Amoled 51mm | 15 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm\n\nChyby: zadne\n"
+    },
+    {
       "runAt": "2026-03-03T18:04:22.884Z",
       "summary": {
         "totalWatches": 1,
