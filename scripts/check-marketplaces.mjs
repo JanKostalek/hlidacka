@@ -386,64 +386,64 @@ function buildEmailHtml(config, results, alreadyDisplayedByWatch = {}) {
 
       const itemList =
         newItems.length === 0
-          ? `<div class="muted">Zadne nove inzeraty pro tento dotaz.</div>`
-          : `<ul class="item-list">${newItems
+          ? `<div style="color:#5c748e;font-size:13px;">Zadne nove inzeraty pro tento dotaz.</div>`
+          : `<ul style="margin:6px 0 0;padding-left:18px;font-size:13px;">${newItems
               .map((item) => {
                 const pricePart = item.price ? ` | ${escapeHtml(item.price)}` : "";
-                return `<li><a href="${escapeHtml(item.link)}">${escapeHtml(
+                return `<li style="margin:4px 0;"><a style="color:#0f6bcf;text-decoration:none;" href="${escapeHtml(item.link)}">${escapeHtml(
                   item.title
-                )}</a><span class="muted"> (${escapeHtml(item.sourceName)}${pricePart})</span></li>`;
+                )}</a><span style="color:#5c748e;font-size:13px;"> (${escapeHtml(item.sourceName)}${pricePart})</span></li>`;
               })
               .join("")}</ul>`;
 
       const errorList =
         errorsForWatch.length === 0
-          ? `<div class="muted">Bez chyb.</div>`
-          : `<ul class="error-list">${errorsForWatch
+          ? `<div style="color:#5c748e;font-size:13px;">Bez chyb.</div>`
+          : `<ul style="margin:6px 0 0;padding-left:18px;font-size:13px;">${errorsForWatch
               .map(
                 (err) =>
-                  `<li>${escapeHtml(err.sourceName)}: ${escapeHtml(err.message)}</li>`
+                  `<li style="margin:4px 0;">${escapeHtml(err.sourceName)}: ${escapeHtml(err.message)}</li>`
               )
               .join("")}</ul>`;
       const shownList =
         shownItems.length === 0
-          ? `<div class="muted">Zadne drive zobrazene inzeraty.</div>`
-          : `<ul class="item-list">${shownItems
+          ? `<div style="color:#5c748e;font-size:13px;">Zadne drive zobrazene inzeraty.</div>`
+          : `<ul style="margin:6px 0 0;padding-left:18px;font-size:13px;">${shownItems
               .map((item) => {
                 const pricePart = item.price ? ` | ${escapeHtml(item.price)}` : "";
-                return `<li><a href="${escapeHtml(item.link)}">${escapeHtml(
+                return `<li style="margin:4px 0;"><a style="color:#0f6bcf;text-decoration:none;" href="${escapeHtml(item.link)}">${escapeHtml(
                   item.title
-                )}</a><span class="muted"> (${escapeHtml(item.sourceName)}${pricePart})</span></li>`;
+                )}</a><span style="color:#5c748e;font-size:13px;"> (${escapeHtml(item.sourceName)}${pricePart})</span></li>`;
               })
               .join("")}</ul>`;
 
       return `
-        <section class="card">
-          <div class="cardHead">
+        <section style="background:#ffffff;border:1px solid #dbe5f0;border-radius:14px;padding:14px;margin-bottom:14px;box-shadow:0 4px 14px rgba(16,32,51,0.04);">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
             <h3>${escapeHtml(watch.name || watch.id)}</h3>
-            <div class="pill">nove ${newItems.length} | jiz zobrazene ${shownCount} | chyby ${errorsForWatch.length}</div>
+            <div style="background:#edf6ff;border:1px solid #d3e6fa;color:#15406a;border-radius:999px;padding:4px 10px;font-size:12px;">nove ${newItems.length} | jiz zobrazene ${shownCount} | chyby ${errorsForWatch.length}</div>
           </div>
 
-          <div class="subsection">
+          <div style="background:#f9fcff;border:1px solid #e2edf8;border-radius:10px;padding:10px;margin-top:10px;">
             <h4>Vyhledavani</h4>
-            <div class="meta"><b>Co hledat:</b> ${escapeHtml(watch.query || "(prazdne)")}</div>
-            <div class="meta"><b>Klicova slova:</b> ${escapeHtml(keywords)}</div>
-            <div class="meta"><b>Vyloucit slova:</b> ${escapeHtml(excluded)}</div>
-            <div class="meta"><b>Bazary:</b> ${escapeHtml(sourceList)}</div>
-            <div class="meta"><b>Vysledek:</b> nove ${newItems.length}, jiz zobrazene ${shownCount}, chyby ${errorsForWatch.length}</div>
+            <div style="font-size:13px;margin:3px 0;"><b>Co hledat:</b> ${escapeHtml(watch.query || "(prazdne)")}</div>
+            <div style="font-size:13px;margin:3px 0;"><b>Klicova slova:</b> ${escapeHtml(keywords)}</div>
+            <div style="font-size:13px;margin:3px 0;"><b>Vyloucit slova:</b> ${escapeHtml(excluded)}</div>
+            <div style="font-size:13px;margin:3px 0;"><b>Bazary:</b> ${escapeHtml(sourceList)}</div>
+            <div style="font-size:13px;margin:3px 0;"><b>Vysledek:</b> nove ${newItems.length}, jiz zobrazene ${shownCount}, chyby ${errorsForWatch.length}</div>
           </div>
 
-          <div class="subsection">
+          <div style="background:#f9fcff;border:1px solid #e2edf8;border-radius:10px;padding:10px;margin-top:10px;">
             <h4>Nove inzeraty</h4>
             ${itemList}
           </div>
 
-          <div class="subsection">
+          <div style="background:#f9fcff;border:1px solid #e2edf8;border-radius:10px;padding:10px;margin-top:10px;">
             <h4>Jiz zobrazene inzeraty</h4>
             ${shownList}
           </div>
 
-          <div class="subsection">
+          <div style="background:#f9fcff;border:1px solid #e2edf8;border-radius:10px;padding:10px;margin-top:10px;">
             <h4>Chyby</h4>
             ${errorList}
           </div>
@@ -482,20 +482,6 @@ function buildEmailHtml(config, results, alreadyDisplayedByWatch = {}) {
       <div style="margin-top:12px;">
         ${watchCards || '<div style="background:white;border:1px solid #dbe5f0;border-radius:12px;padding:14px;">Zadne aktivni dotazy.</div>'}
       </div>
-
-      <style>
-        .card { background:white;border:1px solid #dbe5f0;border-radius:14px;padding:14px 14px;margin-bottom:12px; box-shadow:0 4px 14px rgba(16,32,51,0.04); }
-        .cardHead { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:10px; flex-wrap:wrap; }
-        .pill { background:#edf6ff; border:1px solid #d3e6fa; color:#15406a; border-radius:999px; padding:4px 10px; font-size:12px; }
-        .subsection { background:#f9fcff; border:1px solid #e2edf8; border-radius:10px; padding:10px; margin-top:10px; }
-        h3 { margin:0;font-size:18px; }
-        h4 { margin:0 0 6px;font-size:14px; }
-        .meta { font-size:13px; margin:3px 0; }
-        .muted { color:#5c748e;font-size:13px; }
-        .item-list, .error-list { margin:6px 0 0; padding-left:18px; font-size:13px; }
-        .item-list li, .error-list li { margin:4px 0; }
-        a { color:#0f6bcf; text-decoration:none; }
-      </style>
     </div>
   </body>
 </html>`;
