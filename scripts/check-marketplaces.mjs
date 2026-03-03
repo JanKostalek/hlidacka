@@ -620,6 +620,8 @@ async function main() {
     foundHistory,
     results.newItemsByWatch
   );
+  const emailTextForRun = buildEmailText(config, results, alreadyDisplayedByWatch);
+  const emailSubjectForRun = buildEmailSubject(config, results);
   const nextFoundHistory = updateFoundHistory(
     foundHistory,
     results.newItemsByWatch,
@@ -630,7 +632,9 @@ async function main() {
     {
       runAt: nowIso,
       summary: results.summary,
-      watchStats
+      watchStats,
+      emailSubject: emailSubjectForRun,
+      emailText: emailTextForRun
     },
     ...(runHistory.runs || [])
   ].slice(0, 200);

@@ -17,6 +17,7 @@ Aplikace pravidelne (kazde 2 hodiny) prohledava bazary podle tvych dotazu a ukla
    - `data/last-run.md`
    - `data/state.json`
    - `data/run-history.json` (historie behu + statistiky)
+   - `data/found-history.json` (drive nalezene inzeraty pro sekci "Jiz zobrazene")
 5. Workflow zmeny commitne zpet do repozitare.
 6. Vercel nasadi aktualni dashboard (`app/page.js`).
 
@@ -101,6 +102,7 @@ Pokud nechas `itemSelector` prazdny, scraper projde vsechny odkazy na strance.
 Dashboard na Vercel zobrazuje posledni vysledky z `data/latest-results.json`.
 Administrace na `/admin` uklada `config/watches.json` primo do GitHub repozitare.
 Historie behu se cte z `data/run-history.json` a zobrazuje na hlavni strance.
+V historii behu lze kazdy run rozkliknout a zobrazit text e-mailu, ktery se odesilal.
 
 ## Jak funguje e-mail notifikace
 
@@ -122,6 +124,7 @@ Historie behu se cte z `data/run-history.json` a zobrazuje na hlavni strance.
   - `Vyloucit slova (CSV)`
   - vyber bazary (`Sbazar`, `Bazos`)
 - Uloz konfiguraci
+- Tlacitkem `Vycistit historii` smazes ulozenou historii behu a historii drive zobrazenych inzeratu
 
 ## Poznamky
 

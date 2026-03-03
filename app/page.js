@@ -95,6 +95,7 @@ export default async function Home() {
                     <th>Zdroje</th>
                     <th>Nalezy</th>
                     <th>Chyby</th>
+                    <th>Detail</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -105,6 +106,19 @@ export default async function Home() {
                       <td>{run.summary?.totalSources ?? 0}</td>
                       <td>{run.summary?.totalNewItems ?? 0}</td>
                       <td>{run.summary?.errorCount ?? 0}</td>
+                      <td>
+                        <details className="runDetails">
+                          <summary>Otevrit</summary>
+                          <div className="runDetailsBody">
+                            <div>
+                              <b>Predmet:</b> {run.emailSubject || "neuvedeno"}
+                            </div>
+                            <pre className="emailPreview">
+                              {run.emailText || "Text e-mailu neni u tohoto behu ulozen."}
+                            </pre>
+                          </div>
+                        </details>
+                      </td>
                     </tr>
                   ))}
                 </tbody>

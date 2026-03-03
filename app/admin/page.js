@@ -20,6 +20,7 @@ export default function AdminPage() {
   const [notificationEmail, setNotificationEmail] = useState("");
   const [status, setStatus] = useState("Nacitani...");
   const [saving, setSaving] = useState(false);
+  const [clearing, setClearing] = useState(false);
 
   useEffect(() => {
     const localToken = window.localStorage.getItem("adminToken") || "";
@@ -104,6 +105,40 @@ export default function AdminPage() {
     setNotificationEmail(data.notificationEmail || "");
     setStatus("Ulozeno.");
     setSaving(false);
+  }
+
+  async function clearHistory() {
+    const confirmed = window.confirm(
+      "Opravdu chces vycistit historii? (behy, jiz zobrazene inzeraty, stav)"
+    );
+    if (!confirmed) return;
+
+    setClearing(true);
+    setStatus("Cistim historii...");
+    const headers = { "content-type": "application/json" };
+    if (token) headers["x-admin-token"] = token;
+
+    const res = await fetch("/api/history", {
+      method: "POST",
+      headers,
+      body: JSON.stringify({ action: "clear" })
+    });
+
+    if (res.status === 401) {
+      setStatus("Neplatny token. Cisteni zamitnuto.");
+      setClearing(false);
+      return;
+    }
+
+    if (!res.ok) {
+      const error = await res.json().catch(() => ({}));
+      setStatus(`Nepodarilo se vycistit historii. ${error.error || ""}`.trim());
+      setClearing(false);
+      return;
+    }
+
+    setStatus("Historie vycistena.");
+    setClearing(false);
   }
 
   function removeWatch(index) {
@@ -217,9 +252,19 @@ export default function AdminPage() {
       </section>
 
       <section className="panel">
-        <button type="button" onClick={saveConfig} disabled={saving}>
-          {saving ? "Ukladam..." : "Ulozit konfiguraci"}
-        </button>
+        <div className="adminActions">
+          <button type="button" onClick={saveConfig} disabled={saving || clearing}>
+            {saving ? "Ukladam..." : "Ulozit konfiguraci"}
+          </button>
+          <button
+            type="button"
+            className="dangerBtn"
+            onClick={clearHistory}
+            disabled={saving || clearing}
+          >
+            {clearing ? "Cistim..." : "Vycistit historii"}
+          </button>
+        </div>
       </section>
     </main>
   );

@@ -141,6 +141,13 @@ button:disabled {
   color: #48617d;
 }
 
+.adminActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .historyTableWrap {
   overflow-x: auto;
 }
@@ -156,12 +163,35 @@ button:disabled {
   border-bottom: 1px solid #dce5ef;
   text-align: left;
   padding: 8px 10px;
-  white-space: nowrap;
+  vertical-align: top;
 }
 
 .historyTable th {
   color: #2c4764;
   background: #f5f9ff;
+}
+
+.runDetails summary {
+  cursor: pointer;
+  color: #0f6bcf;
+}
+
+.runDetailsBody {
+  margin-top: 8px;
+  min-width: 260px;
+  max-width: 520px;
+}
+
+.emailPreview {
+  margin: 8px 0 0;
+  background: #f7fbff;
+  border: 1px solid #d8e6f5;
+  border-radius: 8px;
+  padding: 8px;
+  white-space: pre-wrap;
+  max-height: 220px;
+  overflow: auto;
+  font-size: 12px;
 }
 
 @media (max-width: 700px) {
