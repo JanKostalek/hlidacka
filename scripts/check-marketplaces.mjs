@@ -283,13 +283,14 @@ function buildEmailText(config, results, alreadyDisplayedByWatch = {}) {
     const keywords = (watch.keywords || []).join(", ") || "(zadna)";
     const excluded = (watch.excludeKeywords || []).join(", ") || "(zadna)";
     const sourceList = sources.join(", ") || "(zadny)";
+    const shownCount = (alreadyDisplayedByWatch[watch.id] || []).length;
 
     lines.push(`- ${watch.name || watch.id}`);
     lines.push(`  co hledat: ${watch.query || "(prazdne)"}`);
     lines.push(`  klicova slova: ${keywords}`);
     lines.push(`  vyloucit slova: ${excluded}`);
     lines.push(`  bazary: ${sourceList}`);
-    lines.push(`  vysledek: nove ${newCount}, chyby ${errCount}`);
+    lines.push(`  vysledek: nove ${newCount}, jiz zobrazene ${shownCount}, chyby ${errCount}`);
     lines.push("");
   }
 
@@ -380,6 +381,8 @@ function buildEmailHtml(config, results, alreadyDisplayedByWatch = {}) {
       const keywords = (watch.keywords || []).join(", ") || "(zadna)";
       const excluded = (watch.excludeKeywords || []).join(", ") || "(zadna)";
       const sourceList = sources.join(", ") || "(zadny)";
+      const shownItems = alreadyDisplayedByWatch[watch.id] || [];
+      const shownCount = shownItems.length;
 
       const itemList =
         newItems.length === 0
@@ -402,8 +405,6 @@ function buildEmailHtml(config, results, alreadyDisplayedByWatch = {}) {
                   `<li>${escapeHtml(err.sourceName)}: ${escapeHtml(err.message)}</li>`
               )
               .join("")}</ul>`;
-
-      const shownItems = alreadyDisplayedByWatch[watch.id] || [];
       const shownList =
         shownItems.length === 0
           ? `<div class="muted">Zadne drive zobrazene inzeraty.</div>`
@@ -418,18 +419,34 @@ function buildEmailHtml(config, results, alreadyDisplayedByWatch = {}) {
 
       return `
         <section class="card">
-          <h3>${escapeHtml(watch.name || watch.id)}</h3>
-          <div class="meta"><b>Co hledat:</b> ${escapeHtml(watch.query || "(prazdne)")}</div>
-          <div class="meta"><b>Klicova slova:</b> ${escapeHtml(keywords)}</div>
-          <div class="meta"><b>Vyloucit slova:</b> ${escapeHtml(excluded)}</div>
-          <div class="meta"><b>Bazary:</b> ${escapeHtml(sourceList)}</div>
-          <div class="meta"><b>Vysledek:</b> nove ${newItems.length}, chyby ${errorsForWatch.length}</div>
-          <h4>Nove inzeraty</h4>
-          ${itemList}
-          <h4>Jiz zobrazene inzeraty</h4>
-          ${shownList}
-          <h4>Chyby</h4>
-          ${errorList}
+          <div class="cardHead">
+            <h3>${escapeHtml(watch.name || watch.id)}</h3>
+            <div class="pill">nove ${newItems.length} | jiz zobrazene ${shownCount} | chyby ${errorsForWatch.length}</div>
+          </div>
+
+          <div class="subsection">
+            <h4>Vyhledavani</h4>
+            <div class="meta"><b>Co hledat:</b> ${escapeHtml(watch.query || "(prazdne)")}</div>
+            <div class="meta"><b>Klicova slova:</b> ${escapeHtml(keywords)}</div>
+            <div class="meta"><b>Vyloucit slova:</b> ${escapeHtml(excluded)}</div>
+            <div class="meta"><b>Bazary:</b> ${escapeHtml(sourceList)}</div>
+            <div class="meta"><b>Vysledek:</b> nove ${newItems.length}, jiz zobrazene ${shownCount}, chyby ${errorsForWatch.length}</div>
+          </div>
+
+          <div class="subsection">
+            <h4>Nove inzeraty</h4>
+            ${itemList}
+          </div>
+
+          <div class="subsection">
+            <h4>Jiz zobrazene inzeraty</h4>
+            ${shownList}
+          </div>
+
+          <div class="subsection">
+            <h4>Chyby</h4>
+            ${errorList}
+          </div>
         </section>
       `;
     })
@@ -467,9 +484,12 @@ function buildEmailHtml(config, results, alreadyDisplayedByWatch = {}) {
       </div>
 
       <style>
-        .card { background:white;border:1px solid #dbe5f0;border-radius:12px;padding:14px 14px;margin-bottom:10px; }
-        h3 { margin:0 0 8px;font-size:18px; }
-        h4 { margin:12px 0 6px;font-size:14px; }
+        .card { background:white;border:1px solid #dbe5f0;border-radius:14px;padding:14px 14px;margin-bottom:12px; box-shadow:0 4px 14px rgba(16,32,51,0.04); }
+        .cardHead { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:10px; flex-wrap:wrap; }
+        .pill { background:#edf6ff; border:1px solid #d3e6fa; color:#15406a; border-radius:999px; padding:4px 10px; font-size:12px; }
+        .subsection { background:#f9fcff; border:1px solid #e2edf8; border-radius:10px; padding:10px; margin-top:10px; }
+        h3 { margin:0;font-size:18px; }
+        h4 { margin:0 0 6px;font-size:14px; }
         .meta { font-size:13px; margin:3px 0; }
         .muted { color:#5c748e;font-size:13px; }
         .item-list, .error-list { margin:6px 0 0; padding-left:18px; font-size:13px; }
