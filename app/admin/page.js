@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 function emptyWatch() {
   return {
@@ -17,6 +17,7 @@ export default function AdminPage() {
   const [token, setToken] = useState("");
   const [watches, setWatches] = useState([]);
   const [marketplaces, setMarketplaces] = useState([]);
+  const [notificationEmail, setNotificationEmail] = useState("");
   const [status, setStatus] = useState("Nacitani...");
   const [saving, setSaving] = useState(false);
 
@@ -45,6 +46,7 @@ export default function AdminPage() {
     const data = await res.json();
     setWatches(data.watches || []);
     setMarketplaces(data.marketplaces || []);
+    setNotificationEmail(data.notificationEmail || "");
     setStatus("Konfigurace nactena.");
   }
 
@@ -52,11 +54,6 @@ export default function AdminPage() {
     loadConfig();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  const canSave = useMemo(
-    () => watches.some((watch) => watch.name && watch.query && watch.marketplaces.length > 0),
-    [watches]
-  );
 
   function updateWatch(index, patch) {
     setWatches((prev) => prev.map((item, idx) => (idx === index ? { ...item, ...patch } : item)));
@@ -86,7 +83,7 @@ export default function AdminPage() {
     const res = await fetch("/api/config", {
       method: "PUT",
       headers,
-      body: JSON.stringify({ watches })
+      body: JSON.stringify({ watches, notificationEmail })
     });
 
     if (res.status === 401) {
@@ -104,6 +101,7 @@ export default function AdminPage() {
 
     const data = await res.json();
     setWatches(data.watches || []);
+    setNotificationEmail(data.notificationEmail || "");
     setStatus("Ulozeno.");
     setSaving(false);
   }
@@ -133,6 +131,17 @@ export default function AdminPage() {
           <button type="button" onClick={() => loadConfig(token)}>
             Nacist znovu
           </button>
+        </div>
+        <div className="adminRow">
+          <label htmlFor="email_to">Cilovy e-mail</label>
+          <input
+            id="email_to"
+            type="email"
+            value={notificationEmail}
+            onChange={(e) => setNotificationEmail(e.target.value)}
+            placeholder="kam se posilaji nalezy"
+          />
+          <span className="helpText">Pouzije se pri dalsim behu workflow.</span>
         </div>
         <p className="status">{status}</p>
       </section>
@@ -208,7 +217,7 @@ export default function AdminPage() {
       </section>
 
       <section className="panel">
-        <button type="button" onClick={saveConfig} disabled={!canSave || saving}>
+        <button type="button" onClick={saveConfig} disabled={saving}>
           {saving ? "Ukladam..." : "Ulozit konfiguraci"}
         </button>
       </section>

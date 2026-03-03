@@ -115,6 +115,7 @@ Historie behu se cte z `data/run-history.json` a zobrazuje na hlavni strance.
 - Otevri `/admin`
 - Zadej `ADMIN_TOKEN`
 - Pridavej dotazy:
+  - `Cilovy e-mail` pro notifikace
   - `Nazev dotazu`
   - `Co hledat (text)` pro URL vyhledavani
   - `Klicova slova (CSV)` pro filtrovani vysledku

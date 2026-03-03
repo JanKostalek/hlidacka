@@ -136,6 +136,11 @@ button:disabled {
   color: #35516f;
 }
 
+.helpText {
+  font-size: 13px;
+  color: #48617d;
+}
+
 .historyTableWrap {
   overflow-x: auto;
 }

@@ -1,17 +1,13 @@
 {
+  "notifications": {
+    "emailTo": "jan.kostalek@gmail.com"
+  },
   "watches": [
     {
       "id": "lego-star-wars",
       "name": "LEGO Star Wars",
-      "query": "lego star wars",
-      "keywords": [
-        "lego",
-        "star wars"
-      ],
-      "excludeKeywords": [
-        "rezervace",
-        "prodano"
-      ],
+      "keywords": ["lego", "star wars"],
+      "excludeKeywords": ["rezervace", "prodano"],
       "sources": [
         {
           "id": "sbazar",
@@ -25,11 +21,11 @@
         {
           "id": "bazos",
           "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=lego%20star%20wars",
-          "itemSelector": ".inzerat",
+          "url": "https://deti.bazos.cz/?hledat=lego+star+wars",
+          "itemSelector": ".inzeraty.inzeratyflex",
           "titleSelector": ".nadpis",
           "linkSelector": "a[href]",
-          "priceSelector": ".inzeratcena, .cena"
+          "priceSelector": ".cena"
         }
       ]
     }

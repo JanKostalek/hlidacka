@@ -119,7 +119,7 @@ function configToAdminModel(config) {
   });
 }
 
-function adminModelToConfig(modelWatches) {
+function adminModelToConfig(modelWatches, notificationEmail, existingConfig = {}) {
   const usedIds = new Set();
 
   const watches = (modelWatches || [])
@@ -152,7 +152,16 @@ function adminModelToConfig(modelWatches) {
     })
     .filter(Boolean);
 
-  return { watches };
+  const notifications = {
+    ...(existingConfig.notifications || {}),
+    emailTo: String(notificationEmail || "").trim()
+  };
+
+  return {
+    ...existingConfig,
+    watches,
+    notifications
+  };
 }
 
 function isAuthorized(req) {
@@ -171,7 +180,9 @@ export async function GET(req) {
     const config = await readConfig();
     return Response.json({
       watches: configToAdminModel(config),
-      marketplaces: listSupportedMarketplaces()
+      marketplaces: listSupportedMarketplaces(),
+      notificationEmail:
+        config.notifications?.emailTo || process.env.EMAIL_TO || "jan.kostalek@gmail.com"
     });
   } catch (err) {
     return Response.json(
@@ -188,13 +199,20 @@ export async function PUT(req) {
 
   try {
     const body = await req.json();
-    const config = adminModelToConfig(body.watches || []);
+    const current = await readConfig();
+    const config = adminModelToConfig(
+      body.watches || [],
+      body.notificationEmail,
+      current
+    );
     await writeConfig(config, "web-admin");
 
     return Response.json({
       ok: true,
       watches: configToAdminModel(config),
-      marketplaces: listSupportedMarketplaces()
+      marketplaces: listSupportedMarketplaces(),
+      notificationEmail:
+        config.notifications?.emailTo || process.env.EMAIL_TO || "jan.kostalek@gmail.com"
     });
   } catch (err) {
     return Response.json(

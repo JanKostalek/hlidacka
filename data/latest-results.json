@@ -1,18 +1,11 @@
 {
-  "runAt": "2026-03-03T09:33:54.284Z",
+  "runAt": null,
   "summary": {
-    "totalWatches": 1,
-    "totalSources": 2,
+    "totalWatches": 0,
+    "totalSources": 0,
     "totalNewItems": 0,
-    "errorCount": 1
+    "errorCount": 0
   },
   "newItemsByWatch": [],
-  "errors": [
-    {
-      "watchId": "lego-star-wars",
-      "watchName": "LEGO Star Wars",
-      "sourceName": "Sbazar",
-      "message": "fetch failed"
-    }
-  ]
+  "errors": []
 }

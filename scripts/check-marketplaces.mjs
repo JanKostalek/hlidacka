@@ -221,7 +221,7 @@ function buildEmailText(results) {
   return lines.join("\n");
 }
 
-async function sendEmailNotification(results) {
+async function sendEmailNotification(config, results) {
   if (results.summary.totalNewItems === 0) return;
 
   const host = process.env.SMTP_HOST || "smtp.gmail.com";
@@ -230,7 +230,10 @@ async function sendEmailNotification(results) {
   const user = process.env.SMTP_USER || "hlidacka1@gmail.com";
   const pass = process.env.SMTP_PASS;
   const from = process.env.EMAIL_FROM || "hlidacka1@gmail.com";
-  const to = process.env.EMAIL_TO || "jan.kostalek@gmail.com";
+  const to =
+    config.notifications?.emailTo ||
+    process.env.EMAIL_TO ||
+    "jan.kostalek@gmail.com";
   const enabled = String(process.env.EMAIL_ENABLED || "true") !== "false";
 
   if (!enabled || !pass || !to) return;
@@ -355,7 +358,7 @@ async function main() {
   await writeJson(RUN_HISTORY_PATH, { runs: nextRuns });
   await fs.writeFile(REPORT_PATH, buildReport(results), "utf8");
   await sendDiscordNotification(results);
-  await sendEmailNotification(results);
+  await sendEmailNotification(config, results);
 
   console.log(
     `Done. New items: ${results.summary.totalNewItems}, errors: ${results.summary.errorCount}`
