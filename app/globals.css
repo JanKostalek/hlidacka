@@ -1,5 +1,15 @@
 :root {
   color-scheme: light;
+  --bg-1: #f6fbff;
+  --bg-2: #e9f2ff;
+  --ink-1: #0f172a;
+  --ink-2: #334155;
+  --ink-3: #607089;
+  --line: #d4dfee;
+  --card: rgba(255, 255, 255, 0.72);
+  --accent-a: #2563eb;
+  --accent-b: #0ea5a8;
+  --accent-c: #f59e0b;
 }
 
 * {
@@ -8,44 +18,104 @@
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  background: linear-gradient(180deg, #f7f8fa 0%, #eef2f7 100%);
-  color: #122033;
+  color: var(--ink-1);
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+  background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(14, 165, 168, 0.16) 0%, transparent 60%),
+    radial-gradient(1000px 520px at -10% 5%, rgba(37, 99, 235, 0.14) 0%, transparent 60%),
+    linear-gradient(170deg, var(--bg-1) 0%, var(--bg-2) 100%);
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  font-family: var(--font-heading), "Segoe UI", sans-serif;
+  letter-spacing: -0.02em;
 }
 
 a {
-  color: #0f6bcf;
+  color: #1f4de1;
+  text-underline-offset: 2px;
 }
 
 .page {
-  max-width: 920px;
+  max-width: 1040px;
   margin: 0 auto;
-  padding: 24px 16px 48px;
+  padding: 26px 16px 56px;
   display: grid;
-  gap: 16px;
+  gap: 18px;
 }
 
 .panel {
-  background: #ffffff;
-  border: 1px solid #dbe3ee;
-  border-radius: 14px;
-  padding: 18px;
-  box-shadow: 0 4px 18px rgba(15, 29, 48, 0.05);
+  position: relative;
+  background: var(--card);
+  border: 1px solid rgba(201, 216, 234, 0.85);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow:
+    0 14px 40px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
 }
 
-.panel h1,
-.panel h2,
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.45), transparent 38%);
+}
+
+.panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.panel h1 {
+  font-size: clamp(2rem, 4vw, 2.4rem);
+  margin-bottom: 10px;
+}
+
+.panel h2 {
+  font-size: clamp(1.35rem, 2.6vw, 1.65rem);
+  margin-bottom: 14px;
+}
+
 .panel h3 {
-  margin-top: 0;
+  font-size: 1.08rem;
 }
 
 .stats {
-  margin: 12px 0 0;
-  padding-left: 18px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.stats li {
+  border-radius: 13px;
+  border: 1px solid rgba(191, 208, 229, 0.9);
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.94), rgba(245, 251, 255, 0.94));
+  padding: 11px 12px;
+  color: var(--ink-2);
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .group {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(203, 219, 237, 0.85);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 12px 14px;
+}
+
+.group h3 {
+  margin-bottom: 8px;
 }
 
 .adminHead {
@@ -57,7 +127,7 @@ a {
 
 .adminRow {
   display: grid;
-  grid-template-columns: 120px 1fr auto;
+  grid-template-columns: 130px 1fr auto;
   gap: 10px;
   align-items: center;
 }
@@ -73,6 +143,8 @@ a {
   display: grid;
   gap: 6px;
   font-size: 14px;
+  color: var(--ink-2);
+  font-weight: 600;
 }
 
 .adminRow .helpText {
@@ -80,11 +152,7 @@ a {
   text-align: right;
 }
 
-.adminRowToken input {
-  max-width: 340px;
-  width: 340px;
-}
-
+.adminRowToken input,
 .adminRowEmail input {
   max-width: 340px;
   width: 340px;
@@ -99,31 +167,56 @@ a {
 input {
   width: 100%;
   padding: 10px 11px;
-  border-radius: 10px;
-  border: 1px solid #c6d4e3;
-  background: #ffffff;
+  border-radius: 11px;
+  border: 1px solid #bed0e4;
+  background: rgba(255, 255, 255, 0.93);
+  color: var(--ink-1);
+  font-size: 0.96rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent-a);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.16);
 }
 
 button {
-  border: 1px solid #0f6bcf;
-  color: #0f6bcf;
-  background: #f0f7ff;
-  border-radius: 10px;
-  padding: 9px 12px;
+  border: 1px solid rgba(39, 96, 226, 0.6);
+  color: #fff;
+  background: linear-gradient(125deg, var(--accent-a), #2456dd 55%, #356be9);
+  border-radius: 11px;
+  padding: 9px 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
   cursor: pointer;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+  transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 9px 18px rgba(37, 99, 235, 0.28);
+  filter: saturate(1.05);
+}
+
+button:active {
+  transform: translateY(0);
 }
 
 button:disabled {
-  opacity: 0.45;
+  opacity: 0.5;
   cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 .watchCard {
-  border: 1px solid #d8e2ef;
-  border-radius: 12px;
-  padding: 12px;
+  border: 1px solid rgba(194, 210, 229, 0.9);
+  border-radius: 14px;
+  padding: 13px;
   margin-bottom: 10px;
-  background: #fbfdff;
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.92), rgba(243, 250, 255, 0.92));
 }
 
 .marketplaces {
@@ -135,9 +228,13 @@ button:disabled {
 }
 
 .checkboxLabel {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 7px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(187, 205, 227, 0.9);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .checkboxLabel input {
@@ -147,19 +244,25 @@ button:disabled {
 
 .dangerBtn {
   margin-top: 12px;
-  border-color: #c23a3a;
-  color: #c23a3a;
-  background: #fff4f4;
+  border-color: rgba(219, 44, 77, 0.45);
+  color: #9f1239;
+  background: linear-gradient(135deg, #fff4f7, #ffe9ef);
+  box-shadow: none;
+}
+
+.dangerBtn:hover {
+  box-shadow: 0 6px 12px rgba(219, 44, 77, 0.16);
 }
 
 .status {
-  margin: 8px 0 0;
-  color: #35516f;
+  margin: 10px 0 0;
+  color: #0f355f;
+  font-weight: 600;
 }
 
 .helpText {
   font-size: 13px;
-  color: #48617d;
+  color: var(--ink-3);
 }
 
 .adminActions {
@@ -171,30 +274,45 @@ button:disabled {
 
 .historyTableWrap {
   overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(201, 217, 236, 0.9);
 }
 
 .historyTable {
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
+  background: rgba(255, 255, 255, 0.88);
 }
 
 .historyTable th,
 .historyTable td {
-  border-bottom: 1px solid #dce5ef;
+  border-bottom: 1px solid rgba(210, 223, 240, 0.85);
   text-align: left;
-  padding: 8px 10px;
+  padding: 9px 10px;
   vertical-align: top;
 }
 
 .historyTable th {
-  color: #2c4764;
-  background: #f5f9ff;
+  color: #1f3653;
+  background: linear-gradient(180deg, rgba(239, 248, 255, 0.95), rgba(231, 242, 255, 0.95));
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.historyTable tbody tr:nth-child(even) {
+  background: rgba(246, 251, 255, 0.8);
+}
+
+.historyTable tbody tr:hover {
+  background: rgba(230, 242, 255, 0.78);
 }
 
 .runDetails summary {
   cursor: pointer;
-  color: #0f6bcf;
+  color: #1e4fd5;
+  font-weight: 700;
 }
 
 .runDetailsBody {
@@ -204,15 +322,15 @@ button:disabled {
 }
 
 .historyLoadMore {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .emailPreview {
   margin: 8px 0 0;
-  background: #f7fbff;
-  border: 1px solid #d8e6f5;
-  border-radius: 8px;
-  padding: 8px;
+  background: rgba(246, 252, 255, 0.92);
+  border: 1px solid rgba(202, 221, 241, 0.9);
+  border-radius: 10px;
+  padding: 9px;
   white-space: pre-wrap;
   max-height: 220px;
   overflow: auto;
@@ -220,13 +338,56 @@ button:disabled {
 }
 
 .emailPreview a {
-  color: #0f6bcf;
+  color: #1e4fd5;
   text-decoration: underline;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page > .panel {
+  animation: riseIn 400ms ease both;
+}
+
+.page > .panel:nth-child(2) {
+  animation-delay: 70ms;
+}
+
+.page > .panel:nth-child(3) {
+  animation-delay: 130ms;
+}
+
+.page > .panel:nth-child(4) {
+  animation-delay: 190ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page > .panel {
+    animation: none;
+  }
+}
+
+@media (max-width: 920px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 700px) {
   .page {
     padding: 14px 10px 30px;
+  }
+
+  .panel {
+    padding: 16px;
   }
 
   .adminGrid {
@@ -247,5 +408,9 @@ button:disabled {
   .adminRowNumber .numberInput {
     max-width: 100%;
     width: 100%;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
   }
 }
