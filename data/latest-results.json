@@ -1,11 +1,155 @@
 {
-  "runAt": null,
+  "runAt": "2026-03-03T09:26:16.291Z",
   "summary": {
-    "totalWatches": 0,
-    "totalSources": 0,
-    "totalNewItems": 0,
-    "errorCount": 0
+    "totalWatches": 1,
+    "totalSources": 2,
+    "totalNewItems": 13,
+    "errorCount": 1
   },
-  "newItemsByWatch": [],
-  "errors": []
+  "newItemsByWatch": [
+    {
+      "watchId": "lego-star-wars",
+      "watchName": "LEGO Star Wars",
+      "items": [
+        {
+          "watchId": "lego-star-wars",
+          "watchName": "LEGO Star Wars",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "LEGO STAR WARS 75042",
+          "price": "",
+          "link": "https://deti.bazos.cz/inzerat/215272080/lego-star-wars-75042.php",
+          "foundAt": "2026-03-03T09:26:16.291Z"
+        },
+        {
+          "watchId": "lego-star-wars",
+          "watchName": "LEGO Star Wars",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "LEGO STAR WARS 75042",
+          "price": "",
+          "link": "https://deti.bazos.cz/inzerat/215272478/lego-star-wars-75042.php",
+          "foundAt": "2026-03-03T09:26:16.291Z"
+        },
+        {
+          "watchId": "lego-star-wars",
+          "watchName": "LEGO Star Wars",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "LEGO Star Wars 75371 Chewbacca – NOVÉ, ZAPEČETĚNÉ",
+          "price": "",
+          "link": "https://deti.bazos.cz/inzerat/215252063/lego-star-wars-75371-chewbacca-nove-zapecetene.php",
+          "foundAt": "2026-03-03T09:26:16.291Z"
+        },
+        {
+          "watchId": "lego-star-wars",
+          "watchName": "LEGO Star Wars",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "LEGO Star Wars Razor Crest 75292",
+          "price": "",
+          "link": "https://deti.bazos.cz/inzerat/215724889/lego-star-wars-razor-crest-75292.php",
+          "foundAt": "2026-03-03T09:26:16.291Z"
+        },
+        {
+          "watchId": "lego-star-wars",
+          "watchName": "LEGO Star Wars",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Lego star wars X wing 7140 rok 1999",
+          "price": "",
+          "link": "https://deti.bazos.cz/inzerat/215718508/lego-star-wars-x-wing-7140-rok-1999.php",
+          "foundAt": "2026-03-03T09:26:16.291Z"
+        },
+        {
+          "watchId": "lego-star-wars",
+          "watchName": "LEGO Star Wars",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "LEGO® Star Wars™ 75336 Inkvizitorská transportní loď Scythe",
+          "price": "",
+          "link": "https://deti.bazos.cz/inzerat/215715937/lego-star-wars-75336-inkvizitorska-transportni-lod-scythe.php",
+          "foundAt": "2026-03-03T09:26:16.291Z"
+        },
+        {
+          "watchId": "lego-star-wars",
+          "watchName": "LEGO Star Wars",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "LEGO® BrickHeadz™ Star Wars™ 40623 Hrdinové bitvy o planetu",
+          "price": "",
+          "link": "https://deti.bazos.cz/inzerat/215715935/lego-brickheadz-star-wars-40623-hrdinove-bitvy-o-planetu.php",
+          "foundAt": "2026-03-03T09:26:16.291Z"
+        },
+        {
+          "watchId": "lego-star-wars",
+          "watchName": "LEGO Star Wars",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Lego Star Wars 75387 + 40765 + 30708",
+          "price": "",
+          "link": "https://deti.bazos.cz/inzerat/215714612/lego-star-wars-75387-40765-30708.php",
+          "foundAt": "2026-03-03T09:26:16.291Z"
+        },
+        {
+          "watchId": "lego-star-wars",
+          "watchName": "LEGO Star Wars",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Nabízím figurky Lego Star wars NOVÉ",
+          "price": "",
+          "link": "https://deti.bazos.cz/inzerat/215714292/nabizim-figurky-lego-star-wars-nove.php",
+          "foundAt": "2026-03-03T09:26:16.291Z"
+        },
+        {
+          "watchId": "lego-star-wars",
+          "watchName": "LEGO Star Wars",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "LEGO Star Wars 75380 Závod kluzáků v Mos Espa – diorama",
+          "price": "",
+          "link": "https://deti.bazos.cz/inzerat/215708596/lego-star-wars-75380-zavod-kluzaku-v-mos-espa-diorama.php",
+          "foundAt": "2026-03-03T09:26:16.291Z"
+        },
+        {
+          "watchId": "lego-star-wars",
+          "watchName": "LEGO Star Wars",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Lego nové star wars.",
+          "price": "",
+          "link": "https://deti.bazos.cz/inzerat/215705515/lego-nove-star-wars.php",
+          "foundAt": "2026-03-03T09:26:16.291Z"
+        },
+        {
+          "watchId": "lego-star-wars",
+          "watchName": "LEGO Star Wars",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "LEGO Star Wars 40431 BB-8",
+          "price": "",
+          "link": "https://deti.bazos.cz/inzerat/215704757/lego-star-wars-40431-bb-8.php",
+          "foundAt": "2026-03-03T09:26:16.291Z"
+        },
+        {
+          "watchId": "lego-star-wars",
+          "watchName": "LEGO Star Wars",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "LEGO Star Wars 40391 Stormtrooper",
+          "price": "",
+          "link": "https://deti.bazos.cz/inzerat/215704744/lego-star-wars-40391-stormtrooper.php",
+          "foundAt": "2026-03-03T09:26:16.291Z"
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "watchId": "lego-star-wars",
+      "watchName": "LEGO Star Wars",
+      "sourceName": "Sbazar",
+      "message": "fetch failed"
+    }
+  ]
 }
