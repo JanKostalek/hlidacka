@@ -164,7 +164,12 @@ async function fetchHtml(url) {
       urlsToTry.push(
         `${parsed.protocol}//${parsed.host}/hledej/${encodeURIComponent(rawQuery.toLowerCase())}`
       );
-      urlsToTry.push(`${parsed.protocol}//${parsed.host}/search?query=${encodeURIComponent(rawQuery)}`);
+      urlsToTry.push(`${parsed.protocol}//${parsed.host}/?q=${encodeURIComponent(rawQuery)}`);
+    } else if (parsed.hostname.includes("sbazar.cz") && parsed.searchParams.get("q")) {
+      const rawQuery = parsed.searchParams.get("q") || "";
+      urlsToTry.push(
+        `${parsed.protocol}//${parsed.host}/hledej/${encodeURIComponent(rawQuery.toLowerCase())}`
+      );
     }
   } catch {
     // Keep the original URL only.
@@ -187,10 +192,7 @@ async function fetchHtml(url) {
         });
 
         if (!res.ok) {
-          const bodyPreview = (await res.text()).slice(0, 180).replace(/\s+/g, " ").trim();
-          throw new Error(
-            `HTTP ${res.status} (${candidateUrl})${bodyPreview ? ` | ${bodyPreview}` : ""}`
-          );
+          throw new Error(`HTTP ${res.status} (${candidateUrl})`);
         }
 
         return await res.text();
