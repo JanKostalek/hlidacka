@@ -196,21 +196,33 @@ async function sendDiscordNotification(results) {
 
 function buildEmailText(results) {
   const lines = [];
-  lines.push(`Hlidacka bazaru - nove inzeraty (${results.summary.totalNewItems})`);
+  lines.push(`Hlidacka bazaru - vysledek behu`);
   lines.push(`Cas behu: ${results.runAt}`);
+  lines.push(`Nove inzeraty: ${results.summary.totalNewItems}`);
+  lines.push(`Chyby: ${results.summary.errorCount}`);
   lines.push("");
 
-  for (const group of results.newItemsByWatch) {
-    lines.push(`${group.watchName} (${group.items.length})`);
-    for (const item of group.items) {
-      const pricePart = item.price ? ` | ${item.price}` : "";
-      lines.push(`- ${item.title}${pricePart} | ${item.sourceName}`);
-      lines.push(`  ${item.link}`);
-    }
+  if (results.summary.totalNewItems === 0) {
+    lines.push("Zadne nove inzeraty.");
     lines.push("");
+  } else {
+    lines.push("Nove inzeraty:");
+    lines.push("");
+    for (const group of results.newItemsByWatch) {
+      lines.push(`${group.watchName} (${group.items.length})`);
+      for (const item of group.items) {
+        const pricePart = item.price ? ` | ${item.price}` : "";
+        lines.push(`- ${item.title}${pricePart} | ${item.sourceName}`);
+        lines.push(`  ${item.link}`);
+      }
+      lines.push("");
+    }
   }
 
-  if (results.errors.length > 0) {
+  if (results.errors.length === 0) {
+    lines.push("Chyby: zadne");
+    lines.push("");
+  } else {
     lines.push("Chyby:");
     for (const err of results.errors) {
       lines.push(`- ${err.watchName} / ${err.sourceName}: ${err.message}`);
@@ -222,8 +234,6 @@ function buildEmailText(results) {
 }
 
 async function sendEmailNotification(config, results) {
-  if (results.summary.totalNewItems === 0) return;
-
   const host = process.env.SMTP_HOST || "smtp.gmail.com";
   const port = Number(process.env.SMTP_PORT || 465);
   const secure = String(process.env.SMTP_SECURE || "true") !== "false";
@@ -248,7 +258,10 @@ async function sendEmailNotification(config, results) {
   await transporter.sendMail({
     from,
     to,
-    subject: `Hlidacka: ${results.summary.totalNewItems} novych inzeratu`,
+    subject:
+      results.summary.totalNewItems > 0
+        ? `Hlidacka: ${results.summary.totalNewItems} novych inzeratu`
+        : "Hlidacka: zadne nove inzeraty",
     text: buildEmailText(results)
   });
 }
