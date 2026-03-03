@@ -738,7 +738,7 @@ async function main() {
           matchedForSource += 1;
 
           const key = makeKey(
-            sourceForRun.id || sourceForRun.name || sourceForRun.url,
+            `${watch.id}|${sourceForRun.id || sourceForRun.name || sourceForRun.url}`,
             candidate.link,
             candidate.title
           );
