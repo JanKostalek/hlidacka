@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "runAt": "2026-03-03T09:33:54.284Z",
+      "summary": {
+        "totalWatches": 1,
+        "totalSources": 2,
+        "totalNewItems": 0,
+        "errorCount": 1
+      },
+      "watchStats": [
+        {
+          "watchId": "lego-star-wars",
+          "watchName": "LEGO Star Wars",
+          "query": "",
+          "keywords": [
+            "lego",
+            "star wars"
+          ],
+          "excludeKeywords": [
+            "rezervace",
+            "prodano"
+          ],
+          "sourcesChecked": 2,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 1
+        }
+      ]
+    },
+    {
       "runAt": "2026-03-03T09:26:16.291Z",
       "summary": {
         "totalWatches": 1,
