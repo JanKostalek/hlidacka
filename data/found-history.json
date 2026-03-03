@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-03-03T12:56:32.226Z",
+  "updatedAt": "2026-03-03T13:00:27.690Z",
   "byWatch": {
     "garmin": [
+      {
+        "watchId": "garmin",
+        "watchName": "Garmin",
+        "sourceName": "Bazos",
+        "title": "Hodinky Garmin Fénix 7xpro Sapphire Solar",
+        "price": "11 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215600138/hodinky-garmin-fenix-7xpro-sapphire-solar.php",
+        "firstSeenAt": "2026-03-03T13:00:27.690Z"
+      },
+      {
+        "watchId": "garmin",
+        "watchName": "Garmin",
+        "sourceName": "Bazos",
+        "title": "Garmin Instinct 3 Tactical Solar",
+        "price": "6 500 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215684982/garmin-instinct-3-tactical-solar.php",
+        "firstSeenAt": "2026-03-03T13:00:27.690Z"
+      },
       {
         "watchId": "garmin",
         "watchName": "Garmin",
@@ -314,6 +332,15 @@
       }
     ],
     "lego": [
+      {
+        "watchId": "lego",
+        "watchName": "Lego",
+        "sourceName": "Bazos",
+        "title": "Lego pytlíkové sety (nabízené sety v textu a viz. foto)",
+        "price": "V textu",
+        "link": "https://deti.bazos.cz/inzerat/215720711/lego-ninjago-30536-cerveny-bourak.php",
+        "firstSeenAt": "2026-03-03T13:00:27.690Z"
+      },
       {
         "watchId": "lego",
         "watchName": "Lego",
