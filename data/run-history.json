@@ -1,6 +1,47 @@
 {
   "runs": [
     {
+      "runAt": "2026-03-03T12:51:08.165Z",
+      "summary": {
+        "totalWatches": 2,
+        "totalSources": 4,
+        "totalNewItems": 0,
+        "errorCount": 0
+      },
+      "watchStats": [
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "query": "Garmin",
+          "keywords": [
+            "Garmin",
+            "8"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "query": "Lego ninja",
+          "keywords": [
+            "lego",
+            "ninja"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        }
+      ],
+      "emailSubject": "Hlidacka (Garmin +1): zadne nove inzeraty",
+      "emailText": "Hlidacka bazaru - Výsledek vyhledávání\nČas vyhledávání: 2026-03-03T12:51:08.165Z\nNove inzeraty: 0\nChyby: 0\n\nAktivni dotazy:\n\n- Garmin\n  co hledat: Garmin\n  klicova slova: Garmin, 8\n  vyloucit slova: (zadna)\n  bazary: Bazos, Sbazar\n  vysledek: nove 0, jiz zobrazene 2, chyby 0\n\n- Lego\n  co hledat: Lego ninja\n  klicova slova: lego, ninja\n  vyloucit slova: (zadna)\n  bazary: Bazos, Sbazar\n  vysledek: nove 0, jiz zobrazene 12, chyby 0\n\nZadne nove inzeraty.\n\nJiz zobrazene inzeraty:\n\nGarmin (2)\n- Garmin Fenix 8 SOLAR 51 mm, Sapphire Carbon Gray | 18 000 Kč | Bazos\n  https://sport.bazos.cz/inzerat/215631219/garmin-fenix-8-solar-51-mm-sapphire-carbon-gray.php\n- Echolot Garmin ech. ultra 122sv a Live sonda Panoptix PS30 | 68 000 Kč | Bazos\n  https://elektro.bazos.cz/inzerat/214212117/garmin-echomap-ultra-122sv-a-live-sonda-panoptix-ps30.php\n\nLego (12)\n- LEGO NINJAGO 71795 Chrám dračích energetických jader | 2 600 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215685283/lego-ninjago-71795-chram-dracich-energetickych-jader.php\n- LEGO Ninjago 71822 Zdrojový drak pohybu | 3 100 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215686463/lego-ninjago-71822-zdrojovy-drak-pohybu.php\n- LEGO Ninjago 30591 Titanový minirobot | 100 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215704726/lego-ninjago-30591-titanovy-minirobot.php\n- Ninjago lego nové | 109 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215705528/ninjago-lego-nove.php\n- Lego Ninjago Spinner 2ks 9579 s návody | 149 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215706461/lego-ninjago-spinner-2ks-9579-s-navody.php\n- lego ninjago 70638 | 450 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215711760/lego-ninjago-70638.php\n- Lego Ninjago Lord Garmadon njo078 Super Stav | 399 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215728022/lego-ninjago-lord-garmadon-njo078-super-stav.php\n- Zlatý Robot Lego Ninjago 70505 | 990 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215728260/zlaty-robot-lego-ninjago-70505.php\n- Lego ninjago 70590 Airjitzu Battle Grounds | 8 500 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215729603/lego-ninjago-70590-airjitzu-battle-grounds.php\n- Lego ninjago set 70736 Morro Dragon | 5 499 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215729707/lego-ninjago-set-70736-morro-dragon.php\n- Lego Ninjago sety Zane DX a Cole DX | 2 500 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215729807/lego-ninjago-sety-zane-dx-a-cole-dx.php\n- LEGO Ninja Turtles 79121 nebo 79115 dle fotek a popisu | 2 000 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215730758/lego-ninja-turtles-79121-nebo-79115-dle-fotek-a-popisu.php\n\nChyby: zadne\n"
+    },
+    {
       "runAt": "2026-03-03T12:41:19.461Z",
       "summary": {
         "totalWatches": 4,
