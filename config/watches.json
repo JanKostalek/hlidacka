@@ -44,6 +44,26 @@
           "priceSelector": ".inzeratycena, .inzeratcena, .cena"
         }
       ]
+    },
+    {
+      "id": "iphone-16",
+      "name": "iphone 16",
+      "query": "Iphone 16",
+      "keywords": [
+        "Iphone 16"
+      ],
+      "excludeKeywords": [],
+      "sources": [
+        {
+          "id": "bazos",
+          "name": "Bazos",
+          "url": "https://www.bazos.cz/search.php?hledat=Iphone%2016",
+          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
+          "titleSelector": ".nadpis",
+          "linkSelector": "a[href]",
+          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
+        }
+      ]
     }
   ]
 }
