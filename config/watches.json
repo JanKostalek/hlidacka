@@ -23,6 +23,26 @@
           "priceSelector": ".inzeratcena, .cena"
         }
       ]
+    },
+    {
+      "id": "iphone",
+      "name": "Iphone",
+      "query": "iphone 13",
+      "keywords": [
+        "iphone"
+      ],
+      "excludeKeywords": [],
+      "sources": [
+        {
+          "id": "bazos",
+          "name": "Bazos",
+          "url": "https://www.bazos.cz/search.php?hledat=iphone%2013",
+          "itemSelector": ".inzerat",
+          "titleSelector": ".nadpis",
+          "linkSelector": "a[href]",
+          "priceSelector": ".inzeratcena, .cena"
+        }
+      ]
     }
   ]
 }
