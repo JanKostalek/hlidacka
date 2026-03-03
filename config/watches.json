@@ -6,7 +6,7 @@
     {
       "id": "garmin",
       "name": "Garmin",
-      "query": "Garming",
+      "query": "Garmin",
       "keywords": [
         "Garmin 8"
       ],
@@ -15,7 +15,7 @@
         {
           "id": "bazos",
           "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=Garming",
+          "url": "https://www.bazos.cz/search.php?hledat=Garmin",
           "itemSelector": ".inzerat",
           "titleSelector": ".nadpis",
           "linkSelector": "a[href]",
