@@ -81,11 +81,13 @@ a {
 }
 
 .adminRowToken input {
-  max-width: 620px;
+  max-width: 340px;
+  width: 340px;
 }
 
 .adminRowEmail input {
-  max-width: 510px;
+  max-width: 340px;
+  width: 340px;
 }
 
 .adminRowNumber .numberInput {
