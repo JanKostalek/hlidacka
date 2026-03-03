@@ -1,6 +1,32 @@
 {
   "runs": [
     {
+      "runAt": "2026-03-03T10:29:38.848Z",
+      "summary": {
+        "totalWatches": 1,
+        "totalSources": 2,
+        "totalNewItems": 0,
+        "errorCount": 1
+      },
+      "watchStats": [
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "query": "Garmin",
+          "keywords": [
+            "Garmin",
+            "8",
+            "Fenix"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 1
+        }
+      ]
+    },
+    {
       "runAt": "2026-03-03T10:27:36.372Z",
       "summary": {
         "totalWatches": 1,
