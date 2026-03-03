@@ -4,15 +4,20 @@
   },
   "watches": [
     {
-      "id": "lego-star-wars",
-      "name": "LEGO Star Wars",
-      "keywords": ["lego", "star wars"],
-      "excludeKeywords": ["rezervace", "prodano"],
+      "id": "garmin",
+      "name": "Garmin",
+      "query": "Garmin",
+      "keywords": [
+        "Garmin",
+        "Fenix",
+        "8"
+      ],
+      "excludeKeywords": [],
       "sources": [
         {
           "id": "sbazar",
           "name": "Sbazar",
-          "url": "https://www.sbazar.cz/hledej/lego%20star%20wars",
+          "url": "https://www.sbazar.cz/?q=Garmin",
           "itemSelector": "article",
           "titleSelector": "h3, h2, a",
           "linkSelector": "a[href]",
@@ -21,11 +26,11 @@
         {
           "id": "bazos",
           "name": "Bazos",
-          "url": "https://deti.bazos.cz/?hledat=lego+star+wars",
-          "itemSelector": ".inzeraty.inzeratyflex",
+          "url": "https://www.bazos.cz/search.php?hledat=Garmin",
+          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
           "titleSelector": ".nadpis",
           "linkSelector": "a[href]",
-          "priceSelector": ".cena"
+          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
         }
       ]
     }
