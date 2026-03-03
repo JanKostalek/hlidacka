@@ -1,6 +1,74 @@
 {
   "runs": [
     {
+      "runAt": "2026-03-03T12:41:19.461Z",
+      "summary": {
+        "totalWatches": 4,
+        "totalSources": 6,
+        "totalNewItems": 0,
+        "errorCount": 0
+      },
+      "watchStats": [
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "query": "Garmin",
+          "keywords": [
+            "Garmin",
+            "8"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "iphone",
+          "watchName": "Iphone",
+          "query": "iphone 13",
+          "keywords": [
+            "iphone",
+            "13"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 1,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "iphone-16",
+          "watchName": "iphone 16",
+          "query": "Iphone 16",
+          "keywords": [
+            "Iphone 16"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 1,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "lego",
+          "watchName": "Lego",
+          "query": "Lego ninja",
+          "keywords": [
+            "lego",
+            "ninja"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        }
+      ],
+      "emailSubject": "Hlidacka (Garmin +3): zadne nove inzeraty",
+      "emailText": "Hlidacka bazaru - Výsledek vyhledávání\nČas vyhledávání: 2026-03-03T12:41:19.461Z\nNove inzeraty: 0\nChyby: 0\n\nAktivni dotazy:\n\n- Garmin\n  co hledat: Garmin\n  klicova slova: Garmin, 8\n  vyloucit slova: (zadna)\n  bazary: Bazos, Sbazar\n  vysledek: nove 0, jiz zobrazene 2, chyby 0\n\n- Iphone\n  co hledat: iphone 13\n  klicova slova: iphone, 13\n  vyloucit slova: (zadna)\n  bazary: Bazos\n  vysledek: nove 0, jiz zobrazene 17, chyby 0\n\n- iphone 16\n  co hledat: Iphone 16\n  klicova slova: Iphone 16\n  vyloucit slova: (zadna)\n  bazary: Bazos\n  vysledek: nove 0, jiz zobrazene 15, chyby 0\n\n- Lego\n  co hledat: Lego ninja\n  klicova slova: lego, ninja\n  vyloucit slova: (zadna)\n  bazary: Bazos, Sbazar\n  vysledek: nove 0, jiz zobrazene 12, chyby 0\n\nZadne nove inzeraty.\n\nJiz zobrazene inzeraty:\n\nGarmin (2)\n- Garmin Fenix 8 SOLAR 51 mm, Sapphire Carbon Gray | 18 000 Kč | Bazos\n  https://sport.bazos.cz/inzerat/215631219/garmin-fenix-8-solar-51-mm-sapphire-carbon-gray.php\n- Echolot Garmin ech. ultra 122sv a Live sonda Panoptix PS30 | 68 000 Kč | Bazos\n  https://elektro.bazos.cz/inzerat/214212117/garmin-echomap-ultra-122sv-a-live-sonda-panoptix-ps30.php\n\nIphone (17)\n- APPLE IPHONE 13 128GB ZELENÝ, ZÁRUKA | 6 499 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215731922/apple-iphone-13-128gb-zeleny-zaruka.php\n- iPhone 13 PRO 128GB,Sierra Blue.Stav 10/10 | 7 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215461803/iphone-13-pro-128gbsierra-blue-stav-1010.php\n- IPhone 13 PRO 256GB horsky modrý | 10 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215507804/iphone-13-pro-256gb-horsky-modry.php\n- iPhone 13 modrý | 5 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/214244795/iphone-13-modry.php\n- iPhone 13 128GB s fakturou | 6 490 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215563957/iphone-13-128gb-s-fakturou.php\n- Prodám iPhone 13 Pro 128 gb | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/214102405/prodam-iphone-13-pro-128-gb.php\n- Apple iPhone 13 Pro Max Gold 256GB + příslušenství | 10 900 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215636349/apple-iphone-13-pro-max-gold-256gb-prislusenstvi.php\n- iPhone 13 128 gb | zelený | 6 900 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215640065/iphone-13-128-gb-zeleny.php\n- Apple Iphone 13 Pro 256GB 87% | 10 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215649964/apple-iphone-13-pro-256gb-87.php\n- Apple iPhone 13 Pro Max, 256gb, vesmírně šedá | 10 999 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215597387/apple-iphone-13-pro-max-256gb-vesmirne-seda.php\n- IPhone 13 256 GB | 6 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215679597/iphone-13-256-gb.php\n- Apple iPhone 13, 128GB, 90% BAT | 5 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215693820/apple-iphone-13-128gb-90-bat.php\n- iPhone 13 mini 128GB, modrý (rok záruka) | 5 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215676535/iphone-13-mini-128gb-modry-rok-zaruka.php\n- iPhone 13 mini 128GB, modrý, 99% bat., pouze na eSIM | 4 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215676685/iphone-13-mini-128gb-modry-99-bat-pouze-na-esim.php\n- iPhone 13 pro 128 GB | 6 490 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215672051/iphone-13-pro-128-gb.php\n- Apple iPhone 13 Pro 256GB černý - TOP STAV | 7 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215729786/apple-iphone-13-pro-256gb-cerny-top-stav.php\n- APPLE IPHONE 13 MINI 128 GB BÍLÝ,12 MĚS. ZÁRUKA,VELMI HEZKÝ | 6 490 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215541959/apple-iphone-13-mini-128-gb-bily12-mes-zarukavelmi-hezky.php\n\niphone 16 (15)\n- APPLE IPHONE 16 128GB RŮŽOVÝ, ZÁRUKA, 100% BATERIE | 13 999 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215732752/apple-iphone-16-128gb-ruzovy-zaruka-100-baterie.php\n- ZÁNOVNÍ APPLE IPHONE 16 PRO MAX 256GB ZLATÝ,100% BATERIE | 19 999 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215733034/zanovni-apple-iphone-16-pro-max-256gb-zlaty100-baterie.php\n- APPLE IPHONE 16 PRO 128GB PŘÍRODNÍ TITAN,ZÁRUKA,100% BATERIE | 17 999 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215733239/apple-iphone-16-pro-128gb-prirodni-titanzaruka100-baterie.php\n- iPhone 16 Pro 512GB, černý, eSiM, 95% bat. (rok záruka) | 20 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215671787/iphone-16-pro-512gb-cerny-esim-95-bat-rok-zaruka.php\n- iPhone 16 Pro 512GB, pouštní Titan, eSIM (rok záruka) | 19 900 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215672072/iphone-16-pro-512gb-poustni-titan-esim-rok-zaruka.php\n- iPhone 16 Pro 128GB, desert titanium, eSIM (rok záruka) | 16 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215672633/iphone-16-pro-128gb-desert-titanium-esim-rok-zaruka.php\n- iPhone 16 Pro 256GB, bílý Titan, eSIM (rok záruka) | 19 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215672860/iphone-16-pro-256gb-bily-titan-esim-rok-zaruka.php\n- iPhone 16 Pro 256 GB Natural Titanium + MagSafe | 19 990 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215608313/iphone-16-pro-256-gb-natural-titanium-magsafe.php\n- Prodám nepoužitý IPhone 16 Pro, 512GB (white titanum) | 21 900 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215716574/prodam-nepouzity-iphone-16-pro-512gb-white-titanum.php\n- Apple iPhone 16 pro 256gb záruka 21 měsíců. | 19 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215719884/apple-iphone-16-pro-256gb-zaruka-21-mesicu.php\n- Apple iPhone 16 Pro Max 256 GB. | 20 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215542513/apple-iphone-16-pro-max-256-gb.php\n- Apple iPhone 16 – černá – 128 GB – NOVÝ – 15 900 | 15 900 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215499330/apple-iphone-16-cerna-128-gb-novy-19-900.php\n- iPhone 16e 128gb black. Baterie 100%. Záruka 6 měsíců | 8 800 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215475278/iphone-16e-128gb-black-baterie-100-zaruka-6-mesicu.php\n- IPhone 16e | 9 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215626372/iphone-16e.php\n- iPhone 16 Plus 128GB, STAV NOVÉHO, Baterie 100% | 15 999 Kč | Bazos\n  https://pc.bazos.cz/inzerat/215697139/ipad-pro-129-m2-6gen-128gb-wifi-zanovni.php\n\nLego (12)\n- LEGO NINJAGO 71795 Chrám dračích energetických jader | 2 600 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215685283/lego-ninjago-71795-chram-dracich-energetickych-jader.php\n- LEGO Ninjago 71822 Zdrojový drak pohybu | 3 100 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215686463/lego-ninjago-71822-zdrojovy-drak-pohybu.php\n- LEGO Ninjago 30591 Titanový minirobot | 100 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215704726/lego-ninjago-30591-titanovy-minirobot.php\n- Ninjago lego nové | 109 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215705528/ninjago-lego-nove.php\n- Lego Ninjago Spinner 2ks 9579 s návody | 149 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215706461/lego-ninjago-spinner-2ks-9579-s-navody.php\n- lego ninjago 70638 | 450 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215711760/lego-ninjago-70638.php\n- Lego Ninjago Lord Garmadon njo078 Super Stav | 399 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215728022/lego-ninjago-lord-garmadon-njo078-super-stav.php\n- Zlatý Robot Lego Ninjago 70505 | 990 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215728260/zlaty-robot-lego-ninjago-70505.php\n- Lego ninjago 70590 Airjitzu Battle Grounds | 8 500 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215729603/lego-ninjago-70590-airjitzu-battle-grounds.php\n- Lego ninjago set 70736 Morro Dragon | 5 499 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215729707/lego-ninjago-set-70736-morro-dragon.php\n- Lego Ninjago sety Zane DX a Cole DX | 2 500 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215729807/lego-ninjago-sety-zane-dx-a-cole-dx.php\n- LEGO Ninja Turtles 79121 nebo 79115 dle fotek a popisu | 2 000 Kč | Bazos\n  https://deti.bazos.cz/inzerat/215730758/lego-ninja-turtles-79121-nebo-79115-dle-fotek-a-popisu.php\n\nChyby: zadne\n"
+    },
+    {
       "runAt": "2026-03-03T12:35:52.525Z",
       "summary": {
         "totalWatches": 4,

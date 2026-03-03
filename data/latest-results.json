@@ -1,24 +1,11 @@
 {
-  "runAt": "2026-03-03T12:35:52.525Z",
+  "runAt": "2026-03-03T12:41:19.461Z",
   "summary": {
     "totalWatches": 4,
     "totalSources": 6,
     "totalNewItems": 0,
-    "errorCount": 2
+    "errorCount": 0
   },
   "newItemsByWatch": [],
-  "errors": [
-    {
-      "watchId": "garmin",
-      "watchName": "Garmin",
-      "sourceName": "Sbazar",
-      "message": "Fetch failed (https://www.sbazar.cz/hledej/garmin): HTTP 404 (https://www.sbazar.cz/search?query=garmin) | <!DOCTYPE html><html lang=\"cs\" class=\"scroll-pt-mobile-header md:scroll-pt-desktop-header\" data-astro-transition-scope=\"astro-smooz4hq-1\"> <head><meta name=\"sentry-trace\" content=\""
-    },
-    {
-      "watchId": "lego",
-      "watchName": "Lego",
-      "sourceName": "Sbazar",
-      "message": "Fetch failed (https://www.sbazar.cz/hledej/lego%20ninja): HTTP 404 (https://www.sbazar.cz/search?query=lego%20ninja) | <!DOCTYPE html><html lang=\"cs\" class=\"scroll-pt-mobile-header md:scroll-pt-desktop-header\" data-astro-transition-scope=\"astro-smooz4hq-1\"> <head><meta name=\"sentry-trace\" content=\""
-    }
-  ]
+  "errors": []
 }
