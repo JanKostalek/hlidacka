@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-03-03T10:06:52.795Z",
+  "runAt": "2026-03-03T10:13:25.491Z",
   "summary": {
     "totalWatches": 1,
     "totalSources": 2,
@@ -10,7 +10,7 @@
   "errors": [
     {
       "watchId": "garmin",
-      "watchName": "garmin",
+      "watchName": "Garmin",
       "sourceName": "Sbazar",
       "message": "fetch failed"
     }

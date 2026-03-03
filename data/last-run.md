@@ -1,4 +1,4 @@
-# Hlidacka bazaru - 2026-03-03T10:06:52.795Z
+# Hlidacka bazaru - 2026-03-03T10:13:25.491Z
 
 - Kontrolovano dotazu: **1**
 - Kontrolovano zdroju: **2**
@@ -7,4 +7,4 @@
 
 ## Chyby
 
-- garmin / Sbazar: fetch failed
+- Garmin / Sbazar: fetch failed
