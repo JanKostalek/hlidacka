@@ -192,58 +192,6 @@ function getAlreadyDisplayedByWatch(foundHistory, newItemsByWatch) {
   return output;
 }
 
-function updateFoundHistory(existing, newItemsByWatch, runAt, maxPerWatch = 60) {
-  const next = {};
-  const currentByWatch = existing?.byWatch || {};
-
-  for (const [watchId, items] of Object.entries(currentByWatch)) {
-    next[watchId] = Array.isArray(items) ? [...items] : [];
-  }
-
-  for (const group of newItemsByWatch || []) {
-    const watchId = group.watchId;
-    const prev = next[watchId] || [];
-    const merged = [...prev];
-
-    for (const item of group.items || []) {
-      if (!merged.some((entry) => entry.link === item.link)) {
-        merged.unshift({
-          watchId: item.watchId,
-          watchName: item.watchName,
-          sourceName: item.sourceName,
-          title: item.title,
-          price: item.price,
-          link: item.link,
-          firstSeenAt: runAt
-        });
-      }
-    }
-
-    next[watchId] = merged.slice(0, maxPerWatch);
-  }
-
-  return {
-    updatedAt: runAt,
-    byWatch: next
-  };
-}
-
-function getAlreadyDisplayedByWatch(foundHistory, newItemsByWatch) {
-  const newLinksByWatch = new Map(
-    (newItemsByWatch || []).map((group) => [
-      group.watchId,
-      new Set((group.items || []).map((item) => item.link))
-    ])
-  );
-
-  const output = {};
-  for (const [watchId, items] of Object.entries(foundHistory?.byWatch || {})) {
-    const newLinks = newLinksByWatch.get(watchId) || new Set();
-    output[watchId] = (items || []).filter((item) => !newLinks.has(item.link));
-  }
-  return output;
-}
-
 function buildReport(results) {
   const lines = [];
   lines.push(`# Hlidacka bazaru - ${results.runAt}`);
