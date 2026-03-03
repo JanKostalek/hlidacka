@@ -194,13 +194,44 @@ async function sendDiscordNotification(results) {
   }
 }
 
-function buildEmailText(results) {
+function buildEmailText(config, results) {
+  const watches = config.watches || [];
+  const newItemsByWatchId = new Map(
+    (results.newItemsByWatch || []).map((group) => [group.watchId, group.items.length])
+  );
+
   const lines = [];
   lines.push(`Hlidacka bazaru - vysledek behu`);
   lines.push(`Cas behu: ${results.runAt}`);
   lines.push(`Nove inzeraty: ${results.summary.totalNewItems}`);
   lines.push(`Chyby: ${results.summary.errorCount}`);
   lines.push("");
+  lines.push("Aktivni dotazy:");
+  lines.push("");
+
+  for (const watch of watches) {
+    const sources = Array.from(
+      new Set((watch.sources || []).map((source) => source.name || source.id).filter(Boolean))
+    );
+    const errCount = (results.errors || []).filter((err) => err.watchId === watch.id).length;
+    const newCount = newItemsByWatchId.get(watch.id) || 0;
+    const keywords = (watch.keywords || []).join(", ") || "(zadna)";
+    const excluded = (watch.excludeKeywords || []).join(", ") || "(zadna)";
+    const sourceList = sources.join(", ") || "(zadny)";
+
+    lines.push(`- ${watch.name || watch.id}`);
+    lines.push(`  co hledat: ${watch.query || "(prazdne)"}`);
+    lines.push(`  klicova slova: ${keywords}`);
+    lines.push(`  vyloucit slova: ${excluded}`);
+    lines.push(`  bazary: ${sourceList}`);
+    lines.push(`  vysledek: nove ${newCount}, chyby ${errCount}`);
+    lines.push("");
+  }
+
+  if (watches.length === 0) {
+    lines.push("(zadne dotazy)");
+    lines.push("");
+  }
 
   if (results.summary.totalNewItems === 0) {
     lines.push("Zadne nove inzeraty.");
@@ -231,6 +262,15 @@ function buildEmailText(results) {
   }
 
   return lines.join("\n");
+}
+
+function buildEmailSubject(config, results) {
+  const firstName = config.watches?.[0]?.name || "dotaz";
+  const extraCount = Math.max((config.watches?.length || 1) - 1, 0);
+  const scope = extraCount > 0 ? `${firstName} +${extraCount}` : firstName;
+  return results.summary.totalNewItems > 0
+    ? `Hlidacka (${scope}): ${results.summary.totalNewItems} novych inzeratu`
+    : `Hlidacka (${scope}): zadne nove inzeraty`;
 }
 
 async function sendEmailNotification(config, results) {
@@ -270,11 +310,8 @@ async function sendEmailNotification(config, results) {
   await transporter.sendMail({
     from,
     to,
-    subject:
-      results.summary.totalNewItems > 0
-        ? `Hlidacka: ${results.summary.totalNewItems} novych inzeratu`
-        : "Hlidacka: zadne nove inzeraty",
-    text: buildEmailText(results)
+    subject: buildEmailSubject(config, results),
+    text: buildEmailText(config, results)
   });
   console.log("Email notification sent.");
 }
