@@ -25,52 +25,11 @@
         {
           "id": "sbazar",
           "name": "Sbazar",
-          "url": "https://www.sbazar.cz/hledej/garmin",
+          "url": "https://www.sbazar.cz/?q=Garmin",
           "itemSelector": "article",
           "titleSelector": "h3, h2, a",
           "linkSelector": "a[href]",
           "priceSelector": "[class*='price'], [data-e2e*='price']"
-        }
-      ]
-    },
-    {
-      "id": "iphone",
-      "name": "Iphone",
-      "query": "iphone 13",
-      "keywords": [
-        "iphone",
-        "13"
-      ],
-      "excludeKeywords": [],
-      "sources": [
-        {
-          "id": "bazos",
-          "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=iphone%2013",
-          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
-          "titleSelector": ".nadpis",
-          "linkSelector": "a[href]",
-          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
-        }
-      ]
-    },
-    {
-      "id": "iphone-16",
-      "name": "iphone 16",
-      "query": "Iphone 16",
-      "keywords": [
-        "Iphone 16"
-      ],
-      "excludeKeywords": [],
-      "sources": [
-        {
-          "id": "bazos",
-          "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=Iphone%2016",
-          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
-          "titleSelector": ".nadpis",
-          "linkSelector": "a[href]",
-          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
         }
       ]
     },
@@ -96,7 +55,7 @@
         {
           "id": "sbazar",
           "name": "Sbazar",
-          "url": "https://www.sbazar.cz/hledej/lego%20ninja",
+          "url": "https://www.sbazar.cz/?q=Lego%20ninja",
           "itemSelector": "article",
           "titleSelector": "h3, h2, a",
           "linkSelector": "a[href]",
