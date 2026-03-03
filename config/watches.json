@@ -5,17 +5,19 @@
   "watches": [
     {
       "id": "garmin",
-      "name": "garmin",
-      "query": "Garmin 8 solar",
+      "name": "Garmin",
+      "query": "Garmin",
       "keywords": [
-        "garmin 8 solar"
+        "Garmin",
+        "8",
+        "Fenix"
       ],
       "excludeKeywords": [],
       "sources": [
         {
           "id": "sbazar",
           "name": "Sbazar",
-          "url": "https://www.sbazar.cz/hledej/Garmin%208%20solar",
+          "url": "https://www.sbazar.cz/hledej/Garmin",
           "itemSelector": "article",
           "titleSelector": "h3, h2, a",
           "linkSelector": "a[href]",
@@ -24,7 +26,7 @@
         {
           "id": "bazos",
           "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=Garmin%208%20solar",
+          "url": "https://www.bazos.cz/search.php?hledat=Garmin",
           "itemSelector": ".inzerat",
           "titleSelector": ".nadpis",
           "linkSelector": "a[href]",
