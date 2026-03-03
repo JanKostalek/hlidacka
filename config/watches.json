@@ -17,10 +17,10 @@
           "id": "bazos",
           "name": "Bazos",
           "url": "https://www.bazos.cz/search.php?hledat=Garmin",
-          "itemSelector": ".inzerat",
+          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
           "titleSelector": ".nadpis",
           "linkSelector": "a[href]",
-          "priceSelector": ".inzeratcena, .cena"
+          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
         }
       ]
     },
@@ -29,7 +29,8 @@
       "name": "Iphone",
       "query": "iphone 13",
       "keywords": [
-        "iphone"
+        "iphone",
+        "13"
       ],
       "excludeKeywords": [],
       "sources": [
@@ -37,10 +38,10 @@
           "id": "bazos",
           "name": "Bazos",
           "url": "https://www.bazos.cz/search.php?hledat=iphone%2013",
-          "itemSelector": ".inzerat",
+          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
           "titleSelector": ".nadpis",
           "linkSelector": "a[href]",
-          "priceSelector": ".inzeratcena, .cena"
+          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
         }
       ]
     }
