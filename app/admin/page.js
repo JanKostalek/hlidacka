@@ -16,6 +16,7 @@ function emptyWatch() {
 export default function AdminPage() {
   const [token, setToken] = useState("");
   const [watches, setWatches] = useState([]);
+  const [watchValidationErrors, setWatchValidationErrors] = useState({});
   const [marketplaces, setMarketplaces] = useState([]);
   const [notificationEmail, setNotificationEmail] = useState("");
   const [status, setStatus] = useState("Nacitani...");
@@ -46,6 +47,7 @@ export default function AdminPage() {
 
     const data = await res.json();
     setWatches(data.watches || []);
+    setWatchValidationErrors({});
     setMarketplaces(data.marketplaces || []);
     setNotificationEmail(data.notificationEmail || "");
     setStatus("Konfigurace nactena.");
@@ -58,6 +60,12 @@ export default function AdminPage() {
 
   function updateWatch(index, patch) {
     setWatches((prev) => prev.map((item, idx) => (idx === index ? { ...item, ...patch } : item)));
+    setWatchValidationErrors((prev) => {
+      if (!(index in prev)) return prev;
+      const next = { ...prev };
+      delete next[index];
+      return next;
+    });
   }
 
   function toggleMarketplace(index, marketplaceId) {
@@ -73,9 +81,32 @@ export default function AdminPage() {
         };
       })
     );
+    setWatchValidationErrors((prev) => {
+      if (!(index in prev)) return prev;
+      const next = { ...prev };
+      delete next[index];
+      return next;
+    });
+  }
+
+  function validateWatchesForSave(currentWatches) {
+    const errors = {};
+    currentWatches.forEach((watch, index) => {
+      if (!Array.isArray(watch.marketplaces) || watch.marketplaces.length === 0) {
+        errors[index] = "Vyber aspon jeden bazar (Sbazar nebo Bazos).";
+      }
+    });
+    return errors;
   }
 
   async function saveConfig() {
+    const validationErrors = validateWatchesForSave(watches);
+    setWatchValidationErrors(validationErrors);
+    if (Object.keys(validationErrors).length > 0) {
+      setStatus("Nelze ulozit konfiguraci. U kazdeho dotazu vyber aspon jeden bazar.");
+      return;
+    }
+
     setSaving(true);
     setStatus("Ukladam...");
     const headers = { "content-type": "application/json" };
@@ -102,6 +133,7 @@ export default function AdminPage() {
 
     const data = await res.json();
     setWatches(data.watches || []);
+    setWatchValidationErrors({});
     setNotificationEmail(data.notificationEmail || "");
     setStatus("Ulozeno.");
     setSaving(false);
@@ -143,6 +175,7 @@ export default function AdminPage() {
 
   function removeWatch(index) {
     setWatches((prev) => prev.filter((_, idx) => idx !== index));
+    setWatchValidationErrors({});
   }
 
   return (
@@ -184,7 +217,13 @@ export default function AdminPage() {
       <section className="panel">
         <div className="adminHead">
           <h2>Hlidane dotazy</h2>
-          <button type="button" onClick={() => setWatches((prev) => [...prev, emptyWatch()])}>
+          <button
+            type="button"
+            onClick={() => {
+              setWatches((prev) => [...prev, emptyWatch()]);
+              setWatchValidationErrors({});
+            }}
+          >
             + Pridat dotaz
           </button>
         </div>
@@ -243,6 +282,9 @@ export default function AdminPage() {
                 </label>
               ))}
             </div>
+            {watchValidationErrors[index] ? (
+              <p style={{ color: "#b42318", marginTop: "8px" }}>{watchValidationErrors[index]}</p>
+            ) : null}
 
             <button type="button" className="dangerBtn" onClick={() => removeWatch(index)}>
               Smazat dotaz
