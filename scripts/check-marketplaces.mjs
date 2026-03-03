@@ -63,11 +63,11 @@ function normalizeSourceForRuntime(source, watch) {
     ...source,
     // Use explicit search route that returns listing links server-side.
     url: buildSbazarSearchUrl(watch?.query || ""),
-    // Keep only real listing links.
-    itemSelector: "article",
-    titleSelector: "a[href*='/inzerat/']",
-    linkSelector: "a[href*='/inzerat/']",
-    priceSelector: "[class*='price'], [data-e2e*='price']"
+    // Keep only real search result cards from the offer list.
+    itemSelector: "ul[data-test='offer-list'] > li[data-offer-id]",
+    titleSelector: "a[href^='/inzerat/'] .text-red, a[href^='/inzerat/'] [class*='line-clamp-2']",
+    linkSelector: "a[href^='/inzerat/']",
+    priceSelector: "a[href^='/inzerat/'] b"
   };
 }
 
@@ -127,6 +127,9 @@ function extractItemsFromPage(html, source) {
 
   // Fallback if marketplace selector changed and no cards were extracted.
   if (source.itemSelector && !usedCardExtraction) {
+    if (source.id === "sbazar") {
+      return [];
+    }
     $("a[href]").each((_, el) => {
       const title = normalizeWhitespace($(el).text());
       const link = normalizeLink($(el).attr("href"), sourceUrl);
