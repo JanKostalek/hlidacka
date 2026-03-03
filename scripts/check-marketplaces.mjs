@@ -76,14 +76,22 @@ function makeKey(sourceId, link, title) {
 }
 
 function includesKeywords(text, required = [], excluded = []) {
-  const haystack = text.toLowerCase();
+  const haystack = normalizeForMatch(text);
   const hasRequired =
     required.length === 0 ||
-    required.every((kw) => haystack.includes(String(kw).toLowerCase()));
-  const hasExcluded = excluded.some((kw) =>
-    haystack.includes(String(kw).toLowerCase())
-  );
+    required.every((kw) => haystack.includes(normalizeForMatch(kw)));
+  const hasExcluded = excluded.some((kw) => haystack.includes(normalizeForMatch(kw)));
   return hasRequired && !hasExcluded;
+}
+
+function normalizeForMatch(input) {
+  return String(input || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function extractFromCard($, card, source, sourceUrl) {
@@ -657,7 +665,7 @@ async function main() {
 
         let matchedForSource = 0;
         for (const candidate of extracted) {
-          const text = `${candidate.title} ${candidate.price}`;
+          const text = `${candidate.title} ${candidate.price} ${candidate.link}`;
           if (
             !includesKeywords(text, watch.keywords || [], watch.excludeKeywords || [])
           ) {
