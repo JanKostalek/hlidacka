@@ -1,3 +1,28 @@
 {
-  "runs": []
+  "runs": [
+    {
+      "runAt": "2026-03-03T10:06:52.795Z",
+      "summary": {
+        "totalWatches": 1,
+        "totalSources": 2,
+        "totalNewItems": 0,
+        "errorCount": 1
+      },
+      "watchStats": [
+        {
+          "watchId": "garmin",
+          "watchName": "garmin",
+          "query": "Garmin 8 solar",
+          "keywords": [
+            "garmin 8 solar"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 1
+        }
+      ]
+    }
+  ]
 }
