@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-03T13:38:53.815Z",
+  "updatedAt": "2026-03-03T13:47:27.329Z",
   "byWatch": {
     "garmin": [
       {
@@ -451,6 +451,105 @@
     "lego": [
       {
         "watchId": "lego",
+        "watchName": "lego",
+        "sourceName": "Bazos",
+        "title": "LEGO Ninjago 71822 Zdrojový drak pohybu",
+        "price": "3 100 Kč",
+        "link": "https://deti.bazos.cz/inzerat/215686463/lego-ninjago-71822-zdrojovy-drak-pohybu.php",
+        "firstSeenAt": "2026-03-03T13:47:27.329Z"
+      },
+      {
+        "watchId": "lego",
+        "watchName": "lego",
+        "sourceName": "Bazos",
+        "title": "LEGO Ninjago 30591 Titanový minirobot",
+        "price": "100 Kč",
+        "link": "https://deti.bazos.cz/inzerat/215704726/lego-ninjago-30591-titanovy-minirobot.php",
+        "firstSeenAt": "2026-03-03T13:47:27.329Z"
+      },
+      {
+        "watchId": "lego",
+        "watchName": "lego",
+        "sourceName": "Bazos",
+        "title": "Ninjago lego nové",
+        "price": "109 Kč",
+        "link": "https://deti.bazos.cz/inzerat/215705528/ninjago-lego-nove.php",
+        "firstSeenAt": "2026-03-03T13:47:27.329Z"
+      },
+      {
+        "watchId": "lego",
+        "watchName": "lego",
+        "sourceName": "Bazos",
+        "title": "Lego Ninjago Spinner 2ks 9579 s návody",
+        "price": "149 Kč",
+        "link": "https://deti.bazos.cz/inzerat/215706461/lego-ninjago-spinner-2ks-9579-s-navody.php",
+        "firstSeenAt": "2026-03-03T13:47:27.329Z"
+      },
+      {
+        "watchId": "lego",
+        "watchName": "lego",
+        "sourceName": "Bazos",
+        "title": "lego ninjago 70638",
+        "price": "450 Kč",
+        "link": "https://deti.bazos.cz/inzerat/215711760/lego-ninjago-70638.php",
+        "firstSeenAt": "2026-03-03T13:47:27.329Z"
+      },
+      {
+        "watchId": "lego",
+        "watchName": "lego",
+        "sourceName": "Bazos",
+        "title": "Lego Ninjago Lord Garmadon njo078 Super Stav",
+        "price": "399 Kč",
+        "link": "https://deti.bazos.cz/inzerat/215728022/lego-ninjago-lord-garmadon-njo078-super-stav.php",
+        "firstSeenAt": "2026-03-03T13:47:27.329Z"
+      },
+      {
+        "watchId": "lego",
+        "watchName": "lego",
+        "sourceName": "Bazos",
+        "title": "Zlatý Robot Lego Ninjago 70505",
+        "price": "990 Kč",
+        "link": "https://deti.bazos.cz/inzerat/215728260/zlaty-robot-lego-ninjago-70505.php",
+        "firstSeenAt": "2026-03-03T13:47:27.329Z"
+      },
+      {
+        "watchId": "lego",
+        "watchName": "lego",
+        "sourceName": "Bazos",
+        "title": "Lego ninjago 70590 Airjitzu Battle Grounds",
+        "price": "8 500 Kč",
+        "link": "https://deti.bazos.cz/inzerat/215729603/lego-ninjago-70590-airjitzu-battle-grounds.php",
+        "firstSeenAt": "2026-03-03T13:47:27.329Z"
+      },
+      {
+        "watchId": "lego",
+        "watchName": "lego",
+        "sourceName": "Bazos",
+        "title": "Lego ninjago set 70736 Morro Dragon",
+        "price": "5 499 Kč",
+        "link": "https://deti.bazos.cz/inzerat/215729707/lego-ninjago-set-70736-morro-dragon.php",
+        "firstSeenAt": "2026-03-03T13:47:27.329Z"
+      },
+      {
+        "watchId": "lego",
+        "watchName": "lego",
+        "sourceName": "Bazos",
+        "title": "Lego Ninjago sety Zane DX a Cole DX",
+        "price": "2 500 Kč",
+        "link": "https://deti.bazos.cz/inzerat/215729807/lego-ninjago-sety-zane-dx-a-cole-dx.php",
+        "firstSeenAt": "2026-03-03T13:47:27.329Z"
+      },
+      {
+        "watchId": "lego",
+        "watchName": "lego",
+        "sourceName": "Bazos",
+        "title": "LEGO Ninja Turtles 79121 nebo 79115 dle fotek a popisu",
+        "price": "2 000 Kč",
+        "link": "https://deti.bazos.cz/inzerat/215730758/lego-ninja-turtles-79121-nebo-79115-dle-fotek-a-popisu.php",
+        "firstSeenAt": "2026-03-03T13:47:27.329Z"
+      },
+      {
+        "watchId": "lego",
         "watchName": "Lego",
         "sourceName": "Sbazar",
         "title": "Lego Ninjago žlutý letoun s figurkou",
@@ -888,105 +987,6 @@
         "title": "LEGO Ninjago 70662 Spinjitzu Cole",
         "price": "200 Kč",
         "link": "https://www.sbazar.cz/inzerat/228216680-lego-ninjago-70662-spinjitzu-cole",
-        "firstSeenAt": "2026-03-03T13:22:16.390Z"
-      },
-      {
-        "watchId": "lego",
-        "watchName": "Lego",
-        "sourceName": "Sbazar",
-        "title": "Lego Ninjago 4002021",
-        "price": "4 190 Kč",
-        "link": "https://www.sbazar.cz/inzerat/197765449-lego-ninjago-4002021",
-        "firstSeenAt": "2026-03-03T13:22:16.390Z"
-      },
-      {
-        "watchId": "lego",
-        "watchName": "Lego",
-        "sourceName": "Sbazar",
-        "title": "Lego dílky - Ninjago - Spinner - Snappa (9564)",
-        "price": "12 Kč",
-        "link": "https://www.sbazar.cz/inzerat/228295052-lego-dilky-ninjago-spinner-snappa-9564",
-        "firstSeenAt": "2026-03-03T13:22:16.390Z"
-      },
-      {
-        "watchId": "lego",
-        "watchName": "Lego",
-        "sourceName": "Sbazar",
-        "title": "Lego dílky - Ninjago - Spinner - Rattla (9579)",
-        "price": "139 Kč",
-        "link": "https://www.sbazar.cz/inzerat/228295067-lego-dilky-ninjago-spinner-rattla-9579",
-        "firstSeenAt": "2026-03-03T13:22:16.390Z"
-      },
-      {
-        "watchId": "lego",
-        "watchName": "Lego",
-        "sourceName": "Sbazar",
-        "title": "Lego dílky - Ninjago - Spinner - Nya (2172)",
-        "price": "139 Kč",
-        "link": "https://www.sbazar.cz/inzerat/228295094-lego-dilky-ninjago-spinner-nya-2172",
-        "firstSeenAt": "2026-03-03T13:22:16.390Z"
-      },
-      {
-        "watchId": "lego",
-        "watchName": "Lego",
-        "sourceName": "Sbazar",
-        "title": "Lego dílky - Ninjago - Spinner - Nuckal (2173)",
-        "price": "119 Kč",
-        "link": "https://www.sbazar.cz/inzerat/228295103-lego-dilky-ninjago-spinner-nuckal-2173",
-        "firstSeenAt": "2026-03-03T13:22:16.390Z"
-      },
-      {
-        "watchId": "lego",
-        "watchName": "Lego",
-        "sourceName": "Sbazar",
-        "title": "Lego dílky - Ninjago - Spinner - Garmadon (2256)",
-        "price": "119 Kč",
-        "link": "https://www.sbazar.cz/inzerat/228295124-lego-dilky-ninjago-spinner-garmadon-2256",
-        "firstSeenAt": "2026-03-03T13:22:16.390Z"
-      },
-      {
-        "watchId": "lego",
-        "watchName": "Lego",
-        "sourceName": "Sbazar",
-        "title": "Lego dílky - Ninjago - Spinner - Lasha (9562)",
-        "price": "129 Kč",
-        "link": "https://www.sbazar.cz/inzerat/228295130-lego-dilky-ninjago-spinner-lasha-9562",
-        "firstSeenAt": "2026-03-03T13:22:16.390Z"
-      },
-      {
-        "watchId": "lego",
-        "watchName": "Lego",
-        "sourceName": "Sbazar",
-        "title": "Lego dílky - Ninjago - Spinner - Koruna - (zelená)",
-        "price": "15 Kč",
-        "link": "https://www.sbazar.cz/inzerat/228295196-lego-dilky-ninjago-spinner-koruna-zelena",
-        "firstSeenAt": "2026-03-03T13:22:16.390Z"
-      },
-      {
-        "watchId": "lego",
-        "watchName": "Lego",
-        "sourceName": "Sbazar",
-        "title": "Lego dílky - Ninjago - Spinner - Koruna (stříbrná)",
-        "price": "11 Kč",
-        "link": "https://www.sbazar.cz/inzerat/228295217-lego-dilky-ninjago-spinner-koruna-stribrna",
-        "firstSeenAt": "2026-03-03T13:22:16.390Z"
-      },
-      {
-        "watchId": "lego",
-        "watchName": "Lego",
-        "sourceName": "Sbazar",
-        "title": "Lego dílky - Ninjago - Spinner - Koruna -(fialová)",
-        "price": "29 Kč",
-        "link": "https://www.sbazar.cz/inzerat/228295241-lego-dilky-ninjago-spinner-koruna-fialova",
-        "firstSeenAt": "2026-03-03T13:22:16.390Z"
-      },
-      {
-        "watchId": "lego",
-        "watchName": "Lego",
-        "sourceName": "Sbazar",
-        "title": "Lego dílky - Ninjago - Spinner - Lasha (9562)",
-        "price": "99 Kč",
-        "link": "https://www.sbazar.cz/inzerat/228295259-lego-dilky-ninjago-spinner-lasha-9562",
         "firstSeenAt": "2026-03-03T13:22:16.390Z"
       }
     ],
