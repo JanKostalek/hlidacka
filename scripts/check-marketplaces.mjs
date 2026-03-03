@@ -9,6 +9,7 @@ const STATE_PATH = path.join(ROOT, "data", "state.json");
 const RESULTS_PATH = path.join(ROOT, "data", "latest-results.json");
 const REPORT_PATH = path.join(ROOT, "data", "last-run.md");
 const RUN_HISTORY_PATH = path.join(ROOT, "data", "run-history.json");
+const FOUND_HISTORY_PATH = path.join(ROOT, "data", "found-history.json");
 
 const USER_AGENT =
   "Mozilla/5.0 (compatible; HlidackaBazaru/1.0; +https://github.com/)";
@@ -141,6 +142,108 @@ function pruneSeen(seenMap, maxAgeDays = 90, maxCount = 10000) {
   return Object.fromEntries(entries.slice(0, maxCount));
 }
 
+function updateFoundHistory(existing, newItemsByWatch, runAt, maxPerWatch = 60) {
+  const nextByWatch = {};
+  const currentByWatch = existing?.byWatch || {};
+
+  for (const [watchId, items] of Object.entries(currentByWatch)) {
+    nextByWatch[watchId] = Array.isArray(items) ? [...items] : [];
+  }
+
+  for (const group of newItemsByWatch || []) {
+    const watchId = group.watchId;
+    const merged = nextByWatch[watchId] || [];
+
+    for (const item of group.items || []) {
+      if (!merged.some((entry) => entry.link === item.link)) {
+        merged.unshift({
+          watchId: item.watchId,
+          watchName: item.watchName,
+          sourceName: item.sourceName,
+          title: item.title,
+          price: item.price,
+          link: item.link,
+          firstSeenAt: runAt
+        });
+      }
+    }
+    nextByWatch[watchId] = merged.slice(0, maxPerWatch);
+  }
+
+  return {
+    updatedAt: runAt,
+    byWatch: nextByWatch
+  };
+}
+
+function getAlreadyDisplayedByWatch(foundHistory, newItemsByWatch) {
+  const newLinksByWatch = new Map(
+    (newItemsByWatch || []).map((group) => [
+      group.watchId,
+      new Set((group.items || []).map((item) => item.link))
+    ])
+  );
+
+  const output = {};
+  for (const [watchId, items] of Object.entries(foundHistory?.byWatch || {})) {
+    const newLinks = newLinksByWatch.get(watchId) || new Set();
+    output[watchId] = (items || []).filter((item) => !newLinks.has(item.link));
+  }
+  return output;
+}
+
+function updateFoundHistory(existing, newItemsByWatch, runAt, maxPerWatch = 60) {
+  const next = {};
+  const currentByWatch = existing?.byWatch || {};
+
+  for (const [watchId, items] of Object.entries(currentByWatch)) {
+    next[watchId] = Array.isArray(items) ? [...items] : [];
+  }
+
+  for (const group of newItemsByWatch || []) {
+    const watchId = group.watchId;
+    const prev = next[watchId] || [];
+    const merged = [...prev];
+
+    for (const item of group.items || []) {
+      if (!merged.some((entry) => entry.link === item.link)) {
+        merged.unshift({
+          watchId: item.watchId,
+          watchName: item.watchName,
+          sourceName: item.sourceName,
+          title: item.title,
+          price: item.price,
+          link: item.link,
+          firstSeenAt: runAt
+        });
+      }
+    }
+
+    next[watchId] = merged.slice(0, maxPerWatch);
+  }
+
+  return {
+    updatedAt: runAt,
+    byWatch: next
+  };
+}
+
+function getAlreadyDisplayedByWatch(foundHistory, newItemsByWatch) {
+  const newLinksByWatch = new Map(
+    (newItemsByWatch || []).map((group) => [
+      group.watchId,
+      new Set((group.items || []).map((item) => item.link))
+    ])
+  );
+
+  const output = {};
+  for (const [watchId, items] of Object.entries(foundHistory?.byWatch || {})) {
+    const newLinks = newLinksByWatch.get(watchId) || new Set();
+    output[watchId] = (items || []).filter((item) => !newLinks.has(item.link));
+  }
+  return output;
+}
+
 function buildReport(results) {
   const lines = [];
   lines.push(`# Hlidacka bazaru - ${results.runAt}`);
@@ -208,15 +311,15 @@ async function sendDiscordNotification(results) {
   }
 }
 
-function buildEmailText(config, results) {
+function buildEmailText(config, results, alreadyDisplayedByWatch = {}) {
   const watches = config.watches || [];
   const newItemsByWatchId = new Map(
     (results.newItemsByWatch || []).map((group) => [group.watchId, group.items.length])
   );
 
   const lines = [];
-  lines.push(`Hlidacka bazaru - vysledek behu`);
-  lines.push(`Cas behu: ${results.runAt}`);
+  lines.push(`Hlidacka bazaru - Výsledek vyhledávání`);
+  lines.push(`Čas vyhledávání: ${results.runAt}`);
   lines.push(`Nove inzeraty: ${results.summary.totalNewItems}`);
   lines.push(`Chyby: ${results.summary.errorCount}`);
   lines.push("");
@@ -264,6 +367,23 @@ function buildEmailText(config, results) {
     }
   }
 
+  lines.push("Jiz zobrazene inzeraty:");
+  lines.push("");
+  for (const watch of watches) {
+    const shown = alreadyDisplayedByWatch[watch.id] || [];
+    lines.push(`${watch.name || watch.id} (${shown.length})`);
+    if (shown.length === 0) {
+      lines.push("- zadne");
+    } else {
+      for (const item of shown) {
+        const pricePart = item.price ? ` | ${item.price}` : "";
+        lines.push(`- ${item.title}${pricePart} | ${item.sourceName}`);
+        lines.push(`  ${item.link}`);
+      }
+    }
+    lines.push("");
+  }
+
   if (results.errors.length === 0) {
     lines.push("Chyby: zadne");
     lines.push("");
@@ -296,7 +416,7 @@ function escapeHtml(input) {
     .replace(/'/g, "&#39;");
 }
 
-function buildEmailHtml(config, results) {
+function buildEmailHtml(config, results, alreadyDisplayedByWatch = {}) {
   const watches = config.watches || [];
   const newItemsByWatchId = new Map(
     (results.newItemsByWatch || []).map((group) => [group.watchId, group.items || []])
@@ -335,6 +455,19 @@ function buildEmailHtml(config, results) {
               )
               .join("")}</ul>`;
 
+      const shownItems = alreadyDisplayedByWatch[watch.id] || [];
+      const shownList =
+        shownItems.length === 0
+          ? `<div class="muted">Zadne drive zobrazene inzeraty.</div>`
+          : `<ul class="item-list">${shownItems
+              .map((item) => {
+                const pricePart = item.price ? ` | ${escapeHtml(item.price)}` : "";
+                return `<li><a href="${escapeHtml(item.link)}">${escapeHtml(
+                  item.title
+                )}</a><span class="muted"> (${escapeHtml(item.sourceName)}${pricePart})</span></li>`;
+              })
+              .join("")}</ul>`;
+
       return `
         <section class="card">
           <h3>${escapeHtml(watch.name || watch.id)}</h3>
@@ -345,6 +478,8 @@ function buildEmailHtml(config, results) {
           <div class="meta"><b>Vysledek:</b> nove ${newItems.length}, chyby ${errorsForWatch.length}</div>
           <h4>Nove inzeraty</h4>
           ${itemList}
+          <h4>Jiz zobrazene inzeraty</h4>
+          ${shownList}
           <h4>Chyby</h4>
           ${errorList}
         </section>
@@ -358,8 +493,8 @@ function buildEmailHtml(config, results) {
     <div style="max-width:760px;margin:0 auto;padding:20px 12px;">
       <div style="background:linear-gradient(120deg,#0f6bcf,#0ea5a8);color:white;border-radius:14px;padding:20px 18px;">
         <div style="font-size:13px;opacity:.9;margin-bottom:6px;">Hlidacka bazaru</div>
-        <div style="font-size:24px;font-weight:700;line-height:1.2;">Vysledek behu</div>
-        <div style="margin-top:10px;font-size:14px;opacity:.95;">Cas behu: ${escapeHtml(
+        <div style="font-size:24px;font-weight:700;line-height:1.2;">Výsledek vyhledávání</div>
+        <div style="margin-top:10px;font-size:14px;opacity:.95;">Čas vyhledávání: ${escapeHtml(
           results.runAt
         )}</div>
       </div>
@@ -398,7 +533,7 @@ function buildEmailHtml(config, results) {
 </html>`;
 }
 
-async function sendEmailNotification(config, results) {
+async function sendEmailNotification(config, results, alreadyDisplayedByWatch) {
   const host = process.env.SMTP_HOST || "smtp.gmail.com";
   const port = Number(process.env.SMTP_PORT || 465);
   const secure = String(process.env.SMTP_SECURE || "true") !== "false";
@@ -436,8 +571,8 @@ async function sendEmailNotification(config, results) {
     from,
     to,
     subject: buildEmailSubject(config, results),
-    text: buildEmailText(config, results),
-    html: buildEmailHtml(config, results)
+    text: buildEmailText(config, results, alreadyDisplayedByWatch),
+    html: buildEmailHtml(config, results, alreadyDisplayedByWatch)
   });
   console.log("Email notification sent.");
 }
@@ -447,6 +582,7 @@ async function main() {
   const config = await readJson(CONFIG_PATH, { watches: [] });
   const state = await readJson(STATE_PATH, { seen: {} });
   const runHistory = await readJson(RUN_HISTORY_PATH, { runs: [] });
+  const foundHistory = await readJson(FOUND_HISTORY_PATH, { byWatch: {} });
   const seen = { ...(state.seen || {}) };
 
   const newItemsByWatch = [];
@@ -532,6 +668,16 @@ async function main() {
     errors
   };
 
+  const alreadyDisplayedByWatch = getAlreadyDisplayedByWatch(
+    foundHistory,
+    results.newItemsByWatch
+  );
+  const nextFoundHistory = updateFoundHistory(
+    foundHistory,
+    results.newItemsByWatch,
+    nowIso
+  );
+
   const nextRuns = [
     {
       runAt: nowIso,
@@ -545,6 +691,7 @@ async function main() {
   await writeJson(STATE_PATH, { updatedAt: nowIso, seen: prunedSeen });
   await writeJson(RESULTS_PATH, results);
   await writeJson(RUN_HISTORY_PATH, { runs: nextRuns });
+  await writeJson(FOUND_HISTORY_PATH, nextFoundHistory);
   await fs.writeFile(REPORT_PATH, buildReport(results), "utf8");
   try {
     await sendDiscordNotification(results);
@@ -552,7 +699,7 @@ async function main() {
     console.error("Discord notification failed:", err);
   }
   try {
-    await sendEmailNotification(config, results);
+    await sendEmailNotification(config, results, alreadyDisplayedByWatch);
   } catch (err) {
     console.error("Email notification failed:", err);
   }
