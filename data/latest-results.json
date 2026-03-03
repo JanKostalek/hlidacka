@@ -1,11 +1,24 @@
 {
-  "runAt": "2026-03-03T12:11:41.388Z",
+  "runAt": "2026-03-03T12:17:51.929Z",
   "summary": {
     "totalWatches": 4,
-    "totalSources": 4,
+    "totalSources": 6,
     "totalNewItems": 0,
-    "errorCount": 0
+    "errorCount": 2
   },
   "newItemsByWatch": [],
-  "errors": []
+  "errors": [
+    {
+      "watchId": "garmin",
+      "watchName": "Garmin",
+      "sourceName": "Sbazar",
+      "message": "fetch failed"
+    },
+    {
+      "watchId": "lego",
+      "watchName": "Lego",
+      "sourceName": "Sbazar",
+      "message": "fetch failed"
+    }
+  ]
 }
