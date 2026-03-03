@@ -56,18 +56,56 @@ function buildSbazarSearchUrl(query) {
   )}`;
 }
 
+function formatSbazarPrice(item) {
+  if (!item || item.price_by_agreement) return "";
+  if (typeof item.price !== "number" || !Number.isFinite(item.price)) return "";
+  return `${new Intl.NumberFormat("cs-CZ").format(item.price)} Kč`;
+}
+
+function mapSbazarItemToCandidate(item) {
+  const title = normalizeWhitespace(item?.name || "");
+  const seoName = String(item?.seo_name || item?.id || "").trim();
+  const link = seoName ? `https://www.sbazar.cz/inzerat/${seoName}` : "";
+  const price = formatSbazarPrice(item);
+  return { title, link, price };
+}
+
+async function fetchSbazarItems(query, limit = 80) {
+  const phrase = String(query || "").trim();
+  const url = new URL("https://www.sbazar.cz/api/v1/items/search");
+  url.searchParams.set("phrase", phrase);
+  url.searchParams.set("limit", String(limit));
+  url.searchParams.set("offset", "0");
+
+  const res = await fetch(url.toString(), {
+    headers: {
+      ...buildRequestHeaders(url.toString()),
+      accept: "application/json"
+    },
+    redirect: "follow",
+    signal: AbortSignal.timeout(20000)
+  });
+
+  if (!res.ok) {
+    throw new Error(`HTTP ${res.status} (${url.toString()})`);
+  }
+
+  const payload = await res.json();
+  const results = Array.isArray(payload?.results) ? payload.results : [];
+  return results.map(mapSbazarItemToCandidate).filter((item) => item.title || item.link);
+}
+
 function normalizeSourceForRuntime(source, watch) {
   if (!source || source.id !== "sbazar") return source;
 
   return {
     ...source,
-    // Use explicit search route that returns listing links server-side.
+    // Keep search URL for display/debug, but runtime fetch uses Sbazar JSON API.
     url: buildSbazarSearchUrl(watch?.query || ""),
-    // Keep only real search result cards from the offer list.
-    itemSelector: "ul[data-test='offer-list'] > li[data-offer-id]",
-    titleSelector: "a[href^='/inzerat/'] .text-red, a[href^='/inzerat/'] [class*='line-clamp-2']",
-    linkSelector: "a[href^='/inzerat/']",
-    priceSelector: "a[href^='/inzerat/'] b"
+    itemSelector: "",
+    titleSelector: "",
+    linkSelector: "",
+    priceSelector: ""
   };
 }
 
@@ -295,6 +333,29 @@ function getAlreadyDisplayedByWatch(foundHistory, newItemsByWatch) {
     output[watchId] = (items || []).filter((item) => !newLinks.has(item.link));
   }
   return output;
+}
+
+function getAlreadyDisplayedByWatchWithFilters(foundHistory, newItemsByWatch, watches = []) {
+  const base = getAlreadyDisplayedByWatch(foundHistory, newItemsByWatch);
+  const watchById = new Map((watches || []).map((watch) => [watch.id, watch]));
+
+  const filtered = {};
+  for (const [watchId, items] of Object.entries(base)) {
+    const watch = watchById.get(watchId);
+    if (!watch) {
+      filtered[watchId] = items;
+      continue;
+    }
+
+    filtered[watchId] = (items || []).filter((item) =>
+      includesKeywords(
+        `${item.title || ""} ${item.price || ""}`,
+        watch.keywords || [],
+        watch.excludeKeywords || []
+      )
+    );
+  }
+  return filtered;
 }
 
 function buildReport(results) {
@@ -657,8 +718,10 @@ async function main() {
       const sourceForRun = normalizeSourceForRuntime(source, watch);
       totalSources += 1;
       try {
-        const html = await fetchHtml(sourceForRun.url);
-        const extracted = extractItemsFromPage(html, sourceForRun);
+        const extracted =
+          sourceForRun.id === "sbazar"
+            ? await fetchSbazarItems(watch.query || "")
+            : extractItemsFromPage(await fetchHtml(sourceForRun.url), sourceForRun);
         console.log(
           `[source] ${watch.name || watch.id} / ${sourceForRun.name || sourceForRun.id}: extracted=${extracted.length}`
         );
@@ -752,11 +815,12 @@ async function main() {
     errors
   };
 
-  const alreadyDisplayedByWatch = getAlreadyDisplayedByWatch(
+  const filteredAlreadyDisplayedByWatch = getAlreadyDisplayedByWatchWithFilters(
     foundHistory,
-    results.newItemsByWatch
+    results.newItemsByWatch,
+    config.watches || []
   );
-  const emailTextForRun = buildEmailText(config, results, alreadyDisplayedByWatch);
+  const emailTextForRun = buildEmailText(config, results, filteredAlreadyDisplayedByWatch);
   const emailSubjectForRun = buildEmailSubject(config, results);
   const nextFoundHistory = updateFoundHistory(
     foundHistory,
@@ -787,7 +851,7 @@ async function main() {
     console.error("Discord notification failed:", err);
   }
   try {
-    await sendEmailNotification(config, results, alreadyDisplayedByWatch);
+    await sendEmailNotification(config, results, filteredAlreadyDisplayedByWatch);
   } catch (err) {
     console.error("Email notification failed:", err);
   }
