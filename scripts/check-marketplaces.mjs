@@ -246,7 +246,18 @@ async function sendEmailNotification(config, results) {
     "jan.kostalek@gmail.com";
   const enabled = String(process.env.EMAIL_ENABLED || "true") !== "false";
 
-  if (!enabled || !pass || !to) return;
+  if (!enabled) {
+    console.log("Email notification skipped: EMAIL_ENABLED=false");
+    return;
+  }
+  if (!pass) {
+    console.log("Email notification skipped: SMTP_PASS is empty");
+    return;
+  }
+  if (!to) {
+    console.log("Email notification skipped: target e-mail is empty");
+    return;
+  }
 
   const transporter = nodemailer.createTransport({
     host,
@@ -255,6 +266,7 @@ async function sendEmailNotification(config, results) {
     auth: { user, pass }
   });
 
+  console.log(`Sending email notification to ${to}...`);
   await transporter.sendMail({
     from,
     to,
@@ -264,6 +276,7 @@ async function sendEmailNotification(config, results) {
         : "Hlidacka: zadne nove inzeraty",
     text: buildEmailText(results)
   });
+  console.log("Email notification sent.");
 }
 
 async function main() {
