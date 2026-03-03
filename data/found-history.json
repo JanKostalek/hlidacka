@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-03T13:22:16.390Z",
+  "updatedAt": "2026-03-03T13:24:43.233Z",
   "byWatch": {
     "garmin": [
       {
@@ -449,6 +449,15 @@
       }
     ],
     "lego": [
+      {
+        "watchId": "lego",
+        "watchName": "Lego",
+        "sourceName": "Sbazar",
+        "title": "Lego Ninjago žlutý letoun s figurkou",
+        "price": "450 Kč",
+        "link": "https://www.sbazar.cz/inzerat/215497483-lego-ninjago-zluty-letoun-s-figurkou",
+        "firstSeenAt": "2026-03-03T13:24:43.233Z"
+      },
       {
         "watchId": "lego",
         "watchName": "Lego",
@@ -978,15 +987,6 @@
         "title": "Lego dílky - Ninjago - Spinner - Lasha (9562)",
         "price": "99 Kč",
         "link": "https://www.sbazar.cz/inzerat/228295259-lego-dilky-ninjago-spinner-lasha-9562",
-        "firstSeenAt": "2026-03-03T13:22:16.390Z"
-      },
-      {
-        "watchId": "lego",
-        "watchName": "Lego",
-        "sourceName": "Sbazar",
-        "title": "Lego dílky - Ninjago - Spinner - Koruna (modrá)",
-        "price": "10 Kč",
-        "link": "https://www.sbazar.cz/inzerat/228295292-lego-dilky-ninjago-spinner-koruna-modra",
         "firstSeenAt": "2026-03-03T13:22:16.390Z"
       }
     ]
