@@ -19,6 +19,8 @@ export default function AdminPage() {
   const [watchValidationErrors, setWatchValidationErrors] = useState({});
   const [marketplaces, setMarketplaces] = useState([]);
   const [notificationEmail, setNotificationEmail] = useState("");
+  const [scheduleStartHour, setScheduleStartHour] = useState(0);
+  const [scheduleIntervalHours, setScheduleIntervalHours] = useState(2);
   const [status, setStatus] = useState("Nacitani...");
   const [saving, setSaving] = useState(false);
   const [clearing, setClearing] = useState(false);
@@ -50,6 +52,10 @@ export default function AdminPage() {
     setWatchValidationErrors({});
     setMarketplaces(data.marketplaces || []);
     setNotificationEmail(data.notificationEmail || "");
+    setScheduleStartHour(Number.isInteger(data.schedule?.startHour) ? data.schedule.startHour : 0);
+    setScheduleIntervalHours(
+      Number.isInteger(data.schedule?.intervalHours) ? data.schedule.intervalHours : 2
+    );
     setStatus("Konfigurace nactena.");
   }
 
@@ -106,6 +112,22 @@ export default function AdminPage() {
       setStatus("Nelze ulozit konfiguraci. U kazdeho dotazu vyber aspon jeden bazar.");
       return;
     }
+    if (
+      !Number.isInteger(scheduleStartHour) ||
+      scheduleStartHour < 0 ||
+      scheduleStartHour > 23
+    ) {
+      setStatus("Neplatna startovni hodina. Povoleny rozsah je 0-23.");
+      return;
+    }
+    if (
+      !Number.isInteger(scheduleIntervalHours) ||
+      scheduleIntervalHours < 2 ||
+      scheduleIntervalHours > 24
+    ) {
+      setStatus("Neplatny interval opakovani. Povoleny rozsah je 2-24 hodin.");
+      return;
+    }
 
     setSaving(true);
     setStatus("Ukladam...");
@@ -115,7 +137,14 @@ export default function AdminPage() {
     const res = await fetch("/api/config", {
       method: "PUT",
       headers,
-      body: JSON.stringify({ watches, notificationEmail })
+      body: JSON.stringify({
+        watches,
+        notificationEmail,
+        schedule: {
+          startHour: scheduleStartHour,
+          intervalHours: scheduleIntervalHours
+        }
+      })
     });
 
     if (res.status === 401) {
@@ -135,6 +164,10 @@ export default function AdminPage() {
     setWatches(data.watches || []);
     setWatchValidationErrors({});
     setNotificationEmail(data.notificationEmail || "");
+    setScheduleStartHour(Number.isInteger(data.schedule?.startHour) ? data.schedule.startHour : 0);
+    setScheduleIntervalHours(
+      Number.isInteger(data.schedule?.intervalHours) ? data.schedule.intervalHours : 2
+    );
     setStatus("Ulozeno.");
     setSaving(false);
   }
@@ -210,6 +243,32 @@ export default function AdminPage() {
             placeholder="kam se posilaji nalezy"
           />
           <span className="helpText">Pouzije se pri dalsim behu workflow.</span>
+        </div>
+        <div className="adminRow">
+          <label htmlFor="schedule_start">Automatika od (hodina)</label>
+          <input
+            id="schedule_start"
+            type="number"
+            min={0}
+            max={23}
+            step={1}
+            value={scheduleStartHour}
+            onChange={(e) => setScheduleStartHour(Number(e.target.value))}
+          />
+          <span className="helpText">0-23, napr. 8 = prvni beh v 08:00.</span>
+        </div>
+        <div className="adminRow">
+          <label htmlFor="schedule_interval">Opakovat kazdych (hodin)</label>
+          <input
+            id="schedule_interval"
+            type="number"
+            min={2}
+            max={24}
+            step={1}
+            value={scheduleIntervalHours}
+            onChange={(e) => setScheduleIntervalHours(Number(e.target.value))}
+          />
+          <span className="helpText">Minimum je 2 hodiny.</span>
         </div>
         <p className="status">{status}</p>
       </section>

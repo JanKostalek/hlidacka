@@ -41,7 +41,7 @@ export default async function Home() {
     <main className="page">
       <section className="panel">
         <h1>Hlidacka bazaru</h1>
-        <p>Kontrola kazde 2 hodiny bezi pres GitHub Actions.</p>
+        <p>Kontrola bezi podle planu nastaveneho v administraci (GitHub Actions).</p>
         <p>
           <a href="/admin">Otevrit administraci</a>
         </p>

@@ -4,6 +4,18 @@ import { buildSourcesForQuery, listSupportedMarketplaces } from "../../../lib/ma
 
 const CONFIG_PATH = path.join(process.cwd(), "config", "watches.json");
 const CONFIG_REPO_PATH = "config/watches.json";
+const WORKFLOW_PATH = path.join(
+  process.cwd(),
+  ".github",
+  "workflows",
+  "market-watch.yml"
+);
+const WORKFLOW_REPO_PATH = ".github/workflows/market-watch.yml";
+const DEFAULT_SCHEDULE = {
+  startHour: 0,
+  intervalHours: 2,
+  cronExpression: "0 */2 * * *"
+};
 
 function splitCsv(value) {
   return String(value || "")
@@ -22,13 +34,27 @@ function slugify(input) {
 }
 
 async function readConfig() {
+  return readJsonFromFile(CONFIG_PATH, CONFIG_REPO_PATH);
+}
+
+async function writeConfig(config, actor = "admin") {
+  const output = JSON.stringify(config, null, 2) + "\n";
+  await writeTextToFile(output, CONFIG_PATH, CONFIG_REPO_PATH, `chore: update watches config (${actor})`);
+}
+
+async function readJsonFromFile(localPath, repoPath) {
+  const raw = await readTextFromFile(localPath, repoPath);
+  return JSON.parse(raw);
+}
+
+async function readTextFromFile(localPath, repoPath) {
   const repo = process.env.GITHUB_REPO;
   const token = process.env.GITHUB_TOKEN;
   const branch = process.env.GITHUB_BRANCH || "main";
 
   if (repo && token) {
     const response = await fetch(
-      `https://api.github.com/repos/${repo}/contents/${CONFIG_REPO_PATH}?ref=${encodeURIComponent(
+      `https://api.github.com/repos/${repo}/contents/${repoPath}?ref=${encodeURIComponent(
         branch
       )}`,
       {
@@ -43,23 +69,20 @@ async function readConfig() {
       throw new Error(`GitHub read failed: ${response.status}`);
     }
     const payload = await response.json();
-    const content = Buffer.from(payload.content, "base64").toString("utf8");
-    return JSON.parse(content);
+    return Buffer.from(payload.content, "base64").toString("utf8");
   }
 
-  const raw = await fs.readFile(CONFIG_PATH, "utf8");
-  return JSON.parse(raw);
+  return fs.readFile(localPath, "utf8");
 }
 
-async function writeConfig(config, actor = "admin") {
-  const output = JSON.stringify(config, null, 2) + "\n";
+async function writeTextToFile(output, localPath, repoPath, commitMessage) {
   const repo = process.env.GITHUB_REPO;
   const token = process.env.GITHUB_TOKEN;
   const branch = process.env.GITHUB_BRANCH || "main";
 
   if (repo && token) {
     const currentResponse = await fetch(
-      `https://api.github.com/repos/${repo}/contents/${CONFIG_REPO_PATH}?ref=${encodeURIComponent(
+      `https://api.github.com/repos/${repo}/contents/${repoPath}?ref=${encodeURIComponent(
         branch
       )}`,
       {
@@ -76,7 +99,7 @@ async function writeConfig(config, actor = "admin") {
     const currentPayload = await currentResponse.json();
 
     const updateResponse = await fetch(
-      `https://api.github.com/repos/${repo}/contents/${CONFIG_REPO_PATH}`,
+      `https://api.github.com/repos/${repo}/contents/${repoPath}`,
       {
         method: "PUT",
         headers: {
@@ -86,7 +109,7 @@ async function writeConfig(config, actor = "admin") {
           "user-agent": "hlidacka-admin"
         },
         body: JSON.stringify({
-          message: `chore: update watches config (${actor})`,
+          message: commitMessage,
           content: Buffer.from(output, "utf8").toString("base64"),
           sha: currentPayload.sha,
           branch
@@ -99,7 +122,128 @@ async function writeConfig(config, actor = "admin") {
     return;
   }
 
-  await fs.writeFile(CONFIG_PATH, output, "utf8");
+  await fs.writeFile(localPath, output, "utf8");
+}
+
+function parseScheduleFromWorkflow(workflowText) {
+  const cronMatch = workflowText.match(/-\s*cron:\s*"([^"]+)"/);
+  const cronExpression = cronMatch?.[1] || DEFAULT_SCHEDULE.cronExpression;
+  const parts = cronExpression.trim().split(/\s+/);
+  if (parts.length !== 5) {
+    return { ...DEFAULT_SCHEDULE, cronExpression };
+  }
+
+  const minute = Number(parts[0]);
+  const hourField = parts[1] || "";
+  if (!Number.isInteger(minute) || minute !== 0) {
+    return { ...DEFAULT_SCHEDULE, cronExpression };
+  }
+
+  let startHour = null;
+  let intervalHours = null;
+
+  const everyMatch = hourField.match(/^\*\/(\d+)$/);
+  if (everyMatch) {
+    startHour = 0;
+    intervalHours = Number(everyMatch[1]);
+  }
+
+  const rangeMatch = hourField.match(/^(\d+)-23\/(\d+)$/);
+  if (rangeMatch) {
+    startHour = Number(rangeMatch[1]);
+    intervalHours = Number(rangeMatch[2]);
+  }
+
+  if (hourField.includes(",")) {
+    const hours = hourField
+      .split(",")
+      .map((value) => Number(value.trim()))
+      .filter((value) => Number.isInteger(value) && value >= 0 && value <= 23);
+    if (hours.length >= 2) {
+      const diffs = [];
+      for (let i = 0; i < hours.length; i += 1) {
+        const current = hours[i];
+        const next = hours[(i + 1) % hours.length];
+        let diff = next - current;
+        if (diff <= 0) diff += 24;
+        diffs.push(diff);
+      }
+      const firstDiff = diffs[0];
+      const isConstant = diffs.every((diff) => diff === firstDiff);
+      if (isConstant) {
+        startHour = hours[0];
+        intervalHours = firstDiff;
+      }
+    }
+  }
+
+  if (
+    !Number.isInteger(startHour) ||
+    startHour < 0 ||
+    startHour > 23 ||
+    !Number.isInteger(intervalHours) ||
+    intervalHours < 2 ||
+    intervalHours > 24
+  ) {
+    return { ...DEFAULT_SCHEDULE, cronExpression };
+  }
+
+  return {
+    startHour,
+    intervalHours,
+    cronExpression
+  };
+}
+
+function buildCronExpression(startHour, intervalHours) {
+  const hours = [];
+  for (let hour = startHour; hour < startHour + 24; hour += intervalHours) {
+    hours.push(hour % 24);
+  }
+  return `0 ${hours.join(",")} * * *`;
+}
+
+function updateWorkflowCron(workflowText, cronExpression) {
+  const pattern = /(-\s*cron:\s*")([^"]+)(")/;
+  if (!pattern.test(workflowText)) {
+    throw new Error("Cron schedule was not found in workflow file.");
+  }
+  return workflowText.replace(pattern, `$1${cronExpression}$3`);
+}
+
+async function readWorkflowSchedule() {
+  const workflowText = await readTextFromFile(WORKFLOW_PATH, WORKFLOW_REPO_PATH);
+  return parseScheduleFromWorkflow(workflowText);
+}
+
+async function writeWorkflowSchedule(schedule, actor = "admin") {
+  const workflowText = await readTextFromFile(WORKFLOW_PATH, WORKFLOW_REPO_PATH);
+  const cronExpression = buildCronExpression(schedule.startHour, schedule.intervalHours);
+  const nextWorkflowText = updateWorkflowCron(workflowText, cronExpression);
+  await writeTextToFile(
+    nextWorkflowText,
+    WORKFLOW_PATH,
+    WORKFLOW_REPO_PATH,
+    `chore: update market watch schedule (${actor})`
+  );
+  return { ...schedule, cronExpression };
+}
+
+function normalizeScheduleInput(scheduleInput, fallbackSchedule = DEFAULT_SCHEDULE) {
+  const startHour = Number(scheduleInput?.startHour);
+  const intervalHours = Number(scheduleInput?.intervalHours);
+
+  const safeStartHour = Number.isInteger(startHour) && startHour >= 0 && startHour <= 23
+    ? startHour
+    : fallbackSchedule.startHour;
+  const safeInterval = Number.isInteger(intervalHours) && intervalHours >= 2 && intervalHours <= 24
+    ? intervalHours
+    : fallbackSchedule.intervalHours;
+
+  return {
+    startHour: safeStartHour,
+    intervalHours: safeInterval
+  };
 }
 
 function configToAdminModel(config) {
@@ -177,12 +321,13 @@ export async function GET(req) {
   }
 
   try {
-    const config = await readConfig();
+    const [config, schedule] = await Promise.all([readConfig(), readWorkflowSchedule()]);
     return Response.json({
       watches: configToAdminModel(config),
       marketplaces: listSupportedMarketplaces(),
       notificationEmail:
-        config.notifications?.emailTo || process.env.EMAIL_TO || "jan.kostalek@gmail.com"
+        config.notifications?.emailTo || process.env.EMAIL_TO || "jan.kostalek@gmail.com",
+      schedule
     });
   } catch (err) {
     return Response.json(
@@ -199,20 +344,28 @@ export async function PUT(req) {
 
   try {
     const body = await req.json();
-    const current = await readConfig();
+    const [current, currentSchedule] = await Promise.all([readConfig(), readWorkflowSchedule()]);
     const config = adminModelToConfig(
       body.watches || [],
       body.notificationEmail,
       current
     );
-    await writeConfig(config, "web-admin");
+    const nextSchedule = normalizeScheduleInput(body.schedule, currentSchedule);
+    await Promise.all([
+      writeConfig(config, "web-admin"),
+      writeWorkflowSchedule(nextSchedule, "web-admin")
+    ]);
 
     return Response.json({
       ok: true,
       watches: configToAdminModel(config),
       marketplaces: listSupportedMarketplaces(),
       notificationEmail:
-        config.notifications?.emailTo || process.env.EMAIL_TO || "jan.kostalek@gmail.com"
+        config.notifications?.emailTo || process.env.EMAIL_TO || "jan.kostalek@gmail.com",
+      schedule: {
+        ...nextSchedule,
+        cronExpression: buildCronExpression(nextSchedule.startHour, nextSchedule.intervalHours)
+      }
     });
   } catch (err) {
     return Response.json(
