@@ -1,6 +1,76 @@
-# Hlidacka bazaru - 2026-03-03T13:28:55.308Z
+# Hlidacka bazaru - 2026-03-03T13:29:59.258Z
 
 - Kontrolovano dotazu: **1**
 - Kontrolovano zdroju: **2**
-- Nalezeno novych inzeratu: **0**
+- Nalezeno novych inzeratu: **67**
 - Chyby: **0**
+
+## Garmin new (67)
+
+- [Garmin Fénix 6 PRO](https://www.sbazar.cz/inzerat/228317270-garmin-fenix-6-pro) | 4 000 Kč | Sbazar
+- [GPS Navigace Garmin](https://www.sbazar.cz/inzerat/228307358-gps-navigace-garmin) | 500 Kč | Sbazar
+- [GPS hodinky Garmin vivoactive 4 silver](https://www.sbazar.cz/inzerat/222761410-gps-hodinky-garmin-vivoactive-4-silver) | 5 000 Kč | Sbazar
+- [Garmin Fenix 7 Solar Sapphire Pro 51](https://www.sbazar.cz/inzerat/228308150-garmin-fenix-7-solar-sapphire-pro-51) | 10 500 Kč | Sbazar
+- [Nabíjecí kabel Garmin](https://www.sbazar.cz/inzerat/228270071-nabijeci-kabel-garmin) | 70 Kč | Sbazar
+- [navigace GARMIN](https://www.sbazar.cz/inzerat/228181673-navigace-garmin) | 300 Kč | Sbazar
+- [Garmin Solar](https://www.sbazar.cz/inzerat/228168815-garmin-solar) | 3 000 Kč | Sbazar
+- [Garmin StreetPilot GPS (1999)](https://www.sbazar.cz/inzerat/225275326-garmin-streetpilot-gps-1999) | 4 500 Kč | Sbazar
+- [Hodinky Garmin Vivoactive 4S](https://www.sbazar.cz/inzerat/219367706-hodinky-garmin-vivoactive-4s) | 1 500 Kč | Sbazar
+- [Garmin](https://www.sbazar.cz/inzerat/192651505-garmin) | Sbazar
+- [Chytré hodinky garmin fenix3](https://www.sbazar.cz/inzerat/228226277-chytre-hodinky-garmin-fenix3) | 1 300 Kč | Sbazar
+- [Garmin 165 Music Black](https://www.sbazar.cz/inzerat/228237656-garmin-165-music-black) | 5 000 Kč | Sbazar
+- [Garmin Enduro](https://www.sbazar.cz/inzerat/228074779-garmin-enduro) | 5 000 Kč | Sbazar
+- [Garmin Venu 2](https://www.sbazar.cz/inzerat/228138908-garmin-venu-2) | 2 000 Kč | Sbazar
+- [Navigace Garmin Quest](https://www.sbazar.cz/inzerat/57474192-navigace-garmin-quest) | 2 000 Kč | Sbazar
+- [Garmin Forerunner 955](https://www.sbazar.cz/inzerat/228138665-garmin-forerunner-955) | 6 000 Kč | Sbazar
+- [navigace Garmin s Head-Up Display](https://www.sbazar.cz/inzerat/184839314-navigace-garmin-s-head-up-display) | 1 500 Kč | Sbazar
+- [Prodám nabíjecí kabel pro hodinky Garmin](https://www.sbazar.cz/inzerat/226124074-prodam-nabijeci-kabel-pro-hodinky-garmin) | 99 Kč | Sbazar
+- [Prodám Garmin Forerunner 265s](https://www.sbazar.cz/inzerat/228234455-prodam-garmin-forerunner-265s) | 5 690 Kč | Sbazar
+- [Garmin fenix6x pro](https://www.sbazar.cz/inzerat/228017275-garmin-fenix6x-pro) | 3 000 Kč | Sbazar
+- [Garmin Tactix Delta](https://www.sbazar.cz/inzerat/228067945-garmin-tactix-delta) | 6 000 Kč | Sbazar
+- [Chytré hodinky Garmin](https://www.sbazar.cz/inzerat/228029356-chytre-hodinky-garmin) | 1 199 Kč | Sbazar
+- [Garmin Forerunner 165](https://www.sbazar.cz/inzerat/227872273-garmin-forerunner-165) | 4 500 Kč | Sbazar
+- [Dětský fitness náramek Garmin vivofit jr. 3](https://www.sbazar.cz/inzerat/228281339-detsky-fitness-naramek-garmin-vivofit-jr-3) | 600 Kč | Sbazar
+- [Kabel Garmin](https://www.sbazar.cz/inzerat/227593042-kabel-garmin) | 70 Kč | Sbazar
+- [Garmin Fenix 5s](https://www.sbazar.cz/inzerat/224000323-garmin-fenix-5s) | 2 000 Kč | Sbazar
+- [řemínek Garmin 26mm](https://www.sbazar.cz/inzerat/227894995-reminek-garmin-26mm) | 400 Kč | Sbazar
+- [Garmin Fenix6x Pro](https://www.sbazar.cz/inzerat/227879323-garmin-fenix6x-pro) | 2 900 Kč | Sbazar
+- [NOVÉ POUZDRO GARMIN](https://www.sbazar.cz/inzerat/205818480-nove-pouzdro-garmin) | 350 Kč | Sbazar
+- [GARMIN EPIX GEN 2](https://www.sbazar.cz/inzerat/227478001-garmin-epix-gen-2) | 5 990 Kč | Sbazar
+- [Navigace Garmin zűmo](https://www.sbazar.cz/inzerat/227856343-navigace-garmin-zumo) | 3 500 Kč | Sbazar
+- [Garmin venu 2s](https://www.sbazar.cz/inzerat/227868766-garmin-venu-2s) | 3 200 Kč | Sbazar
+- [Nabíjecí kabel Garmin](https://www.sbazar.cz/inzerat/227787730-nabijeci-kabel-garmin) | 70 Kč | Sbazar
+- [Garmin Vivoactive 4s](https://www.sbazar.cz/inzerat/227868808-garmin-vivoactive-4s) | 1 500 Kč | Sbazar
+- [Garmin 1040 Solar](https://www.sbazar.cz/inzerat/227794102-garmin-1040-solar) | 6 000 Kč | Sbazar
+- [Navigace Garmin](https://www.sbazar.cz/inzerat/227257867-navigace-garmin) | 500 Kč | Sbazar
+- [Garmin venu 2s](https://www.sbazar.cz/inzerat/227806651-garmin-venu-2s) | 1 400 Kč | Sbazar
+- [hodinky Garmin Fenix 6X Sapphire](https://www.sbazar.cz/inzerat/228135542-hodinky-garmin-fenix-6x-sapphire) | 3 500 Kč | Sbazar
+- [Pásek hodinek Garmin.](https://www.sbazar.cz/inzerat/182259761-pasek-hodinek-garmin) | 125 Kč | Sbazar
+- [Navigace Garmin](https://www.sbazar.cz/inzerat/227773810-navigace-garmin) | 100 Kč | Sbazar
+- [Garmin Forerunner 15](https://www.sbazar.cz/inzerat/208790347-garmin-forerunner-15) | 350 Kč | Sbazar
+- [Garmin Vivoactive 3](https://www.sbazar.cz/inzerat/227999386-garmin-vivoactive-3) | 900 Kč | Sbazar
+- [Garmin - Řeminek, šíře 22mm](https://www.sbazar.cz/inzerat/216277096-garmin-reminek-sire-22mm) | 70 Kč | Sbazar
+- [Chytré hodinky Garmin Venu](https://www.sbazar.cz/inzerat/228012448-chytre-hodinky-garmin-venu) | 1 200 Kč | Sbazar
+- [Navigace Garmin](https://www.sbazar.cz/inzerat/227648830-navigace-garmin) | 200 Kč | Sbazar
+- [Hodinky Garmin Instinct 350mm AMOLED black](https://www.sbazar.cz/inzerat/228150746-hodinky-garmin-instinct-350mm-amoled-black) | 7 500 Kč | Sbazar
+- [Venu 3s Garmin ochranná fólie](https://www.sbazar.cz/inzerat/226324507-venu-3s-garmin-ochranna-folie) | Sbazar
+- [Venu 3s Garmin ochranná fólie](https://www.sbazar.cz/inzerat/226324498-venu-3s-garmin-ochranna-folie) | Sbazar
+- [Garmin FR945](https://www.sbazar.cz/inzerat/227620474-garmin-fr945) | 3 000 Kč | Sbazar
+- [Navigace GARMIN + Bezdrátová kamera](https://www.sbazar.cz/inzerat/228081001-navigace-garmin-bezdratova-kamera) | 2 000 Kč | Sbazar
+- [Garmin Fenix 7 Sapphire Solar](https://www.sbazar.cz/inzerat/228067723-garmin-fenix-7-sapphire-solar) | 7 000 Kč | Sbazar
+- [Golfové hodinky Garmin Approach S2](https://www.sbazar.cz/inzerat/228021064-golfove-hodinky-garmin-approach-s2) | 990 Kč | Sbazar
+- [Navigace Garmin nuvi 56](https://www.sbazar.cz/inzerat/224057098-navigace-garmin-nuvi-56) | 500 Kč | Sbazar
+- [Navigace Garmin Nuvi 255W](https://www.sbazar.cz/inzerat/227910169-navigace-garmin-nuvi-255w) | 1 000 Kč | Sbazar
+- [Navigace Garmin](https://www.sbazar.cz/inzerat/209630836-navigace-garmin) | 450 Kč | Sbazar
+- [Garmin venu 2 plus](https://www.sbazar.cz/inzerat/227868610-garmin-venu-2-plus) | 2 900 Kč | Sbazar
+- [Chytré hodinky Garmin Vivoactive 3](https://www.sbazar.cz/inzerat/215316133-chytre-hodinky-garmin-vivoactive-3) | Sbazar
+- [Navigace GARMIN](https://www.sbazar.cz/inzerat/214972498-navigace-garmin) | 400 Kč | Sbazar
+- [Garmin Marq Captain](https://www.sbazar.cz/inzerat/225251401-garmin-marq-captain) | 11 000 Kč | Sbazar
+- [Navigace GARMIN](https://www.sbazar.cz/inzerat/186318848-navigace-garmin) | 500 Kč | Sbazar
+- [Garmin Vivoactive 3](https://www.sbazar.cz/inzerat/227862253-garmin-vivoactive-3) | 500 Kč | Sbazar
+- [Garmin Forerunner 955 Solar](https://www.sbazar.cz/inzerat/227828056-garmin-forerunner-955-solar) | 5 500 Kč | Sbazar
+- [Prodám hodinky Garmin VIVOMOVE HR](https://www.sbazar.cz/inzerat/225712924-prodam-hodinky-garmin-vivomove-hr) | 1 200 Kč | Sbazar
+- [Garmin Forerunner 305 s nabíječkou](https://www.sbazar.cz/inzerat/113611521-garmin-forerunner-305-s-nabijeckou) | 200 Kč | Sbazar
+- [Chytré hodinky GARMIN Vivoactive 3](https://www.sbazar.cz/inzerat/228039499-chytre-hodinky-garmin-vivoactive-3) | 1 000 Kč | Sbazar
+- [GARMIN Fenix 7x solar](https://mobil.bazos.cz/inzerat/215215319/garmin-fenix-7x-solar.php) | 10 000 Kč | Bazos
+- [Garmin Fenix 5 plus 47 mm](https://mobil.bazos.cz/inzerat/215640959/garmin-fenix-5-plus-47-mm.php) | 2 600 Kč | Bazos
