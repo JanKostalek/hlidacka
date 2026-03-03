@@ -50,6 +50,27 @@ function normalizeLink(rawHref, pageUrl) {
   }
 }
 
+function buildSbazarSearchUrl(query) {
+  return `https://www.sbazar.cz/hledej/${encodeURIComponent(
+    String(query || "").toLowerCase().trim()
+  )}`;
+}
+
+function normalizeSourceForRuntime(source, watch) {
+  if (!source || source.id !== "sbazar") return source;
+
+  return {
+    ...source,
+    // Use explicit search route that returns listing links server-side.
+    url: buildSbazarSearchUrl(watch?.query || ""),
+    // Keep only real listing links.
+    itemSelector: "article",
+    titleSelector: "a[href*='/inzerat/']",
+    linkSelector: "a[href*='/inzerat/']",
+    priceSelector: "[class*='price'], [data-e2e*='price']"
+  };
+}
+
 function makeKey(sourceId, link, title) {
   return `${sourceId}|${link || title.toLowerCase()}`;
 }
@@ -622,11 +643,16 @@ async function main() {
     let watchErrors = 0;
 
     for (const source of watchSources) {
+      const sourceForRun = normalizeSourceForRuntime(source, watch);
       totalSources += 1;
       try {
-        const html = await fetchHtml(source.url);
-        const extracted = extractItemsFromPage(html, source);
+        const html = await fetchHtml(sourceForRun.url);
+        const extracted = extractItemsFromPage(html, sourceForRun);
+        console.log(
+          `[source] ${watch.name || watch.id} / ${sourceForRun.name || sourceForRun.id}: extracted=${extracted.length}`
+        );
 
+        let matchedForSource = 0;
         for (const candidate of extracted) {
           const text = `${candidate.title} ${candidate.price}`;
           if (
@@ -634,28 +660,36 @@ async function main() {
           ) {
             continue;
           }
+          matchedForSource += 1;
 
-          const key = makeKey(source.id || source.name || source.url, candidate.link, candidate.title);
+          const key = makeKey(
+            sourceForRun.id || sourceForRun.name || sourceForRun.url,
+            candidate.link,
+            candidate.title
+          );
           if (seen[key]) continue;
 
           seen[key] = nowIso;
           itemsForWatch.push({
             watchId: watch.id,
             watchName: watch.name,
-            sourceId: source.id || source.url,
-            sourceName: source.name || source.id || source.url,
+            sourceId: sourceForRun.id || sourceForRun.url,
+            sourceName: sourceForRun.name || sourceForRun.id || sourceForRun.url,
             title: candidate.title || "(bez nazvu)",
             price: candidate.price || "",
-            link: candidate.link || source.url,
+            link: candidate.link || sourceForRun.url,
             foundAt: nowIso
           });
         }
+        console.log(
+          `[source] ${watch.name || watch.id} / ${sourceForRun.name || sourceForRun.id}: matched=${matchedForSource}`
+        );
       } catch (err) {
         watchErrors += 1;
         errors.push({
           watchId: watch.id,
           watchName: watch.name,
-          sourceName: source.name || source.id || source.url,
+          sourceName: sourceForRun.name || sourceForRun.id || sourceForRun.url,
           message: err instanceof Error ? err.message : String(err)
         });
       }
