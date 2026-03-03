@@ -1,4 +1,4 @@
-# Hlidacka bazaru - 2026-03-03T12:17:51.929Z
+# Hlidacka bazaru - 2026-03-03T12:30:58.743Z
 
 - Kontrolovano dotazu: **4**
 - Kontrolovano zdroju: **6**
@@ -7,5 +7,5 @@
 
 ## Chyby
 
-- Garmin / Sbazar: fetch failed
-- Lego / Sbazar: fetch failed
+- Garmin / Sbazar: Fetch failed (https://www.sbazar.cz/hledej/Garmin): HTTP 404 (https://www.sbazar.cz/search?query=Garmin) | <!DOCTYPE html><html lang="cs" class="scroll-pt-mobile-header md:scroll-pt-desktop-header" data-astro-transition-scope="astro-smooz4hq-1"> <head><meta name="sentry-trace" content="
+- Lego / Sbazar: Fetch failed (https://www.sbazar.cz/hledej/Lego%20ninja): HTTP 404 (https://www.sbazar.cz/search?query=Lego%20ninja) | <!DOCTYPE html><html lang="cs" class="scroll-pt-mobile-header md:scroll-pt-desktop-header" data-astro-transition-scope="astro-smooz4hq-1"> <head><meta name="sentry-trace" content="
