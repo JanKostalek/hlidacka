@@ -665,7 +665,8 @@ async function main() {
 
         let matchedForSource = 0;
         for (const candidate of extracted) {
-          const text = `${candidate.title} ${candidate.price} ${candidate.link}`;
+          // Match only human-readable content; URL IDs were causing false positives.
+          const text = `${candidate.title} ${candidate.price}`;
           if (
             !includesKeywords(text, watch.keywords || [], watch.excludeKeywords || [])
           ) {
@@ -695,6 +696,18 @@ async function main() {
         console.log(
           `[source] ${watch.name || watch.id} / ${sourceForRun.name || sourceForRun.id}: matched=${matchedForSource}`
         );
+        if (sourceForRun.id === "sbazar" && matchedForSource === 0 && extracted.length > 0) {
+          const sampleTitles = extracted
+            .slice(0, 5)
+            .map((item) => normalizeWhitespace(item.title))
+            .filter(Boolean);
+          const normalizedKeywords = (watch.keywords || []).map((kw) =>
+            normalizeForMatch(kw)
+          );
+          console.log(
+            `[source] ${watch.name || watch.id} / sbazar: keywords=${JSON.stringify(normalizedKeywords)} sample_titles=${JSON.stringify(sampleTitles)}`
+          );
+        }
       } catch (err) {
         watchErrors += 1;
         errors.push({
