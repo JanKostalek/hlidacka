@@ -15,15 +15,6 @@
       "excludeKeywords": [],
       "sources": [
         {
-          "id": "sbazar",
-          "name": "Sbazar",
-          "url": "https://www.sbazar.cz/hledej/Garmin",
-          "itemSelector": "article",
-          "titleSelector": "h3, h2, a",
-          "linkSelector": "a[href]",
-          "priceSelector": "[class*='price'], [data-e2e*='price']"
-        },
-        {
           "id": "bazos",
           "name": "Bazos",
           "url": "https://www.bazos.cz/search.php?hledat=Garmin",
