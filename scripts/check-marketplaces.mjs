@@ -421,7 +421,6 @@ function buildEmailHtml(config, results, alreadyDisplayedByWatch = {}) {
         <section style="background:#ffffff;border:1px solid #dbe5f0;border-radius:14px;padding:14px;margin-bottom:14px;box-shadow:0 4px 14px rgba(16,32,51,0.04);">
           <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
             <h3>${escapeHtml(watch.name || watch.id)}</h3>
-            <div style="background:#edf6ff;border:1px solid #d3e6fa;color:#15406a;border-radius:999px;padding:4px 10px;font-size:12px;">nove ${newItems.length} | jiz zobrazene ${shownCount} | chyby ${errorsForWatch.length}</div>
           </div>
 
           <div style="background:#f9fcff;border:1px solid #e2edf8;border-radius:10px;padding:10px;margin-top:10px;">

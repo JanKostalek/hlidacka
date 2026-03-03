@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import RunEmailPreview from "./components/run-email-preview";
 
 async function loadResults() {
   const resultsPath = path.join(process.cwd(), "data", "latest-results.json");
@@ -17,6 +18,21 @@ async function loadResults() {
 
 export const dynamic = "force-dynamic";
 
+function formatRunTime(iso) {
+  if (!iso) return "zatim zadny";
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return iso;
+  return date.toLocaleString("cs-CZ", {
+    timeZone: "Europe/Prague",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+  });
+}
+
 export default async function Home() {
   const { results, history } = await loadResults();
   const runs = (history.runs || []).slice(0, 20);
@@ -30,7 +46,7 @@ export default async function Home() {
           <a href="/admin">Otevrit administraci</a>
         </p>
         <ul className="stats">
-          <li>Posledni beh: {results.runAt || "zatim zadny"}</li>
+          <li>Posledni beh: {formatRunTime(results.runAt)}</li>
           <li>Dotazy: {results.summary?.totalWatches ?? 0}</li>
           <li>Zdroje: {results.summary?.totalSources ?? 0}</li>
           <li>Nove inzeraty: {results.summary?.totalNewItems ?? 0}</li>
@@ -101,7 +117,7 @@ export default async function Home() {
                 <tbody>
                   {runs.map((run) => (
                     <tr key={run.runAt}>
-                      <td>{run.runAt}</td>
+                      <td title={run.runAt}>{formatRunTime(run.runAt)}</td>
                       <td>{run.summary?.totalWatches ?? 0}</td>
                       <td>{run.summary?.totalSources ?? 0}</td>
                       <td>{run.summary?.totalNewItems ?? 0}</td>
@@ -113,9 +129,9 @@ export default async function Home() {
                             <div>
                               <b>Predmet:</b> {run.emailSubject || "neuvedeno"}
                             </div>
-                            <pre className="emailPreview">
-                              {run.emailText || "Text e-mailu neni u tohoto behu ulozen."}
-                            </pre>
+                            <RunEmailPreview
+                              text={run.emailText || "Text e-mailu neni u tohoto behu ulozen."}
+                            />
                           </div>
                         </details>
                       </td>
