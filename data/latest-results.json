@@ -1,9 +1,8 @@
 {
-  "runAt": "2026-03-03T14:07:23.720Z",
+  "runAt": null,
   "summary": {
-    "totalWatches": 3,
-    "totalSources": 5,
-    "totalFoundItems": 98,
+    "totalWatches": 0,
+    "totalSources": 0,
     "totalNewItems": 0,
     "errorCount": 0
   },

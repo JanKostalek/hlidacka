@@ -4,18 +4,15 @@
   },
   "watches": [
     {
-      "id": "garmin-new",
-      "name": "Garmin new",
-      "query": "Garmin",
-      "keywords": [
-        "Garmin"
-      ],
-      "excludeKeywords": [],
+      "id": "lego-star-wars",
+      "name": "LEGO Star Wars",
+      "keywords": ["lego", "star wars"],
+      "excludeKeywords": ["rezervace", "prodano"],
       "sources": [
         {
           "id": "sbazar",
           "name": "Sbazar",
-          "url": "https://www.sbazar.cz/?q=Garmin",
+          "url": "https://www.sbazar.cz/hledej/lego%20star%20wars",
           "itemSelector": "article",
           "titleSelector": "h3, h2, a",
           "linkSelector": "a[href]",
@@ -24,63 +21,11 @@
         {
           "id": "bazos",
           "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=Garmin",
-          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
+          "url": "https://deti.bazos.cz/?hledat=lego+star+wars",
+          "itemSelector": ".inzeraty.inzeratyflex",
           "titleSelector": ".nadpis",
           "linkSelector": "a[href]",
-          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
-        }
-      ]
-    },
-    {
-      "id": "g",
-      "name": "G",
-      "query": "Garmin",
-      "keywords": [
-        "Garmin",
-        "Fenix",
-        "8"
-      ],
-      "excludeKeywords": [],
-      "sources": [
-        {
-          "id": "sbazar",
-          "name": "Sbazar",
-          "url": "https://www.sbazar.cz/?q=Garmin",
-          "itemSelector": "article",
-          "titleSelector": "h3, h2, a",
-          "linkSelector": "a[href]",
-          "priceSelector": "[class*='price'], [data-e2e*='price']"
-        },
-        {
-          "id": "bazos",
-          "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=Garmin",
-          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
-          "titleSelector": ".nadpis",
-          "linkSelector": "a[href]",
-          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
-        }
-      ]
-    },
-    {
-      "id": "lego",
-      "name": "lego",
-      "query": "lego ninja",
-      "keywords": [
-        "lego",
-        "ninja"
-      ],
-      "excludeKeywords": [],
-      "sources": [
-        {
-          "id": "bazos",
-          "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=lego%20ninja",
-          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
-          "titleSelector": ".nadpis",
-          "linkSelector": "a[href]",
-          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
+          "priceSelector": ".cena"
         }
       ]
     }
