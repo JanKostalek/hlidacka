@@ -161,15 +161,19 @@ async function fetchHtml(url) {
     const parsed = new URL(url);
     if (parsed.hostname.includes("sbazar.cz") && parsed.pathname.startsWith("/hledej/")) {
       const rawQuery = decodeURIComponent(parsed.pathname.replace(/^\/hledej\//, ""));
+      urlsToTry.push(
+        `${parsed.protocol}//${parsed.host}/hledej/${encodeURIComponent(rawQuery.toLowerCase())}`
+      );
       urlsToTry.push(`${parsed.protocol}//${parsed.host}/search?query=${encodeURIComponent(rawQuery)}`);
     }
   } catch {
     // Keep the original URL only.
   }
+  const uniqueUrlsToTry = Array.from(new Set(urlsToTry));
 
   let lastErr = null;
 
-  for (const candidateUrl of urlsToTry) {
+  for (const candidateUrl of uniqueUrlsToTry) {
     for (let i = 0; i < attempts.length; i++) {
       if (attempts[i] > 0) {
         await wait(attempts[i]);
