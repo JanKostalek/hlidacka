@@ -84,13 +84,27 @@ function extractItemsFromPage(html, source) {
   const $ = load(html);
   const sourceUrl = source.url;
   const items = [];
+  let usedCardExtraction = false;
 
   if (source.itemSelector) {
     $(source.itemSelector).each((_, card) => {
       const item = extractFromCard($, card, source, sourceUrl);
-      if (item.title || item.link) items.push(item);
+      if (item.title || item.link) {
+        usedCardExtraction = true;
+        items.push(item);
+      }
     });
   } else {
+    $("a[href]").each((_, el) => {
+      const title = normalizeWhitespace($(el).text());
+      const link = normalizeLink($(el).attr("href"), sourceUrl);
+      if (title.length < 8 || !link) return;
+      items.push({ title, link, price: "" });
+    });
+  }
+
+  // Fallback if marketplace selector changed and no cards were extracted.
+  if (source.itemSelector && !usedCardExtraction) {
     $("a[href]").each((_, el) => {
       const title = normalizeWhitespace($(el).text());
       const link = normalizeLink($(el).attr("href"), sourceUrl);
