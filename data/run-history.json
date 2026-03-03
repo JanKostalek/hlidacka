@@ -1,6 +1,44 @@
 {
   "runs": [
     {
+      "runAt": "2026-03-03T11:04:15.401Z",
+      "summary": {
+        "totalWatches": 2,
+        "totalSources": 2,
+        "totalNewItems": 0,
+        "errorCount": 0
+      },
+      "watchStats": [
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "query": "Garmin",
+          "keywords": [
+            "Garmin",
+            "8"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 1,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "iphone",
+          "watchName": "Iphone",
+          "query": "iphone 13",
+          "keywords": [
+            "iphone"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 1,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        }
+      ]
+    },
+    {
       "runAt": "2026-03-03T11:02:23.785Z",
       "summary": {
         "totalWatches": 1,
