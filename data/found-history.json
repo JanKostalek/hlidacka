@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-04T21:12:20.234Z",
+  "updatedAt": "2026-03-04T22:08:32.609Z",
   "byWatch": {
     "garmin": [
+      {
+        "watchId": "garmin",
+        "watchName": "Garmin",
+        "sourceName": "Bazos",
+        "title": "Suzuki V strom 650 ABS",
+        "price": "119 000 Kč",
+        "link": "https://motorky.bazos.cz/inzerat/214985826/suzuki-v-strom-650-abs-xt.php",
+        "firstSeenAt": "2026-03-04T22:08:32.609Z"
+      },
       {
         "watchId": "garmin",
         "watchName": "Garmin",
