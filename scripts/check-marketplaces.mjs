@@ -193,11 +193,15 @@ function extractFromCard($, card, source, sourceUrl) {
   const title = normalizeWhitespace($card.find(titleSelector).first().text());
   const hrefRaw = $card.find(linkSelector).first().attr("href");
   const link = normalizeLink(hrefRaw, sourceUrl);
-  const priceFromSelector = priceSelector
+  const priceFromSelectorRaw = priceSelector
     ? normalizeWhitespace($card.find(priceSelector).first().text())
     : "";
   const matchText = normalizeWhitespace($card.text());
-  const price = extractPriceFromText(priceFromSelector) || extractPriceFromText(matchText);
+  const parsedPriceFromSelector = extractPriceFromText(priceFromSelectorRaw);
+  const price =
+    parsedPriceFromSelector ||
+    priceFromSelectorRaw ||
+    extractPriceFromText(matchText);
 
   return { title, link, price, matchText };
 }
