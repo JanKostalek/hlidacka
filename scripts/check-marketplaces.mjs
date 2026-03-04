@@ -409,9 +409,23 @@ function buildReport(results) {
   return lines.join("\n");
 }
 
-async function sendDiscordNotification(results) {
-  const webhook = process.env.DISCORD_WEBHOOK_URL;
-  if (!webhook || results.summary.totalNewItems === 0) return;
+async function sendDiscordNotification(config, results) {
+  const webhook = config.notifications?.discordWebhook || process.env.DISCORD_WEBHOOK_URL;
+  const discordOnlyWhenNew =
+    typeof config.notifications?.discordOnlyWhenNew === "boolean"
+      ? config.notifications.discordOnlyWhenNew
+      : String(process.env.DISCORD_ONLY_WHEN_NEW || "true") === "true";
+
+  if (!webhook) {
+    console.log("Discord notification skipped: DISCORD_WEBHOOK_URL is empty");
+    return;
+  }
+  if (discordOnlyWhenNew && results.summary.totalNewItems === 0) {
+    console.log(
+      "Discord notification skipped: configured to send only when new listings are found."
+    );
+    return;
+  }
 
   const entries = results.newItemsByWatch.flatMap((g) =>
     g.items.map((item) => `* ${item.title}\n${item.link}`)
@@ -429,6 +443,7 @@ async function sendDiscordNotification(results) {
   }
   if (current.trim()) chunks.push(current.trim());
 
+  console.log("Sending Discord notification...");
   for (let i = 0; i < chunks.length; i++) {
     const payload = {
       content:
@@ -442,6 +457,7 @@ async function sendDiscordNotification(results) {
       body: JSON.stringify(payload)
     });
   }
+  console.log("Discord notification sent.");
 }
 
 function buildEmailText(config, results, alreadyDisplayedByWatch = {}) {
@@ -862,7 +878,7 @@ async function main() {
   await writeJson(FOUND_HISTORY_PATH, nextFoundHistory);
   await fs.writeFile(REPORT_PATH, buildReport(results), "utf8");
   try {
-    await sendDiscordNotification(results);
+    await sendDiscordNotification(config, results);
   } catch (err) {
     console.error("Discord notification failed:", err);
   }

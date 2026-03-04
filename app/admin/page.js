@@ -20,6 +20,8 @@ export default function AdminPage() {
   const [marketplaces, setMarketplaces] = useState([]);
   const [notificationEmail, setNotificationEmail] = useState("");
   const [emailOnlyWhenNew, setEmailOnlyWhenNew] = useState(false);
+  const [notificationDiscordWebhook, setNotificationDiscordWebhook] = useState("");
+  const [discordOnlyWhenNew, setDiscordOnlyWhenNew] = useState(true);
   const [scheduleStartHour, setScheduleStartHour] = useState(0);
   const [scheduleIntervalHours, setScheduleIntervalHours] = useState(2);
   const [status, setStatus] = useState("Načítání...");
@@ -55,6 +57,8 @@ export default function AdminPage() {
     setMarketplaces(data.marketplaces || []);
     setNotificationEmail(data.notificationEmail || "");
     setEmailOnlyWhenNew(Boolean(data.emailOnlyWhenNew));
+    setNotificationDiscordWebhook(data.notificationDiscordWebhook || "");
+    setDiscordOnlyWhenNew(Boolean(data.discordOnlyWhenNew));
     setScheduleStartHour(Number.isInteger(data.schedule?.startHour) ? data.schedule.startHour : 0);
     setScheduleIntervalHours(
       Number.isInteger(data.schedule?.intervalHours) ? data.schedule.intervalHours : 2
@@ -144,6 +148,8 @@ export default function AdminPage() {
         watches,
         notificationEmail,
         emailOnlyWhenNew,
+        notificationDiscordWebhook,
+        discordOnlyWhenNew,
         schedule: {
           startHour: scheduleStartHour,
           intervalHours: scheduleIntervalHours
@@ -169,6 +175,8 @@ export default function AdminPage() {
     setWatchValidationErrors({});
     setNotificationEmail(data.notificationEmail || "");
     setEmailOnlyWhenNew(Boolean(data.emailOnlyWhenNew));
+    setNotificationDiscordWebhook(data.notificationDiscordWebhook || "");
+    setDiscordOnlyWhenNew(Boolean(data.discordOnlyWhenNew));
     setScheduleStartHour(Number.isInteger(data.schedule?.startHour) ? data.schedule.startHour : 0);
     setScheduleIntervalHours(
       Number.isInteger(data.schedule?.intervalHours) ? data.schedule.intervalHours : 2
@@ -279,6 +287,17 @@ export default function AdminPage() {
           <span className="helpText">Použije se při dalším běhu workflow.</span>
         </div>
         <div className="adminRow adminRowEmail">
+          <label htmlFor="discord_webhook">Discord webhook URL</label>
+          <input
+            id="discord_webhook"
+            type="text"
+            value={notificationDiscordWebhook}
+            onChange={(e) => setNotificationDiscordWebhook(e.target.value)}
+            placeholder="https://discord.com/api/webhooks/..."
+          />
+          <span className="helpText">Použije se při dalším běhu workflow.</span>
+        </div>
+        <div className="adminRow adminRowEmail">
           <label htmlFor="email_only_when_new">Režim informačního e-mailu</label>
           <div className="emailModeOptions" role="group" aria-label="Režim informačního e-mailu">
             <label className="emailModeOption" htmlFor="email_send_always">
@@ -296,6 +315,29 @@ export default function AdminPage() {
                 type="checkbox"
                 checked={emailOnlyWhenNew}
                 onChange={() => setEmailOnlyWhenNew(true)}
+              />
+              Jen nové nálezy
+            </label>
+          </div>
+        </div>
+        <div className="adminRow adminRowEmail">
+          <label htmlFor="discord_only_when_new">Režim Discord notifikace</label>
+          <div className="emailModeOptions" role="group" aria-label="Režim Discord notifikace">
+            <label className="emailModeOption" htmlFor="discord_send_always">
+              <input
+                id="discord_send_always"
+                type="checkbox"
+                checked={!discordOnlyWhenNew}
+                onChange={() => setDiscordOnlyWhenNew(false)}
+              />
+              Odesílat vždy
+            </label>
+            <label className="emailModeOption" htmlFor="discord_only_when_new">
+              <input
+                id="discord_only_when_new"
+                type="checkbox"
+                checked={discordOnlyWhenNew}
+                onChange={() => setDiscordOnlyWhenNew(true)}
               />
               Jen nové nálezy
             </label>

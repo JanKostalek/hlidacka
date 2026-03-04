@@ -271,6 +271,8 @@ function adminModelToConfig(
   modelWatches,
   notificationEmail,
   emailOnlyWhenNew,
+  notificationDiscordWebhook,
+  discordOnlyWhenNew,
   existingConfig = {}
 ) {
   const usedIds = new Set();
@@ -308,7 +310,9 @@ function adminModelToConfig(
   const notifications = {
     ...(existingConfig.notifications || {}),
     emailTo: String(notificationEmail || "").trim(),
-    emailOnlyWhenNew: Boolean(emailOnlyWhenNew)
+    emailOnlyWhenNew: Boolean(emailOnlyWhenNew),
+    discordWebhook: String(notificationDiscordWebhook || "").trim(),
+    discordOnlyWhenNew: Boolean(discordOnlyWhenNew)
   };
 
   return {
@@ -341,6 +345,12 @@ export async function GET(req) {
         typeof config.notifications?.emailOnlyWhenNew === "boolean"
           ? config.notifications.emailOnlyWhenNew
           : String(process.env.EMAIL_ONLY_WHEN_NEW || "false") === "true",
+      notificationDiscordWebhook:
+        config.notifications?.discordWebhook || process.env.DISCORD_WEBHOOK_URL || "",
+      discordOnlyWhenNew:
+        typeof config.notifications?.discordOnlyWhenNew === "boolean"
+          ? config.notifications.discordOnlyWhenNew
+          : String(process.env.DISCORD_ONLY_WHEN_NEW || "true") === "true",
       schedule
     });
   } catch (err) {
@@ -363,6 +373,8 @@ export async function PUT(req) {
       body.watches || [],
       body.notificationEmail,
       body.emailOnlyWhenNew,
+      body.notificationDiscordWebhook,
+      body.discordOnlyWhenNew,
       current
     );
     const nextSchedule = normalizeScheduleInput(body.schedule, currentSchedule);
@@ -377,6 +389,11 @@ export async function PUT(req) {
       notificationEmail:
         config.notifications?.emailTo || process.env.EMAIL_TO || "jan.kostalek@gmail.com",
       emailOnlyWhenNew: Boolean(config.notifications?.emailOnlyWhenNew),
+      notificationDiscordWebhook: config.notifications?.discordWebhook || "",
+      discordOnlyWhenNew:
+        typeof config.notifications?.discordOnlyWhenNew === "boolean"
+          ? config.notifications.discordOnlyWhenNew
+          : true,
       schedule: {
         ...nextSchedule,
         cronExpression: buildCronExpression(nextSchedule.startHour, nextSchedule.intervalHours)
