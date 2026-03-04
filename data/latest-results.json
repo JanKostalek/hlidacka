@@ -1,10 +1,10 @@
 {
-  "runAt": "2026-03-04T08:56:40.015Z",
+  "runAt": "2026-03-04T09:33:21.797Z",
   "summary": {
     "totalWatches": 2,
     "totalSources": 4,
-    "totalFoundItems": 18,
-    "totalNewItems": 18,
+    "totalFoundItems": 19,
+    "totalNewItems": 3,
     "errorCount": 0
   },
   "newItemsByWatch": [
@@ -17,186 +17,30 @@
           "watchName": "LEGO Star Wars",
           "sourceId": "bazos",
           "sourceName": "Bazos",
-          "title": "LEGO STAR WARS 75042",
+          "title": "stavebnice Hvězdné války - Star Wars Mos Eisley Cantina",
           "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215272080/lego-star-wars-75042.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
+          "link": "https://deti.bazos.cz/inzerat/214514151/stavebnice-hvezdne-valky-mos-eisley-cantina.php",
+          "foundAt": "2026-03-04T09:33:21.797Z"
         },
         {
           "watchId": "lego-star-wars",
           "watchName": "LEGO Star Wars",
           "sourceId": "bazos",
           "sourceName": "Bazos",
-          "title": "LEGO STAR WARS 75042",
+          "title": "LEGO 31200 HVĚZDNÉ VÁLKY - SITH",
           "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215272478/lego-star-wars-75042.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
+          "link": "https://deti.bazos.cz/inzerat/215767306/lego-31200-hvezdne-valky-sith.php",
+          "foundAt": "2026-03-04T09:33:21.797Z"
         },
         {
           "watchId": "lego-star-wars",
           "watchName": "LEGO Star Wars",
           "sourceId": "bazos",
           "sourceName": "Bazos",
-          "title": "LEGO Star Wars 75371 Chewbacca – NOVÉ, ZAPEČETĚNÉ",
+          "title": "Lego Adventní kalendáře 2021 a 2022",
           "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215252063/lego-star-wars-75371-chewbacca-nove-zapecetene.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "LEGO Star Wars The Clone Wars 8036",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215767231/lego-star-wars-the-clone-wars-8036.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "LEGO Star Wars 75318 Dítě",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215764475/lego-star-wars-75318-dite.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "LEGO BrickHeadz Star Wars",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215763941/lego-brickheadz-star-wars.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Lego 75223 Star Wars",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215760342/lego-75223-star-wars.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "LEGO Star Wars 75212 MILENIUM FALCON",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215760030/lego-star-wars-75212-milenium-falcon.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "LEGO helmy - Marvel, Star Wars, DC",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215756456/lego-helmy-marvel-star-wars-dc.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "LEGO Star Wars 75319 Kovárna mandaloriánské zbrojmistryně",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215756437/lego-star-wars-75319-kovarna-mandalorianske-zbrojmistryne.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Lego Star Wars 75387",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215750166/lego-star-wars-75387.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Lego Star Wars 75337 AT-TE",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215749651/lego-star-wars-75337-at-te.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Lego LEGO Star Wars 75347 Tie Bomber",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215748541/lego-lego-star-wars-75347-tie-bomber.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Lego Star Wars 75242 Black Ace Tie Interceptor",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215748248/lego-star-wars-75242-black-ace-tie-interceptor.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "LEGO STAR WARS 75323",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215744069/lego-star-wars-75323.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "LEGO STAR WARS 40539",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215744067/lego-star-wars-40539.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "LEGO STAR WARS 75312",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215744064/lego-star-wars-75312.php",
-          "foundAt": "2026-03-04T08:56:40.015Z"
-        }
-      ]
-    },
-    {
-      "watchId": "paladix-nikon-z7-test",
-      "watchName": "Paladix Nikon Z7 test",
-      "items": [
-        {
-          "watchId": "paladix-nikon-z7-test",
-          "watchName": "Paladix Nikon Z7 test",
-          "sourceId": "paladix",
-          "sourceName": "Paladix",
-          "title": "Nikon Z7 II",
-          "price": "37 900 Kč",
-          "link": "https://www.paladix.cz/bazar/inzerat/nikon-z7-ii-2",
-          "foundAt": "2026-03-04T08:56:40.015Z"
+          "link": "https://deti.bazos.cz/inzerat/215756446/lego-adventni-kalendare-2021-a-2022.php",
+          "foundAt": "2026-03-04T09:33:21.797Z"
         }
       ]
     }
