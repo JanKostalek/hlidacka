@@ -56,10 +56,61 @@ function buildSbazarSearchUrl(query) {
   )}`;
 }
 
+function formatPriceCzk(value) {
+  if (typeof value !== "number" || !Number.isFinite(value)) return "";
+  return `${new Intl.NumberFormat("cs-CZ").format(Math.round(value))} Kč`;
+}
+
+function extractPriceFromText(input) {
+  const text = normalizeWhitespace(String(input || "").replace(/\u00a0/g, " "));
+  if (!text) return "";
+
+  const normalized = normalizeForMatch(text);
+  if (
+    normalized.includes("dohodou") ||
+    normalized.includes("na dotaz") ||
+    normalized.includes("nabidnete")
+  ) {
+    return "";
+  }
+
+  const match = text.match(/(\d{1,3}(?:[ .]\d{3})+|\d{3,})\s*(kč|kc|czk)\b/i);
+  if (!match) return "";
+
+  const digits = match[1].replace(/[^\d]/g, "");
+  if (!digits) return "";
+
+  const amount = Number.parseInt(digits, 10);
+  return Number.isFinite(amount) ? formatPriceCzk(amount) : "";
+}
+
 function formatSbazarPrice(item) {
   if (!item || item.price_by_agreement) return "";
-  if (typeof item.price !== "number" || !Number.isFinite(item.price)) return "";
-  return `${new Intl.NumberFormat("cs-CZ").format(item.price)} Kč`;
+
+  const numericCandidates = [
+    item.price,
+    item.price_czk,
+    item.price_amount,
+    item?.price?.amount
+  ];
+
+  for (const candidate of numericCandidates) {
+    if (typeof candidate === "number" && Number.isFinite(candidate)) {
+      return formatPriceCzk(candidate);
+    }
+    if (typeof candidate === "string" && /^\d+(?:[.,]\d+)?$/.test(candidate.trim())) {
+      const asNumber = Number(candidate.replace(",", "."));
+      if (Number.isFinite(asNumber)) return formatPriceCzk(asNumber);
+    }
+  }
+
+  const textCandidates = [item.price_text, item.price_label, item.price_display];
+  for (const candidate of textCandidates) {
+    const parsed = extractPriceFromText(candidate);
+    if (parsed) return parsed;
+  }
+
+  return "";
 }
 
 function mapSbazarItemToCandidate(item) {
@@ -142,10 +193,11 @@ function extractFromCard($, card, source, sourceUrl) {
   const title = normalizeWhitespace($card.find(titleSelector).first().text());
   const hrefRaw = $card.find(linkSelector).first().attr("href");
   const link = normalizeLink(hrefRaw, sourceUrl);
-  const price = priceSelector
+  const priceFromSelector = priceSelector
     ? normalizeWhitespace($card.find(priceSelector).first().text())
     : "";
   const matchText = normalizeWhitespace($card.text());
+  const price = extractPriceFromText(priceFromSelector) || extractPriceFromText(matchText);
 
   return { title, link, price, matchText };
 }
@@ -169,7 +221,15 @@ function extractItemsFromPage(html, source) {
       const title = normalizeWhitespace($(el).text());
       const link = normalizeLink($(el).attr("href"), sourceUrl);
       if (title.length < 8 || !link) return;
-      items.push({ title, link, price: "" });
+      const containerText = normalizeWhitespace(
+        $(el)
+          .closest("article, li, tr, .inzeraty, .inzeratyflex, .item, .advert")
+          .first()
+          .text()
+      );
+      const matchText = containerText || title;
+      const price = extractPriceFromText(matchText);
+      items.push({ title, link, price, matchText });
     });
   }
 
@@ -182,7 +242,15 @@ function extractItemsFromPage(html, source) {
       const title = normalizeWhitespace($(el).text());
       const link = normalizeLink($(el).attr("href"), sourceUrl);
       if (title.length < 8 || !link) return;
-      items.push({ title, link, price: "" });
+      const containerText = normalizeWhitespace(
+        $(el)
+          .closest("article, li, tr, .inzeraty, .inzeratyflex, .item, .advert")
+          .first()
+          .text()
+      );
+      const matchText = containerText || title;
+      const price = extractPriceFromText(matchText);
+      items.push({ title, link, price, matchText });
     });
   }
 
@@ -436,8 +504,38 @@ async function sendDiscordNotification(config, results) {
   }
 
   const entries = results.newItemsByWatch.flatMap((g) =>
-    g.items.map((item) => `* ${item.title}\n${item.link}`)
+    g.items.map((item) => {
+      const pricePart = item.price ? ` | ${item.price}` : "";
+      return `* ${item.title} (${item.sourceName}${pricePart})\n${item.link}`;
+    })
   );
+
+  if (entries.length === 0) {
+    const lines = [
+      "Kontrola dokončena: žádné nové inzeráty.",
+      `Dotazy: ${results.summary.totalWatches} | Zdroje: ${results.summary.totalSources} | Chyby: ${results.summary.errorCount}`,
+      `Čas: ${results.runAt}`
+    ];
+    if (Array.isArray(results.errors) && results.errors.length > 0) {
+      lines.push("");
+      lines.push("Chyby:");
+      for (const err of results.errors.slice(0, 5)) {
+        lines.push(`- ${err.watchName} / ${err.sourceName}: ${err.message}`);
+      }
+      if (results.errors.length > 5) {
+        lines.push(`- ... a dalších ${results.errors.length - 5}`);
+      }
+    }
+
+    console.log("Sending Discord notification...");
+    await fetch(webhook, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ content: lines.join("\n") })
+    });
+    console.log("Discord notification sent.");
+    return;
+  }
 
   const chunks = [];
   let current = "";
