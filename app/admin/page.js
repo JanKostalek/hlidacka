@@ -250,14 +250,23 @@ export default function AdminPage() {
         </div>
         <div className="adminRow adminRowEmail">
           <label htmlFor="email_only_when_new">Režim informačního e-mailu</label>
+          <label className="checkboxLabel" htmlFor="email_send_always">
+            <input
+              id="email_send_always"
+              type="checkbox"
+              checked={!emailOnlyWhenNew}
+              onChange={() => setEmailOnlyWhenNew(false)}
+            />
+            Odesílat vždy
+          </label>
           <label className="checkboxLabel" htmlFor="email_only_when_new">
             <input
               id="email_only_when_new"
               type="checkbox"
               checked={emailOnlyWhenNew}
-              onChange={(e) => setEmailOnlyWhenNew(e.target.checked)}
+              onChange={() => setEmailOnlyWhenNew(true)}
             />
-            Odesílat informační e-mail jen při nalezení nových inzerátů
+            Jen nové nálezy
           </label>
           <span className="helpText">
             {emailOnlyWhenNew
