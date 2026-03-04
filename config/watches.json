@@ -4,106 +4,38 @@
     "emailOnlyWhenNew": true,
     "emailEnabled": false,
     "discordWebhook": "https://discordapp.com/api/webhooks/1478768798550196305/yyFCo5aM6Y2GeygSET8dh9xKOXq8LJ5U2wXY8NbXzM1uBhYbT3GN-xaF5gkaGk_44N72",
-    "discordOnlyWhenNew": false,
+    "discordOnlyWhenNew": true,
     "discordEnabled": true
   },
   "watches": [
     {
-      "id": "paladix-nikon-z7-test-20260304",
-      "name": "Paladix Nikon Z7 test 20260304",
-      "query": "nikon Z7",
+      "id": "garmin",
+      "name": "Garmin",
+      "query": "Garmin Fenix",
       "keywords": [
-        "nikon",
-        "z7"
+        "Garmin",
+        "Fenix",
+        "8"
       ],
       "excludeKeywords": [],
       "sources": [
         {
-          "id": "paladix",
-          "name": "Paladix",
-          "url": "https://www.paladix.cz/bazar/?s=nikon+Z7",
-          "itemSelector": "article.pldx_ad",
-          "titleSelector": "h2.entry-title a",
-          "linkSelector": "h2.entry-title a[href]",
-          "priceSelector": ".entry-meta .price"
-        },
-        {
-          "id": "bazos",
-          "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=nikon%20Z7",
-          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
-          "titleSelector": ".nadpis",
-          "linkSelector": "a[href]",
-          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
-        },
-        {
           "id": "sbazar",
           "name": "Sbazar",
-          "url": "https://www.sbazar.cz/?q=nikon%20Z7",
+          "url": "https://www.sbazar.cz/?q=Garmin%20Fenix",
           "itemSelector": "article",
           "titleSelector": "h3, h2, a",
           "linkSelector": "a[href]",
           "priceSelector": "[class*='price'], [data-e2e*='price']"
-        }
-      ]
-    },
-    {
-      "id": "paladix-test",
-      "name": "paladix test",
-      "query": "olympus",
-      "keywords": [
-        "olympus"
-      ],
-      "excludeKeywords": [],
-      "sources": [
+        },
         {
-          "id": "paladix",
-          "name": "Paladix",
-          "url": "https://www.paladix.cz/bazar/?s=olympus",
-          "itemSelector": "article.pldx_ad",
-          "titleSelector": "h2.entry-title a",
-          "linkSelector": "h2.entry-title a[href]",
-          "priceSelector": ".entry-meta .price"
-        }
-      ]
-    },
-    {
-      "id": "fuji",
-      "name": "fuji",
-      "query": "fuji",
-      "keywords": [
-        "fuji"
-      ],
-      "excludeKeywords": [],
-      "sources": [
-        {
-          "id": "paladix",
-          "name": "Paladix",
-          "url": "https://www.paladix.cz/bazar/?s=fuji",
-          "itemSelector": "article.pldx_ad",
-          "titleSelector": "h2.entry-title a",
-          "linkSelector": "h2.entry-title a[href]",
-          "priceSelector": ".entry-meta .price"
-        }
-      ]
-    },
-    {
-      "id": "kodak",
-      "name": "kodak",
-      "query": "kodak",
-      "keywords": [
-        "kodak"
-      ],
-      "excludeKeywords": [],
-      "sources": [
-        {
-          "id": "paladix",
-          "name": "Paladix",
-          "url": "https://www.paladix.cz/bazar/?s=kodak",
-          "itemSelector": "article.pldx_ad",
-          "titleSelector": "h2.entry-title a",
-          "linkSelector": "h2.entry-title a[href]",
-          "priceSelector": ".entry-meta .price"
+          "id": "bazos",
+          "name": "Bazos",
+          "url": "https://www.bazos.cz/search.php?hledat=Garmin%20Fenix",
+          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
+          "titleSelector": ".nadpis",
+          "linkSelector": "a[href]",
+          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
         }
       ]
     }
