@@ -22,24 +22,6 @@
       ],
       "sources": [
         {
-          "id": "sbazar",
-          "name": "Sbazar",
-          "url": "https://www.sbazar.cz/?q=lego%20star%20wars",
-          "itemSelector": "article",
-          "titleSelector": "h3, h2, a",
-          "linkSelector": "a[href]",
-          "priceSelector": "[class*='price'], [data-e2e*='price']"
-        },
-        {
-          "id": "bazos",
-          "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=lego%20star%20wars",
-          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
-          "titleSelector": ".nadpis",
-          "linkSelector": "a[href]",
-          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
-        },
-        {
           "id": "paladix",
           "name": "Paladix",
           "url": "https://www.paladix.cz/bazar/?s=lego+star+wars",
