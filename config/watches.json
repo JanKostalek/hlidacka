@@ -30,7 +30,7 @@
         {
           "id": "paladix",
           "name": "Paladix",
-          "url": "https://www.paladix.cz/bazar/?_sf_search%5B%5D=lego%20star%20wars",
+          "url": "https://www.paladix.cz/bazar/?s=lego%20star%20wars",
           "itemSelector": "article.pldx_ad",
           "titleSelector": "h2.entry-title a",
           "linkSelector": "h2.entry-title a[href]",
@@ -48,7 +48,7 @@
         {
           "id": "paladix",
           "name": "Paladix",
-          "url": "https://www.paladix.cz/bazar/?_sf_search%5B%5D=nikon%20Z7",
+          "url": "https://www.paladix.cz/bazar/?s=nikon%20Z7",
           "itemSelector": "article.pldx_ad",
           "titleSelector": "h2.entry-title a",
           "linkSelector": "h2.entry-title a[href]",

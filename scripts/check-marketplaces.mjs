@@ -67,7 +67,8 @@ function mapSbazarItemToCandidate(item) {
   const seoName = String(item?.seo_name || item?.id || "").trim();
   const link = seoName ? `https://www.sbazar.cz/inzerat/${seoName}` : "";
   const price = formatSbazarPrice(item);
-  return { title, link, price };
+  const matchText = `${title} ${price}`;
+  return { title, link, price, matchText };
 }
 
 async function fetchSbazarItems(query, limit = 80) {
@@ -144,8 +145,9 @@ function extractFromCard($, card, source, sourceUrl) {
   const price = priceSelector
     ? normalizeWhitespace($card.find(priceSelector).first().text())
     : "";
+  const matchText = normalizeWhitespace($card.text());
 
-  return { title, link, price };
+  return { title, link, price, matchText };
 }
 
 function extractItemsFromPage(html, source) {
@@ -242,16 +244,20 @@ async function fetchHtml(url) {
       );
     } else if (parsed.hostname.includes("paladix.cz") && parsed.pathname.startsWith("/bazar")) {
       const base = `${parsed.protocol}//${parsed.host}`;
-      const phrase = parsed.searchParams.get("_sf_search[]") || "";
+      const phrase = parsed.searchParams.get("s") || parsed.searchParams.get("_sf_search[]") || "";
 
       // Stable fallback for cases where filtered URL returns HTTP 500.
       urlsToTry.push(`${base}/bazar/`);
       urlsToTry.push(`${base}/bazar`);
 
       if (phrase) {
-        const params = new URLSearchParams();
-        params.set("_sf_search[]", phrase);
-        urlsToTry.push(`${base}/bazar/?${params.toString()}`);
+        const paramsS = new URLSearchParams();
+        paramsS.set("s", phrase);
+        urlsToTry.push(`${base}/bazar/?${paramsS.toString()}`);
+
+        const paramsSf = new URLSearchParams();
+        paramsSf.set("_sf_search[]", phrase);
+        urlsToTry.push(`${base}/bazar/?${paramsSf.toString()}`);
       }
     }
   } catch {
@@ -740,7 +746,7 @@ async function main() {
         let matchedForSource = 0;
         for (const candidate of extracted) {
           // Match only human-readable content; URL IDs were causing false positives.
-          const text = `${candidate.title} ${candidate.price}`;
+          const text = candidate.matchText || `${candidate.title} ${candidate.price}`;
           if (
             !includesKeywords(text, watch.keywords || [], watch.excludeKeywords || [])
           ) {
