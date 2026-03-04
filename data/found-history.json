@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-04T21:04:00.335Z",
+  "updatedAt": "2026-03-04T21:06:58.271Z",
   "byWatch": {
     "lego-star-wars": [
       {
@@ -1218,6 +1218,15 @@
       }
     ],
     "garmin": [
+      {
+        "watchId": "garmin",
+        "watchName": "Garmin",
+        "sourceName": "Bazos",
+        "title": "GARMIN Fenix 7x solar",
+        "price": "10 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215215319/garmin-fenix-7x-solar.php",
+        "firstSeenAt": "2026-03-04T21:06:58.271Z"
+      },
       {
         "watchId": "garmin",
         "watchName": "Garmin",

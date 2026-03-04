@@ -1,166 +1,26 @@
 {
-  "runAt": "2026-03-04T21:04:00.335Z",
+  "runAt": "2026-03-04T21:06:58.271Z",
   "summary": {
     "totalWatches": 1,
     "totalSources": 2,
-    "totalFoundItems": 15,
-    "totalNewItems": 15,
+    "totalFoundItems": 6,
+    "totalNewItems": 1,
     "errorCount": 0
   },
   "newItemsByWatch": [
     {
-      "watchId": "garmin-hodinky",
-      "watchName": "Garmin hodinky",
+      "watchId": "garmin",
+      "watchName": "Garmin",
       "items": [
         {
-          "watchId": "garmin-hodinky",
-          "watchName": "Garmin hodinky",
+          "watchId": "garmin",
+          "watchName": "Garmin",
           "sourceId": "bazos",
           "sourceName": "Bazos",
-          "title": "GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm zeleny",
-          "price": "Dohodou",
-          "link": "https://mobil.bazos.cz/inzerat/215056656/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm-zeleny.php",
-          "foundAt": "2026-03-04T21:04:00.335Z"
-        },
-        {
-          "watchId": "garmin-hodinky",
-          "watchName": "Garmin hodinky",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm",
-          "price": "Dohodou",
-          "link": "https://mobil.bazos.cz/inzerat/215056654/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm.php",
-          "foundAt": "2026-03-04T21:04:00.335Z"
-        },
-        {
-          "watchId": "garmin-hodinky",
-          "watchName": "Garmin hodinky",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm maskáč",
-          "price": "Dohodou",
-          "link": "https://mobil.bazos.cz/inzerat/215056653/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm-maskac.php",
-          "foundAt": "2026-03-04T21:04:00.335Z"
-        },
-        {
-          "watchId": "garmin-hodinky",
-          "watchName": "Garmin hodinky",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm maskáč",
-          "price": "Dohodou",
-          "link": "https://mobil.bazos.cz/inzerat/215056652/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm-maskac.php",
-          "foundAt": "2026-03-04T21:04:00.335Z"
-        },
-        {
-          "watchId": "garmin-hodinky",
-          "watchName": "Garmin hodinky",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "GARMIN 8, 6x, 7x tah, řemínek, pásek 26mm žlutý",
-          "price": "Dohodou",
-          "link": "https://mobil.bazos.cz/inzerat/215056650/garmin-8-6x-7x-tah-reminek-pasek-26mm-zluty.php",
-          "foundAt": "2026-03-04T21:04:00.335Z"
-        },
-        {
-          "watchId": "garmin-hodinky",
-          "watchName": "Garmin hodinky",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "GARMIN 8, 6x, 7x tah, řemínek, pásek 26mm šedý",
-          "price": "Dohodou",
-          "link": "https://mobil.bazos.cz/inzerat/215056649/garmin-8-6x-7x-tah-reminek-pasek-26mm-sedy.php",
-          "foundAt": "2026-03-04T21:04:00.335Z"
-        },
-        {
-          "watchId": "garmin-hodinky",
-          "watchName": "Garmin hodinky",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "GARMIN 8, 6x, 7x tah, řemínek, pásek 26mm červená",
-          "price": "Dohodou",
-          "link": "https://mobil.bazos.cz/inzerat/215056644/garmin-8-6x-7x-tah-reminek-pasek-26mm-cervena.php",
-          "foundAt": "2026-03-04T21:04:00.335Z"
-        },
-        {
-          "watchId": "garmin-hodinky",
-          "watchName": "Garmin hodinky",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Garmin Fenix 8 Amoled 51mm",
-          "price": "15 500 Kč",
-          "link": "https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm",
-          "foundAt": "2026-03-04T21:04:00.335Z"
-        },
-        {
-          "watchId": "garmin-hodinky",
-          "watchName": "Garmin hodinky",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Ochranné tvrzené sklo Garmin Fenix 7x, 8",
-          "price": "60 Kč",
-          "link": "https://www.sbazar.cz/inzerat/193223112-ochranne-tvrzene-sklo-garmin-fenix-7x-8",
-          "foundAt": "2026-03-04T21:04:00.335Z"
-        },
-        {
-          "watchId": "garmin-hodinky",
-          "watchName": "Garmin hodinky",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "GARMIN Fenix 5x, 6x, 7x, 8 tah, řemínek",
-          "price": "",
-          "link": "https://www.sbazar.cz/inzerat/218934122-garmin-fenix-5x-6x-7x-8-tah-reminek",
-          "foundAt": "2026-03-04T21:04:00.335Z"
-        },
-        {
-          "watchId": "garmin-hodinky",
-          "watchName": "Garmin hodinky",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Garmin Fenix 8 51 Amoled + příslušenství",
-          "price": "18 999 Kč",
-          "link": "https://www.sbazar.cz/inzerat/226572490-garmin-fenix-8-51-amoled-prislusenstvi",
-          "foundAt": "2026-03-04T21:04:00.335Z"
-        },
-        {
-          "watchId": "garmin-hodinky",
-          "watchName": "Garmin hodinky",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Garmin Fénix 8 AMOLED 51 mm Slate Gray Steel/Black",
-          "price": "18 500 Kč",
-          "link": "https://www.sbazar.cz/inzerat/227508724-garmin-fenix-8-amoled-51-mm-slate-gray-steelblack",
-          "foundAt": "2026-03-04T21:04:00.335Z"
-        },
-        {
-          "watchId": "garmin-hodinky",
-          "watchName": "Garmin hodinky",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Garmin Fenix 8 47mm AMOLED Slate Gray Steel/Black",
-          "price": "14 900 Kč",
-          "link": "https://www.sbazar.cz/inzerat/226723615-garmin-fenix-8-47mm-amoled-slate-gray-steelblack",
-          "foundAt": "2026-03-04T21:04:00.335Z"
-        },
-        {
-          "watchId": "garmin-hodinky",
-          "watchName": "Garmin hodinky",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "NOVÝ ochranný set GARMIN FENIX 8 51 mm kryt sklo",
-          "price": "200 Kč",
-          "link": "https://www.sbazar.cz/inzerat/227251057-novy-ochranny-set-garmin-fenix-8-51-mm-kryt-sklo",
-          "foundAt": "2026-03-04T21:04:00.335Z"
-        },
-        {
-          "watchId": "garmin-hodinky",
-          "watchName": "Garmin hodinky",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "PRODÁM dva řemínky na GARMIN FENIX 8, šířka 22mm",
-          "price": "950 Kč",
-          "link": "https://www.sbazar.cz/inzerat/226785769-prodam-dva-reminky-na-garmin-fenix-8-sirka-22mm",
-          "foundAt": "2026-03-04T21:04:00.335Z"
+          "title": "GARMIN Fenix 7x solar",
+          "price": "10 000 Kč",
+          "link": "https://mobil.bazos.cz/inzerat/215215319/garmin-fenix-7x-solar.php",
+          "foundAt": "2026-03-04T21:06:58.271Z"
         }
       ]
     }
