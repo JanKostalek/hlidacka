@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 70" role="img" aria-label="Administrace">
+  <rect x="2" y="2" width="156" height="66" rx="6" fill="#0b0f12" stroke="#ffffff" stroke-width="3"/>
+  <rect x="10" y="10" width="140" height="6" rx="3" fill="#ffffff"/>
+  <text x="16" y="42" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#ffffff">ADMIN</text>
+  <g transform="translate(112 35)">
+    <circle r="14" fill="#ffffff"/>
+    <circle r="7" fill="#0b0f12"/>
+    <rect x="-1.6" y="-21" width="3.2" height="7" fill="#ffffff"/>
+    <rect x="-1.6" y="14" width="3.2" height="7" fill="#ffffff"/>
+    <rect x="-21" y="-1.6" width="7" height="3.2" fill="#ffffff"/>
+    <rect x="14" y="-1.6" width="7" height="3.2" fill="#ffffff"/>
+    <rect x="-1.6" y="-21" width="3.2" height="7" fill="#ffffff" transform="rotate(45)"/>
+    <rect x="-1.6" y="14" width="3.2" height="7" fill="#ffffff" transform="rotate(45)"/>
+    <rect x="-21" y="-1.6" width="7" height="3.2" fill="#ffffff" transform="rotate(45)"/>
+    <rect x="14" y="-1.6" width="7" height="3.2" fill="#ffffff" transform="rotate(45)"/>
+  </g>
+  <rect x="22" y="49" width="27" height="6" rx="3" fill="#ffffff"/>
+  <rect x="56" y="49" width="27" height="6" rx="3" fill="#ffffff"/>
+</svg>

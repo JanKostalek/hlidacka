@@ -1,6 +1,7 @@
-import fs from "node:fs/promises";
+﻿import fs from "node:fs/promises";
 import path from "node:path";
 import HistoryRunsTable from "./components/history-runs-table";
+import AdminPopupLink from "./components/admin-popup-link";
 
 async function loadResults() {
   const resultsPath = path.join(process.cwd(), "data", "latest-results.json");
@@ -40,11 +41,9 @@ export default async function Home() {
   return (
     <main className="page">
       <section className="panel">
-        <h1>Hlidacka bazaru</h1>
-        <p>Kontrola bezi podle planu nastaveneho v administraci (GitHub Actions).</p>
-        <p>
-          <a href="/admin">Otevrit administraci</a>
-        </p>
+        <AdminPopupLink />
+        <h1>Hlidačka bazarů</h1>
+        <p className="heroSubtitle">Pravidelna kontrola inzeratu na vybranych bazarech</p>
         <ul className="stats">
           <li>Posledni beh: {formatRunTime(results.runAt)}</li>
           <li>Dotazy: {results.summary?.totalWatches ?? 0}</li>
