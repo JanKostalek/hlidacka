@@ -1,76 +1,11 @@
 {
-  "runAt": "2026-03-04T07:54:04.656Z",
+  "runAt": null,
   "summary": {
-    "totalWatches": 1,
-    "totalSources": 3,
-    "totalFoundItems": 17,
-    "totalNewItems": 5,
-    "errorCount": 1
+    "totalWatches": 0,
+    "totalSources": 0,
+    "totalNewItems": 0,
+    "errorCount": 0
   },
-  "newItemsByWatch": [
-    {
-      "watchId": "lego-star-wars",
-      "watchName": "LEGO Star Wars",
-      "items": [
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "LEGO Star Wars The Clone Wars 8036",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215767231/lego-star-wars-the-clone-wars-8036.php",
-          "foundAt": "2026-03-04T07:54:04.656Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "LEGO Star Wars 75318 Dítě",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215764475/lego-star-wars-75318-dite.php",
-          "foundAt": "2026-03-04T07:54:04.656Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "LEGO BrickHeadz Star Wars",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215763941/lego-brickheadz-star-wars.php",
-          "foundAt": "2026-03-04T07:54:04.656Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Lego 75223 Star Wars",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215760342/lego-75223-star-wars.php",
-          "foundAt": "2026-03-04T07:54:04.656Z"
-        },
-        {
-          "watchId": "lego-star-wars",
-          "watchName": "LEGO Star Wars",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "LEGO Star Wars 75212 MILENIUM FALCON",
-          "price": "",
-          "link": "https://deti.bazos.cz/inzerat/215760030/lego-star-wars-75212-milenium-falcon.php",
-          "foundAt": "2026-03-04T07:54:04.656Z"
-        }
-      ]
-    }
-  ],
-  "errors": [
-    {
-      "watchId": "lego-star-wars",
-      "watchName": "LEGO Star Wars",
-      "sourceName": "Paladix",
-      "message": "Fetch failed (https://www.paladix.cz/bazar?_sf_search%5B%5D=lego%20star%20wars): HTTP 500 (https://www.paladix.cz/bazar?_sf_search%5B%5D=lego%20star%20wars)"
-    }
-  ]
+  "newItemsByWatch": [],
+  "errors": []
 }
