@@ -302,10 +302,16 @@ export default function AdminPage() {
         : "Discord: odesílá se vždy.";
 
   return (
-    <main className="page">
-      <section className="panel">
+    <main className="page dashboardPage adminPage">
+      <section className="panel dashboardPanel heroPanel adminHeroPanel">
         <h1>Administrace hlídačky</h1>
         <p>Vyber bazary, zadej co hledat a ulož konfiguraci.</p>
+        <div className="heroMeta">
+          <span className="heroChip">Dotazy: {watches.length}</span>
+          <span className="heroChip">
+            Tržiště: {marketplaces.length}
+          </span>
+        </div>
         <div className="adminRow adminRowToken">
           <label htmlFor="token">Admin token</label>
           <input
@@ -426,10 +432,10 @@ export default function AdminPage() {
           />
           <span className="helpText">Minimum je 2 hodiny.</span>
         </div>
-        <p className="status">{status}</p>
+        <p className="status adminStatus">{status}</p>
       </section>
 
-      <section className="panel">
+      <section className="panel dashboardPanel adminPanel">
         <div className="adminHead">
           <h2>Hlídané dotazy</h2>
           <button
@@ -508,7 +514,7 @@ export default function AdminPage() {
         ))}
       </section>
 
-      <section className="panel">
+      <section className="panel dashboardPanel adminPanel">
         <div className="adminActions">
           <button type="button" onClick={saveConfig} disabled={saving || clearing || runningNow}>
             {saving ? "Ukládám..." : "Uložit konfiguraci"}

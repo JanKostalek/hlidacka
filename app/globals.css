@@ -712,6 +712,35 @@ button:disabled {
     inset 0 1px 0 rgba(255, 255, 255, 0.74);
 }
 
+.adminPage {
+  max-width: 1180px;
+}
+
+.adminHeroPanel {
+  overflow: hidden;
+}
+
+.adminHeroPanel p {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.adminPanel h2 {
+  margin-bottom: 16px;
+}
+
+.adminStatus {
+  margin-top: 14px;
+  text-align: center;
+  border: 1px solid rgba(141, 173, 210, 0.48);
+  border-radius: 999px;
+  padding: 8px 12px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.84), rgba(219, 233, 251, 0.48));
+}
+
 @keyframes dashboardShine {
   0% {
     transform: translateX(-18%) rotate(18deg);
