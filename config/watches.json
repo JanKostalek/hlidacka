@@ -86,6 +86,26 @@
           "priceSelector": ".entry-meta .price"
         }
       ]
+    },
+    {
+      "id": "kodak",
+      "name": "kodak",
+      "query": "kodak",
+      "keywords": [
+        "kodak"
+      ],
+      "excludeKeywords": [],
+      "sources": [
+        {
+          "id": "paladix",
+          "name": "Paladix",
+          "url": "https://www.paladix.cz/bazar/?s=kodak",
+          "itemSelector": "article.pldx_ad",
+          "titleSelector": "h2.entry-title a",
+          "linkSelector": "h2.entry-title a[href]",
+          "priceSelector": ".entry-meta .price"
+        }
+      ]
     }
   ]
 }
