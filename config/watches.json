@@ -1,7 +1,7 @@
 {
   "notifications": {
     "emailTo": "jan.kostalek@gmail.com",
-    "emailOnlyWhenNew": false
+    "emailOnlyWhenNew": true
   },
   "watches": [
     {
