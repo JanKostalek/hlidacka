@@ -25,6 +25,7 @@ export default function AdminPage() {
   const [status, setStatus] = useState("Načítání...");
   const [saving, setSaving] = useState(false);
   const [clearing, setClearing] = useState(false);
+  const [runningNow, setRunningNow] = useState(false);
 
   useEffect(() => {
     const localToken = window.localStorage.getItem("adminToken") || "";
@@ -210,6 +211,35 @@ export default function AdminPage() {
     setClearing(false);
   }
 
+  async function runWorkflowNow() {
+    setRunningNow(true);
+    setStatus("Spouštím GitHub Actions běh...");
+
+    const headers = { "content-type": "application/json" };
+    if (token) headers["x-admin-token"] = token;
+
+    const res = await fetch("/api/run", {
+      method: "POST",
+      headers
+    });
+
+    if (res.status === 401) {
+      setStatus("Neplatný token. Spuštění zamítnuto.");
+      setRunningNow(false);
+      return;
+    }
+
+    if (!res.ok) {
+      const error = await res.json().catch(() => ({}));
+      setStatus(`Nepodařilo se spustit workflow. ${error.error || ""}`.trim());
+      setRunningNow(false);
+      return;
+    }
+
+    setStatus("Workflow spuštěn. Výsledek sleduj v GitHub Actions.");
+    setRunningNow(false);
+  }
+
   function removeWatch(index) {
     setWatches((prev) => prev.filter((_, idx) => idx !== index));
     setWatchValidationErrors({});
@@ -383,14 +413,21 @@ export default function AdminPage() {
 
       <section className="panel">
         <div className="adminActions">
-          <button type="button" onClick={saveConfig} disabled={saving || clearing}>
+          <button type="button" onClick={saveConfig} disabled={saving || clearing || runningNow}>
             {saving ? "Ukládám..." : "Uložit konfiguraci"}
+          </button>
+          <button
+            type="button"
+            onClick={runWorkflowNow}
+            disabled={saving || clearing || runningNow}
+          >
+            {runningNow ? "Spouštím..." : "Spustit kontrolu teď"}
           </button>
           <button
             type="button"
             className="dangerBtn"
             onClick={clearHistory}
-            disabled={saving || clearing}
+            disabled={saving || clearing || runningNow}
           >
             {clearing ? "Čistím..." : "Vyčistit historii"}
           </button>
