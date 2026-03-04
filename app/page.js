@@ -85,10 +85,6 @@ export default async function Home() {
 
   const statCards = [
     {
-      label: "Poslední běh",
-      value: formatRunTime(results.runAt)
-    },
-    {
       label: "Dotazy",
       value: String(results.summary?.totalWatches ?? 0)
     },
@@ -110,20 +106,11 @@ export default async function Home() {
     <main className="page dashboardPage">
       <section className="panel dashboardPanel heroPanel">
         <AdminPopupLink />
-        <div className="heroEyebrow">Live Monitoring</div>
         <h1>Hlídačka bazarů</h1>
         <p className="heroSubtitle">Pravidelná kontrola inzerátů na vybraných bazarech</p>
         <div className="heroMeta">
           <span className="heroChip">{healthState}</span>
           <span className="heroChip">Aktualizace: {formatRunTime(results.runAt)}</span>
-        </div>
-        <div className="heroActions">
-          <a className="heroActionBtn heroActionBtnSecondary" href="#starsi-inzeraty">
-            Starší inzeráty
-          </a>
-          <a className="heroActionBtn heroActionBtnSecondary" href="/admin">
-            Otevřít administraci
-          </a>
         </div>
         <div className="stats dashboardStats">
           {statCards.map((card) => (
