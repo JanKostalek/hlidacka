@@ -6,14 +6,17 @@ import AdminPopupLink from "./components/admin-popup-link";
 async function loadResults() {
   const resultsPath = path.join(process.cwd(), "data", "latest-results.json");
   const historyPath = path.join(process.cwd(), "data", "run-history.json");
-  const [resultsRaw, historyRaw] = await Promise.all([
+  const foundHistoryPath = path.join(process.cwd(), "data", "found-history.json");
+  const [resultsRaw, historyRaw, foundHistoryRaw] = await Promise.all([
     fs.readFile(resultsPath, "utf8"),
-    fs.readFile(historyPath, "utf8").catch(() => JSON.stringify({ runs: [] }))
+    fs.readFile(historyPath, "utf8").catch(() => JSON.stringify({ runs: [] })),
+    fs.readFile(foundHistoryPath, "utf8").catch(() => JSON.stringify({ byWatch: {} }))
   ]);
 
   return {
     results: JSON.parse(resultsRaw),
-    history: JSON.parse(historyRaw)
+    history: JSON.parse(historyRaw),
+    foundHistory: JSON.parse(foundHistoryRaw)
   };
 }
 
@@ -35,10 +38,51 @@ function formatRunTime(iso) {
 }
 
 export default async function Home() {
-  const { results, history } = await loadResults();
+  const { results, history, foundHistory } = await loadResults();
   const runs = (history.runs || []).slice(0, 20);
   const errorsCount = Number(results.summary?.errorCount ?? 0);
   const healthState = errorsCount > 0 ? "Pozor: chyby" : "Stabilní běh";
+  const latestRunWatchStats = runs[0]?.watchStats || [];
+  const watchMeta = new Map();
+  for (const stat of latestRunWatchStats) {
+    watchMeta.set(stat.watchId, stat.watchName || stat.watchId);
+  }
+  for (const group of results.activeItemsByWatch || []) {
+    watchMeta.set(group.watchId, group.watchName || watchMeta.get(group.watchId) || group.watchId);
+  }
+  for (const group of results.newItemsByWatch || []) {
+    watchMeta.set(group.watchId, group.watchName || watchMeta.get(group.watchId) || group.watchId);
+  }
+  for (const watchId of Object.keys(foundHistory?.byWatch || {})) {
+    watchMeta.set(watchId, watchMeta.get(watchId) || watchId);
+  }
+  const watchList = Array.from(watchMeta.entries()).map(([watchId, watchName]) => ({
+    watchId,
+    watchName
+  }));
+
+  const newByWatchId = new Map(
+    (results.newItemsByWatch || []).map((group) => [group.watchId, group.items || []])
+  );
+  const activeByWatchId = new Map(
+    (results.activeItemsByWatch || []).map((group) => [group.watchId, group.items || []])
+  );
+  const olderActiveByWatch = watchList.map((watch) => {
+    const currentlyNewLinks = new Set((newByWatchId.get(watch.watchId) || []).map((item) => item.link));
+    const activeLinks = new Set(
+      (activeByWatchId.get(watch.watchId) || []).map((item) => item.link)
+    );
+    const olderFromHistory = (foundHistory?.byWatch?.[watch.watchId] || []).filter(
+      (item) => activeLinks.has(item.link) && !currentlyNewLinks.has(item.link)
+    );
+    return {
+      watchId: watch.watchId,
+      watchName: watch.watchName,
+      items: olderFromHistory
+    };
+  });
+  const hasOlderActive = olderActiveByWatch.some((group) => group.items.length > 0);
+
   const statCards = [
     {
       label: "Poslední běh",
@@ -74,8 +118,8 @@ export default async function Home() {
           <span className="heroChip">Aktualizace: {formatRunTime(results.runAt)}</span>
         </div>
         <div className="heroActions">
-          <a className="heroActionBtn" href="#nove-inzeraty">
-            Nové inzeráty
+          <a className="heroActionBtn heroActionBtnSecondary" href="#starsi-inzeraty">
+            Starší inzeráty
           </a>
           <a className="heroActionBtn heroActionBtnSecondary" href="/admin">
             Otevřít administraci
@@ -93,8 +137,8 @@ export default async function Home() {
 
       <section className="panel dashboardPanel" id="nove-inzeraty">
         <h2>Nové inzeráty</h2>
-        {results.newItemsByWatch?.length ? (
-          results.newItemsByWatch.map((group) => (
+        {(results.newItemsByWatch || []).length ? (
+          (results.newItemsByWatch || []).map((group) => (
             <div key={group.watchId} className="group dashboardGroup">
               <div className="groupHead">
                 <h3>{group.watchName}</h3>
@@ -118,6 +162,38 @@ export default async function Home() {
           ))
         ) : (
           <p>Zatím nic nového.</p>
+        )}
+      </section>
+
+      <section className="panel dashboardPanel" id="starsi-inzeraty">
+        <h2>Starší inzeráty (stále aktivní)</h2>
+        {hasOlderActive ? (
+          olderActiveByWatch.map((group) =>
+            group.items.length ? (
+              <div key={group.watchId} className="group dashboardGroup">
+                <div className="groupHead">
+                  <h3>{group.watchName}</h3>
+                  <span className="groupBadge">{group.items.length} starších</span>
+                </div>
+                <ul>
+                  {group.items.map((item) => (
+                    <li key={`${item.sourceName}-${item.link}`}>
+                      <a href={item.link} target="_blank" rel="noreferrer">
+                        {item.title}
+                      </a>
+                      <span>
+                        {" "}
+                        | {item.sourceName}
+                        {item.price ? ` | ${item.price}` : ""}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null
+          )
+        ) : (
+          <p>Žádné starší aktivní inzeráty (nebo zatím nejsou data po novém běhu).</p>
         )}
       </section>
 

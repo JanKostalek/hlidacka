@@ -902,6 +902,7 @@ async function main() {
   const seen = { ...(state.seen || {}) };
 
   const newItemsByWatch = [];
+  const activeItemsByWatch = [];
   const errors = [];
   let totalSources = 0;
   let totalFoundItems = 0;
@@ -909,6 +910,7 @@ async function main() {
 
   for (const watch of config.watches || []) {
     const itemsForWatch = [];
+    const activeItemsMap = new Map();
     const watchSources = watch.sources || [];
     let watchErrors = 0;
     let foundItemsForWatch = 0;
@@ -932,6 +934,21 @@ async function main() {
             continue;
           }
           matchedForSource += 1;
+
+          const activeLink = candidate.link || sourceForRun.url;
+          const activeKey = activeLink || candidate.title || `idx-${activeItemsMap.size}`;
+          if (!activeItemsMap.has(activeKey)) {
+            activeItemsMap.set(activeKey, {
+              watchId: watch.id,
+              watchName: watch.name,
+              sourceId: sourceForRun.id || sourceForRun.url,
+              sourceName: sourceForRun.name || sourceForRun.id || sourceForRun.url,
+              title: candidate.title || "(bez názvu)",
+              price: candidate.price || "",
+              link: activeLink,
+              foundAt: nowIso
+            });
+          }
 
           const key = makeKey(
             `${watch.id}|${sourceForRun.id || sourceForRun.name || sourceForRun.url}`,
@@ -972,6 +989,11 @@ async function main() {
         items: itemsForWatch
       });
     }
+    activeItemsByWatch.push({
+      watchId: watch.id,
+      watchName: watch.name,
+      items: Array.from(activeItemsMap.values())
+    });
 
     watchStats.push({
       watchId: watch.id,
@@ -997,6 +1019,7 @@ async function main() {
       errorCount: errors.length
     },
     newItemsByWatch,
+    activeItemsByWatch,
     errors
   };
 
