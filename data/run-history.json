@@ -1,6 +1,77 @@
 {
   "runs": [
     {
+      "runAt": "2026-03-04T16:12:39.802Z",
+      "summary": {
+        "totalWatches": 4,
+        "totalSources": 6,
+        "totalFoundItems": 74,
+        "totalNewItems": 0,
+        "errorCount": 0
+      },
+      "watchStats": [
+        {
+          "watchId": "paladix-nikon-z7-test-20260304",
+          "watchName": "Paladix Nikon Z7 test 20260304",
+          "query": "nikon Z7",
+          "keywords": [
+            "nikon",
+            "z7"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 3,
+          "foundItems": 25,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "paladix-test",
+          "watchName": "paladix test",
+          "query": "olympus",
+          "keywords": [
+            "olympus"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 1,
+          "foundItems": 19,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "fuji",
+          "watchName": "fuji",
+          "query": "fuji",
+          "keywords": [
+            "fuji"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 1,
+          "foundItems": 19,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "kodak",
+          "watchName": "kodak",
+          "query": "kodak",
+          "keywords": [
+            "kodak"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 1,
+          "foundItems": 11,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        }
+      ],
+      "emailSubject": "Hlídačka (Paladix Nikon Z7 test 20260304 +3): žádné nové inzeráty",
+      "emailText": "Hlídačka bazarů - Výsledek vyhledávání\nČas vyhledávání: 2026-03-04T16:12:39.802Z\nNové inzeráty: 0\nChyby: 0\n\nAktivní dotazy:\n\n- Paladix Nikon Z7 test 20260304\n  co hledat: nikon Z7\n  klíčová slova: nikon, z7\n  vyloučit slova: (žádná)\n  bazary: Paladix, Bazos, Sbazar\n  výsledek: nové 0, již zobrazené 15, chyby 0\n\n- paladix test\n  co hledat: olympus\n  klíčová slova: olympus\n  vyloučit slova: (žádná)\n  bazary: Paladix\n  výsledek: nové 0, již zobrazené 19, chyby 0\n\n- fuji\n  co hledat: fuji\n  klíčová slova: fuji\n  vyloučit slova: (žádná)\n  bazary: Paladix\n  výsledek: nové 0, již zobrazené 17, chyby 0\n\n- kodak\n  co hledat: kodak\n  klíčová slova: kodak\n  vyloučit slova: (žádná)\n  bazary: Paladix\n  výsledek: nové 0, již zobrazené 10, chyby 0\n\nŽádné nové inzeráty.\n\nJiž zobrazené inzeráty:\n\nPaladix Nikon Z7 test 20260304 (15)\n- Fotoaparát Nikon Larmor LCD Z5 / Z6 II / Z7 II | 300 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227199868-fotoaparat-nikon-larmor-lcd-z5-z6-ii-z7-ii\n- L-plate pro Nikon Z6, Nikon Z7 úchyt Arca Swiss | 1 100 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/111106985-l-plate-pro-nikon-z6-nikon-z7-uchyt-arca-swiss\n- Kabelová spoušť pro Nikon MC-DC2 D3200 D610 Z6 Z7 | 300 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/87914347-kabelova-spoust-pro-nikon-mc-dc2-d3200-d610-z6-z7\n- Bezzrcadlovku Nikon Z7 | 23 900 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228263186-bezzrcadlovku-nikon-z7\n- Nikon Z7 II | 34 000 Kč | Bazos\n  https://foto.bazos.cz/inzerat/213142359/nikon-z7-ii.php\n- NIKON EH-7P AC Adaptér pro Z6 a Z7 TOP STAV | 390 Kč | Bazos\n  https://foto.bazos.cz/inzerat/213264333/nikon-eh-7p-ac-adapter-pro-z6-a-z7-top-stav.php\n- Nikon Z7 II | 41 500 Kč | Bazos\n  https://foto.bazos.cz/inzerat/213591687/nikon-z7-ii.php\n- Nikon Z6II / Z7II SmallRig klec (Camera Cage) | 1 000 Kč | Bazos\n  https://foto.bazos.cz/inzerat/213599920/nikon-z6ii-z7ii-smallrig-klec-camera-cage.php\n- Nikon Z7 fotoaparát | 16 990 Kč | Bazos\n  https://foto.bazos.cz/inzerat/213632857/nikon-z7-fotoaparat.php\n- Adapter Urth objektiv Canon EF na fotoaparát Nikon Z6 Z7 atd | 390 Kč | Bazos\n  https://foto.bazos.cz/inzerat/214306568/adapter-urth-objektiv-canon-ef-na-fotoaparat-nikon-z6.php\n- Koupím Nikon Z5/Z6/Z7 | V textu | Bazos\n  https://foto.bazos.cz/inzerat/214866888/koupim-nikon-z6.php\n- Bezzrcadlovka Nikon Z7 | 23 900 Kč | Bazos\n  https://foto.bazos.cz/inzerat/215637938/bezzrcadlovk-nikon-z7.php\n- L-plate pro Nikon Z7 Nikon Z6 úchyt Arca Swiss | 1 100 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/a629763\n- NIKON Z7 II v perfektním stavu | 41 000 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/nikon-z7-ii-v-perfektnim-stavu\n- Nikon Z7 II | 37 900 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/nikon-z7-ii-2\n\npaladix test (19)\n- Zaměřovač Olympus EE1 | 2 500 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/zamerovac-olympus-ee1\n- Olympus Pen E-PL8 | 1 800 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/olympus-pen-e-pl8\n- Objektiv olympus M.ZUIKO 40-150 2.8 | 20 500 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/objektiv-olympus-m-zuiko-40-150-2-8\n- PRODÁM: Profesionální výbavu OM System (Olympus) – Špičkový stav! | 12 345 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/prodam-profesionalni-vybavu-om-system-olympus-spickovy-stav\n- L-plate pro Olympus E-M5 Mark III grip Arca | 1 200 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/l-plate-pro-olympus-e-m5-mark-iii-grip-arca\n- Nabíječka Olympus LI-10C pro baterii LI-10B LI-12B | 400 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/nabijecka-olympus-li-10c-pro-baterii-li-10b-li-12b\n- Olympus M.ZUIKO 14-42 mm f/3,5-5,6 II r +obal+filtry | 3 000 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/olympus-m-zuiko-14-42-mm-f-35-56-ii-r-obalfiltry\n- Objektiv Olympus M. Zuiko Digital ED 45 mm f/1.8 | 3 500 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/objektiv-olympus-m-zuiko-digital-ed-45-mm-f-1-8\n- Olympus LC-40,5 originální krytka objektivu 40,5mm | 300 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/olympus-lc-405-originalni-krytka-objektivu-405mm\n- Olympus M.Zuiko Digital 300mm F4 IS Pro | 34 500 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/olympus-m-zuiko-digital-300mm-f4-is-pro\n- Olympus M.Zuiko Digital ED 45mm f/1.2 PRO | 13 000 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/olympus-45mm-f1-2\n- Objektiv Olympus M. Zuiko 40-150 R | 2 600 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/objektiv-olympus-m-zuiko-40-150-r\n- Olympus CSS-P001 nový originální popruh 132cm | 790 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/olympus-css-p001-novy-originalni-popruh-132cm\n- Olympus Pen E-PM1 | 800 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/olympus-pen-e-pm1-3\n- Olympus F-2AC originální nabíječka | 500 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/a615373\n- Olympus E-M10 MK4 + 14-42 EZ – NOVÝ, v záruce | 16 499 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/olympus-e-m10-mk4-14-42-ez-novy-v-zaruce\n- Olympus OM-5 (MK1) – NOVÝ, v záruce | 16 999 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/olympus-om-5-mk1-novy-v-zaruce-2\n- Olympus Telekonvertor MC-20 – v záruce | 7 499 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/olympus-telekonvertor-mc-20-v-zaruce\n- Olympus OM – Zuiko 135mm f3.5 | 1 000 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/olympus-om-zuiko-135mm-f3-5\n\nfuji (17)\n- Sluneční clona Fujifilm 16-50 pro XC 16-50mm f3.5-5.6 OIS | Paladix\n  https://www.paladix.cz/bazar/inzerat/slunecni-clona-fujifilm-16-50-pro-xc-16-50mm-f3-5-5-6-ois\n- VILTROX AF 23mm f/1.4 (Fuji X) | Paladix\n  https://www.paladix.cz/bazar/inzerat/viltrox-af-23mm-f-1-4-fuji-x\n- Prodám objektiv Fujinon XF 27mm f/2.8 | Paladix\n  https://www.paladix.cz/bazar/inzerat/prodam-objektiv-fujinon-xf-27mm-f-2-8\n- Fujifilm BC-W126 nabíječka a baterie NP-W126 | Paladix\n  https://www.paladix.cz/bazar/inzerat/fujifilm-bc-w126-nabijecka-a-baterie-np-w126\n- SIGMA 56mm F1.4 DC DN (FUJI X) | Paladix\n  https://www.paladix.cz/bazar/inzerat/sigma-56mm-f1-4-dc-dn-fuji-x\n- Nikon Nikkor 50mm f/1.4 + K&F adaptér na Fujifilm | Paladix\n  https://www.paladix.cz/bazar/inzerat/nikon-nikkor-50mm-f-1-4-kf-adapter-na-fujifilm\n- Fujifilm Fujinon XF 18-55mm f/2.8–4 R LM OIS | Paladix\n  https://www.paladix.cz/bazar/inzerat/fujifilm-fujinon-xf-18-55mm-f-2-8-4-r-lm-ois\n- FUJIFILM kabelová spoušť RR-100 | Paladix\n  https://www.paladix.cz/bazar/inzerat/fujifilm-kabelova-spoust-rr-100\n- Fujifilm GF 35-70mm f4,5-5,6 WR – pro stredoformat | Paladix\n  https://www.paladix.cz/bazar/inzerat/fujifilm-gf-35-70mm-f45-56-wr-pro-stredoformat\n- Fujifilm X-T20 – OSTRAVA – PRAHA | Paladix\n  https://www.paladix.cz/bazar/inzerat/fujifilm-x-t20-ostrava-praha\n- Fujifilm Fujinon XF 35mm f/1.4 R – OSTRAVA – PRAHA | Paladix\n  https://www.paladix.cz/bazar/inzerat/fujifilm-fujinon-xf-35mm-f-1-4-r-ostrava-praha\n- Fujifilm X100VI | Paladix\n  https://www.paladix.cz/bazar/inzerat/fujifilm-x100vi-5\n- Fujifilm X100 UV filtr NiSi, Haida | Paladix\n  https://www.paladix.cz/bazar/inzerat/fujifilm-x100-uv-filtr-nisi-haida\n- ZEISS Touit 12mm f/2.8 pro Fujifilm (X-mount) | Paladix\n  https://www.paladix.cz/bazar/inzerat/zeiss-touit-12mm-f-2-8-pro-fujifilm-x-mount\n- Fujifilm Fujinon XF 10–24 mm f/4 R OIS | Paladix\n  https://www.paladix.cz/bazar/inzerat/fujifilm-fujinon-xf-10-24-mm-f-4-r-ois\n- Objektiv Fujinon XF 8-16mm f2.8 R LM WR | Paladix\n  https://www.paladix.cz/bazar/inzerat/objektiv-fujinon-xf-8-16mm-f2-8-r-lm-wr\n- Fujifilm X-H2 + objektiv a příslušenství | Paladix\n  https://www.paladix.cz/bazar/inzerat/fujifilm-x-h2-objektiv-a-prislusenstvi\n\nkodak (10)\n- Pixel Oppilas RW-221 bezdrátová spoušť pro Nikon/Kodak (dosah až 300 m) | 749 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/a155593\n- Kodak Retina IIc Heligon 50/2.8 + sluneční clona | 1 900 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/kodak-retina-iic-heligon-50-2-8\n- foťák Kodak pixpro FZ151 | 1 000 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/fotak-kodak-pixpro-fz151\n- Kodak Retina IIc Heligon 50/2.8 + sluneční clona | 1 900 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/kodak-retina-iic-heligon-50-2-8-2\n- Prodám SD kartu Kodak 8GB | 80 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/prodam-sd-kartu-kodak-8gb\n- Canon DCS 520 (Kodak Professional DCS 520) | 400 € | Paladix\n  https://www.paladix.cz/bazar/inzerat/canon-dcs-520-kodak-professional-dcs-520\n- Prodám fotoaparát Olympus E-1 – CCD kodak sensor – top stav | 4 200 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/prodam-fotoaparat-olympus-e-1-ccd-kodak-sensor-top-stav\n- Kodak Junior 620 Anastigmat | 900 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/kodak-junior-620-anastigmat\n- Návod Kodak DX 7590 digitální fotoaparát | 100 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/a553225\n- Kodak cartridge 40 photo paper | 190 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/a553229\n\nChyby: žádné\n"
+    },
+    {
       "runAt": "2026-03-04T15:39:38.813Z",
       "summary": {
         "totalWatches": 4,
