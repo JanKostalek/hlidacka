@@ -83,6 +83,100 @@ a {
   text-align: center;
 }
 
+.heroMeta {
+  margin: 14px 0 0;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.heroChip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(145, 174, 210, 0.52);
+  background:
+    linear-gradient(155deg, rgba(255, 255, 255, 0.8), rgba(216, 230, 248, 0.5)),
+    linear-gradient(115deg, rgba(148, 163, 184, 0.16), rgba(255, 255, 255, 0));
+  padding: 6px 11px;
+  color: #21466f;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+}
+
+.heroActions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.heroActionBtn {
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid rgba(44, 106, 200, 0.58);
+  background:
+    linear-gradient(130deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0) 35%),
+    linear-gradient(125deg, #2563eb, #2d5fdf 56%, #1e4dc9);
+  color: #fff;
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  padding: 9px 13px;
+  box-shadow:
+    0 12px 24px rgba(37, 99, 235, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: transform 170ms ease, box-shadow 170ms ease, filter 170ms ease;
+  overflow: hidden;
+}
+
+.heroActionBtn::after {
+  content: "";
+  position: absolute;
+  top: -150%;
+  left: -40%;
+  width: 55%;
+  height: 280%;
+  transform: rotate(20deg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.36), rgba(255, 255, 255, 0));
+  opacity: 0;
+}
+
+.heroActionBtn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 16px 30px rgba(37, 99, 235, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.48);
+  filter: saturate(1.06);
+}
+
+.heroActionBtn:hover::after {
+  opacity: 1;
+  animation: dashboardShine 920ms ease;
+}
+
+.heroActionBtnSecondary {
+  border-color: rgba(136, 161, 194, 0.56);
+  color: #163f6f;
+  background:
+    linear-gradient(130deg, rgba(255, 255, 255, 0.78), rgba(224, 237, 252, 0.62)),
+    linear-gradient(122deg, rgba(148, 163, 184, 0.16), rgba(255, 255, 255, 0));
+  box-shadow:
+    0 10px 22px rgba(15, 23, 42, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.heroActionBtnSecondary:hover {
+  box-shadow:
+    0 14px 26px rgba(15, 23, 42, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.76);
+}
+
 .adminIconLink {
   position: absolute;
   top: 14px;
@@ -438,6 +532,14 @@ button:disabled {
   .page > .panel {
     animation: none;
   }
+
+  .heroActionBtn {
+    transition: none;
+  }
+
+  .heroActionBtn:hover::after {
+    animation: none;
+  }
 }
 
 @media (max-width: 920px) {
@@ -479,6 +581,15 @@ button:disabled {
   .stats {
     grid-template-columns: 1fr;
   }
+
+  .heroActions {
+    flex-direction: column;
+  }
+
+  .heroActionBtn {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Dashboard "ultra fresh" visual layer */
@@ -503,16 +614,41 @@ button:disabled {
   z-index: -1;
 }
 
+.dashboardPage::after {
+  content: "";
+  position: fixed;
+  inset: auto auto -220px -160px;
+  width: 620px;
+  height: 620px;
+  border-radius: 999px;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 32% 30%, rgba(226, 232, 240, 0.28), rgba(226, 232, 240, 0) 58%),
+    conic-gradient(from 210deg at 50% 50%, rgba(56, 189, 248, 0.16), rgba(15, 23, 42, 0.04), rgba(56, 189, 248, 0.16));
+  filter: blur(20px);
+  z-index: -1;
+}
+
 .dashboardPanel {
   border: 1px solid rgba(189, 207, 232, 0.66);
   background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.72), rgba(239, 247, 255, 0.58)),
-    linear-gradient(100deg, rgba(255, 255, 255, 0.2), rgba(203, 213, 225, 0.06));
+    linear-gradient(158deg, rgba(250, 253, 255, 0.76), rgba(234, 244, 255, 0.54)),
+    linear-gradient(120deg, rgba(15, 23, 42, 0.08), rgba(255, 255, 255, 0.08) 35%, rgba(30, 41, 59, 0.05) 100%);
   box-shadow:
-    0 24px 44px rgba(15, 23, 42, 0.15),
+    0 26px 46px rgba(15, 23, 42, 0.18),
     0 2px 0 rgba(255, 255, 255, 0.7) inset,
-    0 -12px 30px rgba(148, 163, 184, 0.08) inset;
-  backdrop-filter: blur(14px) saturate(1.14);
+    0 -14px 32px rgba(71, 85, 105, 0.12) inset;
+  backdrop-filter: blur(16px) saturate(1.16);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.dashboardPanel:hover {
+  transform: translateY(-2px);
+  border-color: rgba(119, 156, 201, 0.68);
+  box-shadow:
+    0 30px 56px rgba(15, 23, 42, 0.2),
+    0 2px 0 rgba(255, 255, 255, 0.75) inset,
+    0 -16px 34px rgba(71, 85, 105, 0.14) inset;
 }
 
 .dashboardPanel::after {
@@ -523,6 +659,16 @@ button:disabled {
   pointer-events: none;
   border: 1px solid rgba(255, 255, 255, 0.25);
   opacity: 0.6;
+}
+
+.dashboardPanel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.02) 45%, rgba(148, 163, 184, 0.12) 100%);
+  mix-blend-mode: soft-light;
 }
 
 .heroPanel {
@@ -564,6 +710,7 @@ button:disabled {
     0 10px 20px rgba(15, 23, 42, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.66);
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  overflow: hidden;
 }
 
 .statCard:hover {
@@ -572,6 +719,24 @@ button:disabled {
   box-shadow:
     0 18px 28px rgba(15, 23, 42, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.statCard::after {
+  content: "";
+  position: absolute;
+  top: -120%;
+  left: -40%;
+  width: 65%;
+  height: 260%;
+  transform: rotate(18deg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0));
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.statCard:hover::after {
+  opacity: 1;
+  animation: dashboardShine 900ms ease;
 }
 
 .statLabel {
@@ -633,8 +798,36 @@ button:disabled {
   text-shadow: 0 0 18px rgba(59, 130, 246, 0.23);
 }
 
+.dashboardGroup:hover {
+  border-color: rgba(120, 157, 201, 0.66);
+  box-shadow:
+    0 18px 30px rgba(15, 23, 42, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.74);
+}
+
+@keyframes dashboardShine {
+  0% {
+    transform: translateX(-18%) rotate(18deg);
+  }
+  100% {
+    transform: translateX(172%) rotate(18deg);
+  }
+}
+
 @media (max-width: 920px) {
   .dashboardPage {
     max-width: 980px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboardPanel,
+  .statCard,
+  .dashboardGroup {
+    transition: none;
+  }
+
+  .statCard:hover::after {
+    animation: none;
   }
 }

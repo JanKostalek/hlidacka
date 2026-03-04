@@ -37,6 +37,8 @@ function formatRunTime(iso) {
 export default async function Home() {
   const { results, history } = await loadResults();
   const runs = (history.runs || []).slice(0, 20);
+  const errorsCount = Number(results.summary?.errorCount ?? 0);
+  const healthState = errorsCount > 0 ? "Pozor: chyby" : "Stabilní běh";
   const statCards = [
     {
       label: "Poslední běh",
@@ -67,6 +69,18 @@ export default async function Home() {
         <div className="heroEyebrow">Live Monitoring</div>
         <h1>Hlídačka bazarů</h1>
         <p className="heroSubtitle">Pravidelná kontrola inzerátů na vybraných bazarech</p>
+        <div className="heroMeta">
+          <span className="heroChip">{healthState}</span>
+          <span className="heroChip">Aktualizace: {formatRunTime(results.runAt)}</span>
+        </div>
+        <div className="heroActions">
+          <a className="heroActionBtn" href="#nove-inzeraty">
+            Nové inzeráty
+          </a>
+          <a className="heroActionBtn heroActionBtnSecondary" href="/admin">
+            Otevřít administraci
+          </a>
+        </div>
         <div className="stats dashboardStats">
           {statCards.map((card) => (
             <article key={card.label} className="statCard">
@@ -77,7 +91,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="panel dashboardPanel">
+      <section className="panel dashboardPanel" id="nove-inzeraty">
         <h2>Nové inzeráty</h2>
         {results.newItemsByWatch?.length ? (
           results.newItemsByWatch.map((group) => (
@@ -107,7 +121,7 @@ export default async function Home() {
         )}
       </section>
 
-      <section className="panel dashboardPanel">
+      <section className="panel dashboardPanel" id="historie">
         <h2>Historie vyhledávání</h2>
         <HistoryRunsTable runs={runs} />
       </section>
