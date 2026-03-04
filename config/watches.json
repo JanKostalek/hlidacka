@@ -9,9 +9,9 @@
   },
   "watches": [
     {
-      "id": "garmin-hodinky",
-      "name": "Garmin hodinky",
-      "query": "Garmin 8",
+      "id": "garmin",
+      "name": "Garmin",
+      "query": "Garmin",
       "keywords": [
         "Garmin",
         "Fenix",
@@ -22,7 +22,7 @@
         {
           "id": "bazos",
           "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=Garmin%208",
+          "url": "https://www.bazos.cz/search.php?hledat=Garmin",
           "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
           "titleSelector": ".nadpis",
           "linkSelector": "a[href]",
@@ -31,7 +31,7 @@
         {
           "id": "sbazar",
           "name": "Sbazar",
-          "url": "https://www.sbazar.cz/?q=Garmin%208",
+          "url": "https://www.sbazar.cz/?q=Garmin",
           "itemSelector": "article",
           "titleSelector": "h3, h2, a",
           "linkSelector": "a[href]",
