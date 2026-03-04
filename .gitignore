@@ -1,0 +1,8 @@
+node_modules
+.next
+.vercel
+npm-debug.log*
+
+# Local temporary/debug artifacts
+tmp-*
+paladix-*.html
