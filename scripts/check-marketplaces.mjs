@@ -240,6 +240,19 @@ async function fetchHtml(url) {
       urlsToTry.push(
         `${parsed.protocol}//${parsed.host}/hledej/${encodeURIComponent(rawQuery.toLowerCase())}`
       );
+    } else if (parsed.hostname.includes("paladix.cz") && parsed.pathname.startsWith("/bazar")) {
+      const base = `${parsed.protocol}//${parsed.host}`;
+      const phrase = parsed.searchParams.get("_sf_search[]") || "";
+
+      // Stable fallback for cases where filtered URL returns HTTP 500.
+      urlsToTry.push(`${base}/bazar/`);
+      urlsToTry.push(`${base}/bazar`);
+
+      if (phrase) {
+        const params = new URLSearchParams();
+        params.set("_sf_search[]", phrase);
+        urlsToTry.push(`${base}/bazar/?${params.toString()}`);
+      }
     }
   } catch {
     // Keep the original URL only.

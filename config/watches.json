@@ -30,7 +30,25 @@
         {
           "id": "paladix",
           "name": "Paladix",
-          "url": "https://www.paladix.cz/bazar?_sf_search%5B%5D=lego%20star%20wars",
+          "url": "https://www.paladix.cz/bazar/?_sf_search%5B%5D=lego%20star%20wars",
+          "itemSelector": "article.pldx_ad",
+          "titleSelector": "h2.entry-title a",
+          "linkSelector": "h2.entry-title a[href]",
+          "priceSelector": ".entry-meta .price"
+        }
+      ]
+    },
+    {
+      "id": "paladix-nikon-z7-test",
+      "name": "Paladix Nikon Z7 test",
+      "query": "nikon Z7",
+      "keywords": ["nikon", "z7"],
+      "excludeKeywords": [],
+      "sources": [
+        {
+          "id": "paladix",
+          "name": "Paladix",
+          "url": "https://www.paladix.cz/bazar/?_sf_search%5B%5D=nikon%20Z7",
           "itemSelector": "article.pldx_ad",
           "titleSelector": "h2.entry-title a",
           "linkSelector": "h2.entry-title a[href]",
