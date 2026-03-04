@@ -506,7 +506,8 @@ async function sendDiscordNotification(config, results) {
   const entries = results.newItemsByWatch.flatMap((g) =>
     g.items.map((item) => {
       const pricePart = item.price ? ` | ${item.price}` : "";
-      return `* ${item.title} (${item.sourceName}${pricePart})\n${item.link}`;
+      // Wrap links in <> so Discord keeps plain text and does not render rich embeds.
+      return `* ${item.title} (${item.sourceName}${pricePart})\n<${item.link}>`;
     })
   );
 
