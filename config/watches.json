@@ -9,33 +9,33 @@
   },
   "watches": [
     {
-      "id": "garmin",
-      "name": "Garmin",
-      "query": "Garmin Fenix",
+      "id": "garmin-hodinky",
+      "name": "Garmin hodinky",
+      "query": "Garmin 8",
       "keywords": [
         "Garmin",
-        "51",
+        "Fenix",
         "8"
       ],
       "excludeKeywords": [],
       "sources": [
         {
-          "id": "sbazar",
-          "name": "Sbazar",
-          "url": "https://www.sbazar.cz/?q=Garmin%20Fenix",
-          "itemSelector": "article",
-          "titleSelector": "h3, h2, a",
-          "linkSelector": "a[href]",
-          "priceSelector": "[class*='price'], [data-e2e*='price']"
-        },
-        {
           "id": "bazos",
           "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=Garmin%20Fenix",
+          "url": "https://www.bazos.cz/search.php?hledat=Garmin%208",
           "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
           "titleSelector": ".nadpis",
           "linkSelector": "a[href]",
           "priceSelector": ".inzeratycena, .inzeratcena, .cena"
+        },
+        {
+          "id": "sbazar",
+          "name": "Sbazar",
+          "url": "https://www.sbazar.cz/?q=Garmin%208",
+          "itemSelector": "article",
+          "titleSelector": "h3, h2, a",
+          "linkSelector": "a[href]",
+          "priceSelector": "[class*='price'], [data-e2e*='price']"
         }
       ]
     }
