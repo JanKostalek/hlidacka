@@ -195,6 +195,34 @@ a {
   justify-self: start;
 }
 
+.emailModeOptions {
+  width: 340px;
+  max-width: 340px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.emailModeOption {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border-radius: 11px;
+  border: 1px solid rgba(187, 205, 227, 0.9);
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+.emailModeOption input {
+  width: auto;
+  padding: 0;
+}
+
 input {
   width: 100%;
   padding: 10px 11px;
@@ -436,7 +464,8 @@ button:disabled {
 
   .adminRowToken input,
   .adminRowEmail input,
-  .adminRowNumber .numberInput {
+  .adminRowNumber .numberInput,
+  .emailModeOptions {
     max-width: 100%;
     width: 100%;
   }
