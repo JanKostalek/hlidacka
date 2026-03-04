@@ -9,30 +9,6 @@
   },
   "watches": [
     {
-      "id": "lego-star-wars",
-      "name": "LEGO Star Wars",
-      "query": "lego star wars",
-      "keywords": [
-        "lego",
-        "star wars"
-      ],
-      "excludeKeywords": [
-        "rezervace",
-        "prodano"
-      ],
-      "sources": [
-        {
-          "id": "paladix",
-          "name": "Paladix",
-          "url": "https://www.paladix.cz/bazar/?s=lego+star+wars",
-          "itemSelector": "article.pldx_ad",
-          "titleSelector": "h2.entry-title a",
-          "linkSelector": "h2.entry-title a[href]",
-          "priceSelector": ".entry-meta .price"
-        }
-      ]
-    },
-    {
       "id": "paladix-nikon-z7-test-20260304",
       "name": "Paladix Nikon Z7 test 20260304",
       "query": "nikon Z7",
@@ -84,6 +60,26 @@
           "id": "paladix",
           "name": "Paladix",
           "url": "https://www.paladix.cz/bazar/?s=olympus",
+          "itemSelector": "article.pldx_ad",
+          "titleSelector": "h2.entry-title a",
+          "linkSelector": "h2.entry-title a[href]",
+          "priceSelector": ".entry-meta .price"
+        }
+      ]
+    },
+    {
+      "id": "fuji",
+      "name": "fuji",
+      "query": "fuji",
+      "keywords": [
+        "fuji"
+      ],
+      "excludeKeywords": [],
+      "sources": [
+        {
+          "id": "paladix",
+          "name": "Paladix",
+          "url": "https://www.paladix.cz/bazar/?s=fuji",
           "itemSelector": "article.pldx_ad",
           "titleSelector": "h2.entry-title a",
           "linkSelector": "h2.entry-title a[href]",
