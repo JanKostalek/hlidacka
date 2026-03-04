@@ -1,6 +1,53 @@
 {
   "runs": [
     {
+      "runAt": "2026-03-04T13:18:12.009Z",
+      "summary": {
+        "totalWatches": 2,
+        "totalSources": 4,
+        "totalFoundItems": 27,
+        "totalNewItems": 1,
+        "errorCount": 0
+      },
+      "watchStats": [
+        {
+          "watchId": "lego-star-wars",
+          "watchName": "LEGO Star Wars",
+          "query": "",
+          "keywords": [
+            "lego",
+            "star wars"
+          ],
+          "excludeKeywords": [
+            "rezervace",
+            "prodano"
+          ],
+          "sourcesChecked": 3,
+          "foundItems": 19,
+          "newItems": 1,
+          "found": true,
+          "errorCount": 0
+        },
+        {
+          "watchId": "paladix-nikon-z7-test-20260304",
+          "watchName": "Paladix Nikon Z7 test 20260304",
+          "query": "nikon Z7",
+          "keywords": [
+            "nikon",
+            "z7"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 1,
+          "foundItems": 8,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        }
+      ],
+      "emailSubject": "Hlídačka (LEGO Star Wars +1): 1 nových inzerátů",
+      "emailText": "Hlídačka bazarů - Výsledek vyhledávání\nČas vyhledávání: 2026-03-04T13:18:12.009Z\nNové inzeráty: 1\nChyby: 0\n\nAktivní dotazy:\n\n- LEGO Star Wars\n  co hledat: (prázdné)\n  klíčová slova: lego, star wars\n  vyloučit slova: rezervace, prodano\n  bazary: Sbazar, Bazos, Paladix\n  výsledek: nové 1, již zobrazené 16, chyby 0\n\n- Paladix Nikon Z7 test 20260304\n  co hledat: nikon Z7\n  klíčová slova: nikon, z7\n  vyloučit slova: (žádná)\n  bazary: Paladix\n  výsledek: nové 0, již zobrazené 3, chyby 0\n\nNové inzeráty:\n\nLEGO Star Wars (1)\n- Stavebnice Lego Star Wars™ 75432 Stíhačka V-19 Torrent Starf | Bazos\n  https://deti.bazos.cz/inzerat/215783792/stavebnice-lego-star-wars-75432-stihacka-v-19-torrent-starf.php\n\nJiž zobrazené inzeráty:\n\nLEGO Star Wars (16)\n- LEGO STAR WARS 75323 | Bazos\n  https://deti.bazos.cz/inzerat/215744069/lego-star-wars-75323.php\n- Lego Star Wars 75242 Black Ace Tie Interceptor | Bazos\n  https://deti.bazos.cz/inzerat/215748248/lego-star-wars-75242-black-ace-tie-interceptor.php\n- Lego LEGO Star Wars 75347 Tie Bomber | Bazos\n  https://deti.bazos.cz/inzerat/215748541/lego-lego-star-wars-75347-tie-bomber.php\n- Lego Star Wars 75337 AT-TE | Bazos\n  https://deti.bazos.cz/inzerat/215749651/lego-star-wars-75337-at-te.php\n- Lego Star Wars 75387 | Bazos\n  https://deti.bazos.cz/inzerat/215750166/lego-star-wars-75387.php\n- LEGO Star Wars 75319 Kovárna mandaloriánské zbrojmistryně | Bazos\n  https://deti.bazos.cz/inzerat/215756437/lego-star-wars-75319-kovarna-mandalorianske-zbrojmistryne.php\n- LEGO Star Wars 75212 MILENIUM FALCON | Bazos\n  https://deti.bazos.cz/inzerat/215760030/lego-star-wars-75212-milenium-falcon.php\n- Lego 75223 Star Wars | Bazos\n  https://deti.bazos.cz/inzerat/215760342/lego-75223-star-wars.php\n- LEGO BrickHeadz Star Wars | Bazos\n  https://deti.bazos.cz/inzerat/215763941/lego-brickheadz-star-wars.php\n- LEGO Star Wars 75318 Dítě | Bazos\n  https://deti.bazos.cz/inzerat/215764475/lego-star-wars-75318-dite.php\n- LEGO Star Wars The Clone Wars 8036 | Bazos\n  https://deti.bazos.cz/inzerat/215767231/lego-star-wars-the-clone-wars-8036.php\n- Lego Star Wars 75333 Jediská stíhačka Obi-Wana Kenobiho | Bazos\n  https://deti.bazos.cz/inzerat/215779641/lego-star-wars-75333-jediska-stihacka-obi-wana-kenobiho.php\n- Lego Star Wars 75372 bitevní balíček klon. vojáka a droida | Bazos\n  https://deti.bazos.cz/inzerat/215780309/lego-star-wars-75372-bitevni-balicek-klon-vojakaa-a-droida.php\n- LEGO Star Wars 75371 Chewbacca – NOVÉ, ZAPEČETĚNÉ | Bazos\n  https://deti.bazos.cz/inzerat/215252063/lego-star-wars-75371-chewbacca-nove-zapecetene.php\n- LEGO STAR WARS 75042 | Bazos\n  https://deti.bazos.cz/inzerat/215272478/lego-star-wars-75042.php\n- LEGO STAR WARS 75042 | Bazos\n  https://deti.bazos.cz/inzerat/215272080/lego-star-wars-75042.php\n\nPaladix Nikon Z7 test 20260304 (3)\n- L-plate pro Nikon Z7 Nikon Z6 úchyt Arca Swiss | 1 100 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/a629763\n- NIKON Z7 II v perfektním stavu | 41 000 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/nikon-z7-ii-v-perfektnim-stavu\n- Nikon Z7 II | 37 900 Kč | Paladix\n  https://www.paladix.cz/bazar/inzerat/nikon-z7-ii-2\n\nChyby: žádné\n"
+    },
+    {
       "runAt": "2026-03-04T12:19:31.388Z",
       "summary": {
         "totalWatches": 2,
