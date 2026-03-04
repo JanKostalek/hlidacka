@@ -70,6 +70,26 @@
           "priceSelector": "[class*='price'], [data-e2e*='price']"
         }
       ]
+    },
+    {
+      "id": "paladix-test",
+      "name": "paladix test",
+      "query": "olympus",
+      "keywords": [
+        "olympus"
+      ],
+      "excludeKeywords": [],
+      "sources": [
+        {
+          "id": "paladix",
+          "name": "Paladix",
+          "url": "https://www.paladix.cz/bazar/?s=olympus",
+          "itemSelector": "article.pldx_ad",
+          "titleSelector": "h2.entry-title a",
+          "linkSelector": "h2.entry-title a[href]",
+          "priceSelector": ".entry-meta .price"
+        }
+      ]
     }
   ]
 }
