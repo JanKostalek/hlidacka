@@ -481,7 +481,7 @@ function buildReport(results) {
   return lines.join("\n");
 }
 
-async function sendDiscordNotification(config, results) {
+async function sendDiscordNotification(config, results, alreadyDisplayedByWatch = {}) {
   const webhook = config.notifications?.discordWebhook || process.env.DISCORD_WEBHOOK_URL;
   const enabled =
     typeof config.notifications?.discordEnabled === "boolean"
@@ -507,65 +507,85 @@ async function sendDiscordNotification(config, results) {
     return;
   }
 
-  const entries = results.newItemsByWatch.flatMap((g) =>
-    g.items.map((item) => {
-      const pricePart = item.price ? ` | ${item.price}` : "";
-      // Wrap links in <> so Discord keeps plain text and does not render rich embeds.
-      return `* ${item.title} (${item.sourceName}${pricePart})\n<${item.link}>`;
-    })
+  const groupsByWatch = new Map(
+    (results.newItemsByWatch || []).map((group) => [group.watchId, group.items || []])
   );
+  const watchOrder = (config.watches || []).map((watch) => watch.id);
+  for (const group of results.newItemsByWatch || []) {
+    if (!watchOrder.includes(group.watchId)) {
+      watchOrder.push(group.watchId);
+    }
+  }
 
-  if (entries.length === 0) {
+  const watchMetaById = new Map((config.watches || []).map((watch) => [watch.id, watch]));
+  const sections = watchOrder.map((watchId) => {
+    const watchMeta = watchMetaById.get(watchId);
+    const watchName = watchMeta?.name || watchId;
+    const items = groupsByWatch.get(watchId) || [];
+    const shownCount = (alreadyDisplayedByWatch[watchId] || []).length;
     const lines = [
-      "Kontrola dokončena: žádné nové inzeráty.",
-      `Dotazy: ${results.summary.totalWatches} | Zdroje: ${results.summary.totalSources} | Chyby: ${results.summary.errorCount}`,
-      `Čas: ${results.runAt}`
+      `**${watchName}**`,
+      `Nove inzeraty: ${items.length} | Jiz zobrazene: ${shownCount}`
     ];
-    if (Array.isArray(results.errors) && results.errors.length > 0) {
-      lines.push("");
-      lines.push("Chyby:");
-      for (const err of results.errors.slice(0, 5)) {
-        lines.push(`- ${err.watchName} / ${err.sourceName}: ${err.message}`);
-      }
-      if (results.errors.length > 5) {
-        lines.push(`- ... a dalších ${results.errors.length - 5}`);
-      }
+
+    if (shownCount > 0) {
+      lines.push("Jiz zobrazene inzeraty neposilam znovu, jsou ve starsich zpravach vyse.");
     }
 
-    console.log("Sending Discord notification...");
-    await fetch(webhook, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ content: lines.join("\n") })
-    });
-    console.log("Discord notification sent.");
-    return;
-  }
-
-  const chunks = [];
-  let current = "";
-  for (const line of entries) {
-    if ((current + "\n" + line).length > 1800) {
-      chunks.push(current.trim());
-      current = line;
+    if (items.length === 0) {
+      lines.push("- Zadne nove inzeraty.");
     } else {
-      current += `\n${line}`;
+      for (const item of items) {
+        const pricePart = item.price ? ` | ${item.price}` : "";
+        // Wrap links in <> so Discord keeps plain text and does not render rich embeds.
+        lines.push(`- ${item.title} (${item.sourceName}${pricePart})`);
+        lines.push(`  <${item.link}>`);
+      }
+    }
+
+    return lines.join("\n");
+  });
+
+  const messages = [];
+  const intro = `Vysledek hlidani (${results.runAt})\nDotazy: ${results.summary.totalWatches} | Zdroje: ${results.summary.totalSources} | Nove: ${results.summary.totalNewItems} | Chyby: ${results.summary.errorCount}`;
+  let current = intro;
+  for (const section of sections) {
+    const candidate = `${current}\n\n${section}`;
+    if (candidate.length > 1800) {
+      messages.push(current.trim());
+      current = section;
+    } else {
+      current = candidate;
     }
   }
-  if (current.trim()) chunks.push(current.trim());
+
+  if (Array.isArray(results.errors) && results.errors.length > 0) {
+    const errorLines = ["**Chyby**"];
+    for (const err of results.errors.slice(0, 8)) {
+      errorLines.push(`- ${err.watchName} / ${err.sourceName}: ${err.message}`);
+    }
+    if (results.errors.length > 8) {
+      errorLines.push(`- ... a dalsich ${results.errors.length - 8}`);
+    }
+    const errorBlock = errorLines.join("\n");
+    if ((`${current}\n\n${errorBlock}`).length > 1800) {
+      messages.push(current.trim());
+      current = errorBlock;
+    } else {
+      current = `${current}\n\n${errorBlock}`;
+    }
+  }
+
+  if (current.trim()) {
+    messages.push(current.trim());
+  }
 
   console.log("Sending Discord notification...");
-  for (let i = 0; i < chunks.length; i++) {
-    const payload = {
-      content:
-        i === 0
-          ? `Nové inzeráty (${results.summary.totalNewItems})\n${chunks[i]}`
-          : chunks[i]
-    };
+  for (const content of messages) {
     await fetch(webhook, {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(payload)
+      body: JSON.stringify({ content })
     });
   }
   console.log("Discord notification sent.");
@@ -992,7 +1012,7 @@ async function main() {
   await writeJson(FOUND_HISTORY_PATH, nextFoundHistory);
   await fs.writeFile(REPORT_PATH, buildReport(results), "utf8");
   try {
-    await sendDiscordNotification(config, results);
+    await sendDiscordNotification(config, results, filteredAlreadyDisplayedByWatch);
   } catch (err) {
     console.error("Discord notification failed:", err);
   }
