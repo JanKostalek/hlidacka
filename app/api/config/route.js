@@ -263,7 +263,12 @@ function configToAdminModel(config) {
   });
 }
 
-function adminModelToConfig(modelWatches, notificationEmail, existingConfig = {}) {
+function adminModelToConfig(
+  modelWatches,
+  notificationEmail,
+  emailOnlyWhenNew,
+  existingConfig = {}
+) {
   const usedIds = new Set();
 
   const watches = (modelWatches || [])
@@ -298,7 +303,8 @@ function adminModelToConfig(modelWatches, notificationEmail, existingConfig = {}
 
   const notifications = {
     ...(existingConfig.notifications || {}),
-    emailTo: String(notificationEmail || "").trim()
+    emailTo: String(notificationEmail || "").trim(),
+    emailOnlyWhenNew: Boolean(emailOnlyWhenNew)
   };
 
   return {
@@ -327,6 +333,10 @@ export async function GET(req) {
       marketplaces: listSupportedMarketplaces(),
       notificationEmail:
         config.notifications?.emailTo || process.env.EMAIL_TO || "jan.kostalek@gmail.com",
+      emailOnlyWhenNew:
+        typeof config.notifications?.emailOnlyWhenNew === "boolean"
+          ? config.notifications.emailOnlyWhenNew
+          : String(process.env.EMAIL_ONLY_WHEN_NEW || "false") === "true",
       schedule
     });
   } catch (err) {
@@ -348,6 +358,7 @@ export async function PUT(req) {
     const config = adminModelToConfig(
       body.watches || [],
       body.notificationEmail,
+      body.emailOnlyWhenNew,
       current
     );
     const nextSchedule = normalizeScheduleInput(body.schedule, currentSchedule);
@@ -362,6 +373,7 @@ export async function PUT(req) {
       marketplaces: listSupportedMarketplaces(),
       notificationEmail:
         config.notifications?.emailTo || process.env.EMAIL_TO || "jan.kostalek@gmail.com",
+      emailOnlyWhenNew: Boolean(config.notifications?.emailOnlyWhenNew),
       schedule: {
         ...nextSchedule,
         cronExpression: buildCronExpression(nextSchedule.startHour, nextSchedule.intervalHours)

@@ -59,7 +59,7 @@ function buildSbazarSearchUrl(query) {
 function formatSbazarPrice(item) {
   if (!item || item.price_by_agreement) return "";
   if (typeof item.price !== "number" || !Number.isFinite(item.price)) return "";
-  return `${new Intl.NumberFormat("cs-CZ").format(item.price)} KÄ`;
+  return `${new Intl.NumberFormat("cs-CZ").format(item.price)} Kč`;
 }
 
 function mapSbazarItemToCandidate(item) {
@@ -379,11 +379,11 @@ function getAlreadyDisplayedByWatchWithFilters(foundHistory, newItemsByWatch, wa
 
 function buildReport(results) {
   const lines = [];
-  lines.push(`# Hlidacka bazaru - ${results.runAt}`);
+  lines.push(`# Hlídačka bazarů - ${results.runAt}`);
   lines.push("");
-  lines.push(`- Kontrolovano dotazu: **${results.summary.totalWatches}**`);
-  lines.push(`- Kontrolovano zdroju: **${results.summary.totalSources}**`);
-  lines.push(`- Nalezeno novych inzeratu: **${results.summary.totalNewItems}**`);
+  lines.push(`- Kontrolováno dotazů: **${results.summary.totalWatches}**`);
+  lines.push(`- Kontrolováno zdrojů: **${results.summary.totalSources}**`);
+  lines.push(`- Nalezeno nových inzerátů: **${results.summary.totalNewItems}**`);
   lines.push(`- Chyby: **${results.summary.errorCount}**`);
   lines.push("");
 
@@ -433,7 +433,7 @@ async function sendDiscordNotification(results) {
     const payload = {
       content:
         i === 0
-          ? `Nove inzeraty (${results.summary.totalNewItems})\n${chunks[i]}`
+          ? `Nové inzeráty (${results.summary.totalNewItems})\n${chunks[i]}`
           : chunks[i]
     };
     await fetch(webhook, {
@@ -451,12 +451,12 @@ function buildEmailText(config, results, alreadyDisplayedByWatch = {}) {
   );
 
   const lines = [];
-  lines.push(`Hlidacka bazaru - VÃ½sledek vyhledÃ¡vÃ¡nÃ­`);
-  lines.push(`ÄŒas vyhledÃ¡vÃ¡nÃ­: ${results.runAt}`);
-  lines.push(`Nove inzeraty: ${results.summary.totalNewItems}`);
+  lines.push(`Hlídačka bazarů - Výsledek vyhledávání`);
+  lines.push(`Čas vyhledávání: ${results.runAt}`);
+  lines.push(`Nové inzeráty: ${results.summary.totalNewItems}`);
   lines.push(`Chyby: ${results.summary.errorCount}`);
   lines.push("");
-  lines.push("Aktivni dotazy:");
+  lines.push("Aktivní dotazy:");
   lines.push("");
 
   for (const watch of watches) {
@@ -465,30 +465,30 @@ function buildEmailText(config, results, alreadyDisplayedByWatch = {}) {
     );
     const errCount = (results.errors || []).filter((err) => err.watchId === watch.id).length;
     const newCount = newItemsByWatchId.get(watch.id) || 0;
-    const keywords = (watch.keywords || []).join(", ") || "(zadna)";
-    const excluded = (watch.excludeKeywords || []).join(", ") || "(zadna)";
-    const sourceList = sources.join(", ") || "(zadny)";
+    const keywords = (watch.keywords || []).join(", ") || "(žádná)";
+    const excluded = (watch.excludeKeywords || []).join(", ") || "(žádná)";
+    const sourceList = sources.join(", ") || "(žádný)";
     const shownCount = (alreadyDisplayedByWatch[watch.id] || []).length;
 
     lines.push(`- ${watch.name || watch.id}`);
-    lines.push(`  co hledat: ${watch.query || "(prazdne)"}`);
-    lines.push(`  klicova slova: ${keywords}`);
-    lines.push(`  vyloucit slova: ${excluded}`);
+    lines.push(`  co hledat: ${watch.query || "(prázdné)"}`);
+    lines.push(`  klíčová slova: ${keywords}`);
+    lines.push(`  vyloučit slova: ${excluded}`);
     lines.push(`  bazary: ${sourceList}`);
-    lines.push(`  vysledek: nove ${newCount}, jiz zobrazene ${shownCount}, chyby ${errCount}`);
+    lines.push(`  výsledek: nové ${newCount}, již zobrazené ${shownCount}, chyby ${errCount}`);
     lines.push("");
   }
 
   if (watches.length === 0) {
-    lines.push("(zadne dotazy)");
+    lines.push("(žádné dotazy)");
     lines.push("");
   }
 
   if (results.summary.totalNewItems === 0) {
-    lines.push("Zadne nove inzeraty.");
+    lines.push("Žádné nové inzeráty.");
     lines.push("");
   } else {
-    lines.push("Nove inzeraty:");
+    lines.push("Nové inzeráty:");
     lines.push("");
     for (const group of results.newItemsByWatch) {
       lines.push(`${group.watchName} (${group.items.length})`);
@@ -501,13 +501,13 @@ function buildEmailText(config, results, alreadyDisplayedByWatch = {}) {
     }
   }
 
-  lines.push("Jiz zobrazene inzeraty:");
+  lines.push("Již zobrazené inzeráty:");
   lines.push("");
   for (const watch of watches) {
     const shown = alreadyDisplayedByWatch[watch.id] || [];
     lines.push(`${watch.name || watch.id} (${shown.length})`);
     if (shown.length === 0) {
-      lines.push("- zadne");
+      lines.push("- žádné");
     } else {
       for (const item of shown) {
         const pricePart = item.price ? ` | ${item.price}` : "";
@@ -519,7 +519,7 @@ function buildEmailText(config, results, alreadyDisplayedByWatch = {}) {
   }
 
   if (results.errors.length === 0) {
-    lines.push("Chyby: zadne");
+    lines.push("Chyby: žádné");
     lines.push("");
   } else {
     lines.push("Chyby:");
@@ -537,8 +537,8 @@ function buildEmailSubject(config, results) {
   const extraCount = Math.max((config.watches?.length || 1) - 1, 0);
   const scope = extraCount > 0 ? `${firstName} +${extraCount}` : firstName;
   return results.summary.totalNewItems > 0
-    ? `Hlidacka (${scope}): ${results.summary.totalNewItems} novych inzeratu`
-    : `Hlidacka (${scope}): zadne nove inzeraty`;
+    ? `Hlídačka (${scope}): ${results.summary.totalNewItems} nových inzerátů`
+    : `Hlídačka (${scope}): žádné nové inzeráty`;
 }
 
 function escapeHtml(input) {
@@ -563,15 +563,15 @@ function buildEmailHtml(config, results, alreadyDisplayedByWatch = {}) {
       );
       const errorsForWatch = (results.errors || []).filter((err) => err.watchId === watch.id);
       const newItems = newItemsByWatchId.get(watch.id) || [];
-      const keywords = (watch.keywords || []).join(', ') || '(zadna)';
-      const excluded = (watch.excludeKeywords || []).join(', ') || '(zadna)';
-      const sourceList = sources.join(', ') || '(zadny)';
+      const keywords = (watch.keywords || []).join(', ') || '(žádná)';
+      const excluded = (watch.excludeKeywords || []).join(', ') || '(žádná)';
+      const sourceList = sources.join(', ') || '(žádný)';
       const shownItems = alreadyDisplayedByWatch[watch.id] || [];
       const shownCount = shownItems.length;
 
       const itemList =
         newItems.length === 0
-          ? `<div style="color:#607089;font-size:13px;">Zadne nove inzeraty pro tento dotaz.</div>`
+          ? `<div style="color:#607089;font-size:13px;">Žádné nové inzeráty pro tento dotaz.</div>`
           : `<ul style="margin:6px 0 0;padding-left:18px;font-size:13px;line-height:1.45;">${newItems
               .map((item) => {
                 const pricePart = item.price ? ` | ${escapeHtml(item.price)}` : '';
@@ -593,7 +593,7 @@ function buildEmailHtml(config, results, alreadyDisplayedByWatch = {}) {
 
       const shownList =
         shownItems.length === 0
-          ? `<div style="color:#607089;font-size:13px;">Zadne drive zobrazene inzeraty.</div>`
+          ? `<div style="color:#607089;font-size:13px;">Žádné dříve zobrazené inzeráty.</div>`
           : `<ul style="margin:6px 0 0;padding-left:18px;font-size:13px;line-height:1.45;">${shownItems
               .map((item) => {
                 const pricePart = item.price ? ` | ${escapeHtml(item.price)}` : '';
@@ -610,21 +610,21 @@ function buildEmailHtml(config, results, alreadyDisplayedByWatch = {}) {
           </div>
 
           <div style="background:#f7fbff;border:1px solid #dbe7f6;border-radius:12px;padding:11px;margin-top:10px;">
-            <h4 style="margin:0 0 7px;color:#1f3653;">Vyhledavani</h4>
-            <div style="font-size:13px;margin:3px 0;"><b>Co hledat:</b> ${escapeHtml(watch.query || '(prazdne)')}</div>
-            <div style="font-size:13px;margin:3px 0;"><b>Klicova slova:</b> ${escapeHtml(keywords)}</div>
-            <div style="font-size:13px;margin:3px 0;"><b>Vyloucit slova:</b> ${escapeHtml(excluded)}</div>
+            <h4 style="margin:0 0 7px;color:#1f3653;">Vyhledávání</h4>
+            <div style="font-size:13px;margin:3px 0;"><b>Co hledat:</b> ${escapeHtml(watch.query || '(prázdné)')}</div>
+            <div style="font-size:13px;margin:3px 0;"><b>Klíčová slova:</b> ${escapeHtml(keywords)}</div>
+            <div style="font-size:13px;margin:3px 0;"><b>Vyloučit slova:</b> ${escapeHtml(excluded)}</div>
             <div style="font-size:13px;margin:3px 0;"><b>Bazary:</b> ${escapeHtml(sourceList)}</div>
-            <div style="font-size:13px;margin:3px 0;"><b>Vysledek:</b> nove ${newItems.length}, jiz zobrazene ${shownCount}, chyby ${errorsForWatch.length}</div>
+            <div style="font-size:13px;margin:3px 0;"><b>Výsledek:</b> nové ${newItems.length}, již zobrazené ${shownCount}, chyby ${errorsForWatch.length}</div>
           </div>
 
           <div style="background:#f7fbff;border:1px solid #dbe7f6;border-radius:12px;padding:11px;margin-top:10px;">
-            <h4 style="margin:0 0 7px;color:#1f3653;">Nove inzeraty</h4>
+            <h4 style="margin:0 0 7px;color:#1f3653;">Nové inzeráty</h4>
             ${itemList}
           </div>
 
           <div style="background:#f7fbff;border:1px solid #dbe7f6;border-radius:12px;padding:11px;margin-top:10px;">
-            <h4 style="margin:0 0 7px;color:#1f3653;">Jiz zobrazene inzeraty</h4>
+            <h4 style="margin:0 0 7px;color:#1f3653;">Již zobrazené inzeráty</h4>
             ${shownList}
           </div>
 
@@ -642,18 +642,18 @@ function buildEmailHtml(config, results, alreadyDisplayedByWatch = {}) {
   <body style="margin:0;padding:0;background:radial-gradient(1200px 600px at 85% -10%,rgba(14,165,168,0.16) 0%,transparent 60%),radial-gradient(1000px 520px at -10% 5%,rgba(37,99,235,0.14) 0%,transparent 60%),linear-gradient(170deg,#f6fbff 0%,#e9f2ff 100%);font-family:'DM Sans','Segoe UI',Arial,sans-serif;color:#0f172a;">
     <div style="max-width:820px;margin:0 auto;padding:20px 12px;">
       <div style="background:linear-gradient(125deg,#2563eb,#2456dd 52%,#0ea5a8);color:white;border-radius:18px;padding:22px 19px;box-shadow:0 14px 32px rgba(37,99,235,0.28);">
-        <div style="font-size:13px;opacity:.9;margin-bottom:7px;letter-spacing:.02em;">Hlidacka bazaru</div>
-        <div style="font-size:30px;font-weight:700;line-height:1.15;letter-spacing:-0.02em;">Vysledek vyhledavani</div>
-        <div style="margin-top:11px;font-size:14px;opacity:.95;">Cas vyhledavani: ${escapeHtml(results.runAt)}</div>
+        <div style="font-size:13px;opacity:.9;margin-bottom:7px;letter-spacing:.02em;">Hlídačka bazarů</div>
+        <div style="font-size:30px;font-weight:700;line-height:1.15;letter-spacing:-0.02em;">Výsledek vyhledávání</div>
+        <div style="margin-top:11px;font-size:14px;opacity:.95;">Čas vyhledávání: ${escapeHtml(results.runAt)}</div>
       </div>
 
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
         <div style="background:linear-gradient(170deg,rgba(255,255,255,0.97),rgba(245,251,255,0.97));border:1px solid #d4dfee;border-radius:14px;padding:12px 14px;min-width:140px;box-shadow:0 8px 18px rgba(15,23,42,0.08);">
-          <div style="font-size:12px;color:#607089;">Nove inzeraty</div>
+          <div style="font-size:12px;color:#607089;">Nové inzeráty</div>
           <div style="font-size:24px;font-weight:700;">${results.summary.totalNewItems}</div>
         </div>
         <div style="background:linear-gradient(170deg,rgba(255,255,255,0.97),rgba(245,251,255,0.97));border:1px solid #d4dfee;border-radius:14px;padding:12px 14px;min-width:140px;box-shadow:0 8px 18px rgba(15,23,42,0.08);">
-          <div style="font-size:12px;color:#607089;">Celkem inzeratu</div>
+          <div style="font-size:12px;color:#607089;">Celkem inzerátů</div>
           <div style="font-size:24px;font-weight:700;">${results.summary.totalFoundItems ?? results.summary.totalNewItems}</div>
         </div>
         <div style="background:linear-gradient(170deg,rgba(255,255,255,0.97),rgba(245,251,255,0.97));border:1px solid #d4dfee;border-radius:14px;padding:12px 14px;min-width:140px;box-shadow:0 8px 18px rgba(15,23,42,0.08);">
@@ -663,7 +663,7 @@ function buildEmailHtml(config, results, alreadyDisplayedByWatch = {}) {
       </div>
 
       <div style="margin-top:12px;">
-        ${watchCards || '<div style="background:linear-gradient(170deg,rgba(255,255,255,0.97),rgba(245,251,255,0.97));border:1px solid #d4dfee;border-radius:14px;padding:14px;">Zadne aktivni dotazy.</div>'}
+        ${watchCards || '<div style="background:linear-gradient(170deg,rgba(255,255,255,0.97),rgba(245,251,255,0.97));border:1px solid #d4dfee;border-radius:14px;padding:14px;">Žádné aktivní dotazy.</div>'}
       </div>
     </div>
   </body>
@@ -682,6 +682,10 @@ async function sendEmailNotification(config, results, alreadyDisplayedByWatch) {
     process.env.EMAIL_TO ||
     "jan.kostalek@gmail.com";
   const enabled = String(process.env.EMAIL_ENABLED || "true") !== "false";
+  const emailOnlyWhenNew =
+    typeof config.notifications?.emailOnlyWhenNew === "boolean"
+      ? config.notifications.emailOnlyWhenNew
+      : String(process.env.EMAIL_ONLY_WHEN_NEW || "false") === "true";
 
   if (!enabled) {
     console.log("Email notification skipped: EMAIL_ENABLED=false");
@@ -693,6 +697,12 @@ async function sendEmailNotification(config, results, alreadyDisplayedByWatch) {
   }
   if (!to) {
     console.log("Email notification skipped: target e-mail is empty");
+    return;
+  }
+  if (emailOnlyWhenNew && results.summary.totalNewItems === 0) {
+    console.log(
+      "Email notification skipped: configured to send only when new listings are found."
+    );
     return;
   }
 
@@ -767,7 +777,7 @@ async function main() {
             watchName: watch.name,
             sourceId: sourceForRun.id || sourceForRun.url,
             sourceName: sourceForRun.name || sourceForRun.id || sourceForRun.url,
-            title: candidate.title || "(bez nazvu)",
+            title: candidate.title || "(bez názvu)",
             price: candidate.price || "",
             link: candidate.link || sourceForRun.url,
             foundAt: nowIso
@@ -871,5 +881,7 @@ main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
+
+
 
 

@@ -88,20 +88,25 @@ a {
   top: 14px;
   right: 14px;
   z-index: 2;
-  width: 44px;
-  height: 44px;
+  width: 64px;
+  height: 64px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
-  border: 1px solid rgba(191, 208, 229, 0.9);
-  background: linear-gradient(170deg, rgba(255, 255, 255, 0.94), rgba(245, 251, 255, 0.94));
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  text-decoration: none;
 }
 
 .adminIconLink:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 9px 20px rgba(15, 23, 42, 0.13);
+  transform: scale(1.04);
+}
+
+.adminIconLink img {
+  width: 64px;
+  height: 64px;
+  display: block;
 }
 
 .panel h2 {

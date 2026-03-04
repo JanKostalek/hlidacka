@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 
@@ -19,9 +19,10 @@ export default function AdminPage() {
   const [watchValidationErrors, setWatchValidationErrors] = useState({});
   const [marketplaces, setMarketplaces] = useState([]);
   const [notificationEmail, setNotificationEmail] = useState("");
+  const [emailOnlyWhenNew, setEmailOnlyWhenNew] = useState(false);
   const [scheduleStartHour, setScheduleStartHour] = useState(0);
   const [scheduleIntervalHours, setScheduleIntervalHours] = useState(2);
-  const [status, setStatus] = useState("Nacitani...");
+  const [status, setStatus] = useState("Načítání...");
   const [saving, setSaving] = useState(false);
   const [clearing, setClearing] = useState(false);
 
@@ -31,19 +32,19 @@ export default function AdminPage() {
   }, []);
 
   async function loadConfig(currentToken = token) {
-    setStatus("Nacitani...");
+    setStatus("Načítání...");
     const res = await fetch("/api/config", {
       headers: currentToken ? { "x-admin-token": currentToken } : {}
     });
 
     if (res.status === 401) {
-      setStatus("Neplatny token. Zadej ADMIN_TOKEN.");
+      setStatus("Neplatný token. Zadej ADMIN_TOKEN.");
       return;
     }
 
     if (!res.ok) {
       const error = await res.json().catch(() => ({}));
-      setStatus(`Nepodarilo se nacist konfiguraci. ${error.error || ""}`.trim());
+      setStatus(`Nepodařilo se načíst konfiguraci. ${error.error || ""}`.trim());
       return;
     }
 
@@ -52,11 +53,12 @@ export default function AdminPage() {
     setWatchValidationErrors({});
     setMarketplaces(data.marketplaces || []);
     setNotificationEmail(data.notificationEmail || "");
+    setEmailOnlyWhenNew(Boolean(data.emailOnlyWhenNew));
     setScheduleStartHour(Number.isInteger(data.schedule?.startHour) ? data.schedule.startHour : 0);
     setScheduleIntervalHours(
       Number.isInteger(data.schedule?.intervalHours) ? data.schedule.intervalHours : 2
     );
-    setStatus("Konfigurace nactena.");
+    setStatus("Konfigurace načtena.");
   }
 
   useEffect(() => {
@@ -99,7 +101,7 @@ export default function AdminPage() {
     const errors = {};
     currentWatches.forEach((watch, index) => {
       if (!Array.isArray(watch.marketplaces) || watch.marketplaces.length === 0) {
-        errors[index] = "Vyber aspon jeden bazar (Sbazar nebo Bazos).";
+        errors[index] = "Vyber aspoň jeden bazar (Sbazar nebo Bazoš).";
       }
     });
     return errors;
@@ -109,7 +111,7 @@ export default function AdminPage() {
     const validationErrors = validateWatchesForSave(watches);
     setWatchValidationErrors(validationErrors);
     if (Object.keys(validationErrors).length > 0) {
-      setStatus("Nelze ulozit konfiguraci. U kazdeho dotazu vyber aspon jeden bazar.");
+      setStatus("Nelze uložit konfiguraci. U každého dotazu vyber aspoň jeden bazar.");
       return;
     }
     if (
@@ -117,7 +119,7 @@ export default function AdminPage() {
       scheduleStartHour < 0 ||
       scheduleStartHour > 23
     ) {
-      setStatus("Neplatna startovni hodina. Povoleny rozsah je 0-23.");
+      setStatus("Neplatná startovní hodina. Povolený rozsah je 0-23.");
       return;
     }
     if (
@@ -125,12 +127,12 @@ export default function AdminPage() {
       scheduleIntervalHours < 2 ||
       scheduleIntervalHours > 24
     ) {
-      setStatus("Neplatny interval opakovani. Povoleny rozsah je 2-24 hodin.");
+      setStatus("Neplatný interval opakování. Povolený rozsah je 2-24 hodin.");
       return;
     }
 
     setSaving(true);
-    setStatus("Ukladam...");
+    setStatus("Ukládám...");
     const headers = { "content-type": "application/json" };
     if (token) headers["x-admin-token"] = token;
 
@@ -140,6 +142,7 @@ export default function AdminPage() {
       body: JSON.stringify({
         watches,
         notificationEmail,
+        emailOnlyWhenNew,
         schedule: {
           startHour: scheduleStartHour,
           intervalHours: scheduleIntervalHours
@@ -148,14 +151,14 @@ export default function AdminPage() {
     });
 
     if (res.status === 401) {
-      setStatus("Neplatny token. Ulozeni zamitnuto.");
+      setStatus("Neplatný token. Uložení zamítnuto.");
       setSaving(false);
       return;
     }
 
     if (!res.ok) {
       const error = await res.json().catch(() => ({}));
-      setStatus(`Nepodarilo se ulozit konfiguraci. ${error.error || ""}`.trim());
+      setStatus(`Nepodařilo se uložit konfiguraci. ${error.error || ""}`.trim());
       setSaving(false);
       return;
     }
@@ -164,22 +167,23 @@ export default function AdminPage() {
     setWatches(data.watches || []);
     setWatchValidationErrors({});
     setNotificationEmail(data.notificationEmail || "");
+    setEmailOnlyWhenNew(Boolean(data.emailOnlyWhenNew));
     setScheduleStartHour(Number.isInteger(data.schedule?.startHour) ? data.schedule.startHour : 0);
     setScheduleIntervalHours(
       Number.isInteger(data.schedule?.intervalHours) ? data.schedule.intervalHours : 2
     );
-    setStatus("Ulozeno.");
+    setStatus("Uloženo.");
     setSaving(false);
   }
 
   async function clearHistory() {
     const confirmed = window.confirm(
-      "Opravdu chces vycistit historii? (behy, jiz zobrazene inzeraty, stav)"
+      "Opravdu chceš vyčistit historii? (běhy, již zobrazené inzeráty, stav)"
     );
     if (!confirmed) return;
 
     setClearing(true);
-    setStatus("Cistim historii...");
+    setStatus("Čistím historii...");
     const headers = { "content-type": "application/json" };
     if (token) headers["x-admin-token"] = token;
 
@@ -190,19 +194,19 @@ export default function AdminPage() {
     });
 
     if (res.status === 401) {
-      setStatus("Neplatny token. Cisteni zamitnuto.");
+      setStatus("Neplatný token. Čištění zamítnuto.");
       setClearing(false);
       return;
     }
 
     if (!res.ok) {
       const error = await res.json().catch(() => ({}));
-      setStatus(`Nepodarilo se vycistit historii. ${error.error || ""}`.trim());
+      setStatus(`Nepodařilo se vyčistit historii. ${error.error || ""}`.trim());
       setClearing(false);
       return;
     }
 
-    setStatus("Historie vycistena.");
+    setStatus("Historie vyčištěna.");
     setClearing(false);
   }
 
@@ -214,8 +218,8 @@ export default function AdminPage() {
   return (
     <main className="page">
       <section className="panel">
-        <h1>Administrace hlidacky</h1>
-        <p>Vyber bazary, zadej co hledat a uloz konfiguraci.</p>
+        <h1>Administrace hlídačky</h1>
+        <p>Vyber bazary, zadej co hledat a ulož konfiguraci.</p>
         <div className="adminRow adminRowToken">
           <label htmlFor="token">Admin token</label>
           <input
@@ -227,22 +231,39 @@ export default function AdminPage() {
               setToken(next);
               window.localStorage.setItem("adminToken", next);
             }}
-            placeholder="volitelne, pokud je nastaven ADMIN_TOKEN"
+            placeholder="volitelně, pokud je nastaven ADMIN_TOKEN"
           />
           <button type="button" onClick={() => loadConfig(token)}>
-            Nacist znovu
+            Načíst znovu
           </button>
         </div>
         <div className="adminRow adminRowEmail">
-          <label htmlFor="email_to">Cilovy e-mail</label>
+          <label htmlFor="email_to">Cílový e-mail</label>
           <input
             id="email_to"
             type="email"
             value={notificationEmail}
             onChange={(e) => setNotificationEmail(e.target.value)}
-            placeholder="kam se posilaji nalezy"
+            placeholder="kam se posílají nálezy"
           />
-          <span className="helpText">Pouzije se pri dalsim behu workflow.</span>
+          <span className="helpText">Použije se při dalším běhu workflow.</span>
+        </div>
+        <div className="adminRow adminRowEmail">
+          <label htmlFor="email_only_when_new">Režim informačního e-mailu</label>
+          <label className="checkboxLabel" htmlFor="email_only_when_new">
+            <input
+              id="email_only_when_new"
+              type="checkbox"
+              checked={emailOnlyWhenNew}
+              onChange={(e) => setEmailOnlyWhenNew(e.target.checked)}
+            />
+            Odesílat informační e-mail jen při nalezení nových inzerátů
+          </label>
+          <span className="helpText">
+            {emailOnlyWhenNew
+              ? "Aktuálně: odesílat jen při nalezení nových inzerátů."
+              : "Aktuálně: odesílat informační e-mail vždy."}
+          </span>
         </div>
         <div className="adminRow adminRowNumber">
           <label htmlFor="schedule_start">Automatika od (hodina)</label>
@@ -256,10 +277,10 @@ export default function AdminPage() {
             value={scheduleStartHour}
             onChange={(e) => setScheduleStartHour(Number(e.target.value))}
           />
-          <span className="helpText">0-23, napr. 8 = prvni beh v 08:00.</span>
+          <span className="helpText">0-23, např. 8 = první běh v 08:00.</span>
         </div>
         <div className="adminRow adminRowNumber">
-          <label htmlFor="schedule_interval">Opakovat kazdych (hodin)</label>
+          <label htmlFor="schedule_interval">Opakovat každých (hodin)</label>
           <input
             className="numberInput"
             id="schedule_interval"
@@ -277,7 +298,7 @@ export default function AdminPage() {
 
       <section className="panel">
         <div className="adminHead">
-          <h2>Hlidane dotazy</h2>
+          <h2>Hlídané dotazy</h2>
           <button
             type="button"
             onClick={() => {
@@ -285,21 +306,21 @@ export default function AdminPage() {
               setWatchValidationErrors({});
             }}
           >
-            + Pridat dotaz
+            + Přidat dotaz
           </button>
         </div>
 
-        {watches.length === 0 ? <p>Zatim zadny dotaz.</p> : null}
+        {watches.length === 0 ? <p>Zatím žádný dotaz.</p> : null}
 
         {watches.map((watch, index) => (
           <article key={`${watch.id || "new"}-${index}`} className="watchCard">
             <div className="adminGrid">
               <label>
-                Nazev dotazu
+                Název dotazu
                 <input
                   value={watch.name}
                   onChange={(e) => updateWatch(index, { name: e.target.value })}
-                  placeholder="napr. iPhone 13"
+                  placeholder="např. iPhone 13"
                 />
               </label>
               <label>
@@ -307,11 +328,11 @@ export default function AdminPage() {
                 <input
                   value={watch.query}
                   onChange={(e) => updateWatch(index, { query: e.target.value })}
-                  placeholder="napr. iphone 13 128gb"
+                  placeholder="např. iphone 13 128gb"
                 />
               </label>
               <label>
-                Klicova slova (CSV)
+                Klíčová slova (CSV)
                 <input
                   value={watch.keywordsCsv}
                   onChange={(e) => updateWatch(index, { keywordsCsv: e.target.value })}
@@ -319,13 +340,13 @@ export default function AdminPage() {
                 />
               </label>
               <label>
-                Vyloucit slova (CSV)
+                Vyloučit slova (CSV)
                 <input
                   value={watch.excludeKeywordsCsv}
                   onChange={(e) =>
                     updateWatch(index, { excludeKeywordsCsv: e.target.value })
                   }
-                  placeholder="rezervace, prodano"
+                  placeholder="rezervace, prodáno"
                 />
               </label>
             </div>
@@ -357,7 +378,7 @@ export default function AdminPage() {
       <section className="panel">
         <div className="adminActions">
           <button type="button" onClick={saveConfig} disabled={saving || clearing}>
-            {saving ? "Ukladam..." : "Ulozit konfiguraci"}
+            {saving ? "Ukládám..." : "Uložit konfiguraci"}
           </button>
           <button
             type="button"
@@ -365,7 +386,7 @@ export default function AdminPage() {
             onClick={clearHistory}
             disabled={saving || clearing}
           >
-            {clearing ? "Cistim..." : "Vycistit historii"}
+            {clearing ? "Čistím..." : "Vyčistit historii"}
           </button>
         </div>
       </section>
