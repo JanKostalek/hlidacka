@@ -13,14 +13,21 @@ function emptyWatch() {
   };
 }
 
+function modeFromFlags(enabled, onlyWhenNew) {
+  if (!enabled) return "off";
+  return onlyWhenNew ? "new" : "always";
+}
+
 export default function AdminPage() {
   const [token, setToken] = useState("");
   const [watches, setWatches] = useState([]);
   const [watchValidationErrors, setWatchValidationErrors] = useState({});
   const [marketplaces, setMarketplaces] = useState([]);
   const [notificationEmail, setNotificationEmail] = useState("");
+  const [emailEnabled, setEmailEnabled] = useState(true);
   const [emailOnlyWhenNew, setEmailOnlyWhenNew] = useState(false);
   const [notificationDiscordWebhook, setNotificationDiscordWebhook] = useState("");
+  const [discordEnabled, setDiscordEnabled] = useState(true);
   const [discordOnlyWhenNew, setDiscordOnlyWhenNew] = useState(true);
   const [scheduleStartHour, setScheduleStartHour] = useState(0);
   const [scheduleIntervalHours, setScheduleIntervalHours] = useState(2);
@@ -56,8 +63,10 @@ export default function AdminPage() {
     setWatchValidationErrors({});
     setMarketplaces(data.marketplaces || []);
     setNotificationEmail(data.notificationEmail || "");
+    setEmailEnabled(Boolean(data.emailEnabled));
     setEmailOnlyWhenNew(Boolean(data.emailOnlyWhenNew));
     setNotificationDiscordWebhook(data.notificationDiscordWebhook || "");
+    setDiscordEnabled(Boolean(data.discordEnabled));
     setDiscordOnlyWhenNew(Boolean(data.discordOnlyWhenNew));
     setScheduleStartHour(Number.isInteger(data.schedule?.startHour) ? data.schedule.startHour : 0);
     setScheduleIntervalHours(
@@ -147,8 +156,10 @@ export default function AdminPage() {
       body: JSON.stringify({
         watches,
         notificationEmail,
+        emailEnabled,
         emailOnlyWhenNew,
         notificationDiscordWebhook,
+        discordEnabled,
         discordOnlyWhenNew,
         schedule: {
           startHour: scheduleStartHour,
@@ -174,8 +185,10 @@ export default function AdminPage() {
     setWatches(data.watches || []);
     setWatchValidationErrors({});
     setNotificationEmail(data.notificationEmail || "");
+    setEmailEnabled(Boolean(data.emailEnabled));
     setEmailOnlyWhenNew(Boolean(data.emailOnlyWhenNew));
     setNotificationDiscordWebhook(data.notificationDiscordWebhook || "");
+    setDiscordEnabled(Boolean(data.discordEnabled));
     setDiscordOnlyWhenNew(Boolean(data.discordOnlyWhenNew));
     setScheduleStartHour(Number.isInteger(data.schedule?.startHour) ? data.schedule.startHour : 0);
     setScheduleIntervalHours(
@@ -253,6 +266,41 @@ export default function AdminPage() {
     setWatchValidationErrors({});
   }
 
+  function toggleEmailMode(mode) {
+    const currentMode = modeFromFlags(emailEnabled, emailOnlyWhenNew);
+    if (currentMode === mode) {
+      setEmailEnabled(false);
+      return;
+    }
+    setEmailEnabled(true);
+    setEmailOnlyWhenNew(mode === "new");
+  }
+
+  function toggleDiscordMode(mode) {
+    const currentMode = modeFromFlags(discordEnabled, discordOnlyWhenNew);
+    if (currentMode === mode) {
+      setDiscordEnabled(false);
+      return;
+    }
+    setDiscordEnabled(true);
+    setDiscordOnlyWhenNew(mode === "new");
+  }
+
+  const emailMode = modeFromFlags(emailEnabled, emailOnlyWhenNew);
+  const discordMode = modeFromFlags(discordEnabled, discordOnlyWhenNew);
+  const emailSummary =
+    emailMode === "off"
+      ? "E-mail: neodesílá se."
+      : emailMode === "new"
+        ? "E-mail: odesílá se jen při nových inzerátech."
+        : "E-mail: odesílá se vždy.";
+  const discordSummary =
+    discordMode === "off"
+      ? "Discord: neodesílá se."
+      : discordMode === "new"
+        ? "Discord: odesílá se jen při nových inzerátech."
+        : "Discord: odesílá se vždy.";
+
   return (
     <main className="page">
       <section className="panel">
@@ -304,8 +352,8 @@ export default function AdminPage() {
               <input
                 id="email_send_always"
                 type="checkbox"
-                checked={!emailOnlyWhenNew}
-                onChange={() => setEmailOnlyWhenNew(false)}
+                checked={emailMode === "always"}
+                onChange={() => toggleEmailMode("always")}
               />
               Odesílat vždy
             </label>
@@ -313,12 +361,15 @@ export default function AdminPage() {
               <input
                 id="email_only_when_new"
                 type="checkbox"
-                checked={emailOnlyWhenNew}
-                onChange={() => setEmailOnlyWhenNew(true)}
+                checked={emailMode === "new"}
+                onChange={() => toggleEmailMode("new")}
               />
               Jen nové nálezy
             </label>
           </div>
+          <span className="helpText">
+            Nezaškrtnuto = neodesílat.
+          </span>
         </div>
         <div className="adminRow adminRowEmail">
           <label htmlFor="discord_only_when_new">Režim Discord notifikace</label>
@@ -327,8 +378,8 @@ export default function AdminPage() {
               <input
                 id="discord_send_always"
                 type="checkbox"
-                checked={!discordOnlyWhenNew}
-                onChange={() => setDiscordOnlyWhenNew(false)}
+                checked={discordMode === "always"}
+                onChange={() => toggleDiscordMode("always")}
               />
               Odesílat vždy
             </label>
@@ -336,11 +387,15 @@ export default function AdminPage() {
               <input
                 id="discord_only_when_new"
                 type="checkbox"
-                checked={discordOnlyWhenNew}
-                onChange={() => setDiscordOnlyWhenNew(true)}
+                checked={discordMode === "new"}
+                onChange={() => toggleDiscordMode("new")}
               />
               Jen nové nálezy
             </label>
+          </div>
+          <div className="helpText notifySummary" aria-live="polite">
+            <div>{emailSummary}</div>
+            <div>{discordSummary}</div>
           </div>
         </div>
         <div className="adminRow adminRowNumber">

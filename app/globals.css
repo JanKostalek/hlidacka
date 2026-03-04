@@ -324,6 +324,12 @@ button:disabled {
   color: var(--ink-3);
 }
 
+.notifySummary {
+  display: grid;
+  gap: 4px;
+  min-width: 250px;
+}
+
 .adminActions {
   display: flex;
   justify-content: space-between;

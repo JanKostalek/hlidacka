@@ -411,11 +411,19 @@ function buildReport(results) {
 
 async function sendDiscordNotification(config, results) {
   const webhook = config.notifications?.discordWebhook || process.env.DISCORD_WEBHOOK_URL;
+  const enabled =
+    typeof config.notifications?.discordEnabled === "boolean"
+      ? config.notifications.discordEnabled
+      : String(process.env.DISCORD_ENABLED || "true") !== "false";
   const discordOnlyWhenNew =
     typeof config.notifications?.discordOnlyWhenNew === "boolean"
       ? config.notifications.discordOnlyWhenNew
       : String(process.env.DISCORD_ONLY_WHEN_NEW || "true") === "true";
 
+  if (!enabled) {
+    console.log("Discord notification skipped: disabled by configuration.");
+    return;
+  }
   if (!webhook) {
     console.log("Discord notification skipped: DISCORD_WEBHOOK_URL is empty");
     return;
@@ -697,7 +705,10 @@ async function sendEmailNotification(config, results, alreadyDisplayedByWatch) {
     config.notifications?.emailTo ||
     process.env.EMAIL_TO ||
     "jan.kostalek@gmail.com";
-  const enabled = String(process.env.EMAIL_ENABLED || "true") !== "false";
+  const enabled =
+    typeof config.notifications?.emailEnabled === "boolean"
+      ? config.notifications.emailEnabled
+      : String(process.env.EMAIL_ENABLED || "true") !== "false";
   const emailOnlyWhenNew =
     typeof config.notifications?.emailOnlyWhenNew === "boolean"
       ? config.notifications.emailOnlyWhenNew

@@ -271,8 +271,10 @@ function adminModelToConfig(
   modelWatches,
   notificationEmail,
   emailOnlyWhenNew,
+  emailEnabled,
   notificationDiscordWebhook,
   discordOnlyWhenNew,
+  discordEnabled,
   existingConfig = {}
 ) {
   const usedIds = new Set();
@@ -311,8 +313,10 @@ function adminModelToConfig(
     ...(existingConfig.notifications || {}),
     emailTo: String(notificationEmail || "").trim(),
     emailOnlyWhenNew: Boolean(emailOnlyWhenNew),
+    emailEnabled: Boolean(emailEnabled),
     discordWebhook: String(notificationDiscordWebhook || "").trim(),
-    discordOnlyWhenNew: Boolean(discordOnlyWhenNew)
+    discordOnlyWhenNew: Boolean(discordOnlyWhenNew),
+    discordEnabled: Boolean(discordEnabled)
   };
 
   return {
@@ -341,12 +345,20 @@ export async function GET(req) {
       marketplaces: listSupportedMarketplaces(),
       notificationEmail:
         config.notifications?.emailTo || process.env.EMAIL_TO || "jan.kostalek@gmail.com",
+      emailEnabled:
+        typeof config.notifications?.emailEnabled === "boolean"
+          ? config.notifications.emailEnabled
+          : String(process.env.EMAIL_ENABLED || "true") !== "false",
       emailOnlyWhenNew:
         typeof config.notifications?.emailOnlyWhenNew === "boolean"
           ? config.notifications.emailOnlyWhenNew
           : String(process.env.EMAIL_ONLY_WHEN_NEW || "false") === "true",
       notificationDiscordWebhook:
         config.notifications?.discordWebhook || process.env.DISCORD_WEBHOOK_URL || "",
+      discordEnabled:
+        typeof config.notifications?.discordEnabled === "boolean"
+          ? config.notifications.discordEnabled
+          : String(process.env.DISCORD_ENABLED || "true") !== "false",
       discordOnlyWhenNew:
         typeof config.notifications?.discordOnlyWhenNew === "boolean"
           ? config.notifications.discordOnlyWhenNew
@@ -373,8 +385,10 @@ export async function PUT(req) {
       body.watches || [],
       body.notificationEmail,
       body.emailOnlyWhenNew,
+      body.emailEnabled,
       body.notificationDiscordWebhook,
       body.discordOnlyWhenNew,
+      body.discordEnabled,
       current
     );
     const nextSchedule = normalizeScheduleInput(body.schedule, currentSchedule);
@@ -388,8 +402,10 @@ export async function PUT(req) {
       marketplaces: listSupportedMarketplaces(),
       notificationEmail:
         config.notifications?.emailTo || process.env.EMAIL_TO || "jan.kostalek@gmail.com",
+      emailEnabled: Boolean(config.notifications?.emailEnabled),
       emailOnlyWhenNew: Boolean(config.notifications?.emailOnlyWhenNew),
       notificationDiscordWebhook: config.notifications?.discordWebhook || "",
+      discordEnabled: Boolean(config.notifications?.discordEnabled),
       discordOnlyWhenNew:
         typeof config.notifications?.discordOnlyWhenNew === "boolean"
           ? config.notifications.discordOnlyWhenNew
