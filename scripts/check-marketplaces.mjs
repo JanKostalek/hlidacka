@@ -482,6 +482,7 @@ function buildReport(results) {
 }
 
 async function sendDiscordNotification(config, results, alreadyDisplayedByWatch = {}) {
+  const DISCORD_MAX_CONTENT = 1800;
   const webhook = config.notifications?.discordWebhook || process.env.DISCORD_WEBHOOK_URL;
   const enabled =
     typeof config.notifications?.discordEnabled === "boolean"
@@ -547,16 +548,40 @@ async function sendDiscordNotification(config, results, alreadyDisplayedByWatch 
   });
 
   const messages = [];
-  const intro = `Vysledek hlidani (${results.runAt})\nDotazy: ${results.summary.totalWatches} | Zdroje: ${results.summary.totalSources} | Nove: ${results.summary.totalNewItems} | Chyby: ${results.summary.errorCount}`;
-  let current = intro;
-  for (const section of sections) {
-    const candidate = `${current}\n\n${section}`;
-    if (candidate.length > 1800) {
-      messages.push(current.trim());
-      current = section;
-    } else {
-      current = candidate;
+  const pushBlockLines = (lines, prefix = "") => {
+    let current = prefix ? `${prefix}\n` : "";
+    for (const line of lines) {
+      const candidate = current ? `${current}\n${line}` : line;
+      if (candidate.length > DISCORD_MAX_CONTENT) {
+        if (current.trim()) {
+          messages.push(current.trim());
+        }
+        if (line.length > DISCORD_MAX_CONTENT) {
+          const chunks = line.match(new RegExp(`.{1,${DISCORD_MAX_CONTENT - 1}}`, "g")) || [line];
+          for (const chunk of chunks.slice(0, -1)) {
+            messages.push(chunk);
+          }
+          current = chunks[chunks.length - 1];
+        } else {
+          current = line;
+        }
+      } else {
+        current = candidate;
+      }
     }
+    if (current.trim()) {
+      messages.push(current.trim());
+    }
+  };
+
+  const intro = [
+    `Vysledek hlidani (${results.runAt})`,
+    `Dotazy: ${results.summary.totalWatches} | Zdroje: ${results.summary.totalSources} | Nove: ${results.summary.totalNewItems} | Chyby: ${results.summary.errorCount}`
+  ];
+  pushBlockLines(intro);
+
+  for (const section of sections) {
+    pushBlockLines(section.split("\n"));
   }
 
   if (Array.isArray(results.errors) && results.errors.length > 0) {
@@ -567,26 +592,20 @@ async function sendDiscordNotification(config, results, alreadyDisplayedByWatch 
     if (results.errors.length > 8) {
       errorLines.push(`- ... a dalsich ${results.errors.length - 8}`);
     }
-    const errorBlock = errorLines.join("\n");
-    if ((`${current}\n\n${errorBlock}`).length > 1800) {
-      messages.push(current.trim());
-      current = errorBlock;
-    } else {
-      current = `${current}\n\n${errorBlock}`;
-    }
-  }
-
-  if (current.trim()) {
-    messages.push(current.trim());
+    pushBlockLines(errorLines);
   }
 
   console.log("Sending Discord notification...");
   for (const content of messages) {
-    await fetch(webhook, {
+    const res = await fetch(webhook, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ content })
     });
+    if (!res.ok) {
+      const body = await res.text().catch(() => "");
+      throw new Error(`Discord webhook HTTP ${res.status}: ${body}`);
+    }
   }
   console.log("Discord notification sent.");
 }
