@@ -81,45 +81,49 @@ async function writeTextToFile(output, localPath, repoPath, commitMessage) {
   const branch = process.env.GITHUB_BRANCH || "main";
 
   if (repo && token) {
-    const currentResponse = await fetch(
-      `https://api.github.com/repos/${repo}/contents/${repoPath}?ref=${encodeURIComponent(
-        branch
-      )}`,
-      {
-        headers: {
-          authorization: `Bearer ${token}`,
-          accept: "application/vnd.github+json",
-          "user-agent": "hlidacka-admin"
-        }
-      }
-    );
-    if (!currentResponse.ok) {
-      throw new Error(`GitHub read sha failed: ${currentResponse.status}`);
-    }
-    const currentPayload = await currentResponse.json();
-
-    const updateResponse = await fetch(
-      `https://api.github.com/repos/${repo}/contents/${repoPath}`,
-      {
-        method: "PUT",
-        headers: {
-          authorization: `Bearer ${token}`,
-          accept: "application/vnd.github+json",
-          "content-type": "application/json",
-          "user-agent": "hlidacka-admin"
-        },
-        body: JSON.stringify({
-          message: commitMessage,
-          content: Buffer.from(output, "utf8").toString("base64"),
-          sha: currentPayload.sha,
+    for (let attempt = 0; attempt < 3; attempt += 1) {
+      const currentResponse = await fetch(
+        `https://api.github.com/repos/${repo}/contents/${repoPath}?ref=${encodeURIComponent(
           branch
-        })
+        )}`,
+        {
+          headers: {
+            authorization: `Bearer ${token}`,
+            accept: "application/vnd.github+json",
+            "user-agent": "hlidacka-admin"
+          }
+        }
+      );
+      if (!currentResponse.ok) {
+        throw new Error(`GitHub read sha failed: ${currentResponse.status}`);
       }
-    );
-    if (!updateResponse.ok) {
-      throw new Error(`GitHub write failed: ${updateResponse.status}`);
+      const currentPayload = await currentResponse.json();
+
+      const updateResponse = await fetch(
+        `https://api.github.com/repos/${repo}/contents/${repoPath}`,
+        {
+          method: "PUT",
+          headers: {
+            authorization: `Bearer ${token}`,
+            accept: "application/vnd.github+json",
+            "content-type": "application/json",
+            "user-agent": "hlidacka-admin"
+          },
+          body: JSON.stringify({
+            message: commitMessage,
+            content: Buffer.from(output, "utf8").toString("base64"),
+            sha: currentPayload.sha,
+            branch
+          })
+        }
+      );
+      if (updateResponse.ok) {
+        return;
+      }
+      if (updateResponse.status !== 409 || attempt === 2) {
+        throw new Error(`GitHub write failed: ${updateResponse.status}`);
+      }
     }
-    return;
   }
 
   await fs.writeFile(localPath, output, "utf8");
@@ -362,10 +366,9 @@ export async function PUT(req) {
       current
     );
     const nextSchedule = normalizeScheduleInput(body.schedule, currentSchedule);
-    await Promise.all([
-      writeConfig(config, "web-admin"),
-      writeWorkflowSchedule(nextSchedule, "web-admin")
-    ]);
+    // Two GitHub content updates to the same branch in parallel can cause 409 conflicts.
+    await writeConfig(config, "web-admin");
+    await writeWorkflowSchedule(nextSchedule, "web-admin");
 
     return Response.json({
       ok: true,
