@@ -1,18 +1,26 @@
 {
   "notifications": {
-    "emailTo": "jan.kostalek@gmail.com"
+    "emailTo": "jan.kostalek@gmail.com",
+    "emailOnlyWhenNew": false
   },
   "watches": [
     {
       "id": "lego-star-wars",
       "name": "LEGO Star Wars",
-      "keywords": ["lego", "star wars"],
-      "excludeKeywords": ["rezervace", "prodano"],
+      "query": "lego star wars",
+      "keywords": [
+        "lego",
+        "star wars"
+      ],
+      "excludeKeywords": [
+        "rezervace",
+        "prodano"
+      ],
       "sources": [
         {
           "id": "sbazar",
           "name": "Sbazar",
-          "url": "https://www.sbazar.cz/hledej/lego%20star%20wars",
+          "url": "https://www.sbazar.cz/?q=lego%20star%20wars",
           "itemSelector": "article",
           "titleSelector": "h3, h2, a",
           "linkSelector": "a[href]",
@@ -21,16 +29,16 @@
         {
           "id": "bazos",
           "name": "Bazos",
-          "url": "https://deti.bazos.cz/?hledat=lego+star+wars",
-          "itemSelector": ".inzeraty.inzeratyflex",
+          "url": "https://www.bazos.cz/search.php?hledat=lego%20star%20wars",
+          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
           "titleSelector": ".nadpis",
           "linkSelector": "a[href]",
-          "priceSelector": ".cena"
+          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
         },
         {
           "id": "paladix",
           "name": "Paladix",
-          "url": "https://www.paladix.cz/bazar/?s=lego%20star%20wars",
+          "url": "https://www.paladix.cz/bazar/?s=lego+star+wars",
           "itemSelector": "article.pldx_ad",
           "titleSelector": "h2.entry-title a",
           "linkSelector": "h2.entry-title a[href]",
@@ -42,13 +50,16 @@
       "id": "paladix-nikon-z7-test-20260304",
       "name": "Paladix Nikon Z7 test 20260304",
       "query": "nikon Z7",
-      "keywords": ["nikon", "z7"],
+      "keywords": [
+        "nikon",
+        "z7"
+      ],
       "excludeKeywords": [],
       "sources": [
         {
           "id": "paladix",
           "name": "Paladix",
-          "url": "https://www.paladix.cz/bazar/?s=nikon%20Z7",
+          "url": "https://www.paladix.cz/bazar/?s=nikon+Z7",
           "itemSelector": "article.pldx_ad",
           "titleSelector": "h2.entry-title a",
           "linkSelector": "h2.entry-title a[href]",
