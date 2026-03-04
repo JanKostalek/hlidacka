@@ -480,3 +480,161 @@ button:disabled {
     grid-template-columns: 1fr;
   }
 }
+
+/* Dashboard "ultra fresh" visual layer */
+.dashboardPage {
+  max-width: 1160px;
+  gap: 22px;
+}
+
+.dashboardPage::before {
+  content: "";
+  position: fixed;
+  inset: -40% -30% auto auto;
+  width: 760px;
+  height: 760px;
+  border-radius: 999px;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 28% 32%, rgba(255, 255, 255, 0.52) 0%, rgba(255, 255, 255, 0) 44%),
+    radial-gradient(circle at 70% 72%, rgba(148, 163, 184, 0.28) 0%, rgba(148, 163, 184, 0) 48%),
+    conic-gradient(from 120deg at 50% 50%, rgba(96, 165, 250, 0.3), rgba(45, 212, 191, 0.18), rgba(148, 163, 184, 0.26), rgba(96, 165, 250, 0.3));
+  filter: blur(22px);
+  z-index: -1;
+}
+
+.dashboardPanel {
+  border: 1px solid rgba(189, 207, 232, 0.66);
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.72), rgba(239, 247, 255, 0.58)),
+    linear-gradient(100deg, rgba(255, 255, 255, 0.2), rgba(203, 213, 225, 0.06));
+  box-shadow:
+    0 24px 44px rgba(15, 23, 42, 0.15),
+    0 2px 0 rgba(255, 255, 255, 0.7) inset,
+    0 -12px 30px rgba(148, 163, 184, 0.08) inset;
+  backdrop-filter: blur(14px) saturate(1.14);
+}
+
+.dashboardPanel::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border-radius: 12px;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  opacity: 0.6;
+}
+
+.heroPanel {
+  overflow: hidden;
+}
+
+.heroPanel::before {
+  background:
+    radial-gradient(520px 220px at 92% -10%, rgba(255, 255, 255, 0.55), transparent 64%),
+    linear-gradient(138deg, rgba(255, 255, 255, 0.48), transparent 40%);
+}
+
+.heroEyebrow {
+  width: fit-content;
+  margin: 0 auto 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #194472;
+  border: 1px solid rgba(132, 169, 207, 0.5);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.72), rgba(206, 224, 246, 0.42));
+}
+
+.dashboardStats {
+  margin-top: 18px;
+}
+
+.statCard {
+  position: relative;
+  border-radius: 14px;
+  border: 1px solid rgba(164, 188, 218, 0.56);
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.76), rgba(236, 246, 255, 0.58)),
+    linear-gradient(120deg, rgba(148, 163, 184, 0.13), rgba(255, 255, 255, 0));
+  box-shadow:
+    0 10px 20px rgba(15, 23, 42, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.66);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.statCard:hover {
+  transform: translateY(-2px) scale(1.01);
+  border-color: rgba(72, 124, 190, 0.65);
+  box-shadow:
+    0 18px 28px rgba(15, 23, 42, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #486486;
+  margin-bottom: 6px;
+}
+
+.statValue {
+  color: #102848;
+  font-size: 1.14rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.dashboardGroup {
+  border: 1px solid rgba(174, 197, 224, 0.58);
+  background:
+    linear-gradient(155deg, rgba(255, 255, 255, 0.76), rgba(241, 249, 255, 0.6)),
+    linear-gradient(120deg, rgba(148, 163, 184, 0.1), rgba(255, 255, 255, 0));
+  box-shadow:
+    0 12px 22px rgba(15, 23, 42, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.groupHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.groupBadge {
+  border-radius: 999px;
+  border: 1px solid rgba(118, 149, 187, 0.54);
+  background: linear-gradient(130deg, rgba(255, 255, 255, 0.72), rgba(219, 234, 254, 0.5));
+  color: #1d4778;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 5px 10px;
+  letter-spacing: 0.02em;
+}
+
+.dashboardGroup li {
+  margin: 5px 0;
+}
+
+.dashboardGroup a {
+  transition: color 170ms ease, text-shadow 170ms ease;
+}
+
+.dashboardGroup a:hover {
+  color: #0f3fcb;
+  text-shadow: 0 0 18px rgba(59, 130, 246, 0.23);
+}
+
+@media (max-width: 920px) {
+  .dashboardPage {
+    max-width: 980px;
+  }
+}

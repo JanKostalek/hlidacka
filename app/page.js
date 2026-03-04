@@ -37,28 +37,55 @@ function formatRunTime(iso) {
 export default async function Home() {
   const { results, history } = await loadResults();
   const runs = (history.runs || []).slice(0, 20);
+  const statCards = [
+    {
+      label: "Poslední běh",
+      value: formatRunTime(results.runAt)
+    },
+    {
+      label: "Dotazy",
+      value: String(results.summary?.totalWatches ?? 0)
+    },
+    {
+      label: "Zdroje",
+      value: String(results.summary?.totalSources ?? 0)
+    },
+    {
+      label: "Nálezy celkem",
+      value: String(results.summary?.totalFoundItems ?? results.summary?.totalNewItems ?? 0)
+    },
+    {
+      label: "Nové inzeráty",
+      value: String(results.summary?.totalNewItems ?? 0)
+    }
+  ];
 
   return (
-    <main className="page">
-      <section className="panel">
+    <main className="page dashboardPage">
+      <section className="panel dashboardPanel heroPanel">
         <AdminPopupLink />
+        <div className="heroEyebrow">Live Monitoring</div>
         <h1>Hlídačka bazarů</h1>
         <p className="heroSubtitle">Pravidelná kontrola inzerátů na vybraných bazarech</p>
-        <ul className="stats">
-          <li>Poslední běh: {formatRunTime(results.runAt)}</li>
-          <li>Dotazy: {results.summary?.totalWatches ?? 0}</li>
-          <li>Zdroje: {results.summary?.totalSources ?? 0}</li>
-          <li>Nálezy celkem: {results.summary?.totalFoundItems ?? results.summary?.totalNewItems ?? 0}</li>
-          <li>Nové inzeráty: {results.summary?.totalNewItems ?? 0}</li>
-        </ul>
+        <div className="stats dashboardStats">
+          {statCards.map((card) => (
+            <article key={card.label} className="statCard">
+              <div className="statLabel">{card.label}</div>
+              <div className="statValue">{card.value}</div>
+            </article>
+          ))}
+        </div>
       </section>
 
-      <section className="panel">
+      <section className="panel dashboardPanel">
         <h2>Nové inzeráty</h2>
         {results.newItemsByWatch?.length ? (
           results.newItemsByWatch.map((group) => (
-            <div key={group.watchId} className="group">
-              <h3>{group.watchName}</h3>
+            <div key={group.watchId} className="group dashboardGroup">
+              <div className="groupHead">
+                <h3>{group.watchName}</h3>
+                <span className="groupBadge">{group.items.length} nových</span>
+              </div>
               <ul>
                 {group.items.map((item) => (
                   <li key={`${item.sourceId}-${item.link}`}>
@@ -80,7 +107,7 @@ export default async function Home() {
         )}
       </section>
 
-      <section className="panel">
+      <section className="panel dashboardPanel">
         <h2>Historie vyhledávání</h2>
         <HistoryRunsTable runs={runs} />
       </section>
