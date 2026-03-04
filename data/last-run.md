@@ -1,28 +1,20 @@
-# Hlídačka bazarů - 2026-03-04T15:32:08.564Z
+# Hlídačka bazarů - 2026-03-04T15:39:38.813Z
 
-- Kontrolováno dotazů: **3**
-- Kontrolováno zdrojů: **5**
-- Nalezeno nových inzerátů: **19**
+- Kontrolováno dotazů: **4**
+- Kontrolováno zdrojů: **6**
+- Nalezeno nových inzerátů: **11**
 - Chyby: **0**
 
-## fuji (19)
+## kodak (11)
 
-- [Fujifilm X-H2 + objektiv a příslušenství](https://www.paladix.cz/bazar/inzerat/fujifilm-x-h2-objektiv-a-prislusenstvi) | Paladix
-- [Objektiv Fujinon XF 8-16mm f2.8 R LM WR](https://www.paladix.cz/bazar/inzerat/objektiv-fujinon-xf-8-16mm-f2-8-r-lm-wr) | Paladix
-- [Fujifilm Fujinon XF 10–24 mm f/4 R OIS](https://www.paladix.cz/bazar/inzerat/fujifilm-fujinon-xf-10-24-mm-f-4-r-ois) | Paladix
-- [ZEISS Touit 12mm f/2.8 pro Fujifilm (X-mount)](https://www.paladix.cz/bazar/inzerat/zeiss-touit-12mm-f-2-8-pro-fujifilm-x-mount) | Paladix
-- [Olympus OM – Zuiko 135mm f3.5](https://www.paladix.cz/bazar/inzerat/olympus-om-zuiko-135mm-f3-5) | Paladix
-- [Fujifilm X100 UV filtr NiSi, Haida](https://www.paladix.cz/bazar/inzerat/fujifilm-x100-uv-filtr-nisi-haida) | Paladix
-- [Fujifilm X100VI](https://www.paladix.cz/bazar/inzerat/fujifilm-x100vi-5) | Paladix
-- [Fujifilm Fujinon XF 35mm f/1.4 R – OSTRAVA – PRAHA](https://www.paladix.cz/bazar/inzerat/fujifilm-fujinon-xf-35mm-f-1-4-r-ostrava-praha) | Paladix
-- [Fujifilm X-T20 – OSTRAVA – PRAHA](https://www.paladix.cz/bazar/inzerat/fujifilm-x-t20-ostrava-praha) | Paladix
-- [Fujifilm GF 35-70mm f4,5-5,6 WR – pro stredoformat](https://www.paladix.cz/bazar/inzerat/fujifilm-gf-35-70mm-f45-56-wr-pro-stredoformat) | Paladix
-- [FUJIFILM kabelová spoušť RR-100](https://www.paladix.cz/bazar/inzerat/fujifilm-kabelova-spoust-rr-100) | Paladix
-- [Fujifilm Fujinon XF 18-55mm f/2.8–4 R LM OIS](https://www.paladix.cz/bazar/inzerat/fujifilm-fujinon-xf-18-55mm-f-2-8-4-r-lm-ois) | Paladix
-- [Nikon Nikkor 50mm f/1.4 + K&F adaptér na Fujifilm](https://www.paladix.cz/bazar/inzerat/nikon-nikkor-50mm-f-1-4-kf-adapter-na-fujifilm) | Paladix
-- [SIGMA 56mm F1.4 DC DN (FUJI X)](https://www.paladix.cz/bazar/inzerat/sigma-56mm-f1-4-dc-dn-fuji-x) | Paladix
-- [PeakDesign_Lens Kit_Canon](https://www.paladix.cz/bazar/inzerat/peakdesign_lens-kit_canon) | Paladix
-- [Fujifilm BC-W126 nabíječka a baterie NP-W126](https://www.paladix.cz/bazar/inzerat/fujifilm-bc-w126-nabijecka-a-baterie-np-w126) | Paladix
-- [Prodám objektiv Fujinon XF 27mm f/2.8](https://www.paladix.cz/bazar/inzerat/prodam-objektiv-fujinon-xf-27mm-f-2-8) | Paladix
-- [VILTROX AF 23mm f/1.4 (Fuji X)](https://www.paladix.cz/bazar/inzerat/viltrox-af-23mm-f-1-4-fuji-x) | Paladix
-- [Sluneční clona Fujifilm 16-50 pro XC 16-50mm f3.5-5.6 OIS](https://www.paladix.cz/bazar/inzerat/slunecni-clona-fujifilm-16-50-pro-xc-16-50mm-f3-5-5-6-ois) | Paladix
+- [BAREVNÉ INVERZNÍ FILMY](https://www.paladix.cz/bazar/inzerat/barevne-inverzni-filmy) | 1 Kč | Paladix
+- [Kodak cartridge 40 photo paper](https://www.paladix.cz/bazar/inzerat/a553229) | 190 Kč | Paladix
+- [Návod Kodak DX 7590 digitální fotoaparát](https://www.paladix.cz/bazar/inzerat/a553225) | 100 Kč | Paladix
+- [Kodak Junior 620 Anastigmat](https://www.paladix.cz/bazar/inzerat/kodak-junior-620-anastigmat) | 900 Kč | Paladix
+- [Prodám fotoaparát Olympus E-1 – CCD kodak sensor – top stav](https://www.paladix.cz/bazar/inzerat/prodam-fotoaparat-olympus-e-1-ccd-kodak-sensor-top-stav) | 4 200 Kč | Paladix
+- [Canon DCS 520 (Kodak Professional DCS 520)](https://www.paladix.cz/bazar/inzerat/canon-dcs-520-kodak-professional-dcs-520) | 400 € | Paladix
+- [Prodám SD kartu Kodak 8GB](https://www.paladix.cz/bazar/inzerat/prodam-sd-kartu-kodak-8gb) | 80 Kč | Paladix
+- [Kodak Retina IIc Heligon 50/2.8 + sluneční clona](https://www.paladix.cz/bazar/inzerat/kodak-retina-iic-heligon-50-2-8-2) | 1 900 Kč | Paladix
+- [foťák Kodak pixpro FZ151](https://www.paladix.cz/bazar/inzerat/fotak-kodak-pixpro-fz151) | 1 000 Kč | Paladix
+- [Kodak Retina IIc Heligon 50/2.8 + sluneční clona](https://www.paladix.cz/bazar/inzerat/kodak-retina-iic-heligon-50-2-8) | 1 900 Kč | Paladix
+- [Pixel Oppilas RW-221 bezdrátová spoušť pro Nikon/Kodak (dosah až 300 m)](https://www.paladix.cz/bazar/inzerat/a155593) | 749 Kč | Paladix

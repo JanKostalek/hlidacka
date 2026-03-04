@@ -1,206 +1,126 @@
 {
-  "runAt": "2026-03-04T15:32:08.564Z",
+  "runAt": "2026-03-04T15:39:38.813Z",
   "summary": {
-    "totalWatches": 3,
-    "totalSources": 5,
-    "totalFoundItems": 63,
-    "totalNewItems": 19,
+    "totalWatches": 4,
+    "totalSources": 6,
+    "totalFoundItems": 74,
+    "totalNewItems": 11,
     "errorCount": 0
   },
   "newItemsByWatch": [
     {
-      "watchId": "fuji",
-      "watchName": "fuji",
+      "watchId": "kodak",
+      "watchName": "kodak",
       "items": [
         {
-          "watchId": "fuji",
-          "watchName": "fuji",
+          "watchId": "kodak",
+          "watchName": "kodak",
           "sourceId": "paladix",
           "sourceName": "Paladix",
-          "title": "Fujifilm X-H2 + objektiv a příslušenství",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/fujifilm-x-h2-objektiv-a-prislusenstvi",
-          "foundAt": "2026-03-04T15:32:08.564Z"
+          "title": "BAREVNÉ INVERZNÍ FILMY",
+          "price": "1 Kč",
+          "link": "https://www.paladix.cz/bazar/inzerat/barevne-inverzni-filmy",
+          "foundAt": "2026-03-04T15:39:38.813Z"
         },
         {
-          "watchId": "fuji",
-          "watchName": "fuji",
+          "watchId": "kodak",
+          "watchName": "kodak",
           "sourceId": "paladix",
           "sourceName": "Paladix",
-          "title": "Objektiv Fujinon XF 8-16mm f2.8 R LM WR",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/objektiv-fujinon-xf-8-16mm-f2-8-r-lm-wr",
-          "foundAt": "2026-03-04T15:32:08.564Z"
+          "title": "Kodak cartridge 40 photo paper",
+          "price": "190 Kč",
+          "link": "https://www.paladix.cz/bazar/inzerat/a553229",
+          "foundAt": "2026-03-04T15:39:38.813Z"
         },
         {
-          "watchId": "fuji",
-          "watchName": "fuji",
+          "watchId": "kodak",
+          "watchName": "kodak",
           "sourceId": "paladix",
           "sourceName": "Paladix",
-          "title": "Fujifilm Fujinon XF 10–24 mm f/4 R OIS",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/fujifilm-fujinon-xf-10-24-mm-f-4-r-ois",
-          "foundAt": "2026-03-04T15:32:08.564Z"
+          "title": "Návod Kodak DX 7590 digitální fotoaparát",
+          "price": "100 Kč",
+          "link": "https://www.paladix.cz/bazar/inzerat/a553225",
+          "foundAt": "2026-03-04T15:39:38.813Z"
         },
         {
-          "watchId": "fuji",
-          "watchName": "fuji",
+          "watchId": "kodak",
+          "watchName": "kodak",
           "sourceId": "paladix",
           "sourceName": "Paladix",
-          "title": "ZEISS Touit 12mm f/2.8 pro Fujifilm (X-mount)",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/zeiss-touit-12mm-f-2-8-pro-fujifilm-x-mount",
-          "foundAt": "2026-03-04T15:32:08.564Z"
+          "title": "Kodak Junior 620 Anastigmat",
+          "price": "900 Kč",
+          "link": "https://www.paladix.cz/bazar/inzerat/kodak-junior-620-anastigmat",
+          "foundAt": "2026-03-04T15:39:38.813Z"
         },
         {
-          "watchId": "fuji",
-          "watchName": "fuji",
+          "watchId": "kodak",
+          "watchName": "kodak",
           "sourceId": "paladix",
           "sourceName": "Paladix",
-          "title": "Olympus OM – Zuiko 135mm f3.5",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/olympus-om-zuiko-135mm-f3-5",
-          "foundAt": "2026-03-04T15:32:08.564Z"
+          "title": "Prodám fotoaparát Olympus E-1 – CCD kodak sensor – top stav",
+          "price": "4 200 Kč",
+          "link": "https://www.paladix.cz/bazar/inzerat/prodam-fotoaparat-olympus-e-1-ccd-kodak-sensor-top-stav",
+          "foundAt": "2026-03-04T15:39:38.813Z"
         },
         {
-          "watchId": "fuji",
-          "watchName": "fuji",
+          "watchId": "kodak",
+          "watchName": "kodak",
           "sourceId": "paladix",
           "sourceName": "Paladix",
-          "title": "Fujifilm X100 UV filtr NiSi, Haida",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/fujifilm-x100-uv-filtr-nisi-haida",
-          "foundAt": "2026-03-04T15:32:08.564Z"
+          "title": "Canon DCS 520 (Kodak Professional DCS 520)",
+          "price": "400 €",
+          "link": "https://www.paladix.cz/bazar/inzerat/canon-dcs-520-kodak-professional-dcs-520",
+          "foundAt": "2026-03-04T15:39:38.813Z"
         },
         {
-          "watchId": "fuji",
-          "watchName": "fuji",
+          "watchId": "kodak",
+          "watchName": "kodak",
           "sourceId": "paladix",
           "sourceName": "Paladix",
-          "title": "Fujifilm X100VI",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/fujifilm-x100vi-5",
-          "foundAt": "2026-03-04T15:32:08.564Z"
+          "title": "Prodám SD kartu Kodak 8GB",
+          "price": "80 Kč",
+          "link": "https://www.paladix.cz/bazar/inzerat/prodam-sd-kartu-kodak-8gb",
+          "foundAt": "2026-03-04T15:39:38.813Z"
         },
         {
-          "watchId": "fuji",
-          "watchName": "fuji",
+          "watchId": "kodak",
+          "watchName": "kodak",
           "sourceId": "paladix",
           "sourceName": "Paladix",
-          "title": "Fujifilm Fujinon XF 35mm f/1.4 R – OSTRAVA – PRAHA",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/fujifilm-fujinon-xf-35mm-f-1-4-r-ostrava-praha",
-          "foundAt": "2026-03-04T15:32:08.564Z"
+          "title": "Kodak Retina IIc Heligon 50/2.8 + sluneční clona",
+          "price": "1 900 Kč",
+          "link": "https://www.paladix.cz/bazar/inzerat/kodak-retina-iic-heligon-50-2-8-2",
+          "foundAt": "2026-03-04T15:39:38.813Z"
         },
         {
-          "watchId": "fuji",
-          "watchName": "fuji",
+          "watchId": "kodak",
+          "watchName": "kodak",
           "sourceId": "paladix",
           "sourceName": "Paladix",
-          "title": "Fujifilm X-T20 – OSTRAVA – PRAHA",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/fujifilm-x-t20-ostrava-praha",
-          "foundAt": "2026-03-04T15:32:08.564Z"
+          "title": "foťák Kodak pixpro FZ151",
+          "price": "1 000 Kč",
+          "link": "https://www.paladix.cz/bazar/inzerat/fotak-kodak-pixpro-fz151",
+          "foundAt": "2026-03-04T15:39:38.813Z"
         },
         {
-          "watchId": "fuji",
-          "watchName": "fuji",
+          "watchId": "kodak",
+          "watchName": "kodak",
           "sourceId": "paladix",
           "sourceName": "Paladix",
-          "title": "Fujifilm GF 35-70mm f4,5-5,6 WR – pro stredoformat",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/fujifilm-gf-35-70mm-f45-56-wr-pro-stredoformat",
-          "foundAt": "2026-03-04T15:32:08.564Z"
+          "title": "Kodak Retina IIc Heligon 50/2.8 + sluneční clona",
+          "price": "1 900 Kč",
+          "link": "https://www.paladix.cz/bazar/inzerat/kodak-retina-iic-heligon-50-2-8",
+          "foundAt": "2026-03-04T15:39:38.813Z"
         },
         {
-          "watchId": "fuji",
-          "watchName": "fuji",
+          "watchId": "kodak",
+          "watchName": "kodak",
           "sourceId": "paladix",
           "sourceName": "Paladix",
-          "title": "FUJIFILM kabelová spoušť RR-100",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/fujifilm-kabelova-spoust-rr-100",
-          "foundAt": "2026-03-04T15:32:08.564Z"
-        },
-        {
-          "watchId": "fuji",
-          "watchName": "fuji",
-          "sourceId": "paladix",
-          "sourceName": "Paladix",
-          "title": "Fujifilm Fujinon XF 18-55mm f/2.8–4 R LM OIS",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/fujifilm-fujinon-xf-18-55mm-f-2-8-4-r-lm-ois",
-          "foundAt": "2026-03-04T15:32:08.564Z"
-        },
-        {
-          "watchId": "fuji",
-          "watchName": "fuji",
-          "sourceId": "paladix",
-          "sourceName": "Paladix",
-          "title": "Nikon Nikkor 50mm f/1.4 + K&F adaptér na Fujifilm",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/nikon-nikkor-50mm-f-1-4-kf-adapter-na-fujifilm",
-          "foundAt": "2026-03-04T15:32:08.564Z"
-        },
-        {
-          "watchId": "fuji",
-          "watchName": "fuji",
-          "sourceId": "paladix",
-          "sourceName": "Paladix",
-          "title": "SIGMA 56mm F1.4 DC DN (FUJI X)",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/sigma-56mm-f1-4-dc-dn-fuji-x",
-          "foundAt": "2026-03-04T15:32:08.564Z"
-        },
-        {
-          "watchId": "fuji",
-          "watchName": "fuji",
-          "sourceId": "paladix",
-          "sourceName": "Paladix",
-          "title": "PeakDesign_Lens Kit_Canon",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/peakdesign_lens-kit_canon",
-          "foundAt": "2026-03-04T15:32:08.564Z"
-        },
-        {
-          "watchId": "fuji",
-          "watchName": "fuji",
-          "sourceId": "paladix",
-          "sourceName": "Paladix",
-          "title": "Fujifilm BC-W126 nabíječka a baterie NP-W126",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/fujifilm-bc-w126-nabijecka-a-baterie-np-w126",
-          "foundAt": "2026-03-04T15:32:08.564Z"
-        },
-        {
-          "watchId": "fuji",
-          "watchName": "fuji",
-          "sourceId": "paladix",
-          "sourceName": "Paladix",
-          "title": "Prodám objektiv Fujinon XF 27mm f/2.8",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/prodam-objektiv-fujinon-xf-27mm-f-2-8",
-          "foundAt": "2026-03-04T15:32:08.564Z"
-        },
-        {
-          "watchId": "fuji",
-          "watchName": "fuji",
-          "sourceId": "paladix",
-          "sourceName": "Paladix",
-          "title": "VILTROX AF 23mm f/1.4 (Fuji X)",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/viltrox-af-23mm-f-1-4-fuji-x",
-          "foundAt": "2026-03-04T15:32:08.564Z"
-        },
-        {
-          "watchId": "fuji",
-          "watchName": "fuji",
-          "sourceId": "paladix",
-          "sourceName": "Paladix",
-          "title": "Sluneční clona Fujifilm 16-50 pro XC 16-50mm f3.5-5.6 OIS",
-          "price": "",
-          "link": "https://www.paladix.cz/bazar/inzerat/slunecni-clona-fujifilm-16-50-pro-xc-16-50mm-f3-5-5-6-ois",
-          "foundAt": "2026-03-04T15:32:08.564Z"
+          "title": "Pixel Oppilas RW-221 bezdrátová spoušť pro Nikon/Kodak (dosah až 300 m)",
+          "price": "749 Kč",
+          "link": "https://www.paladix.cz/bazar/inzerat/a155593",
+          "foundAt": "2026-03-04T15:39:38.813Z"
         }
       ]
     }
