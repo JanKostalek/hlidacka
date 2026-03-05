@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const PRICE_SLIDER_MAX = 200000;
+const PRICE_SLIDER_MAX = 100000;
 const PRICE_SLIDER_STEP = 10;
 
 function emptyWatch() {

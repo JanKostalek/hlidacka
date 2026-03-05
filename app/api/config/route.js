@@ -17,7 +17,7 @@ const DEFAULT_SCHEDULE = {
   cronExpression: "0 */2 * * *"
 };
 const SUPPORTED_THEMES = ["glass", "classic"];
-const PRICE_FILTER_MAX = 200000;
+const PRICE_FILTER_MAX = 100000;
 
 function splitCsv(value) {
   return String(value || "")
