@@ -1,35 +1,3 @@
 {
-  "runs": [
-    {
-      "runAt": "2026-03-05T19:36:19.425Z",
-      "summary": {
-        "totalWatches": 1,
-        "totalSources": 2,
-        "totalFoundItems": 23,
-        "totalNewItems": 23,
-        "errorCount": 0
-      },
-      "watchStats": [
-        {
-          "watchId": "garmin-solar",
-          "watchName": "Garmin Solar",
-          "query": "Garmin",
-          "keywords": [
-            "Fenix",
-            "8"
-          ],
-          "excludeKeywords": [
-            "PRO"
-          ],
-          "sourcesChecked": 2,
-          "foundItems": 23,
-          "newItems": 23,
-          "found": true,
-          "errorCount": 0
-        }
-      ],
-      "emailSubject": "Hlídačka (Garmin Solar): 23 nových inzerátů",
-      "emailText": "Hlídačka bazarů - Výsledek vyhledávání\nČas vyhledávání: 2026-03-05T19:36:19.425Z\nNové inzeráty: 23\nChyby: 0\n\nAktivní dotazy:\n\n- Garmin Solar\n  co hledat: Garmin\n  klíčová slova: Fenix, 8\n  vyloučit slova: PRO\n  bazary: Bazos, Sbazar\n  výsledek: nové 23, již zobrazené 0, chyby 0\n\nNové inzeráty:\n\nGarmin Solar (23)\n- Garmin Fenix 8 51 Amoled + příslušenství | 18 999 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215611340/garmin-fenix-8-51-amoled-prislusenstvi.php\n- Vyměním Garmin Fenix 8 51 Amoled za MIP | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/215557136/vymenim-garmin-fenix-8-51-amoled-za-mip.php\n- Koupím Garmin Fenix 8 AMOLED Sapphire 51mm | Nabídněte | Bazos\n  https://mobil.bazos.cz/inzerat/215503958/koupim-garmin-fenix-8-amoled-sapphire-51mm.php\n- Koupím NOVÝ orig Garmin QuickFit 26mm řemínek z Fenix 8 | 111 Kč | Bazos\n  https://obleceni.bazos.cz/inzerat/215183900/koupim-novy-orig-garmin-quickfit-26mm-reminek-z-fenix-8.php\n- Garmin Fenix 8 51mm AMOLED Sapphire Carbon grey | 20 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/214463202/garmin-fenix-8-51mm-amoled-sapphire-carbon-grey.php\n- Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm černo/červený | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/215056660/fenix-8-6x-7x-tah-reminek-pasek-26mm-cernocerveny.php\n- Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm červeno/černý | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/215056658/fenix-8-6x-7x-tah-reminek-pasek-26mm-cervenocerny.php\n- Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm černo/žlutý | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/215056657/fenix-8-6x-7x-tah-reminek-pasek-26mm-cernozluty.php\n- GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm zeleny | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/215056656/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm-zeleny.php\n- GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/215056654/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm.php\n- GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm maskáč | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/215056653/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm-maskac.php\n- GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm maskáč | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/215056652/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm-maskac.php\n- GARMIN 8, 6x, 7x tah, řemínek, pásek 26mm žlutý | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/215056650/garmin-8-6x-7x-tah-reminek-pasek-26mm-zluty.php\n- GARMIN 8, 6x, 7x tah, řemínek, pásek 26mm šedý | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/215056649/garmin-8-6x-7x-tah-reminek-pasek-26mm-sedy.php\n- GARMIN 8, 6x, 7x tah, řemínek, pásek 26mm červená | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/215056644/garmin-8-6x-7x-tah-reminek-pasek-26mm-cervena.php\n- GARMIN 6x, 7x a 8 tah, řemínek, pásek 26mm bílý | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/215056642/garmin-6x-7x-a-8-tah-reminek-pasek-26mm-bily.php\n- GARMIN Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm maskáč | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/215056640/garmin-fenix-8-6x-7x-tah-reminek-pasek-26mm-maskac.php\n- Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm černo/žlutý | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/215056637/fenix-8-6x-7x-tah-reminek-pasek-26mm-cernozluty.php\n- Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm červeno/černý | Dohodou | Bazos\n  https://mobil.bazos.cz/inzerat/215056635/fenix-8-6x-7x-tah-reminek-pasek-26mm-cervenocerny.php\n- Garmin Fenix 8 Amoled 51 sapphire | Nabídněte | Bazos\n  https://mobil.bazos.cz/inzerat/214320796/garmin-fenix-8-amoled-51-sapphire.php\n- Garmin Fenix 8 47mm | 15 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228374567-garmin-fenix-8-47mm\n- Garmin Fenix 8 Amoled 51mm | 15 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm\n- Garmin Fenix 7x Solar | 8 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227933335-garmin-fenix-7x-solar\n\nJiž zobrazené inzeráty:\n\nGarmin Solar (0)\n- žádné\n\nChyby: žádné\n"
-    }
-  ]
+  "runs": []
 }
