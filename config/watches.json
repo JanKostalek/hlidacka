@@ -7,7 +7,7 @@
     "emailOnlyWhenNew": false,
     "emailEnabled": true,
     "discordWebhook": "",
-    "discordOnlyWhenNew": true,
+    "discordOnlyWhenNew": false,
     "discordEnabled": true
   },
   "watches": [
@@ -21,8 +21,8 @@
         "51"
       ],
       "excludeKeywords": [],
-      "priceMin": 0,
-      "priceMax": 20010,
+      "priceMin": null,
+      "priceMax": null,
       "sources": [
         {
           "id": "bazos",
@@ -52,8 +52,8 @@
         "Canon"
       ],
       "excludeKeywords": [],
-      "priceMin": 6400,
-      "priceMax": 44750,
+      "priceMin": null,
+      "priceMax": null,
       "sources": [
         {
           "id": "paladix",
@@ -74,8 +74,8 @@
         "iphone 15"
       ],
       "excludeKeywords": [],
-      "priceMin": 7610,
-      "priceMax": 11070,
+      "priceMin": null,
+      "priceMax": null,
       "sources": [
         {
           "id": "bazos",
@@ -134,7 +134,7 @@
       "query": "Garmin",
       "keywords": [
         "Garmin",
-        "8",
+        "fenix",
         "Solar"
       ],
       "excludeKeywords": [],
