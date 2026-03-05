@@ -1,6 +1,65 @@
 {
   "runs": [
     {
+      "runAt": "2026-03-05T14:33:56.075Z",
+      "summary": {
+        "totalWatches": 3,
+        "totalSources": 6,
+        "totalFoundItems": 72,
+        "totalNewItems": 0,
+        "errorCount": 0
+      },
+      "watchStats": [
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "query": "Garmin",
+          "keywords": [
+            "Garmin",
+            "8",
+            "51"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 3,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "iphone-2",
+          "watchName": "iphone 2",
+          "query": "iphone",
+          "keywords": [
+            "iphone 16"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 5,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "garmin-8-solar",
+          "watchName": "Garmin 8 Solar",
+          "query": "Garmin",
+          "keywords": [
+            "fenix",
+            "Solar"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 64,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        }
+      ],
+      "emailSubject": "Hlídačka (Garmin +2): žádné nové inzeráty",
+      "emailText": "Hlídačka bazarů - Výsledek vyhledávání\nČas vyhledávání: 2026-03-05T14:33:56.075Z\nNové inzeráty: 0\nChyby: 0\n\nAktivní dotazy:\n\n- Garmin\n  co hledat: Garmin\n  klíčová slova: Garmin, 8, 51\n  vyloučit slova: (žádná)\n  bazary: Bazos, Sbazar\n  výsledek: nové 0, již zobrazené 2, chyby 0\n\n- iphone 2\n  co hledat: iphone\n  klíčová slova: iphone 16\n  vyloučit slova: (žádná)\n  bazary: Bazos, Sbazar\n  výsledek: nové 0, již zobrazené 6, chyby 0\n\n- Garmin 8 Solar\n  co hledat: Garmin\n  klíčová slova: fenix, Solar\n  vyloučit slova: (žádná)\n  bazary: Bazos, Sbazar\n  výsledek: nové 0, již zobrazené 50, chyby 0\n\nŽádné nové inzeráty.\n\nJiž zobrazené inzeráty:\n\nGarmin (2)\n- Garmin Fenix 8 Amoled 51mm | 15 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm\n- GARMIN Fenix 8 AMOLED Sapphire 51mm Titan – záruka | 17 999 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215782110/garmin-fenix-8-amoled-sapphire-51mm-titan-zaruka.php\n\niphone 2 (6)\n- Apple iPhone 16 128gb black - záruka 12/26 | 12 800 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228382859-apple-iphone-16-128gb-black-zaruka-1226\n- iPhone 16 Pro 128GB Natural Titan, 1 rok záruka | 14 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228376898-iphone-16-pro-128gb-natural-titan-1-rok-zaruka\n- iPhone 16 Pro 256GB White Titan, 1 rok záruka | 15 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228377192-iphone-16-pro-256gb-white-titan-1-rok-zaruka\n- Iphone 16 128GB | 12 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228365198-iphone-16-128gb\n- APPLE iPhone 16 128GB Černý - ZÁRUKA - JAKO NOVÝ | 15 490 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228374816-apple-iphone-16-128gb-cerny-zaruka-jako-novy\n- Apple iPhone 16 Pro 128 GB, 48Mpx fotoaparát | 14 999 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228378857-apple-iphone-16-pro-128-gb-48mpx-fotoaparat\n\nGarmin 8 Solar (50)\n- Garmin Fenix 7x Solar | 8 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/213198280/garmin-fenix-7x-solar.php\n- Garmin Fenix 7 Sapphire Solar Black | 11 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/213298991/garmin-fenix-7-sapphire-solar-black.php\n- Sportovní hodinky Garmin Fenix 7 Sapphire Solar | 8 500 Kč | Bazos\n  https://obleceni.bazos.cz/inzerat/213411848/sportovni-hodinky-garmin-fenix-7-sapphire-solar.php\n- Garmin Fenix 7x solar | 7 900 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/213587386/garmin-fenix-7x-solar.php\n- Garmin fenix7 solar | 6 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/213779862/garmin-fenix7-solar.php\n- Garmin Fénix 7S PRO Solar | 9 000 Kč | Bazos\n  https://sport.bazos.cz/inzerat/213966992/garmin-fenix-7s-pro-solar.php\n- Garmin Fenix 7 Sapphire Solar | 7 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/213994943/garmin-fenix-7x-sapphire-solar.php\n- Garmin Fenix 6 Pro Solar | 6 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/214016595/garmin-fenix-6-pro-solar.php\n- GARMIN FÉNIX 7X SAPHIRE SOLAR | 6 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/214027109/garmin-fenix-7x-saphire-solar.php\n- Garmin Fenix 7X Saphire Solar | 10 500 Kč | Bazos\n  https://sport.bazos.cz/inzerat/214060966/garmin-fenix-7x-saphire-solar.php\n- Garmin Fenix 7X Sapphire Solar | 7 500 Kč | Bazos\n  https://elektro.bazos.cz/inzerat/214086632/garmin-fenix-7-pro-sapphire-solar.php\n- Fenix 7X Sapphire Solar Mineral blue | 7 000 Kč | Bazos\n  https://obleceni.bazos.cz/inzerat/214235869/fenix-7x-sapphire-solar-mineral-blue.php\n- Garmin Fenix 7X Solar | 8 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/214311061/garmin-fenix-7x-solar.php\n- Garmin Fenix 7 sapphire solar titanium | 8 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/214349083/garmin-fenix-7-sapphire-solar-titanium.php\n- Garmin Fenix 7 Sapphire Solar | 8 000 Kč | Bazos\n  https://sport.bazos.cz/inzerat/214409506/garmin-fenix-7-sapphire-solar.php\n- Garmin Fenix 7S Pro Solar + voucher Topo Czech 42mm | 9 500 Kč | Bazos\n  https://elektro.bazos.cz/inzerat/214426003/garmin-fenix-7s-pro-solar-voucher-topo-czech-42mm.php\n- Prodám Garmin Fenix 6xPro Solar Titanium Carbon Gray | 5 500 Kč | Bazos\n  https://elektro.bazos.cz/inzerat/214525956/prodam-garmin-fenix-6xpro-solar.php\n- Hodinky Garmin Fénix 7X Sapphire Solar | 8 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/214701647/hodinky-garmin-fenix-7x-sapphire-solar.php\n- Garmin Fénix Tactix 7 Pro Sapphire Solar 51mm | 15 000 Kč | Bazos\n  https://obleceni.bazos.cz/inzerat/214765166/garmin-fenix-tactix-7-pro-saphire.php\n- Hodinky Garmin Fénix 7X Sapphire Solar | 7 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/214861074/hodinky-garmin-fenix-7x-sapphire-solar.php\n- GARMIN Fénix 7 PRO Sapphire Solar, Titan | 8 700 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/214874102/garmin-fenix-7-sapphire-solar.php\n- Silikonový pásek na Garmin Fenix 6x pro solar | 150 Kč | Bazos\n  https://sport.bazos.cz/inzerat/214885096/silikonovy-pasek-na-garmin-fenix-6x-pro-solar.php\n- Prodám Garmin Fenix 7 PRO Solar | 8 500 Kč | Bazos\n  https://elektro.bazos.cz/inzerat/214971952/prodam-garmin-fenix-7-pro-solar.php\n- Garmin Fenix 7x sapphire solar | 8 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/214978627/garmin-fenix-7x-sapphire-solar.php\n- Garmin Fenix 7X Solar Sapphire 51mm | 11 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215019969/garmin-fenix-7x-solar-sapphire.php\n- Garmin Fenix 7 x pro safir solar Titan | 11 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215069781/garmin-fenix-7-x-pro-safir-solar-titan.php\n- Garmin Fenix 7 Solar Sapphire | 6 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215127601/garmin-fenix-7-solar-sapphire.php\n- Garmin fenix6 PRO Solar | 4 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215155714/garmin-fenix6-pro-solar.php\n- Garmin Fenix 6xPro Solar Titanium Carbon Gray , 47mm | 4 500 Kč | Bazos\n  https://ostatni.bazos.cz/inzerat/215166938/garmin-fenix-6xpro-solar-titanium-carbon-gray-47mm.php\n- Garmin Fenix 7S Pro Solar Sapphire | 8 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215190897/garmin-fenix-7s-pro-solar-sapphire.php\n- Garmin FENIX 7 Pro Solar - záruka Datart | 8 999 Kč | Bazos\n  https://elektro.bazos.cz/inzerat/215206814/garmin-fenix-7-pro-solar-zaruka-datart.php\n- Garmin Fenix 7X Solar — ve skvělém stavu, ihned k použití. | 7 799 Kč | Bazos\n  https://elektro.bazos.cz/inzerat/215271493/garmin-fenix-7x-solar-ve-skvelem-stavu-ihned-k-pouziti.php\n- Garmin Fénix 7s Sapphire solar | 9 900 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/213199211/garmin-fenix-7s-pro-sapphire-solar.php\n- Garmin Fenix 7X Pro Solar Sapphire | 12 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215312818/garmin-fenix-7x-pro-solar-sapphire.php\n- Garmin Fenix 8 51mm Sapphire,Titan,Solar | 19 000 Kč | Bazos\n  https://obleceni.bazos.cz/inzerat/215370722/garmin-fenix-8-51mm-sapphire-titan.php\n- GARMIN FENIX 6X PRO SOLAR | 4 990 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215376003/garmin-fenix-6x-pro-solar.php\n- Fenix 7X PRO solar | 12 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215382118/fenix-7x-pro-solar.php\n- Garmin Fenix 7X Solar – výdrž 29 dní, funkční | 9 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215409373/garmin-fenix-7x-solar-vydrz-29-dni-funkcni.php\n- Garmin Fenix 7X Sapphire Solar (Top stav) | 8 300 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215409754/garmin-fenix-7x-sapphire-solar-top-stav.php\n- Garmin Fenix 7X Sapphire Solar | 8 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215410161/garmin-fenix-7x-sapphire-solar.php\n- Garmin Fenix 7X Solar Sapphire 51mm | 6 900 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215420776/garmin-fenix-7x-solar-sapphire-51mm.php\n- Garmin Fenix 7S Solar Sapphire | 7 800 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215520903/garmin-fenix-7s-solar-sapphire.php\n- KOUPÍM Garmin Fénix 7 PRO Sapphire Solar | Nabídněte | Bazos\n  https://sport.bazos.cz/inzerat/215567219/koupim-garmin-fenix-7-pro-sapphire-solar.php\n- Garmin Fenix 6x PRO Solar | 5 700 Kč | Bazos\n  https://elektro.bazos.cz/inzerat/215647026/garmin-fenix-6x-pro-solar.php\n- Garmin Fénix 7 Sapphire Solar | 7 000 Kč | Bazos\n  https://sport.bazos.cz/inzerat/215706192/garmin-fenix-7-sapphire-solar.php\n- Garmin Fenix 7x Solar 51mm | 10 000 Kč | Bazos\n  https://sport.bazos.cz/inzerat/215723849/garmin-fenix-7x-solar-51mm.php\n- Garmin Fenix 7x solar záruka | 7 500 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215746046/garmin-fenix-7x-solar.php\n- Garmin Fenix 7pro Solar | 9 900 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215796216/garmin-fenix-7pro-solar.php\n- Garmin fenix 7X solar | 9 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215797078/garmin-fenix-7x-solar.php\n- Hodinky Garmin Fénix 7xpro Sapphire Solar | 11 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215600138/hodinky-garmin-fenix-7xpro-sapphire-solar.php\n\nChyby: žádné\n"
+    },
+    {
       "runAt": "2026-03-05T13:36:59.338Z",
       "summary": {
         "totalWatches": 3,
