@@ -1,30 +1,13 @@
 {
-  "runAt": "2026-03-04T22:08:32.609Z",
+  "runAt": "2026-03-05T05:05:22.482Z",
   "summary": {
     "totalWatches": 1,
     "totalSources": 2,
-    "totalFoundItems": 22,
-    "totalNewItems": 1,
+    "totalFoundItems": 20,
+    "totalNewItems": 0,
     "errorCount": 0
   },
-  "newItemsByWatch": [
-    {
-      "watchId": "garmin",
-      "watchName": "Garmin",
-      "items": [
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Suzuki V strom 650 ABS",
-          "price": "119 000 Kč",
-          "link": "https://motorky.bazos.cz/inzerat/214985826/suzuki-v-strom-650-abs-xt.php",
-          "foundAt": "2026-03-04T22:08:32.609Z"
-        }
-      ]
-    }
-  ],
+  "newItemsByWatch": [],
   "activeItemsByWatch": [
     {
       "watchId": "garmin",
@@ -38,7 +21,7 @@
           "title": "Echolot Garmin ech. ultra 122sv a Live sonda Panoptix PS30",
           "price": "68 000 Kč",
           "link": "https://elektro.bazos.cz/inzerat/214212117/garmin-echomap-ultra-122sv-a-live-sonda-panoptix-ps30.php",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -48,7 +31,7 @@
           "title": "GARMIN Fenix 8 AMOLED Sapphire 51mm Titan – záruka",
           "price": "17 999 Kč",
           "link": "https://mobil.bazos.cz/inzerat/215782110/garmin-fenix-8-amoled-sapphire-51mm-titan-zaruka.php",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -58,7 +41,7 @@
           "title": "Chytré hodinky Garmin Venu 2",
           "price": "2 000 Kč",
           "link": "https://mobil.bazos.cz/inzerat/215746399/chytre-hodinky-garmin-venu-2.php",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -68,7 +51,7 @@
           "title": "Triumph tiger 1200xc",
           "price": "210 000 Kč",
           "link": "https://motorky.bazos.cz/inzerat/215489404/triumph-tiger-1200xc.php",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -78,17 +61,7 @@
           "title": "Garmin Fenix 8 Pro LTE 47mm AMOLED",
           "price": "18 500 Kč",
           "link": "https://mobil.bazos.cz/inzerat/215185695/garmin-fenix-8-pro-lte-47mm-amoled.php",
-          "foundAt": "2026-03-04T22:08:32.609Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Suzuki V strom 650 ABS",
-          "price": "119 000 Kč",
-          "link": "https://motorky.bazos.cz/inzerat/214985826/suzuki-v-strom-650-abs-xt.php",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -98,7 +71,7 @@
           "title": "KTM 890 Adventure R-READY TO RALLY",
           "price": "V textu",
           "link": "https://motorky.bazos.cz/inzerat/215691487/ktm-890-adventure-r-ready-to-rally.php",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -108,7 +81,7 @@
           "title": "KTM DUKE 125 2028",
           "price": "83 000 Kč",
           "link": "https://motorky.bazos.cz/inzerat/215654173/ktm-duke-125-2028.php",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -118,7 +91,7 @@
           "title": "Colnago V3 54s Sran rival 2x12 záruka",
           "price": "109 000 Kč",
           "link": "https://sport.bazos.cz/inzerat/215220310/colnago-v3-54s-sran-rival-2x12-zaruka.php",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -128,7 +101,7 @@
           "title": "Garmin Fenix 8 SOLAR 51 mm, Sapphire Carbon Gray",
           "price": "18 000 Kč",
           "link": "https://sport.bazos.cz/inzerat/215631219/garmin-fenix-8-solar-51-mm-sapphire-carbon-gray.php",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -138,7 +111,7 @@
           "title": "Garmin Tactix 7 Amoled",
           "price": "18 900 Kč",
           "link": "https://www.sbazar.cz/inzerat/228317888-garmin-tactix-7-amoled",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -148,7 +121,7 @@
           "title": "Garmin epix 2 sapphire",
           "price": "8 000 Kč",
           "link": "https://www.sbazar.cz/inzerat/228252116-garmin-epix-2-sapphire",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -158,7 +131,7 @@
           "title": "Garmin Fenix 8 Amoled 51mm",
           "price": "15 500 Kč",
           "link": "https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -168,7 +141,7 @@
           "title": "Garmin vivoactive",
           "price": "1 800 Kč",
           "link": "https://www.sbazar.cz/inzerat/227826877-garmin-vivoactive",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -178,7 +151,7 @@
           "title": "Garmin Force 57\"",
           "price": "80 000 Kč",
           "link": "https://www.sbazar.cz/inzerat/227878147-garmin-force-57",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -188,7 +161,7 @@
           "title": "Garmin -Silikonový řemínek 26mm",
           "price": "80 Kč",
           "link": "https://www.sbazar.cz/inzerat/216277084-garmin-silikonovy-reminek-26mm",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -198,7 +171,7 @@
           "title": "Garmin Fenix 7x Solar",
           "price": "8 000 Kč",
           "link": "https://www.sbazar.cz/inzerat/227933335-garmin-fenix-7x-solar",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -208,7 +181,7 @@
           "title": "Garmin Tactix 8 - 47mm AMOLED",
           "price": "25 000 Kč",
           "link": "https://www.sbazar.cz/inzerat/228085567-garmin-tactix-8-47mm-amoled",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -218,7 +191,7 @@
           "title": "Garmin nuvi 2589",
           "price": "300 Kč",
           "link": "https://www.sbazar.cz/inzerat/223816678-garmin-nuvi-2589",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -228,17 +201,7 @@
           "title": "MERCEDES Navigace GARMIN MAP PILOT",
           "price": "980 Kč",
           "link": "https://www.sbazar.cz/inzerat/228123893-mercedes-navigace-garmin-map-pilot",
-          "foundAt": "2026-03-04T22:08:32.609Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Funkční navigace Garmin Nuvi 1390T Lifetime",
-          "price": "890 Kč",
-          "link": "https://www.sbazar.cz/inzerat/129300198-funkcni-navigace-garmin-nuvi-1390t-lifetime",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         },
         {
           "watchId": "garmin",
@@ -248,7 +211,7 @@
           "title": "GARMIN VIVOACTIVE 4",
           "price": "1 800 Kč",
           "link": "https://www.sbazar.cz/inzerat/226109962-garmin-vivoactive-4",
-          "foundAt": "2026-03-04T22:08:32.609Z"
+          "foundAt": "2026-03-05T05:05:22.482Z"
         }
       ]
     }
