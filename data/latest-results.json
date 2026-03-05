@@ -1,13 +1,66 @@
 {
-  "runAt": "2026-03-05T05:05:22.482Z",
+  "runAt": "2026-03-05T09:54:12.682Z",
   "summary": {
-    "totalWatches": 1,
-    "totalSources": 2,
-    "totalFoundItems": 20,
-    "totalNewItems": 0,
+    "totalWatches": 4,
+    "totalSources": 7,
+    "totalFoundItems": 5,
+    "totalNewItems": 4,
     "errorCount": 0
   },
-  "newItemsByWatch": [],
+  "newItemsByWatch": [
+    {
+      "watchId": "iphone",
+      "watchName": "iphone",
+      "items": [
+        {
+          "watchId": "iphone",
+          "watchName": "iphone",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "iPHONE 15 PLUS 128GB",
+          "price": "10 990 Kč",
+          "link": "https://www.sbazar.cz/inzerat/226505086-iphone-15-plus-128gb",
+          "foundAt": "2026-03-05T09:54:12.682Z"
+        },
+        {
+          "watchId": "iphone",
+          "watchName": "iphone",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Iphone 15 Pro Max",
+          "price": "11 000 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228250154-iphone-15-pro-max",
+          "foundAt": "2026-03-05T09:54:12.682Z"
+        }
+      ]
+    },
+    {
+      "watchId": "iphone-2",
+      "watchName": "iphone 2",
+      "items": [
+        {
+          "watchId": "iphone-2",
+          "watchName": "iphone 2",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "APPLE iPhone 16 128GB Černý - ZÁRUKA - JAKO NOVÝ",
+          "price": "15 490 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228374816-apple-iphone-16-128gb-cerny-zaruka-jako-novy",
+          "foundAt": "2026-03-05T09:54:12.682Z"
+        },
+        {
+          "watchId": "iphone-2",
+          "watchName": "iphone 2",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Iphone 16 128GB",
+          "price": "12 000 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228365198-iphone-16-128gb",
+          "foundAt": "2026-03-05T09:54:12.682Z"
+        }
+      ]
+    }
+  ],
   "activeItemsByWatch": [
     {
       "watchId": "garmin",
@@ -16,202 +69,69 @@
         {
           "watchId": "garmin",
           "watchName": "Garmin",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Echolot Garmin ech. ultra 122sv a Live sonda Panoptix PS30",
-          "price": "68 000 Kč",
-          "link": "https://elektro.bazos.cz/inzerat/214212117/garmin-echomap-ultra-122sv-a-live-sonda-panoptix-ps30.php",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "GARMIN Fenix 8 AMOLED Sapphire 51mm Titan – záruka",
-          "price": "17 999 Kč",
-          "link": "https://mobil.bazos.cz/inzerat/215782110/garmin-fenix-8-amoled-sapphire-51mm-titan-zaruka.php",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Chytré hodinky Garmin Venu 2",
-          "price": "2 000 Kč",
-          "link": "https://mobil.bazos.cz/inzerat/215746399/chytre-hodinky-garmin-venu-2.php",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Triumph tiger 1200xc",
-          "price": "210 000 Kč",
-          "link": "https://motorky.bazos.cz/inzerat/215489404/triumph-tiger-1200xc.php",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Garmin Fenix 8 Pro LTE 47mm AMOLED",
-          "price": "18 500 Kč",
-          "link": "https://mobil.bazos.cz/inzerat/215185695/garmin-fenix-8-pro-lte-47mm-amoled.php",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "KTM 890 Adventure R-READY TO RALLY",
-          "price": "V textu",
-          "link": "https://motorky.bazos.cz/inzerat/215691487/ktm-890-adventure-r-ready-to-rally.php",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "KTM DUKE 125 2028",
-          "price": "83 000 Kč",
-          "link": "https://motorky.bazos.cz/inzerat/215654173/ktm-duke-125-2028.php",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Colnago V3 54s Sran rival 2x12 záruka",
-          "price": "109 000 Kč",
-          "link": "https://sport.bazos.cz/inzerat/215220310/colnago-v3-54s-sran-rival-2x12-zaruka.php",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Garmin Fenix 8 SOLAR 51 mm, Sapphire Carbon Gray",
-          "price": "18 000 Kč",
-          "link": "https://sport.bazos.cz/inzerat/215631219/garmin-fenix-8-solar-51-mm-sapphire-carbon-gray.php",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Garmin Tactix 7 Amoled",
-          "price": "18 900 Kč",
-          "link": "https://www.sbazar.cz/inzerat/228317888-garmin-tactix-7-amoled",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Garmin epix 2 sapphire",
-          "price": "8 000 Kč",
-          "link": "https://www.sbazar.cz/inzerat/228252116-garmin-epix-2-sapphire",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
           "sourceId": "sbazar",
           "sourceName": "Sbazar",
           "title": "Garmin Fenix 8 Amoled 51mm",
           "price": "15 500 Kč",
           "link": "https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
+          "foundAt": "2026-03-05T09:54:12.682Z"
+        }
+      ]
+    },
+    {
+      "watchId": "kanon",
+      "watchName": "Kanon",
+      "items": []
+    },
+    {
+      "watchId": "iphone",
+      "watchName": "iphone",
+      "items": [
         {
-          "watchId": "garmin",
-          "watchName": "Garmin",
+          "watchId": "iphone",
+          "watchName": "iphone",
           "sourceId": "sbazar",
           "sourceName": "Sbazar",
-          "title": "Garmin vivoactive",
-          "price": "1 800 Kč",
-          "link": "https://www.sbazar.cz/inzerat/227826877-garmin-vivoactive",
-          "foundAt": "2026-03-05T05:05:22.482Z"
+          "title": "iPHONE 15 PLUS 128GB",
+          "price": "10 990 Kč",
+          "link": "https://www.sbazar.cz/inzerat/226505086-iphone-15-plus-128gb",
+          "foundAt": "2026-03-05T09:54:12.682Z"
         },
         {
-          "watchId": "garmin",
-          "watchName": "Garmin",
+          "watchId": "iphone",
+          "watchName": "iphone",
           "sourceId": "sbazar",
           "sourceName": "Sbazar",
-          "title": "Garmin Force 57\"",
-          "price": "80 000 Kč",
-          "link": "https://www.sbazar.cz/inzerat/227878147-garmin-force-57",
-          "foundAt": "2026-03-05T05:05:22.482Z"
+          "title": "Iphone 15 Pro Max",
+          "price": "11 000 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228250154-iphone-15-pro-max",
+          "foundAt": "2026-03-05T09:54:12.682Z"
+        }
+      ]
+    },
+    {
+      "watchId": "iphone-2",
+      "watchName": "iphone 2",
+      "items": [
+        {
+          "watchId": "iphone-2",
+          "watchName": "iphone 2",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "APPLE iPhone 16 128GB Černý - ZÁRUKA - JAKO NOVÝ",
+          "price": "15 490 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228374816-apple-iphone-16-128gb-cerny-zaruka-jako-novy",
+          "foundAt": "2026-03-05T09:54:12.682Z"
         },
         {
-          "watchId": "garmin",
-          "watchName": "Garmin",
+          "watchId": "iphone-2",
+          "watchName": "iphone 2",
           "sourceId": "sbazar",
           "sourceName": "Sbazar",
-          "title": "Garmin -Silikonový řemínek 26mm",
-          "price": "80 Kč",
-          "link": "https://www.sbazar.cz/inzerat/216277084-garmin-silikonovy-reminek-26mm",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Garmin Fenix 7x Solar",
-          "price": "8 000 Kč",
-          "link": "https://www.sbazar.cz/inzerat/227933335-garmin-fenix-7x-solar",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Garmin Tactix 8 - 47mm AMOLED",
-          "price": "25 000 Kč",
-          "link": "https://www.sbazar.cz/inzerat/228085567-garmin-tactix-8-47mm-amoled",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Garmin nuvi 2589",
-          "price": "300 Kč",
-          "link": "https://www.sbazar.cz/inzerat/223816678-garmin-nuvi-2589",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "MERCEDES Navigace GARMIN MAP PILOT",
-          "price": "980 Kč",
-          "link": "https://www.sbazar.cz/inzerat/228123893-mercedes-navigace-garmin-map-pilot",
-          "foundAt": "2026-03-05T05:05:22.482Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "GARMIN VIVOACTIVE 4",
-          "price": "1 800 Kč",
-          "link": "https://www.sbazar.cz/inzerat/226109962-garmin-vivoactive-4",
-          "foundAt": "2026-03-05T05:05:22.482Z"
+          "title": "Iphone 16 128GB",
+          "price": "12 000 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228365198-iphone-16-128gb",
+          "foundAt": "2026-03-05T09:54:12.682Z"
         }
       ]
     }

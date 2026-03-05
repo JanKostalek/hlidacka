@@ -1,6 +1,78 @@
 {
   "runs": [
     {
+      "runAt": "2026-03-05T09:54:12.682Z",
+      "summary": {
+        "totalWatches": 4,
+        "totalSources": 7,
+        "totalFoundItems": 5,
+        "totalNewItems": 4,
+        "errorCount": 0
+      },
+      "watchStats": [
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "query": "Garmin",
+          "keywords": [
+            "Garmin",
+            "8",
+            "51"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 1,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "kanon",
+          "watchName": "Kanon",
+          "query": "Kanon",
+          "keywords": [
+            "Kanon"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 1,
+          "foundItems": 0,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "iphone",
+          "watchName": "iphone",
+          "query": "iphone",
+          "keywords": [
+            "iphone 15"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 2,
+          "newItems": 2,
+          "found": true,
+          "errorCount": 0
+        },
+        {
+          "watchId": "iphone-2",
+          "watchName": "iphone 2",
+          "query": "iphone",
+          "keywords": [
+            "iphone 16"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 2,
+          "newItems": 2,
+          "found": true,
+          "errorCount": 0
+        }
+      ],
+      "emailSubject": "Hlídačka (Garmin +3): 4 nových inzerátů",
+      "emailText": "Hlídačka bazarů - Výsledek vyhledávání\nČas vyhledávání: 2026-03-05T09:54:12.682Z\nNové inzeráty: 4\nChyby: 0\n\nAktivní dotazy:\n\n- Garmin\n  co hledat: Garmin\n  klíčová slova: Garmin, 8, 51\n  vyloučit slova: (žádná)\n  bazary: Bazos, Sbazar\n  výsledek: nové 0, již zobrazené 3, chyby 0\n\n- Kanon\n  co hledat: Kanon\n  klíčová slova: Kanon\n  vyloučit slova: (žádná)\n  bazary: Paladix\n  výsledek: nové 0, již zobrazené 0, chyby 0\n\n- iphone\n  co hledat: iphone\n  klíčová slova: iphone 15\n  vyloučit slova: (žádná)\n  bazary: Bazos, Sbazar\n  výsledek: nové 2, již zobrazené 0, chyby 0\n\n- iphone 2\n  co hledat: iphone\n  klíčová slova: iphone 16\n  vyloučit slova: (žádná)\n  bazary: Bazos, Sbazar\n  výsledek: nové 2, již zobrazené 0, chyby 0\n\nNové inzeráty:\n\niphone (2)\n- iPHONE 15 PLUS 128GB | 10 990 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/226505086-iphone-15-plus-128gb\n- Iphone 15 Pro Max | 11 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228250154-iphone-15-pro-max\n\niphone 2 (2)\n- APPLE iPhone 16 128GB Černý - ZÁRUKA - JAKO NOVÝ | 15 490 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228374816-apple-iphone-16-128gb-cerny-zaruka-jako-novy\n- Iphone 16 128GB | 12 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228365198-iphone-16-128gb\n\nJiž zobrazené inzeráty:\n\nGarmin (3)\n- Garmin Fenix 8 Amoled 51mm | 15 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm\n- Garmin Fenix 8 SOLAR 51 mm, Sapphire Carbon Gray | 18 000 Kč | Bazos\n  https://sport.bazos.cz/inzerat/215631219/garmin-fenix-8-solar-51-mm-sapphire-carbon-gray.php\n- GARMIN Fenix 8 AMOLED Sapphire 51mm Titan – záruka | 17 999 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215782110/garmin-fenix-8-amoled-sapphire-51mm-titan-zaruka.php\n\nKanon (0)\n- žádné\n\niphone (0)\n- žádné\n\niphone 2 (0)\n- žádné\n\nChyby: žádné\n"
+    },
+    {
       "runAt": "2026-03-05T05:05:22.482Z",
       "summary": {
         "totalWatches": 1,

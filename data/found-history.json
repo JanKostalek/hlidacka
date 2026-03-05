@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-05T05:05:22.482Z",
+  "updatedAt": "2026-03-05T09:54:12.682Z",
   "byWatch": {
     "garmin": [
       {
@@ -208,6 +208,46 @@
         "price": "10 000 Kč",
         "link": "https://mobil.bazos.cz/inzerat/215215319/garmin-fenix-7x-solar.php",
         "firstSeenAt": "2026-03-04T21:12:20.234Z"
+      }
+    ],
+    "iphone": [
+      {
+        "watchId": "iphone",
+        "watchName": "iphone",
+        "sourceName": "Sbazar",
+        "title": "Iphone 15 Pro Max",
+        "price": "11 000 Kč",
+        "link": "https://www.sbazar.cz/inzerat/228250154-iphone-15-pro-max",
+        "firstSeenAt": "2026-03-05T09:54:12.682Z"
+      },
+      {
+        "watchId": "iphone",
+        "watchName": "iphone",
+        "sourceName": "Sbazar",
+        "title": "iPHONE 15 PLUS 128GB",
+        "price": "10 990 Kč",
+        "link": "https://www.sbazar.cz/inzerat/226505086-iphone-15-plus-128gb",
+        "firstSeenAt": "2026-03-05T09:54:12.682Z"
+      }
+    ],
+    "iphone-2": [
+      {
+        "watchId": "iphone-2",
+        "watchName": "iphone 2",
+        "sourceName": "Sbazar",
+        "title": "Iphone 16 128GB",
+        "price": "12 000 Kč",
+        "link": "https://www.sbazar.cz/inzerat/228365198-iphone-16-128gb",
+        "firstSeenAt": "2026-03-05T09:54:12.682Z"
+      },
+      {
+        "watchId": "iphone-2",
+        "watchName": "iphone 2",
+        "sourceName": "Sbazar",
+        "title": "APPLE iPhone 16 128GB Černý - ZÁRUKA - JAKO NOVÝ",
+        "price": "15 490 Kč",
+        "link": "https://www.sbazar.cz/inzerat/228374816-apple-iphone-16-128gb-cerny-zaruka-jako-novy",
+        "firstSeenAt": "2026-03-05T09:54:12.682Z"
       }
     ]
   }
