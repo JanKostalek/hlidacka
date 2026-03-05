@@ -623,6 +623,8 @@ button:disabled {
 .dashboardPage {
   max-width: 1160px;
   gap: 22px;
+  position: relative;
+  isolation: isolate;
 }
 
 .themeGlass.dashboardPage::before {

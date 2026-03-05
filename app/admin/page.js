@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const PRICE_SLIDER_MAX = 2000000;
+const PRICE_SLIDER_MAX = 200000;
 const PRICE_SLIDER_STEP = 10;
 
 function emptyWatch() {
@@ -275,8 +275,11 @@ export default function AdminPage() {
   }
 
   function formatPriceRangeLabel(min, max) {
-    const safeMin = Math.max(0, Number(min) || 0);
-    const safeMax = Math.max(safeMin, Number(max) || safeMin);
+    const safeMin = Math.min(PRICE_SLIDER_MAX, Math.max(0, Number(min) || 0));
+    const safeMax = Math.min(
+      PRICE_SLIDER_MAX,
+      Math.max(safeMin, Number(max) || safeMin)
+    );
     return `${new Intl.NumberFormat("cs-CZ").format(safeMin)} Kč - ${new Intl.NumberFormat("cs-CZ").format(safeMax)} Kč`;
   }
 
@@ -542,7 +545,10 @@ export default function AdminPage() {
                     min={0}
                     max={PRICE_SLIDER_MAX}
                     step={PRICE_SLIDER_STEP}
-                    value={Math.min(Number(watch.priceMin) || 0, Number(watch.priceMax) || PRICE_SLIDER_MAX)}
+                    value={Math.min(
+                      Math.min(Number(watch.priceMin) || 0, Number(watch.priceMax) || PRICE_SLIDER_MAX),
+                      PRICE_SLIDER_MAX
+                    )}
                     disabled={!watch.usePriceFilter}
                     onChange={(e) => {
                       const nextMin = Number(e.target.value);
@@ -561,7 +567,10 @@ export default function AdminPage() {
                     min={0}
                     max={PRICE_SLIDER_MAX}
                     step={PRICE_SLIDER_STEP}
-                    value={Math.max(Number(watch.priceMax) || PRICE_SLIDER_MAX, Number(watch.priceMin) || 0)}
+                    value={Math.min(
+                      PRICE_SLIDER_MAX,
+                      Math.max(Number(watch.priceMax) || PRICE_SLIDER_MAX, Number(watch.priceMin) || 0)
+                    )}
                     disabled={!watch.usePriceFilter}
                     onChange={(e) => {
                       const nextMax = Number(e.target.value);
