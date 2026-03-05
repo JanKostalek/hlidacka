@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-05T13:06:46.970Z",
+  "updatedAt": "2026-03-05T13:36:59.338Z",
   "byWatch": {
     "garmin": [
       {
@@ -31,6 +31,15 @@
       }
     ],
     "iphone-2": [
+      {
+        "watchId": "iphone-2",
+        "watchName": "iphone 2",
+        "sourceName": "Sbazar",
+        "title": "Apple iPhone 16 128gb black - záruka 12/26",
+        "price": "12 800 Kč",
+        "link": "https://www.sbazar.cz/inzerat/228382859-apple-iphone-16-128gb-black-zaruka-1226",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
       {
         "watchId": "iphone-2",
         "watchName": "iphone 2",
@@ -81,29 +90,542 @@
       {
         "watchId": "garmin-8-solar",
         "watchName": "Garmin 8 Solar",
-        "sourceName": "Sbazar",
+        "sourceName": "Bazos",
         "title": "Garmin Fenix 7x Solar",
-        "price": "8 000 Kč",
-        "link": "https://www.sbazar.cz/inzerat/227933335-garmin-fenix-7x-solar",
-        "firstSeenAt": "2026-03-05T13:03:18.293Z"
-      },
-      {
-        "watchId": "garmin-8-solar",
-        "watchName": "Garmin 8 Solar",
-        "sourceName": "Sbazar",
-        "title": "Garmin Fenix 7 Solar Sapphire Pro 51",
-        "price": "10 500 Kč",
-        "link": "https://www.sbazar.cz/inzerat/228308150-garmin-fenix-7-solar-sapphire-pro-51",
-        "firstSeenAt": "2026-03-05T13:03:18.293Z"
+        "price": "8 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/213198280/garmin-fenix-7x-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
       },
       {
         "watchId": "garmin-8-solar",
         "watchName": "Garmin 8 Solar",
         "sourceName": "Bazos",
-        "title": "GARMIN Fenix 7x solar",
+        "title": "Garmin Fenix 7 Sapphire Solar Black",
+        "price": "11 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/213298991/garmin-fenix-7-sapphire-solar-black.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Ochranné pouzdro Garmin Fenix 8, Garmin Forerunner 970",
+        "price": "150 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/213305844/fenix-8-forerunner-979.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Sportovní hodinky Garmin Fenix 7 Sapphire Solar",
+        "price": "8 500 Kč",
+        "link": "https://obleceni.bazos.cz/inzerat/213411848/sportovni-hodinky-garmin-fenix-7-sapphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7x solar",
+        "price": "7 900 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/213587386/garmin-fenix-7x-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin fenix7 solar",
+        "price": "6 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/213779862/garmin-fenix7-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fénix 7S PRO Solar",
+        "price": "9 000 Kč",
+        "link": "https://sport.bazos.cz/inzerat/213966992/garmin-fenix-7s-pro-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin - 1x Silikonový + 1x Nylonový✅26mm✅",
+        "price": "80 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/213990026/garmin-1x-silikonovy-1x-nylonovy26mm.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7 Sapphire Solar",
+        "price": "7 500 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/213994943/garmin-fenix-7x-sapphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 6 Pro Solar",
+        "price": "6 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/214016595/garmin-fenix-6-pro-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "GARMIN FÉNIX 7X SAPHIRE SOLAR",
+        "price": "6 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/214027109/garmin-fenix-7x-saphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7X Saphire Solar",
+        "price": "10 500 Kč",
+        "link": "https://sport.bazos.cz/inzerat/214060966/garmin-fenix-7x-saphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Tissot Touch Solar Expert T091.420A",
+        "price": "14 000 Kč",
+        "link": "https://obleceni.bazos.cz/inzerat/214077280/tissot-touch-solar-expert-t091420a.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7X Sapphire Solar",
+        "price": "7 500 Kč",
+        "link": "https://elektro.bazos.cz/inzerat/214086632/garmin-fenix-7-pro-sapphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Fenix 7X Sapphire Solar Mineral blue",
+        "price": "7 000 Kč",
+        "link": "https://obleceni.bazos.cz/inzerat/214235869/fenix-7x-sapphire-solar-mineral-blue.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7X Solar",
+        "price": "8 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/214311061/garmin-fenix-7x-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7 sapphire solar titanium",
+        "price": "8 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/214349083/garmin-fenix-7-sapphire-solar-titanium.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7 Sapphire Solar",
+        "price": "8 000 Kč",
+        "link": "https://sport.bazos.cz/inzerat/214409506/garmin-fenix-7-sapphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin 7 Saphire Solar",
+        "price": "9 500 Kč",
+        "link": "https://obleceni.bazos.cz/inzerat/214423976/garmin-7-saphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7S Pro Solar + voucher Topo Czech 42mm",
+        "price": "9 500 Kč",
+        "link": "https://elektro.bazos.cz/inzerat/214426003/garmin-fenix-7s-pro-solar-voucher-topo-czech-42mm.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin - Nacvakavací řemínky - 26 mm - NOVÉ",
+        "price": "250 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/214453500/garmin-nacvakavaci-reminky-26-mm-nove.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Prodám Garmin Fenix 6xPro Solar Titanium Carbon Gray",
+        "price": "5 500 Kč",
+        "link": "https://elektro.bazos.cz/inzerat/214525956/prodam-garmin-fenix-6xpro-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Hodinky GARMIN 6s Pro Solar + orig. pasek",
+        "price": "4 000 Kč",
+        "link": "https://sport.bazos.cz/inzerat/214651924/hodinky-garmin-6s-pro-solar-orig-pasek.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Hodinky Garmin Fénix 7X Sapphire Solar",
+        "price": "8 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/214701647/hodinky-garmin-fenix-7x-sapphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fénix Tactix 7 Pro Sapphire Solar 51mm",
+        "price": "15 000 Kč",
+        "link": "https://obleceni.bazos.cz/inzerat/214765166/garmin-fenix-tactix-7-pro-saphire.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin 7X Solar - v záruce",
+        "price": "9 000 Kč",
+        "link": "https://ostatni.bazos.cz/inzerat/214765887/garmin-7x-solar-v-zaruce.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Hemsut kožený pásek quickfit 20 mm",
+        "price": "550 Kč",
+        "link": "https://obleceni.bazos.cz/inzerat/214820439/hemsut-kozeny-pasek-quickfit-20-mm.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Hodinky Garmin Fénix 7X Sapphire Solar",
+        "price": "7 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/214861074/hodinky-garmin-fenix-7x-sapphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "GARMIN Fénix 7 PRO Sapphire Solar, Titan",
+        "price": "8 700 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/214874102/garmin-fenix-7-sapphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Silikonový pásek na Garmin Fenix 6x pro solar",
+        "price": "150 Kč",
+        "link": "https://sport.bazos.cz/inzerat/214885096/silikonovy-pasek-na-garmin-fenix-6x-pro-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Prodám Garmin Fenix 7 PRO Solar",
+        "price": "8 500 Kč",
+        "link": "https://elektro.bazos.cz/inzerat/214971952/prodam-garmin-fenix-7-pro-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7x sapphire solar",
+        "price": "8 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/214978627/garmin-fenix-7x-sapphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7X Solar Sapphire 51mm",
+        "price": "11 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215019969/garmin-fenix-7x-solar-sapphire.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7 x pro safir solar Titan",
+        "price": "11 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215069781/garmin-fenix-7-x-pro-safir-solar-titan.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7 Solar Sapphire",
+        "price": "6 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215127601/garmin-fenix-7-solar-sapphire.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin fenix6 PRO Solar",
+        "price": "4 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215155714/garmin-fenix6-pro-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 6xPro Solar Titanium Carbon Gray , 47mm",
+        "price": "4 500 Kč",
+        "link": "https://ostatni.bazos.cz/inzerat/215166938/garmin-fenix-6xpro-solar-titanium-carbon-gray-47mm.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7S Pro Solar Sapphire",
+        "price": "8 500 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215190897/garmin-fenix-7s-pro-solar-sapphire.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin FENIX 7 Pro Solar - záruka Datart",
+        "price": "8 999 Kč",
+        "link": "https://elektro.bazos.cz/inzerat/215206814/garmin-fenix-7-pro-solar-zaruka-datart.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7X Solar — ve skvělém stavu, ihned k použití.",
+        "price": "7 799 Kč",
+        "link": "https://elektro.bazos.cz/inzerat/215271493/garmin-fenix-7x-solar-ve-skvelem-stavu-ihned-k-pouziti.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fénix 7s Sapphire solar",
+        "price": "9 900 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/213199211/garmin-fenix-7s-pro-sapphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7X Pro Solar Sapphire",
+        "price": "12 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215312818/garmin-fenix-7x-pro-solar-sapphire.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Chytré hodinky Garmin 6s",
+        "price": "4 100 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215314983/chytre-hodinky-garmin-6s.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 51mm Sapphire,Titan,Solar",
+        "price": "19 000 Kč",
+        "link": "https://obleceni.bazos.cz/inzerat/215370722/garmin-fenix-8-51mm-sapphire-titan.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "GARMIN FENIX 6X PRO SOLAR",
+        "price": "4 990 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215376003/garmin-fenix-6x-pro-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Fenix 7X PRO solar",
+        "price": "12 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215382118/fenix-7x-pro-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7X Solar – výdrž 29 dní, funkční",
+        "price": "9 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215409373/garmin-fenix-7x-solar-vydrz-29-dni-funkcni.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7X Sapphire Solar (Top stav)",
+        "price": "8 300 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215409754/garmin-fenix-7x-sapphire-solar-top-stav.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7X Sapphire Solar",
+        "price": "8 500 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215410161/garmin-fenix-7x-sapphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7X Solar Sapphire 51mm",
+        "price": "6 900 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215420776/garmin-fenix-7x-solar-sapphire-51mm.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7S Solar Sapphire",
+        "price": "7 800 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215520903/garmin-fenix-7s-solar-sapphire.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "KOUPÍM Garmin Fénix 7 PRO Sapphire Solar",
+        "price": "Nabídněte",
+        "link": "https://sport.bazos.cz/inzerat/215567219/koupim-garmin-fenix-7-pro-sapphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 6x PRO Solar",
+        "price": "5 700 Kč",
+        "link": "https://elektro.bazos.cz/inzerat/215647026/garmin-fenix-6x-pro-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fénix 7 Sapphire Solar",
+        "price": "7 000 Kč",
+        "link": "https://sport.bazos.cz/inzerat/215706192/garmin-fenix-7-sapphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7x Solar 51mm",
         "price": "10 000 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/215215319/garmin-fenix-7x-solar.php",
-        "firstSeenAt": "2026-03-05T13:03:18.293Z"
+        "link": "https://sport.bazos.cz/inzerat/215723849/garmin-fenix-7x-solar-51mm.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 AMOLED 47mm",
+        "price": "15 590 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215734885/garmin-fenix-8-amoled-47mm.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7x solar záruka",
+        "price": "7 500 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215746046/garmin-fenix-7x-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7pro Solar",
+        "price": "9 900 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215796216/garmin-fenix-7pro-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin fenix 7X solar",
+        "price": "9 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215797078/garmin-fenix-7x-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
+      },
+      {
+        "watchId": "garmin-8-solar",
+        "watchName": "Garmin 8 Solar",
+        "sourceName": "Bazos",
+        "title": "Hodinky Garmin Fénix 7xpro Sapphire Solar",
+        "price": "11 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215600138/hodinky-garmin-fenix-7xpro-sapphire-solar.php",
+        "firstSeenAt": "2026-03-05T13:36:59.338Z"
       }
     ]
   }
