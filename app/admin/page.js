@@ -500,7 +500,7 @@ export default function AdminPage() {
           <article key={`${watch.id || "new"}-${index}`} className="watchCard">
             <div className="adminGrid">
               <label>
-                Název dotazu
+                Název dotazu (Nemá vliv na vyhledávání)
                 <input
                   value={watch.name}
                   onChange={(e) => updateWatch(index, { name: e.target.value })}
@@ -508,7 +508,7 @@ export default function AdminPage() {
                 />
               </label>
               <label>
-                Co hledat (text)
+                Co hledat (Hrubý filtr)
                 <input
                   value={watch.query}
                   onChange={(e) => updateWatch(index, { query: e.target.value })}
@@ -516,7 +516,7 @@ export default function AdminPage() {
                 />
               </label>
               <label>
-                Klíčová slova (CSV)
+                Klíčová slova (Upřesnění vyhledávání. Odděluj pomocí čárky řetězce k vyhledávání)
                 <input
                   value={watch.keywordsCsv}
                   onChange={(e) => updateWatch(index, { keywordsCsv: e.target.value })}

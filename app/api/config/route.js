@@ -348,10 +348,14 @@ function adminModelToConfig(
 
   const notifications = {
     ...(existingConfig.notifications || {}),
-    emailTo: String(notificationEmail || "").trim(),
+    emailTo:
+      String(notificationEmail || "").trim() ||
+      String(existingConfig.notifications?.emailTo || "").trim(),
     emailOnlyWhenNew: Boolean(emailOnlyWhenNew),
     emailEnabled: Boolean(emailEnabled),
-    discordWebhook: String(notificationDiscordWebhook || "").trim(),
+    discordWebhook:
+      String(notificationDiscordWebhook || "").trim() ||
+      String(existingConfig.notifications?.discordWebhook || "").trim(),
     discordOnlyWhenNew: Boolean(discordOnlyWhenNew),
     discordEnabled: Boolean(discordEnabled)
   };
