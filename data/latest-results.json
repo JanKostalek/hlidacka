@@ -1,11 +1,487 @@
 {
-  "runAt": null,
+  "runAt": "2026-03-05T19:36:19.425Z",
   "summary": {
-    "totalWatches": 0,
-    "totalSources": 0,
-    "totalNewItems": 0,
+    "totalWatches": 1,
+    "totalSources": 2,
+    "totalFoundItems": 23,
+    "totalNewItems": 23,
     "errorCount": 0
   },
-  "newItemsByWatch": [],
+  "newItemsByWatch": [
+    {
+      "watchId": "garmin-solar",
+      "watchName": "Garmin Solar",
+      "items": [
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Garmin Fenix 8 51 Amoled + příslušenství",
+          "price": "18 999 Kč",
+          "link": "https://mobil.bazos.cz/inzerat/215611340/garmin-fenix-8-51-amoled-prislusenstvi.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Vyměním Garmin Fenix 8 51 Amoled za MIP",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215557136/vymenim-garmin-fenix-8-51-amoled-za-mip.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Koupím Garmin Fenix 8 AMOLED Sapphire 51mm",
+          "price": "Nabídněte",
+          "link": "https://mobil.bazos.cz/inzerat/215503958/koupim-garmin-fenix-8-amoled-sapphire-51mm.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Koupím NOVÝ orig Garmin QuickFit 26mm řemínek z Fenix 8",
+          "price": "111 Kč",
+          "link": "https://obleceni.bazos.cz/inzerat/215183900/koupim-novy-orig-garmin-quickfit-26mm-reminek-z-fenix-8.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Garmin Fenix 8 51mm AMOLED Sapphire Carbon grey",
+          "price": "20 000 Kč",
+          "link": "https://mobil.bazos.cz/inzerat/214463202/garmin-fenix-8-51mm-amoled-sapphire-carbon-grey.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm černo/červený",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056660/fenix-8-6x-7x-tah-reminek-pasek-26mm-cernocerveny.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm červeno/černý",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056658/fenix-8-6x-7x-tah-reminek-pasek-26mm-cervenocerny.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm černo/žlutý",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056657/fenix-8-6x-7x-tah-reminek-pasek-26mm-cernozluty.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm zeleny",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056656/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm-zeleny.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056654/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm maskáč",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056653/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm-maskac.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm maskáč",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056652/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm-maskac.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 8, 6x, 7x tah, řemínek, pásek 26mm žlutý",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056650/garmin-8-6x-7x-tah-reminek-pasek-26mm-zluty.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 8, 6x, 7x tah, řemínek, pásek 26mm šedý",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056649/garmin-8-6x-7x-tah-reminek-pasek-26mm-sedy.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 8, 6x, 7x tah, řemínek, pásek 26mm červená",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056644/garmin-8-6x-7x-tah-reminek-pasek-26mm-cervena.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 6x, 7x a 8 tah, řemínek, pásek 26mm bílý",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056642/garmin-6x-7x-a-8-tah-reminek-pasek-26mm-bily.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm maskáč",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056640/garmin-fenix-8-6x-7x-tah-reminek-pasek-26mm-maskac.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm černo/žlutý",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056637/fenix-8-6x-7x-tah-reminek-pasek-26mm-cernozluty.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm červeno/černý",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056635/fenix-8-6x-7x-tah-reminek-pasek-26mm-cervenocerny.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Garmin Fenix 8 Amoled 51 sapphire",
+          "price": "Nabídněte",
+          "link": "https://mobil.bazos.cz/inzerat/214320796/garmin-fenix-8-amoled-51-sapphire.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin Fenix 8 47mm",
+          "price": "15 000 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228374567-garmin-fenix-8-47mm",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin Fenix 8 Amoled 51mm",
+          "price": "15 500 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin Fenix 7x Solar",
+          "price": "8 000 Kč",
+          "link": "https://www.sbazar.cz/inzerat/227933335-garmin-fenix-7x-solar",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        }
+      ]
+    }
+  ],
+  "activeItemsByWatch": [
+    {
+      "watchId": "garmin-solar",
+      "watchName": "Garmin Solar",
+      "items": [
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Garmin Fenix 8 51 Amoled + příslušenství",
+          "price": "18 999 Kč",
+          "link": "https://mobil.bazos.cz/inzerat/215611340/garmin-fenix-8-51-amoled-prislusenstvi.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Vyměním Garmin Fenix 8 51 Amoled za MIP",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215557136/vymenim-garmin-fenix-8-51-amoled-za-mip.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Koupím Garmin Fenix 8 AMOLED Sapphire 51mm",
+          "price": "Nabídněte",
+          "link": "https://mobil.bazos.cz/inzerat/215503958/koupim-garmin-fenix-8-amoled-sapphire-51mm.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Koupím NOVÝ orig Garmin QuickFit 26mm řemínek z Fenix 8",
+          "price": "111 Kč",
+          "link": "https://obleceni.bazos.cz/inzerat/215183900/koupim-novy-orig-garmin-quickfit-26mm-reminek-z-fenix-8.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Garmin Fenix 8 51mm AMOLED Sapphire Carbon grey",
+          "price": "20 000 Kč",
+          "link": "https://mobil.bazos.cz/inzerat/214463202/garmin-fenix-8-51mm-amoled-sapphire-carbon-grey.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm černo/červený",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056660/fenix-8-6x-7x-tah-reminek-pasek-26mm-cernocerveny.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm červeno/černý",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056658/fenix-8-6x-7x-tah-reminek-pasek-26mm-cervenocerny.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm černo/žlutý",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056657/fenix-8-6x-7x-tah-reminek-pasek-26mm-cernozluty.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm zeleny",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056656/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm-zeleny.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056654/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm maskáč",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056653/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm-maskac.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm maskáč",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056652/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm-maskac.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 8, 6x, 7x tah, řemínek, pásek 26mm žlutý",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056650/garmin-8-6x-7x-tah-reminek-pasek-26mm-zluty.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 8, 6x, 7x tah, řemínek, pásek 26mm šedý",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056649/garmin-8-6x-7x-tah-reminek-pasek-26mm-sedy.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 8, 6x, 7x tah, řemínek, pásek 26mm červená",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056644/garmin-8-6x-7x-tah-reminek-pasek-26mm-cervena.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN 6x, 7x a 8 tah, řemínek, pásek 26mm bílý",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056642/garmin-6x-7x-a-8-tah-reminek-pasek-26mm-bily.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "GARMIN Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm maskáč",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056640/garmin-fenix-8-6x-7x-tah-reminek-pasek-26mm-maskac.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm černo/žlutý",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056637/fenix-8-6x-7x-tah-reminek-pasek-26mm-cernozluty.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm červeno/černý",
+          "price": "Dohodou",
+          "link": "https://mobil.bazos.cz/inzerat/215056635/fenix-8-6x-7x-tah-reminek-pasek-26mm-cervenocerny.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "bazos",
+          "sourceName": "Bazos",
+          "title": "Garmin Fenix 8 Amoled 51 sapphire",
+          "price": "Nabídněte",
+          "link": "https://mobil.bazos.cz/inzerat/214320796/garmin-fenix-8-amoled-51-sapphire.php",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin Fenix 8 47mm",
+          "price": "15 000 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228374567-garmin-fenix-8-47mm",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin Fenix 8 Amoled 51mm",
+          "price": "15 500 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        },
+        {
+          "watchId": "garmin-solar",
+          "watchName": "Garmin Solar",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Garmin Fenix 7x Solar",
+          "price": "8 000 Kč",
+          "link": "https://www.sbazar.cz/inzerat/227933335-garmin-fenix-7x-solar",
+          "foundAt": "2026-03-05T19:36:19.425Z"
+        }
+      ]
+    }
+  ],
   "errors": []
 }
