@@ -627,7 +627,8 @@ button:disabled {
   isolation: isolate;
 }
 
-.themeGlass.dashboardPage::before {
+.themeGlass.dashboardPage::before,
+.themeGlassLight.dashboardPage::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -643,7 +644,8 @@ button:disabled {
   z-index: -1;
 }
 
-.themeGlass.dashboardPage::after {
+.themeGlass.dashboardPage::after,
+.themeGlassLight.dashboardPage::after {
   content: "";
   position: fixed;
   inset: auto auto -220px -160px;
@@ -915,6 +917,33 @@ button:disabled {
     inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
+/* Light glass variant: same background, sharp "glass sheet" edges */
+.themeGlassLight .panel,
+.themeGlassLight .dashboardPanel,
+.themeGlassLight .statCard,
+.themeGlassLight .group,
+.themeGlassLight .dashboardGroup,
+.themeGlassLight .watchCard,
+.themeGlassLight .historyTableWrap,
+.themeGlassLight .emailPreview,
+.themeGlassLight input,
+.themeGlassLight button,
+.themeGlassLight .checkboxLabel,
+.themeGlassLight .heroChip,
+.themeGlassLight .groupBadge,
+.themeGlassLight .emailModeOption,
+.themeGlassLight .themeSelectWrap select {
+  border-radius: 0 !important;
+}
+
+.themeGlassLight .panel::before,
+.themeGlassLight .panel::after,
+.themeGlassLight .dashboardPanel::before,
+.themeGlassLight .dashboardPanel::after,
+.themeGlassLight .statCard::after {
+  border-radius: 0 !important;
+}
+
 .adminPage {
   max-width: 1180px;
 }
@@ -958,7 +987,8 @@ button:disabled {
     max-width: 980px;
   }
 
-  .themeGlass.dashboardPage::before {
+  .themeGlass.dashboardPage::before,
+  .themeGlassLight.dashboardPage::before {
     background-size: cover, 300px 300px;
   }
 }
