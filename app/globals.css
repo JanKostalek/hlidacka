@@ -337,6 +337,10 @@ button:disabled {
   box-shadow: 0 6px 12px rgba(219, 44, 77, 0.16);
 }
 
+.inlineDangerBtn {
+  margin-top: 0;
+}
+
 .status {
   margin: 10px 0 0;
   color: #0f355f;
@@ -368,6 +372,7 @@ button:disabled {
   gap: 8px;
   color: var(--ink-2);
   font-weight: 700;
+  margin-left: auto;
 }
 
 .themeSelectWrap select {
@@ -620,23 +625,23 @@ button:disabled {
   gap: 22px;
 }
 
-.dashboardPage::before {
+.themeGlass.dashboardPage::before {
   content: "";
   position: fixed;
-  inset: -40% -30% auto auto;
-  width: 760px;
-  height: 760px;
-  border-radius: 999px;
+  inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 28% 32%, rgba(255, 255, 255, 0.52) 0%, rgba(255, 255, 255, 0) 44%),
-    radial-gradient(circle at 70% 72%, rgba(148, 163, 184, 0.28) 0%, rgba(148, 163, 184, 0) 48%),
-    conic-gradient(from 120deg at 50% 50%, rgba(96, 165, 250, 0.3), rgba(45, 212, 191, 0.18), rgba(148, 163, 184, 0.26), rgba(96, 165, 250, 0.3));
-  filter: blur(22px);
+    linear-gradient(170deg, rgba(246, 251, 255, 0.6), rgba(233, 242, 255, 0.45)),
+    url("/glass-bg-tile.svg");
+  background-repeat: no-repeat, repeat;
+  background-size: cover, 880px 586px;
+  background-position: center center, left top;
+  opacity: 0.65;
+  filter: saturate(1.08);
   z-index: -1;
 }
 
-.dashboardPage::after {
+.themeGlass.dashboardPage::after {
   content: "";
   position: fixed;
   inset: auto auto -220px -160px;
@@ -861,6 +866,10 @@ button:disabled {
 @media (max-width: 920px) {
   .dashboardPage {
     max-width: 980px;
+  }
+
+  .themeGlass.dashboardPage::before {
+    background-size: cover, 660px 440px;
   }
 }
 

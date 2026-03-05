@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const PRICE_SLIDER_MAX = 2000000;
-const PRICE_SLIDER_STEP = 500;
+const PRICE_SLIDER_STEP = 10;
 
 function emptyWatch() {
   return {
@@ -12,6 +12,7 @@ function emptyWatch() {
     query: "",
     keywordsCsv: "",
     excludeKeywordsCsv: "",
+    usePriceFilter: false,
     priceMin: 0,
     priceMax: PRICE_SLIDER_MAX,
     marketplaces: []
@@ -40,6 +41,7 @@ export default function AdminPage() {
   const [uiThemes, setUiThemes] = useState(["glass", "classic"]);
   const [status, setStatus] = useState("Načítání...");
   const [saving, setSaving] = useState(false);
+  const [clearing, setClearing] = useState(false);
   const [runningNow, setRunningNow] = useState(false);
 
   useEffect(() => {
@@ -236,6 +238,40 @@ export default function AdminPage() {
 
     setStatus("Workflow spuštěn. Výsledek sleduj v GitHub Actions.");
     setRunningNow(false);
+  }
+
+  async function clearHistory() {
+    const confirmed = window.confirm(
+      "Opravdu chceš vyčistit cache/historii? (běhy, již zobrazené inzeráty, stav)"
+    );
+    if (!confirmed) return;
+
+    setClearing(true);
+    setStatus("Čistím cache/historii...");
+    const headers = { "content-type": "application/json" };
+    if (token) headers["x-admin-token"] = token;
+
+    const res = await fetch("/api/history", {
+      method: "POST",
+      headers,
+      body: JSON.stringify({ action: "clear" })
+    });
+
+    if (res.status === 401) {
+      setStatus("Neplatný token. Čištění zamítnuto.");
+      setClearing(false);
+      return;
+    }
+
+    if (!res.ok) {
+      const error = await res.json().catch(() => ({}));
+      setStatus(`Nepodařilo se vyčistit cache/historii. ${error.error || ""}`.trim());
+      setClearing(false);
+      return;
+    }
+
+    setStatus("Cache/historie vyčištěna.");
+    setClearing(false);
   }
 
   function formatPriceRangeLabel(min, max) {
@@ -486,8 +522,18 @@ export default function AdminPage() {
             <div className="priceFilterWrap">
               <label>Cenový filtr</label>
               <div className="priceFilterValue">
-                {formatPriceRangeLabel(watch.priceMin ?? 0, watch.priceMax ?? PRICE_SLIDER_MAX)}
+                {watch.usePriceFilter
+                  ? formatPriceRangeLabel(watch.priceMin ?? 0, watch.priceMax ?? PRICE_SLIDER_MAX)
+                  : "Filtr je vypnutý"}
               </div>
+              <label className="checkboxLabel">
+                <input
+                  type="checkbox"
+                  checked={Boolean(watch.usePriceFilter)}
+                  onChange={(e) => updateWatch(index, { usePriceFilter: e.target.checked })}
+                />
+                Použít filtr
+              </label>
               <div className="priceSliders">
                 <div className="priceSliderRow">
                   <span>Od</span>
@@ -497,6 +543,7 @@ export default function AdminPage() {
                     max={PRICE_SLIDER_MAX}
                     step={PRICE_SLIDER_STEP}
                     value={Math.min(Number(watch.priceMin) || 0, Number(watch.priceMax) || PRICE_SLIDER_MAX)}
+                    disabled={!watch.usePriceFilter}
                     onChange={(e) => {
                       const nextMin = Number(e.target.value);
                       const currentMax = Number(watch.priceMax) || PRICE_SLIDER_MAX;
@@ -515,6 +562,7 @@ export default function AdminPage() {
                     max={PRICE_SLIDER_MAX}
                     step={PRICE_SLIDER_STEP}
                     value={Math.max(Number(watch.priceMax) || PRICE_SLIDER_MAX, Number(watch.priceMin) || 0)}
+                    disabled={!watch.usePriceFilter}
                     onChange={(e) => {
                       const nextMax = Number(e.target.value);
                       const currentMin = Number(watch.priceMin) || 0;
@@ -554,22 +602,30 @@ export default function AdminPage() {
 
       <section className="panel dashboardPanel adminPanel">
         <div className="adminActions">
-          <button type="button" onClick={saveConfig} disabled={saving || runningNow}>
+          <button type="button" onClick={saveConfig} disabled={saving || clearing || runningNow}>
             {saving ? "Ukládám..." : "Uložit konfiguraci"}
           </button>
           <button
             type="button"
             onClick={runWorkflowNow}
-            disabled={saving || runningNow}
+            disabled={saving || clearing || runningNow}
           >
             {runningNow ? "Spouštím..." : "Spustit kontrolu teď"}
+          </button>
+          <button
+            type="button"
+            className="dangerBtn inlineDangerBtn"
+            onClick={clearHistory}
+            disabled={saving || clearing || runningNow}
+          >
+            {clearing ? "Čistím..." : "Vyčistit cache"}
           </button>
           <label className="themeSelectWrap">
             <span>Styl:</span>
             <select
               value={uiTheme}
               onChange={(e) => setUiTheme(e.target.value)}
-              disabled={saving || runningNow}
+              disabled={saving || clearing || runningNow}
             >
               {uiThemes.map((theme) => (
                 <option key={theme} value={theme}>

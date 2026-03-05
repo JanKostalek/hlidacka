@@ -270,6 +270,9 @@ function configToAdminModel(config) {
     const marketplaces = Array.from(
       new Set((watch.sources || []).map((source) => source.id).filter(Boolean))
     );
+    const rawMin = normalizePriceBound(watch.priceMin);
+    const rawMax = normalizePriceBound(watch.priceMax);
+    const usePriceFilter = rawMin !== null || rawMax !== null;
 
     return {
       id: watch.id || `watch-${index + 1}`,
@@ -277,8 +280,9 @@ function configToAdminModel(config) {
       query: watch.query || (watch.keywords || []).join(" "),
       keywordsCsv: (watch.keywords || []).join(", "),
       excludeKeywordsCsv: (watch.excludeKeywords || []).join(", "),
-      priceMin: normalizePriceBound(watch.priceMin) ?? 0,
-      priceMax: normalizePriceBound(watch.priceMax) ?? PRICE_FILTER_MAX,
+      usePriceFilter,
+      priceMin: rawMin ?? 0,
+      priceMax: rawMax ?? PRICE_FILTER_MAX,
       marketplaces
     };
   });
@@ -324,8 +328,9 @@ function adminModelToConfig(
       const hasDefaultOpenRange =
         (safePriceMin === null || safePriceMin <= 0) &&
         (safePriceMax === null || safePriceMax >= PRICE_FILTER_MAX);
-      const outPriceMin = hasDefaultOpenRange ? null : safePriceMin;
-      const outPriceMax = hasDefaultOpenRange ? null : safePriceMax;
+      const usePriceFilter = Boolean(watch.usePriceFilter);
+      const outPriceMin = usePriceFilter && !hasDefaultOpenRange ? safePriceMin : null;
+      const outPriceMax = usePriceFilter && !hasDefaultOpenRange ? safePriceMax : null;
 
       return {
         id,
