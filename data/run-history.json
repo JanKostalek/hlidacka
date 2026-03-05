@@ -1,6 +1,66 @@
 {
   "runs": [
     {
+      "runAt": "2026-03-05T13:00:24.308Z",
+      "summary": {
+        "totalWatches": 3,
+        "totalSources": 6,
+        "totalFoundItems": 11,
+        "totalNewItems": 0,
+        "errorCount": 0
+      },
+      "watchStats": [
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "query": "Garmin",
+          "keywords": [
+            "Garmin",
+            "8",
+            "51"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 3,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "iphone-2",
+          "watchName": "iphone 2",
+          "query": "iphone",
+          "keywords": [
+            "iphone 16"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 5,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "garmin-8-solar",
+          "watchName": "Garmin 8 Solar",
+          "query": "Garmin",
+          "keywords": [
+            "Garmin",
+            "fenix",
+            "Solar"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 3,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        }
+      ],
+      "emailSubject": "Hlídačka (Garmin +2): žádné nové inzeráty",
+      "emailText": "Hlídačka bazarů - Výsledek vyhledávání\nČas vyhledávání: 2026-03-05T13:00:24.308Z\nNové inzeráty: 0\nChyby: 0\n\nAktivní dotazy:\n\n- Garmin\n  co hledat: Garmin\n  klíčová slova: Garmin, 8, 51\n  vyloučit slova: (žádná)\n  bazary: Bazos, Sbazar\n  výsledek: nové 0, již zobrazené 2, chyby 0\n\n- iphone 2\n  co hledat: iphone\n  klíčová slova: iphone 16\n  vyloučit slova: (žádná)\n  bazary: Bazos, Sbazar\n  výsledek: nové 0, již zobrazené 5, chyby 0\n\n- Garmin 8 Solar\n  co hledat: Garmin\n  klíčová slova: Garmin, fenix, Solar\n  vyloučit slova: (žádná)\n  bazary: Bazos, Sbazar\n  výsledek: nové 0, již zobrazené 4, chyby 0\n\nŽádné nové inzeráty.\n\nJiž zobrazené inzeráty:\n\nGarmin (2)\n- GARMIN Fenix 8 AMOLED Sapphire 51mm Titan – záruka | 17 999 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215782110/garmin-fenix-8-amoled-sapphire-51mm-titan-zaruka.php\n- Garmin Fenix 8 Amoled 51mm | 15 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm\n\niphone 2 (5)\n- iPhone 16 Pro 256GB White Titan, 1 rok záruka | 15 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228377192-iphone-16-pro-256gb-white-titan-1-rok-zaruka\n- Apple iPhone 16 Pro 128 GB, 48Mpx fotoaparát | 14 999 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228378857-apple-iphone-16-pro-128-gb-48mpx-fotoaparat\n- iPhone 16 Pro 128GB Natural Titan, 1 rok záruka | 14 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228376898-iphone-16-pro-128gb-natural-titan-1-rok-zaruka\n- Iphone 16 128GB | 12 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228365198-iphone-16-128gb\n- APPLE iPhone 16 128GB Černý - ZÁRUKA - JAKO NOVÝ | 15 490 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228374816-apple-iphone-16-128gb-cerny-zaruka-jako-novy\n\nGarmin 8 Solar (4)\n- Garmin Fenix 7 Sapphire Solar | 7 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228067723-garmin-fenix-7-sapphire-solar\n- Garmin Fenix 7 Solar Sapphire Pro 51 | 10 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228308150-garmin-fenix-7-solar-sapphire-pro-51\n- GARMIN Fenix 7x solar | 10 000 Kč | Bazos\n  https://mobil.bazos.cz/inzerat/215215319/garmin-fenix-7x-solar.php\n- Garmin Fenix 7x Solar | 8 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227933335-garmin-fenix-7x-solar\n\nChyby: žádné\n"
+    },
+    {
       "runAt": "2026-03-05T11:49:17.780Z",
       "summary": {
         "totalWatches": 5,
