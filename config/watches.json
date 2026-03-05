@@ -43,6 +43,90 @@
           "priceSelector": "[class*='price'], [data-e2e*='price']"
         }
       ]
+    },
+    {
+      "id": "kanon",
+      "name": "Kanon",
+      "query": "Kanon",
+      "keywords": [
+        "Kanon"
+      ],
+      "excludeKeywords": [],
+      "priceMin": null,
+      "priceMax": null,
+      "sources": [
+        {
+          "id": "paladix",
+          "name": "Paladix",
+          "url": "https://www.paladix.cz/bazar/?s=Kanon",
+          "itemSelector": "article.pldx_ad",
+          "titleSelector": "h2.entry-title a",
+          "linkSelector": "h2.entry-title a[href]",
+          "priceSelector": ".entry-meta .price"
+        }
+      ]
+    },
+    {
+      "id": "iphone",
+      "name": "iphone",
+      "query": "iphone",
+      "keywords": [
+        "iphone 15"
+      ],
+      "excludeKeywords": [],
+      "priceMin": 7610,
+      "priceMax": 11070,
+      "sources": [
+        {
+          "id": "bazos",
+          "name": "Bazos",
+          "url": "https://www.bazos.cz/search.php?hledat=iphone",
+          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
+          "titleSelector": ".nadpis",
+          "linkSelector": "a[href]",
+          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
+        },
+        {
+          "id": "sbazar",
+          "name": "Sbazar",
+          "url": "https://www.sbazar.cz/?q=iphone",
+          "itemSelector": "article",
+          "titleSelector": "h3, h2, a",
+          "linkSelector": "a[href]",
+          "priceSelector": "[class*='price'], [data-e2e*='price']"
+        }
+      ]
+    },
+    {
+      "id": "iphone-2",
+      "name": "iphone 2",
+      "query": "iphone",
+      "keywords": [
+        "iphone 16"
+      ],
+      "excludeKeywords": [],
+      "priceMin": 8310,
+      "priceMax": 16190,
+      "sources": [
+        {
+          "id": "bazos",
+          "name": "Bazos",
+          "url": "https://www.bazos.cz/search.php?hledat=iphone",
+          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
+          "titleSelector": ".nadpis",
+          "linkSelector": "a[href]",
+          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
+        },
+        {
+          "id": "sbazar",
+          "name": "Sbazar",
+          "url": "https://www.sbazar.cz/?q=iphone",
+          "itemSelector": "article",
+          "titleSelector": "h3, h2, a",
+          "linkSelector": "a[href]",
+          "priceSelector": "[class*='price'], [data-e2e*='price']"
+        }
+      ]
     }
   ]
 }
