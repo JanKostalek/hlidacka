@@ -12,75 +12,12 @@
   },
   "watches": [
     {
-      "id": "garmin",
-      "name": "Garmin",
+      "id": "garmin-solar",
+      "name": "Garmin Solar",
       "query": "Garmin",
       "keywords": [
-        "Garmin",
+        "Fenix",
         "8",
-        "51"
-      ],
-      "excludeKeywords": [],
-      "priceMin": null,
-      "priceMax": null,
-      "sources": [
-        {
-          "id": "bazos",
-          "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=Garmin",
-          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
-          "titleSelector": ".nadpis",
-          "linkSelector": "a[href]",
-          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
-        },
-        {
-          "id": "sbazar",
-          "name": "Sbazar",
-          "url": "https://www.sbazar.cz/?q=Garmin",
-          "itemSelector": "article",
-          "titleSelector": "h3, h2, a",
-          "linkSelector": "a[href]",
-          "priceSelector": "[class*='price'], [data-e2e*='price']"
-        }
-      ]
-    },
-    {
-      "id": "iphone-2",
-      "name": "iphone 2",
-      "query": "iphone",
-      "keywords": [
-        "iphone 16"
-      ],
-      "excludeKeywords": [],
-      "priceMin": 8310,
-      "priceMax": 16190,
-      "sources": [
-        {
-          "id": "bazos",
-          "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=iphone",
-          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
-          "titleSelector": ".nadpis",
-          "linkSelector": "a[href]",
-          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
-        },
-        {
-          "id": "sbazar",
-          "name": "Sbazar",
-          "url": "https://www.sbazar.cz/?q=iphone",
-          "itemSelector": "article",
-          "titleSelector": "h3, h2, a",
-          "linkSelector": "a[href]",
-          "priceSelector": "[class*='price'], [data-e2e*='price']"
-        }
-      ]
-    },
-    {
-      "id": "garmin-8-solar",
-      "name": "Garmin 8 Solar",
-      "query": "Garmin",
-      "keywords": [
-        "fenix",
         "Solar"
       ],
       "excludeKeywords": [],
