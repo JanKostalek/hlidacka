@@ -859,12 +859,12 @@ button:disabled {
 .themeGlass .dashboardGroup {
   border-color: rgba(87, 102, 128, 0.34);
   background:
-    linear-gradient(160deg, rgba(234, 240, 248, 0.25), rgba(200, 211, 227, 0.25)),
-    linear-gradient(120deg, rgba(21, 26, 36, 0.06), rgba(255, 255, 255, 0.03));
+    linear-gradient(160deg, rgba(234, 240, 248, 0.23), rgba(200, 211, 227, 0.23)),
+    linear-gradient(120deg, rgba(21, 26, 36, 0.03), rgba(255, 255, 255, 0.04));
   box-shadow:
-    0 14px 24px rgba(9, 14, 25, 0.2),
-    0 6px 12px rgba(9, 14, 25, 0.14),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    0 12px 20px rgba(9, 14, 25, 0.16),
+    0 4px 10px rgba(9, 14, 25, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42);
   backdrop-filter: blur(18px) saturate(1.08);
 }
 
@@ -872,12 +872,12 @@ button:disabled {
 .themeGlass .dashboardGroup:hover {
   border-color: rgba(52, 62, 80, 0.58);
   background:
-    linear-gradient(160deg, rgba(165, 176, 194, 0.375), rgba(129, 140, 160, 0.375)),
-    linear-gradient(120deg, rgba(7, 11, 19, 0.18), rgba(82, 93, 112, 0.1));
+    linear-gradient(160deg, rgba(165, 176, 194, 0.28), rgba(129, 140, 160, 0.28)),
+    linear-gradient(120deg, rgba(7, 11, 19, 0.09), rgba(82, 93, 112, 0.06));
   box-shadow:
-    0 24px 36px rgba(6, 10, 18, 0.34),
-    0 8px 16px rgba(6, 10, 18, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.24);
+    0 20px 30px rgba(6, 10, 18, 0.24),
+    0 6px 12px rgba(6, 10, 18, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
   transform: translateY(-4px) scale(1.006);
 }
 
