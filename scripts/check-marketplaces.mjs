@@ -15,6 +15,32 @@ const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36";
 
 const nowIso = new Date().toISOString();
+const BAZOS_DEFAULT_CATEGORY_HOSTS = [
+  "auto",
+  "deti",
+  "dum",
+  "elektro",
+  "foto",
+  "hudba",
+  "knihy",
+  "mobil",
+  "motorky",
+  "nabytek",
+  "obleceni",
+  "ostatni",
+  "pc",
+  "prace",
+  "reality",
+  "sluzby",
+  "sport",
+  "stroje",
+  "vstupenky",
+  "zvirata"
+];
+const BAZOS_GLOBAL_PAGE_SIZE = 20;
+const BAZOS_MAX_GLOBAL_PAGES = 12;
+
+let bazosCategoryHostsCache = null;
 
 async function ensureDir(dirPath) {
   await fs.mkdir(dirPath, { recursive: true });
@@ -153,6 +179,109 @@ async function fetchSbazarItems(query, limit = 80) {
   const payload = await res.json();
   const results = Array.isArray(payload?.results) ? payload.results : [];
   return results.map(mapSbazarItemToCandidate).filter((item) => item.title || item.link);
+}
+
+async function fetchBazosCategoryHosts() {
+  if (Array.isArray(bazosCategoryHostsCache) && bazosCategoryHostsCache.length > 0) {
+    return bazosCategoryHostsCache;
+  }
+
+  try {
+    const homeHtml = await fetchHtml("https://www.bazos.cz/");
+    const hosts = new Set();
+    const pattern = /https?:\/\/([a-z0-9-]+)\.bazos\.cz\//gi;
+    let match = pattern.exec(homeHtml);
+    while (match) {
+      const host = String(match[1] || "").toLowerCase().trim();
+      if (host && host !== "www") hosts.add(host);
+      match = pattern.exec(homeHtml);
+    }
+    if (hosts.size > 0) {
+      bazosCategoryHostsCache = Array.from(hosts);
+      return bazosCategoryHostsCache;
+    }
+  } catch {
+    // Fallback below.
+  }
+
+  bazosCategoryHostsCache = [...BAZOS_DEFAULT_CATEGORY_HOSTS];
+  return bazosCategoryHostsCache;
+}
+
+function buildBazosSearchUrls(query, categoryHosts = [], maxGlobalPages = BAZOS_MAX_GLOBAL_PAGES) {
+  const phrase = String(query || "").trim();
+  if (!phrase) return [];
+
+  const urls = [];
+
+  for (let page = 0; page < maxGlobalPages; page += 1) {
+    const globalUrl = new URL("https://www.bazos.cz/search.php");
+    globalUrl.searchParams.set("hledat", phrase);
+    // Match "Vsechny rubriky" behavior from Bazos UI.
+    globalUrl.searchParams.set("rubriky", "www");
+    globalUrl.searchParams.set("hlokalita", "");
+    globalUrl.searchParams.set("humkreis", "25");
+    globalUrl.searchParams.set("cenaod", "");
+    globalUrl.searchParams.set("cenado", "");
+    globalUrl.searchParams.set("order", "");
+    const offset = page * BAZOS_GLOBAL_PAGE_SIZE;
+    if (offset > 0) {
+      globalUrl.searchParams.set("crz", String(offset));
+    }
+    urls.push(globalUrl.toString());
+  }
+
+  for (const host of categoryHosts) {
+    const cleanHost = String(host || "").trim().toLowerCase();
+    if (!cleanHost || cleanHost === "www") continue;
+    urls.push(`https://${cleanHost}.bazos.cz/?hledat=${encodeURIComponent(phrase)}`);
+  }
+
+  return Array.from(new Set(urls));
+}
+
+function buildBazosPhrasesFromWatch(watch = {}) {
+  const baseQuery = String(watch?.query || "").trim();
+  const keywords = Array.isArray(watch?.keywords) ? watch.keywords : [];
+  const keywordPhrase = keywords.map((kw) => String(kw || "").trim()).filter(Boolean).join(" ");
+
+  const phrases = [baseQuery];
+  if (baseQuery && keywordPhrase) {
+    phrases.push(`${baseQuery} ${keywordPhrase}`);
+  }
+  return Array.from(new Set(phrases.map((p) => p.trim()).filter(Boolean)));
+}
+
+async function fetchBazosItems(watch, source, maxGlobalPages = BAZOS_MAX_GLOBAL_PAGES) {
+  const phrases = buildBazosPhrasesFromWatch(watch);
+  if (phrases.length === 0) return [];
+
+  const categoryHosts = await fetchBazosCategoryHosts();
+  const urls = Array.from(
+    new Set(
+      phrases.flatMap((phrase) =>
+        buildBazosSearchUrls(phrase, categoryHosts, maxGlobalPages)
+      )
+    )
+  );
+  const items = [];
+
+  for (const url of urls) {
+    try {
+      const html = await fetchHtml(url);
+      const parsedItems = extractItemsFromPage(html, { ...source, url });
+      items.push(...parsedItems);
+    } catch (err) {
+      console.warn(`Bazos fetch warning (${url}): ${describeFetchError(err)}`);
+    }
+  }
+
+  const uniq = new Map();
+  for (const item of items) {
+    const key = item.link || item.title;
+    if (!uniq.has(key)) uniq.set(key, item);
+  }
+  return Array.from(uniq.values());
 }
 
 function normalizeSourceForRuntime(source, watch) {
@@ -642,7 +771,11 @@ async function sendDiscordNotification(config, results, alreadyDisplayedByWatch 
     const res = await fetch(webhook, {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ content })
+      body: JSON.stringify({
+        content,
+        // Suppress Discord rich embeds; keep only compact text summary with links.
+        flags: 4
+      })
     });
     if (!res.ok) {
       const body = await res.text().catch(() => "");
@@ -964,6 +1097,8 @@ async function main() {
         const extracted =
           sourceForRun.id === "sbazar"
             ? await fetchSbazarItems(watch.query || "")
+            : sourceForRun.id === "bazos"
+              ? await fetchBazosItems(watch, sourceForRun)
             : extractItemsFromPage(await fetchHtml(sourceForRun.url), sourceForRun);
 
         let matchedForSource = 0;
