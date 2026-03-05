@@ -1,3 +1,92 @@
 {
-  "runs": []
+  "runs": [
+    {
+      "runAt": "2026-03-05T10:01:58.403Z",
+      "summary": {
+        "totalWatches": 5,
+        "totalSources": 9,
+        "totalFoundItems": 6,
+        "totalNewItems": 6,
+        "errorCount": 0
+      },
+      "watchStats": [
+        {
+          "watchId": "garmin",
+          "watchName": "Garmin",
+          "query": "Garmin",
+          "keywords": [
+            "Garmin",
+            "8",
+            "51"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 1,
+          "newItems": 1,
+          "found": true,
+          "errorCount": 0
+        },
+        {
+          "watchId": "kanon",
+          "watchName": "Kanon",
+          "query": "Kanon",
+          "keywords": [
+            "Canon"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 1,
+          "foundItems": 0,
+          "newItems": 0,
+          "found": false,
+          "errorCount": 0
+        },
+        {
+          "watchId": "iphone",
+          "watchName": "iphone",
+          "query": "iphone",
+          "keywords": [
+            "iphone 15"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 2,
+          "newItems": 2,
+          "found": true,
+          "errorCount": 0
+        },
+        {
+          "watchId": "iphone-2",
+          "watchName": "iphone 2",
+          "query": "iphone",
+          "keywords": [
+            "iphone 16"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 2,
+          "newItems": 2,
+          "found": true,
+          "errorCount": 0
+        },
+        {
+          "watchId": "garmin-8-solar",
+          "watchName": "Garmin 8 Solar",
+          "query": "Garmin",
+          "keywords": [
+            "Garmin",
+            "8",
+            "Solar"
+          ],
+          "excludeKeywords": [],
+          "sourcesChecked": 2,
+          "foundItems": 1,
+          "newItems": 1,
+          "found": true,
+          "errorCount": 0
+        }
+      ],
+      "emailSubject": "Hlídačka (Garmin +4): 6 nových inzerátů",
+      "emailText": "Hlídačka bazarů - Výsledek vyhledávání\nČas vyhledávání: 2026-03-05T10:01:58.403Z\nNové inzeráty: 6\nChyby: 0\n\nAktivní dotazy:\n\n- Garmin\n  co hledat: Garmin\n  klíčová slova: Garmin, 8, 51\n  vyloučit slova: (žádná)\n  bazary: Bazos, Sbazar\n  výsledek: nové 1, již zobrazené 0, chyby 0\n\n- Kanon\n  co hledat: Kanon\n  klíčová slova: Canon\n  vyloučit slova: (žádná)\n  bazary: Paladix\n  výsledek: nové 0, již zobrazené 0, chyby 0\n\n- iphone\n  co hledat: iphone\n  klíčová slova: iphone 15\n  vyloučit slova: (žádná)\n  bazary: Bazos, Sbazar\n  výsledek: nové 2, již zobrazené 0, chyby 0\n\n- iphone 2\n  co hledat: iphone\n  klíčová slova: iphone 16\n  vyloučit slova: (žádná)\n  bazary: Bazos, Sbazar\n  výsledek: nové 2, již zobrazené 0, chyby 0\n\n- Garmin 8 Solar\n  co hledat: Garmin\n  klíčová slova: Garmin, 8, Solar\n  vyloučit slova: (žádná)\n  bazary: Bazos, Sbazar\n  výsledek: nové 1, již zobrazené 0, chyby 0\n\nNové inzeráty:\n\nGarmin (1)\n- Garmin Fenix 8 Amoled 51mm | 15 500 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm\n\niphone (2)\n- iPHONE 15 PLUS 128GB | 10 990 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/226505086-iphone-15-plus-128gb\n- Iphone 15 Pro Max | 11 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228250154-iphone-15-pro-max\n\niphone 2 (2)\n- APPLE iPhone 16 128GB Černý - ZÁRUKA - JAKO NOVÝ | 15 490 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228374816-apple-iphone-16-128gb-cerny-zaruka-jako-novy\n- Iphone 16 128GB | 12 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/228365198-iphone-16-128gb\n\nGarmin 8 Solar (1)\n- Garmin Fenix 7x Solar | 8 000 Kč | Sbazar\n  https://www.sbazar.cz/inzerat/227933335-garmin-fenix-7x-solar\n\nJiž zobrazené inzeráty:\n\nGarmin (0)\n- žádné\n\nKanon (0)\n- žádné\n\niphone (0)\n- žádné\n\niphone 2 (0)\n- žádné\n\nGarmin 8 Solar (0)\n- žádné\n\nChyby: žádné\n"
+    }
+  ]
 }
