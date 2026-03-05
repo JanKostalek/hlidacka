@@ -16,7 +16,13 @@ async function loadResults() {
   ]);
 
   const config = JSON.parse(configRaw);
-  const theme = config?.ui?.theme === "classic" ? "classic" : "glass";
+  const rawTheme = String(config?.ui?.theme || "").toLowerCase();
+  const theme =
+    rawTheme === "classic"
+      ? "classic"
+      : rawTheme === "glass-light"
+        ? "glass-light"
+        : "glass-dark";
 
   return {
     results: JSON.parse(resultsRaw),
@@ -109,7 +115,11 @@ export default async function Home() {
   ];
 
   return (
-    <main className={`page dashboardPage ${theme === "classic" ? "themeClassic" : "themeGlass"}`}>
+    <main
+      className={`page dashboardPage ${
+        theme === "classic" ? "themeClassic" : theme === "glass-light" ? "themeGlassLight" : "themeGlass"
+      }`}
+    >
       <section className="panel dashboardPanel heroPanel">
         <AdminPopupLink />
         <h1>Hlídačka bazarů</h1>

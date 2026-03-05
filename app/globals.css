@@ -871,6 +871,50 @@ button:disabled {
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
+.themeGlassLight .dashboardPanel {
+  border-color: rgba(91, 103, 125, 0.24);
+  background:
+    linear-gradient(158deg, rgba(238, 243, 249, 0.25), rgba(206, 216, 231, 0.25)),
+    linear-gradient(120deg, rgba(27, 33, 44, 0.07), rgba(255, 255, 255, 0.03) 35%, rgba(24, 29, 39, 0.07) 100%);
+  box-shadow:
+    0 22px 34px rgba(15, 23, 42, 0.1),
+    0 1px 0 rgba(255, 255, 255, 0.28) inset,
+    0 -10px 20px rgba(59, 72, 95, 0.12) inset;
+}
+
+.themeGlassLight .dashboardPanel:hover {
+  border-color: rgba(55, 66, 86, 0.42);
+  background:
+    linear-gradient(158deg, rgba(169, 179, 197, 0.5), rgba(136, 147, 167, 0.5)),
+    linear-gradient(120deg, rgba(12, 17, 26, 0.18), rgba(90, 101, 119, 0.1) 35%, rgba(10, 14, 23, 0.19) 100%);
+  box-shadow:
+    0 24px 38px rgba(8, 12, 20, 0.24),
+    0 1px 0 rgba(255, 255, 255, 0.2) inset,
+    0 -14px 24px rgba(10, 16, 28, 0.24) inset;
+}
+
+.themeGlassLight .statCard,
+.themeGlassLight .dashboardGroup {
+  border-color: rgba(87, 102, 128, 0.24);
+  background:
+    linear-gradient(160deg, rgba(234, 240, 248, 0.25), rgba(200, 211, 227, 0.25)),
+    linear-gradient(120deg, rgba(21, 26, 36, 0.06), rgba(255, 255, 255, 0.03));
+  box-shadow:
+    0 10px 18px rgba(15, 23, 42, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.themeGlassLight .statCard:hover,
+.themeGlassLight .dashboardGroup:hover {
+  border-color: rgba(52, 62, 80, 0.44);
+  background:
+    linear-gradient(160deg, rgba(165, 176, 194, 0.5), rgba(129, 140, 160, 0.5)),
+    linear-gradient(120deg, rgba(7, 11, 19, 0.18), rgba(82, 93, 112, 0.1));
+  box-shadow:
+    0 16px 26px rgba(8, 12, 20, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
 .adminPage {
   max-width: 1180px;
 }

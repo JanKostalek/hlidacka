@@ -1,6 +1,6 @@
 {
   "ui": {
-    "theme": "glass"
+    "theme": "glass-dark"
   },
   "notifications": {
     "emailTo": "jan.kostalek@gmail.com"

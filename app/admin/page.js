@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const PRICE_SLIDER_MAX = 100000;
+const PRICE_SLIDER_MAX = 50000;
 const PRICE_SLIDER_STEP = 10;
 
 function emptyWatch() {
@@ -37,8 +37,8 @@ export default function AdminPage() {
   const [discordOnlyWhenNew, setDiscordOnlyWhenNew] = useState(true);
   const [scheduleStartHour, setScheduleStartHour] = useState(0);
   const [scheduleIntervalHours, setScheduleIntervalHours] = useState(2);
-  const [uiTheme, setUiTheme] = useState("glass");
-  const [uiThemes, setUiThemes] = useState(["glass", "classic"]);
+  const [uiTheme, setUiTheme] = useState("glass-dark");
+  const [uiThemes, setUiThemes] = useState(["glass-dark", "glass-light", "classic"]);
   const [status, setStatus] = useState("Načítání...");
   const [saving, setSaving] = useState(false);
   const [clearing, setClearing] = useState(false);
@@ -80,8 +80,12 @@ export default function AdminPage() {
     setScheduleIntervalHours(
       Number.isInteger(data.schedule?.intervalHours) ? data.schedule.intervalHours : 2
     );
-    setUiTheme(data.uiTheme || "glass");
-    setUiThemes(Array.isArray(data.uiThemes) && data.uiThemes.length > 0 ? data.uiThemes : ["glass", "classic"]);
+    setUiTheme(data.uiTheme || "glass-dark");
+    setUiThemes(
+      Array.isArray(data.uiThemes) && data.uiThemes.length > 0
+        ? data.uiThemes
+        : ["glass-dark", "glass-light", "classic"]
+    );
     setStatus("Konfigurace načtena.");
   }
 
@@ -205,8 +209,12 @@ export default function AdminPage() {
     setScheduleIntervalHours(
       Number.isInteger(data.schedule?.intervalHours) ? data.schedule.intervalHours : 2
     );
-    setUiTheme(data.uiTheme || "glass");
-    setUiThemes(Array.isArray(data.uiThemes) && data.uiThemes.length > 0 ? data.uiThemes : ["glass", "classic"]);
+    setUiTheme(data.uiTheme || "glass-dark");
+    setUiThemes(
+      Array.isArray(data.uiThemes) && data.uiThemes.length > 0
+        ? data.uiThemes
+        : ["glass-dark", "glass-light", "classic"]
+    );
     setStatus("Uloženo.");
     setSaving(false);
   }
@@ -284,7 +292,8 @@ export default function AdminPage() {
   }
 
   function themeLabel(theme) {
-    if (theme === "glass") return "Sklo";
+    if (theme === "glass-dark") return "Sklo (Dark)";
+    if (theme === "glass-light") return "Sklo (Light)";
     if (theme === "classic") return "Klasický";
     return theme;
   }
@@ -332,7 +341,11 @@ export default function AdminPage() {
   return (
     <main
       className={`page dashboardPage adminPage ${
-        uiTheme === "classic" ? "themeClassic" : "themeGlass"
+        uiTheme === "classic"
+          ? "themeClassic"
+          : uiTheme === "glass-light"
+            ? "themeGlassLight"
+            : "themeGlass"
       }`}
     >
       <section className="panel dashboardPanel heroPanel adminHeroPanel">

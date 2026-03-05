@@ -16,8 +16,8 @@ const DEFAULT_SCHEDULE = {
   intervalHours: 2,
   cronExpression: "0 */2 * * *"
 };
-const SUPPORTED_THEMES = ["glass", "classic"];
-const PRICE_FILTER_MAX = 100000;
+const SUPPORTED_THEMES = ["glass-dark", "glass-light", "classic"];
+const PRICE_FILTER_MAX = 50000;
 
 function splitCsv(value) {
   return String(value || "")
@@ -42,8 +42,9 @@ function normalizePriceBound(input) {
   return Math.max(0, Math.round(num));
 }
 
-function normalizeTheme(input, fallback = "glass") {
+function normalizeTheme(input, fallback = "glass-dark") {
   const raw = String(input || "").trim().toLowerCase();
+  if (raw === "glass") return "glass-dark";
   if (SUPPORTED_THEMES.includes(raw)) return raw;
   return fallback;
 }
@@ -359,7 +360,7 @@ function adminModelToConfig(
     ...existingConfig,
     ui: {
       ...(existingConfig.ui || {}),
-      theme: normalizeTheme(existingConfig.ui?.theme || "glass")
+      theme: normalizeTheme(existingConfig.ui?.theme || "glass-dark")
     },
     watches,
     notifications
@@ -383,7 +384,7 @@ export async function GET(req) {
     return Response.json({
       watches: configToAdminModel(config),
       marketplaces: listSupportedMarketplaces(),
-      uiTheme: normalizeTheme(config.ui?.theme || "glass"),
+      uiTheme: normalizeTheme(config.ui?.theme || "glass-dark"),
       uiThemes: SUPPORTED_THEMES,
       notificationEmail:
         config.notifications?.emailTo || process.env.EMAIL_TO || "jan.kostalek@gmail.com",
@@ -435,7 +436,7 @@ export async function PUT(req) {
     );
     config.ui = {
       ...(config.ui || {}),
-      theme: normalizeTheme(body.uiTheme, config.ui?.theme || current.ui?.theme || "glass")
+      theme: normalizeTheme(body.uiTheme, config.ui?.theme || current.ui?.theme || "glass-dark")
     };
     const nextSchedule = normalizeScheduleInput(body.schedule, currentSchedule);
     // Two GitHub content updates to the same branch in parallel can cause 409 conflicts.
@@ -446,7 +447,7 @@ export async function PUT(req) {
       ok: true,
       watches: configToAdminModel(config),
       marketplaces: listSupportedMarketplaces(),
-      uiTheme: normalizeTheme(config.ui?.theme || "glass"),
+      uiTheme: normalizeTheme(config.ui?.theme || "glass-dark"),
       uiThemes: SUPPORTED_THEMES,
       notificationEmail:
         config.notifications?.emailTo || process.env.EMAIL_TO || "jan.kostalek@gmail.com",
