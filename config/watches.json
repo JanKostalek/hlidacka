@@ -1,63 +1,14 @@
 {
   "ui": {
-    "theme": "glass-dark"
+    "theme": "glass-light"
   },
   "notifications": {
-    "emailTo": "jan.kostalek@gmail.com"
+    "emailTo": "",
+    "emailOnlyWhenNew": false,
+    "emailEnabled": true,
+    "discordWebhook": "",
+    "discordOnlyWhenNew": true,
+    "discordEnabled": true
   },
-  "watches": [
-    {
-      "id": "lego-star-wars",
-      "name": "LEGO Star Wars",
-      "keywords": ["lego", "star wars"],
-      "excludeKeywords": ["rezervace", "prodano"],
-      "sources": [
-        {
-          "id": "sbazar",
-          "name": "Sbazar",
-          "url": "https://www.sbazar.cz/hledej/lego%20star%20wars",
-          "itemSelector": "article",
-          "titleSelector": "h3, h2, a",
-          "linkSelector": "a[href]",
-          "priceSelector": "[class*='price'], [data-e2e*='price']"
-        },
-        {
-          "id": "bazos",
-          "name": "Bazos",
-          "url": "https://deti.bazos.cz/?hledat=lego+star+wars",
-          "itemSelector": ".inzeraty.inzeratyflex",
-          "titleSelector": ".nadpis",
-          "linkSelector": "a[href]",
-          "priceSelector": ".cena"
-        },
-        {
-          "id": "paladix",
-          "name": "Paladix",
-          "url": "https://www.paladix.cz/bazar/?s=lego%20star%20wars",
-          "itemSelector": "article.pldx_ad",
-          "titleSelector": "h2.entry-title a",
-          "linkSelector": "h2.entry-title a[href]",
-          "priceSelector": ".entry-meta .price"
-        }
-      ]
-    },
-    {
-      "id": "paladix-nikon-z7-test-20260304",
-      "name": "Paladix Nikon Z7 test 20260304",
-      "query": "nikon Z7",
-      "keywords": ["nikon", "z7"],
-      "excludeKeywords": [],
-      "sources": [
-        {
-          "id": "paladix",
-          "name": "Paladix",
-          "url": "https://www.paladix.cz/bazar/?s=nikon%20Z7",
-          "itemSelector": "article.pldx_ad",
-          "titleSelector": "h2.entry-title a",
-          "linkSelector": "h2.entry-title a[href]",
-          "priceSelector": ".entry-meta .price"
-        }
-      ]
-    }
-  ]
+  "watches": []
 }
