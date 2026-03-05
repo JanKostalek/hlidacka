@@ -1,39 +1,13 @@
 {
-  "runAt": "2026-03-05T10:06:43.477Z",
+  "runAt": "2026-03-05T10:30:44.525Z",
   "summary": {
     "totalWatches": 5,
     "totalSources": 9,
-    "totalFoundItems": 22,
-    "totalNewItems": 16,
+    "totalFoundItems": 24,
+    "totalNewItems": 2,
     "errorCount": 0
   },
   "newItemsByWatch": [
-    {
-      "watchId": "garmin",
-      "watchName": "Garmin",
-      "items": [
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "GARMIN Fenix 8 AMOLED Sapphire 51mm Titan – záruka",
-          "price": "17 999 Kč",
-          "link": "https://mobil.bazos.cz/inzerat/215782110/garmin-fenix-8-amoled-sapphire-51mm-titan-zaruka.php",
-          "foundAt": "2026-03-05T10:06:43.477Z"
-        },
-        {
-          "watchId": "garmin",
-          "watchName": "Garmin",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Garmin Tactix 7 Amoled",
-          "price": "14 000 Kč",
-          "link": "https://mobil.bazos.cz/inzerat/215149242/garmin-tactix-7-amoled.php",
-          "foundAt": "2026-03-05T10:06:43.477Z"
-        }
-      ]
-    },
     {
       "watchId": "iphone",
       "watchName": "iphone",
@@ -41,148 +15,28 @@
         {
           "watchId": "iphone",
           "watchName": "iphone",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "Iphone 15 Pro Max 512GB modrý titan",
-          "price": "16 000 Kč",
-          "link": "https://mobil.bazos.cz/inzerat/215483933/iphone-15-pro-max-512gb-modry-titan.php",
-          "foundAt": "2026-03-05T10:06:43.477Z"
-        },
-        {
-          "watchId": "iphone",
-          "watchName": "iphone",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "APPLE IPHONE 15 256 GB,24 MĚS.ZÁRUKA,NOVÝ,NEPOUŽITÝ",
-          "price": "13 990 Kč",
-          "link": "https://mobil.bazos.cz/inzerat/215540784/apple-iphone-15-256-gb24-meszarukanovynepouzity.php",
-          "foundAt": "2026-03-05T10:06:43.477Z"
-        },
-        {
-          "watchId": "iphone",
-          "watchName": "iphone",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "iPhone 15 Pro 128GB",
-          "price": "14 000 Kč",
-          "link": "https://mobil.bazos.cz/inzerat/215357778/iphone-15-pro-128gb.php",
-          "foundAt": "2026-03-05T10:06:43.477Z"
-        },
-        {
-          "watchId": "iphone",
-          "watchName": "iphone",
           "sourceId": "sbazar",
           "sourceName": "Sbazar",
-          "title": "APPLE iPhone 15 Pro 128GB Modrý titan - ZÁRUKA",
-          "price": "13 990 Kč",
-          "link": "https://www.sbazar.cz/inzerat/228373775-apple-iphone-15-pro-128gb-modry-titan-zaruka",
-          "foundAt": "2026-03-05T10:06:43.477Z"
-        },
-        {
-          "watchId": "iphone",
-          "watchName": "iphone",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Ochranný kryt Apple Iphone 15",
-          "price": "100 Kč",
-          "link": "https://www.sbazar.cz/inzerat/205179468-ochranny-kryt-apple-iphone-15",
-          "foundAt": "2026-03-05T10:06:43.477Z"
-        },
-        {
-          "watchId": "iphone",
-          "watchName": "iphone",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "iPhone 15 Pro (modrý titan)",
-          "price": "12 000 Kč",
-          "link": "https://www.sbazar.cz/inzerat/228369971-iphone-15-pro-modry-titan",
-          "foundAt": "2026-03-05T10:06:43.477Z"
-        },
-        {
-          "watchId": "iphone",
-          "watchName": "iphone",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Iphone 15 pro max kryt spigen",
-          "price": "200 Kč",
-          "link": "https://www.sbazar.cz/inzerat/223051648-iphone-15-pro-max-kryt-spigen",
-          "foundAt": "2026-03-05T10:06:43.477Z"
-        },
-        {
-          "watchId": "iphone",
-          "watchName": "iphone",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Iphone 15 Pro Max 256GB, bílý, top stav!",
-          "price": "15 000 Kč",
-          "link": "https://www.sbazar.cz/inzerat/227964175-iphone-15-pro-max-256gb-bily-top-stav",
-          "foundAt": "2026-03-05T10:06:43.477Z"
-        },
-        {
-          "watchId": "iphone",
-          "watchName": "iphone",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Nový alza guard iphone 15 kryt nepoužitý",
-          "price": "200 Kč",
-          "link": "https://www.sbazar.cz/inzerat/223044277-novy-alza-guard-iphone-15-kryt-nepouzity",
-          "foundAt": "2026-03-05T10:06:43.477Z"
-        },
-        {
-          "watchId": "iphone",
-          "watchName": "iphone",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Iphone 15 Pro Max 256GB, černý, top stav!",
-          "price": "15 000 Kč",
-          "link": "https://www.sbazar.cz/inzerat/227964508-iphone-15-pro-max-256gb-cerny-top-stav",
-          "foundAt": "2026-03-05T10:06:43.477Z"
-        },
-        {
-          "watchId": "iphone",
-          "watchName": "iphone",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "iPhone 15 Pro Max 256GB přírodní titan",
-          "price": "15 000 Kč",
-          "link": "https://www.sbazar.cz/inzerat/225293761-iphone-15-pro-max-256gb-prirodni-titan",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "title": "iPhone 15 Pro Titan",
+          "price": "13 500 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228326351-iphone-15-pro-titan",
+          "foundAt": "2026-03-05T10:30:44.525Z"
         }
       ]
     },
     {
-      "watchId": "garmin-8-solar",
-      "watchName": "Garmin 8 Solar",
+      "watchId": "iphone-2",
+      "watchName": "iphone 2",
       "items": [
         {
-          "watchId": "garmin-8-solar",
-          "watchName": "Garmin 8 Solar",
-          "sourceId": "bazos",
-          "sourceName": "Bazos",
-          "title": "GARMIN Fenix 7x solar",
-          "price": "10 000 Kč",
-          "link": "https://mobil.bazos.cz/inzerat/215215319/garmin-fenix-7x-solar.php",
-          "foundAt": "2026-03-05T10:06:43.477Z"
-        },
-        {
-          "watchId": "garmin-8-solar",
-          "watchName": "Garmin 8 Solar",
+          "watchId": "iphone-2",
+          "watchName": "iphone 2",
           "sourceId": "sbazar",
           "sourceName": "Sbazar",
-          "title": "Garmin Fenix 7 Solar Sapphire Pro 51",
-          "price": "10 500 Kč",
-          "link": "https://www.sbazar.cz/inzerat/228308150-garmin-fenix-7-solar-sapphire-pro-51",
-          "foundAt": "2026-03-05T10:06:43.477Z"
-        },
-        {
-          "watchId": "garmin-8-solar",
-          "watchName": "Garmin 8 Solar",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Garmin Fenix 7 Sapphire Solar",
-          "price": "7 000 Kč",
-          "link": "https://www.sbazar.cz/inzerat/228067723-garmin-fenix-7-sapphire-solar",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "title": "iPhone 16 Pro 128GB Natural Titan, 1 rok záruka",
+          "price": "14 500 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228376898-iphone-16-pro-128gb-natural-titan-1-rok-zaruka",
+          "foundAt": "2026-03-05T10:30:44.525Z"
         }
       ]
     }
@@ -200,7 +54,7 @@
           "title": "GARMIN Fenix 8 AMOLED Sapphire 51mm Titan – záruka",
           "price": "17 999 Kč",
           "link": "https://mobil.bazos.cz/inzerat/215782110/garmin-fenix-8-amoled-sapphire-51mm-titan-zaruka.php",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "garmin",
@@ -210,7 +64,7 @@
           "title": "Garmin Tactix 7 Amoled",
           "price": "14 000 Kč",
           "link": "https://mobil.bazos.cz/inzerat/215149242/garmin-tactix-7-amoled.php",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "garmin",
@@ -220,7 +74,7 @@
           "title": "Garmin Fenix 8 Amoled 51mm",
           "price": "15 500 Kč",
           "link": "https://www.sbazar.cz/inzerat/228284876-garmin-fenix-8-amoled-51mm",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         }
       ]
     },
@@ -241,7 +95,7 @@
           "title": "Iphone 15 Pro Max 512GB modrý titan",
           "price": "16 000 Kč",
           "link": "https://mobil.bazos.cz/inzerat/215483933/iphone-15-pro-max-512gb-modry-titan.php",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "iphone",
@@ -251,7 +105,7 @@
           "title": "APPLE IPHONE 15 256 GB,24 MĚS.ZÁRUKA,NOVÝ,NEPOUŽITÝ",
           "price": "13 990 Kč",
           "link": "https://mobil.bazos.cz/inzerat/215540784/apple-iphone-15-256-gb24-meszarukanovynepouzity.php",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "iphone",
@@ -261,7 +115,17 @@
           "title": "iPhone 15 Pro 128GB",
           "price": "14 000 Kč",
           "link": "https://mobil.bazos.cz/inzerat/215357778/iphone-15-pro-128gb.php",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
+        },
+        {
+          "watchId": "iphone",
+          "watchName": "iphone",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "iPhone 15 Pro Titan",
+          "price": "13 500 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228326351-iphone-15-pro-titan",
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "iphone",
@@ -271,7 +135,7 @@
           "title": "APPLE iPhone 15 Pro 128GB Modrý titan - ZÁRUKA",
           "price": "13 990 Kč",
           "link": "https://www.sbazar.cz/inzerat/228373775-apple-iphone-15-pro-128gb-modry-titan-zaruka",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "iphone",
@@ -281,7 +145,7 @@
           "title": "Ochranný kryt Apple Iphone 15",
           "price": "100 Kč",
           "link": "https://www.sbazar.cz/inzerat/205179468-ochranny-kryt-apple-iphone-15",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "iphone",
@@ -291,7 +155,7 @@
           "title": "iPHONE 15 PLUS 128GB",
           "price": "10 990 Kč",
           "link": "https://www.sbazar.cz/inzerat/226505086-iphone-15-plus-128gb",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "iphone",
@@ -301,7 +165,7 @@
           "title": "iPhone 15 Pro (modrý titan)",
           "price": "12 000 Kč",
           "link": "https://www.sbazar.cz/inzerat/228369971-iphone-15-pro-modry-titan",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "iphone",
@@ -311,7 +175,7 @@
           "title": "Iphone 15 Pro Max",
           "price": "11 000 Kč",
           "link": "https://www.sbazar.cz/inzerat/228250154-iphone-15-pro-max",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "iphone",
@@ -321,7 +185,7 @@
           "title": "Iphone 15 pro max kryt spigen",
           "price": "200 Kč",
           "link": "https://www.sbazar.cz/inzerat/223051648-iphone-15-pro-max-kryt-spigen",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "iphone",
@@ -331,17 +195,7 @@
           "title": "Iphone 15 Pro Max 256GB, bílý, top stav!",
           "price": "15 000 Kč",
           "link": "https://www.sbazar.cz/inzerat/227964175-iphone-15-pro-max-256gb-bily-top-stav",
-          "foundAt": "2026-03-05T10:06:43.477Z"
-        },
-        {
-          "watchId": "iphone",
-          "watchName": "iphone",
-          "sourceId": "sbazar",
-          "sourceName": "Sbazar",
-          "title": "Nový alza guard iphone 15 kryt nepoužitý",
-          "price": "200 Kč",
-          "link": "https://www.sbazar.cz/inzerat/223044277-novy-alza-guard-iphone-15-kryt-nepouzity",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "iphone",
@@ -351,7 +205,17 @@
           "title": "Iphone 15 Pro Max 256GB, černý, top stav!",
           "price": "15 000 Kč",
           "link": "https://www.sbazar.cz/inzerat/227964508-iphone-15-pro-max-256gb-cerny-top-stav",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
+        },
+        {
+          "watchId": "iphone",
+          "watchName": "iphone",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
+          "title": "Nový alza guard iphone 15 kryt nepoužitý",
+          "price": "200 Kč",
+          "link": "https://www.sbazar.cz/inzerat/223044277-novy-alza-guard-iphone-15-kryt-nepouzity",
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "iphone",
@@ -361,7 +225,7 @@
           "title": "iPhone 15 Pro Max 256GB přírodní titan",
           "price": "15 000 Kč",
           "link": "https://www.sbazar.cz/inzerat/225293761-iphone-15-pro-max-256gb-prirodni-titan",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         }
       ]
     },
@@ -374,10 +238,20 @@
           "watchName": "iphone 2",
           "sourceId": "sbazar",
           "sourceName": "Sbazar",
+          "title": "iPhone 16 Pro 128GB Natural Titan, 1 rok záruka",
+          "price": "14 500 Kč",
+          "link": "https://www.sbazar.cz/inzerat/228376898-iphone-16-pro-128gb-natural-titan-1-rok-zaruka",
+          "foundAt": "2026-03-05T10:30:44.525Z"
+        },
+        {
+          "watchId": "iphone-2",
+          "watchName": "iphone 2",
+          "sourceId": "sbazar",
+          "sourceName": "Sbazar",
           "title": "APPLE iPhone 16 128GB Černý - ZÁRUKA - JAKO NOVÝ",
           "price": "15 490 Kč",
           "link": "https://www.sbazar.cz/inzerat/228374816-apple-iphone-16-128gb-cerny-zaruka-jako-novy",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "iphone-2",
@@ -387,7 +261,7 @@
           "title": "Iphone 16 128GB",
           "price": "12 000 Kč",
           "link": "https://www.sbazar.cz/inzerat/228365198-iphone-16-128gb",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         }
       ]
     },
@@ -403,7 +277,7 @@
           "title": "GARMIN Fenix 7x solar",
           "price": "10 000 Kč",
           "link": "https://mobil.bazos.cz/inzerat/215215319/garmin-fenix-7x-solar.php",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "garmin-8-solar",
@@ -413,7 +287,7 @@
           "title": "Garmin Fenix 7 Solar Sapphire Pro 51",
           "price": "10 500 Kč",
           "link": "https://www.sbazar.cz/inzerat/228308150-garmin-fenix-7-solar-sapphire-pro-51",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "garmin-8-solar",
@@ -423,7 +297,7 @@
           "title": "Garmin Fenix 7x Solar",
           "price": "8 000 Kč",
           "link": "https://www.sbazar.cz/inzerat/227933335-garmin-fenix-7x-solar",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         },
         {
           "watchId": "garmin-8-solar",
@@ -433,7 +307,7 @@
           "title": "Garmin Fenix 7 Sapphire Solar",
           "price": "7 000 Kč",
           "link": "https://www.sbazar.cz/inzerat/228067723-garmin-fenix-7-sapphire-solar",
-          "foundAt": "2026-03-05T10:06:43.477Z"
+          "foundAt": "2026-03-05T10:30:44.525Z"
         }
       ]
     }

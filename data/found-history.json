@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-05T10:06:43.477Z",
+  "updatedAt": "2026-03-05T10:30:44.525Z",
   "byWatch": {
     "garmin": [
       {
@@ -31,6 +31,15 @@
       }
     ],
     "iphone": [
+      {
+        "watchId": "iphone",
+        "watchName": "iphone",
+        "sourceName": "Sbazar",
+        "title": "iPhone 15 Pro Titan",
+        "price": "13 500 Kč",
+        "link": "https://www.sbazar.cz/inzerat/228326351-iphone-15-pro-titan",
+        "firstSeenAt": "2026-03-05T10:30:44.525Z"
+      },
       {
         "watchId": "iphone",
         "watchName": "iphone",
@@ -150,6 +159,15 @@
       }
     ],
     "iphone-2": [
+      {
+        "watchId": "iphone-2",
+        "watchName": "iphone 2",
+        "sourceName": "Sbazar",
+        "title": "iPhone 16 Pro 128GB Natural Titan, 1 rok záruka",
+        "price": "14 500 Kč",
+        "link": "https://www.sbazar.cz/inzerat/228376898-iphone-16-pro-128gb-natural-titan-1-rok-zaruka",
+        "firstSeenAt": "2026-03-05T10:30:44.525Z"
+      },
       {
         "watchId": "iphone-2",
         "watchName": "iphone 2",
