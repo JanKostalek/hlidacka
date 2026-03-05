@@ -15,32 +15,8 @@ const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36";
 
 const nowIso = new Date().toISOString();
-const BAZOS_DEFAULT_CATEGORY_HOSTS = [
-  "auto",
-  "deti",
-  "dum",
-  "elektro",
-  "foto",
-  "hudba",
-  "knihy",
-  "mobil",
-  "motorky",
-  "nabytek",
-  "obleceni",
-  "ostatni",
-  "pc",
-  "prace",
-  "reality",
-  "sluzby",
-  "sport",
-  "stroje",
-  "vstupenky",
-  "zvirata"
-];
 const BAZOS_GLOBAL_PAGE_SIZE = 20;
 const BAZOS_MAX_GLOBAL_PAGES = 12;
-
-let bazosCategoryHostsCache = null;
 
 async function ensureDir(dirPath) {
   await fs.mkdir(dirPath, { recursive: true });
@@ -181,34 +157,7 @@ async function fetchSbazarItems(query, limit = 80) {
   return results.map(mapSbazarItemToCandidate).filter((item) => item.title || item.link);
 }
 
-async function fetchBazosCategoryHosts() {
-  if (Array.isArray(bazosCategoryHostsCache) && bazosCategoryHostsCache.length > 0) {
-    return bazosCategoryHostsCache;
-  }
-
-  try {
-    const homeHtml = await fetchHtml("https://www.bazos.cz/");
-    const hosts = new Set();
-    const pattern = /https?:\/\/([a-z0-9-]+)\.bazos\.cz\//gi;
-    let match = pattern.exec(homeHtml);
-    while (match) {
-      const host = String(match[1] || "").toLowerCase().trim();
-      if (host && host !== "www") hosts.add(host);
-      match = pattern.exec(homeHtml);
-    }
-    if (hosts.size > 0) {
-      bazosCategoryHostsCache = Array.from(hosts);
-      return bazosCategoryHostsCache;
-    }
-  } catch {
-    // Fallback below.
-  }
-
-  bazosCategoryHostsCache = [...BAZOS_DEFAULT_CATEGORY_HOSTS];
-  return bazosCategoryHostsCache;
-}
-
-function buildBazosSearchUrls(query, categoryHosts = [], maxGlobalPages = BAZOS_MAX_GLOBAL_PAGES) {
+function buildBazosSearchUrls(query, maxGlobalPages = BAZOS_MAX_GLOBAL_PAGES) {
   const phrase = String(query || "").trim();
   if (!phrase) return [];
 
@@ -231,13 +180,15 @@ function buildBazosSearchUrls(query, categoryHosts = [], maxGlobalPages = BAZOS_
     urls.push(globalUrl.toString());
   }
 
-  for (const host of categoryHosts) {
-    const cleanHost = String(host || "").trim().toLowerCase();
-    if (!cleanHost || cleanHost === "www") continue;
-    urls.push(`https://${cleanHost}.bazos.cz/?hledat=${encodeURIComponent(phrase)}`);
-  }
-
   return Array.from(new Set(urls));
+}
+
+function parseBazosTotalCount(html) {
+  const text = normalizeWhitespace(String(html || "").toLowerCase());
+  const match = text.match(/zobrazeno\s+\d+\s*-\s*\d+\s+inzer[aá]t[ůu]\s+z\s+(\d+)/i);
+  if (!match) return null;
+  const total = Number.parseInt(match[1], 10);
+  return Number.isFinite(total) && total > 0 ? total : null;
 }
 
 function buildBazosPhrasesFromWatch(watch = {}) {
@@ -256,23 +207,35 @@ async function fetchBazosItems(watch, source, maxGlobalPages = BAZOS_MAX_GLOBAL_
   const phrases = buildBazosPhrasesFromWatch(watch);
   if (phrases.length === 0) return [];
 
-  const categoryHosts = await fetchBazosCategoryHosts();
-  const urls = Array.from(
-    new Set(
-      phrases.flatMap((phrase) =>
-        buildBazosSearchUrls(phrase, categoryHosts, maxGlobalPages)
-      )
-    )
-  );
   const items = [];
 
-  for (const url of urls) {
+  for (const phrase of phrases) {
+    const firstUrl = buildBazosSearchUrls(phrase, 1)[0];
+    if (!firstUrl) continue;
+
     try {
-      const html = await fetchHtml(url);
-      const parsedItems = extractItemsFromPage(html, { ...source, url });
-      items.push(...parsedItems);
+      const firstHtml = await fetchHtml(firstUrl);
+      items.push(...extractItemsFromPage(firstHtml, { ...source, url: firstUrl }));
+
+      const totalCount = parseBazosTotalCount(firstHtml);
+      const pagesFromCount =
+        totalCount && totalCount > 0
+          ? Math.ceil(totalCount / BAZOS_GLOBAL_PAGE_SIZE)
+          : 1;
+      const pagesToFetch = Math.max(1, Math.min(maxGlobalPages, pagesFromCount));
+      if (pagesToFetch <= 1) continue;
+
+      const pageUrls = buildBazosSearchUrls(phrase, pagesToFetch).slice(1);
+      for (const pageUrl of pageUrls) {
+        try {
+          const pageHtml = await fetchHtml(pageUrl);
+          items.push(...extractItemsFromPage(pageHtml, { ...source, url: pageUrl }));
+        } catch (err) {
+          console.warn(`Bazos fetch warning (${pageUrl}): ${describeFetchError(err)}`);
+        }
+      }
     } catch (err) {
-      console.warn(`Bazos fetch warning (${url}): ${describeFetchError(err)}`);
+      console.warn(`Bazos fetch warning (${firstUrl}): ${describeFetchError(err)}`);
     }
   }
 
