@@ -1,6 +1,3 @@
-# Hlídačka bazarů - 2026-03-05T19:46:38.558Z
+# Hlidacka bazaru
 
-- Kontrolováno dotazů: **1**
-- Kontrolováno zdrojů: **2**
-- Nalezeno nových inzerátů: **0**
-- Chyby: **0**
+Historie byla vycistena.
