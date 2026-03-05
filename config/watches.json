@@ -17,10 +17,11 @@
       "query": "Garmin",
       "keywords": [
         "Fenix",
-        "8",
-        "Solar"
+        "8"
       ],
-      "excludeKeywords": [],
+      "excludeKeywords": [
+        "PRO"
+      ],
       "priceMin": null,
       "priceMax": null,
       "sources": [
