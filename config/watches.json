@@ -19,9 +19,7 @@
         "Fenix",
         "8"
       ],
-      "excludeKeywords": [
-        "PRO"
-      ],
+      "excludeKeywords": [],
       "priceMin": null,
       "priceMax": null,
       "sources": [
