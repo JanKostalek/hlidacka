@@ -356,9 +356,72 @@ button:disabled {
 
 .adminActions {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 10px;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.themeSelectWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-2);
+  font-weight: 700;
+}
+
+.themeSelectWrap select {
+  min-width: 160px;
+  border-radius: 11px;
+  border: 1px solid #bed0e4;
+  background: rgba(255, 255, 255, 0.93);
+  color: var(--ink-1);
+  padding: 10px 11px;
+  font-size: 0.96rem;
+}
+
+.priceFilterWrap {
+  margin-top: 10px;
+  border: 1px solid rgba(187, 205, 227, 0.9);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 10px 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.priceFilterWrap label {
+  font-size: 14px;
+  color: var(--ink-2);
+  font-weight: 700;
+}
+
+.priceFilterValue {
+  font-size: 14px;
+  color: #1f3653;
+  font-weight: 700;
+}
+
+.priceSliders {
+  display: grid;
+  gap: 8px;
+}
+
+.priceSliderRow {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.priceSliderRow span {
+  font-size: 13px;
+  color: var(--ink-3);
+  font-weight: 700;
+}
+
+.priceSliderRow input[type="range"] {
+  padding: 0;
 }
 
 .historyTableWrap {
@@ -462,6 +525,51 @@ button:disabled {
   .page > .panel {
     animation: none;
   }
+}
+
+.themeClassic.dashboardPage::before,
+.themeClassic.dashboardPage::after {
+  display: none;
+}
+
+.themeClassic .dashboardPanel {
+  border: 1px solid rgba(201, 216, 234, 0.85);
+  background: var(--card);
+  box-shadow:
+    0 14px 40px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+}
+
+.themeClassic .dashboardPanel:hover {
+  transform: none;
+  border-color: rgba(201, 216, 234, 0.85);
+  box-shadow:
+    0 14px 40px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.themeClassic .dashboardPanel::after {
+  display: none;
+}
+
+.themeClassic .dashboardPanel::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.45), transparent 38%);
+  mix-blend-mode: normal;
+}
+
+.themeClassic .statCard,
+.themeClassic .dashboardGroup {
+  border: 1px solid rgba(191, 208, 229, 0.9);
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.94), rgba(245, 251, 255, 0.94));
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+.themeClassic .statCard:hover,
+.themeClassic .dashboardGroup:hover {
+  transform: none;
+  border-color: rgba(191, 208, 229, 0.9);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
 }
 
 @media (max-width: 920px) {

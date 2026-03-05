@@ -16,6 +16,8 @@ const DEFAULT_SCHEDULE = {
   intervalHours: 2,
   cronExpression: "0 */2 * * *"
 };
+const SUPPORTED_THEMES = ["glass", "classic"];
+const PRICE_FILTER_MAX = 2000000;
 
 function splitCsv(value) {
   return String(value || "")
@@ -31,6 +33,19 @@ function slugify(input) {
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+function normalizePriceBound(input) {
+  if (input === null || input === undefined || input === "") return null;
+  const num = Number(input);
+  if (!Number.isFinite(num)) return null;
+  return Math.max(0, Math.round(num));
+}
+
+function normalizeTheme(input, fallback = "glass") {
+  const raw = String(input || "").trim().toLowerCase();
+  if (SUPPORTED_THEMES.includes(raw)) return raw;
+  return fallback;
 }
 
 async function readConfig() {
@@ -262,6 +277,8 @@ function configToAdminModel(config) {
       query: watch.query || (watch.keywords || []).join(" "),
       keywordsCsv: (watch.keywords || []).join(", "),
       excludeKeywordsCsv: (watch.excludeKeywords || []).join(", "),
+      priceMin: normalizePriceBound(watch.priceMin) ?? 0,
+      priceMax: normalizePriceBound(watch.priceMax) ?? PRICE_FILTER_MAX,
       marketplaces
     };
   });
@@ -298,12 +315,26 @@ function adminModelToConfig(
       }
       usedIds.add(id);
 
+      const priceMin = normalizePriceBound(watch.priceMin);
+      const priceMax = normalizePriceBound(watch.priceMax);
+      const safePriceMin =
+        priceMin !== null && priceMax !== null ? Math.min(priceMin, priceMax) : priceMin;
+      const safePriceMax =
+        priceMin !== null && priceMax !== null ? Math.max(priceMin, priceMax) : priceMax;
+      const hasDefaultOpenRange =
+        (safePriceMin === null || safePriceMin <= 0) &&
+        (safePriceMax === null || safePriceMax >= PRICE_FILTER_MAX);
+      const outPriceMin = hasDefaultOpenRange ? null : safePriceMin;
+      const outPriceMax = hasDefaultOpenRange ? null : safePriceMax;
+
       return {
         id,
         name,
         query,
         keywords: splitCsv(watch.keywordsCsv),
         excludeKeywords: splitCsv(watch.excludeKeywordsCsv),
+        priceMin: outPriceMin,
+        priceMax: outPriceMax,
         sources: buildSourcesForQuery(query, marketplaces)
       };
     })
@@ -321,6 +352,10 @@ function adminModelToConfig(
 
   return {
     ...existingConfig,
+    ui: {
+      ...(existingConfig.ui || {}),
+      theme: normalizeTheme(existingConfig.ui?.theme || "glass")
+    },
     watches,
     notifications
   };
@@ -343,6 +378,8 @@ export async function GET(req) {
     return Response.json({
       watches: configToAdminModel(config),
       marketplaces: listSupportedMarketplaces(),
+      uiTheme: normalizeTheme(config.ui?.theme || "glass"),
+      uiThemes: SUPPORTED_THEMES,
       notificationEmail:
         config.notifications?.emailTo || process.env.EMAIL_TO || "jan.kostalek@gmail.com",
       emailEnabled:
@@ -391,6 +428,10 @@ export async function PUT(req) {
       body.discordEnabled,
       current
     );
+    config.ui = {
+      ...(config.ui || {}),
+      theme: normalizeTheme(body.uiTheme, config.ui?.theme || current.ui?.theme || "glass")
+    };
     const nextSchedule = normalizeScheduleInput(body.schedule, currentSchedule);
     // Two GitHub content updates to the same branch in parallel can cause 409 conflicts.
     await writeConfig(config, "web-admin");
@@ -400,6 +441,8 @@ export async function PUT(req) {
       ok: true,
       watches: configToAdminModel(config),
       marketplaces: listSupportedMarketplaces(),
+      uiTheme: normalizeTheme(config.ui?.theme || "glass"),
+      uiThemes: SUPPORTED_THEMES,
       notificationEmail:
         config.notifications?.emailTo || process.env.EMAIL_TO || "jan.kostalek@gmail.com",
       emailEnabled: Boolean(config.notifications?.emailEnabled),

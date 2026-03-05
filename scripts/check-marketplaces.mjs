@@ -61,9 +61,9 @@ function formatPriceCzk(value) {
   return `${new Intl.NumberFormat("cs-CZ").format(Math.round(value))} Kč`;
 }
 
-function extractPriceFromText(input) {
+function extractPriceNumberFromText(input) {
   const text = normalizeWhitespace(String(input || "").replace(/\u00a0/g, " "));
-  if (!text) return "";
+  if (!text) return null;
 
   const normalized = normalizeForMatch(text);
   if (
@@ -71,16 +71,21 @@ function extractPriceFromText(input) {
     normalized.includes("na dotaz") ||
     normalized.includes("nabidnete")
   ) {
-    return "";
+    return null;
   }
 
   const match = text.match(/(\d{1,3}(?:[ .]\d{3})+|\d{3,})\s*(kč|kc|czk)\b/i);
-  if (!match) return "";
+  if (!match) return null;
 
   const digits = match[1].replace(/[^\d]/g, "");
-  if (!digits) return "";
+  if (!digits) return null;
 
   const amount = Number.parseInt(digits, 10);
+  return Number.isFinite(amount) ? amount : null;
+}
+
+function extractPriceFromText(input) {
+  const amount = extractPriceNumberFromText(input);
   return Number.isFinite(amount) ? formatPriceCzk(amount) : "";
 }
 
@@ -118,8 +123,11 @@ function mapSbazarItemToCandidate(item) {
   const seoName = String(item?.seo_name || item?.id || "").trim();
   const link = seoName ? `https://www.sbazar.cz/inzerat/${seoName}` : "";
   const price = formatSbazarPrice(item);
+  const priceAmount =
+    extractPriceNumberFromText(price) ||
+    (typeof item?.price === "number" && Number.isFinite(item.price) ? item.price : null);
   const matchText = `${title} ${price}`;
-  return { title, link, price, matchText };
+  return { title, link, price, priceAmount, matchText };
 }
 
 async function fetchSbazarItems(query, limit = 80) {
@@ -202,8 +210,12 @@ function extractFromCard($, card, source, sourceUrl) {
     parsedPriceFromSelector ||
     priceFromSelectorRaw ||
     extractPriceFromText(matchText);
+  const priceAmount =
+    extractPriceNumberFromText(priceFromSelectorRaw) ||
+    extractPriceNumberFromText(price) ||
+    extractPriceNumberFromText(matchText);
 
-  return { title, link, price, matchText };
+  return { title, link, price, priceAmount, matchText };
 }
 
 function extractItemsFromPage(html, source) {
@@ -233,7 +245,8 @@ function extractItemsFromPage(html, source) {
       );
       const matchText = containerText || title;
       const price = extractPriceFromText(matchText);
-      items.push({ title, link, price, matchText });
+      const priceAmount = extractPriceNumberFromText(price) || extractPriceNumberFromText(matchText);
+      items.push({ title, link, price, priceAmount, matchText });
     });
   }
 
@@ -254,7 +267,8 @@ function extractItemsFromPage(html, source) {
       );
       const matchText = containerText || title;
       const price = extractPriceFromText(matchText);
-      items.push({ title, link, price, matchText });
+      const priceAmount = extractPriceNumberFromText(price) || extractPriceNumberFromText(matchText);
+      items.push({ title, link, price, priceAmount, matchText });
     });
   }
 
@@ -290,6 +304,31 @@ function buildRequestHeaders(url) {
         }
       : {})
   };
+}
+
+function normalizePriceBound(input) {
+  if (input === null || input === undefined || input === "") return null;
+  const num = Number(input);
+  if (!Number.isFinite(num)) return null;
+  return Math.max(0, Math.round(num));
+}
+
+function matchesPriceRange(candidate, watch) {
+  const minPrice = normalizePriceBound(watch?.priceMin);
+  const maxPrice = normalizePriceBound(watch?.priceMax);
+  const hasRange = minPrice !== null || maxPrice !== null;
+  if (!hasRange) return true;
+
+  const candidatePrice =
+    (typeof candidate?.priceAmount === "number" && Number.isFinite(candidate.priceAmount)
+      ? Math.round(candidate.priceAmount)
+      : null) ||
+    extractPriceNumberFromText(candidate?.price || "");
+
+  if (!Number.isFinite(candidatePrice)) return false;
+  if (minPrice !== null && candidatePrice < minPrice) return false;
+  if (maxPrice !== null && candidatePrice > maxPrice) return false;
+  return true;
 }
 
 function describeFetchError(err) {
@@ -481,6 +520,10 @@ function buildReport(results) {
   return lines.join("\n");
 }
 
+function escapeDiscordLinkLabel(input) {
+  return String(input || "").replace(/[[\]()`]/g, "\\$&");
+}
+
 async function sendDiscordNotification(config, results, alreadyDisplayedByWatch = {}) {
   const DISCORD_MAX_CONTENT = 1800;
   const webhook = config.notifications?.discordWebhook || process.env.DISCORD_WEBHOOK_URL;
@@ -538,9 +581,8 @@ async function sendDiscordNotification(config, results, alreadyDisplayedByWatch 
     } else {
       for (const item of items) {
         const pricePart = item.price ? ` | ${item.price}` : "";
-        // Wrap links in <> so Discord keeps plain text and does not render rich embeds.
-        lines.push(`- ${item.title} (${item.sourceName}${pricePart})`);
-        lines.push(`  <${item.link}>`);
+        const linkLabel = escapeDiscordLinkLabel(item.title || "(bez názvu)");
+        lines.push(`- [${linkLabel}](${item.link}) | ${item.sourceName}${pricePart}`);
       }
     }
 
@@ -931,6 +973,9 @@ async function main() {
           if (
             !includesKeywords(text, watch.keywords || [], watch.excludeKeywords || [])
           ) {
+            continue;
+          }
+          if (!matchesPriceRange(candidate, watch)) {
             continue;
           }
           matchedForSource += 1;

@@ -7,16 +7,22 @@ async function loadResults() {
   const resultsPath = path.join(process.cwd(), "data", "latest-results.json");
   const historyPath = path.join(process.cwd(), "data", "run-history.json");
   const foundHistoryPath = path.join(process.cwd(), "data", "found-history.json");
-  const [resultsRaw, historyRaw, foundHistoryRaw] = await Promise.all([
+  const configPath = path.join(process.cwd(), "config", "watches.json");
+  const [resultsRaw, historyRaw, foundHistoryRaw, configRaw] = await Promise.all([
     fs.readFile(resultsPath, "utf8"),
     fs.readFile(historyPath, "utf8").catch(() => JSON.stringify({ runs: [] })),
-    fs.readFile(foundHistoryPath, "utf8").catch(() => JSON.stringify({ byWatch: {} }))
+    fs.readFile(foundHistoryPath, "utf8").catch(() => JSON.stringify({ byWatch: {} })),
+    fs.readFile(configPath, "utf8").catch(() => JSON.stringify({}))
   ]);
+
+  const config = JSON.parse(configRaw);
+  const theme = config?.ui?.theme === "classic" ? "classic" : "glass";
 
   return {
     results: JSON.parse(resultsRaw),
     history: JSON.parse(historyRaw),
-    foundHistory: JSON.parse(foundHistoryRaw)
+    foundHistory: JSON.parse(foundHistoryRaw),
+    theme
   };
 }
 
@@ -38,7 +44,7 @@ function formatRunTime(iso) {
 }
 
 export default async function Home() {
-  const { results, history, foundHistory } = await loadResults();
+  const { results, history, foundHistory, theme } = await loadResults();
   const runs = (history.runs || []).slice(0, 20);
   const errorsCount = Number(results.summary?.errorCount ?? 0);
   const healthState = errorsCount > 0 ? "Pozor: chyby" : "Stabilní běh";
@@ -103,7 +109,7 @@ export default async function Home() {
   ];
 
   return (
-    <main className="page dashboardPage">
+    <main className={`page dashboardPage ${theme === "classic" ? "themeClassic" : "themeGlass"}`}>
       <section className="panel dashboardPanel heroPanel">
         <AdminPopupLink />
         <h1>Hlídačka bazarů</h1>

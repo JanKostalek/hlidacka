@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react";
 
+const PRICE_SLIDER_MAX = 2000000;
+const PRICE_SLIDER_STEP = 500;
+
 function emptyWatch() {
   return {
     id: "",
@@ -9,6 +12,8 @@ function emptyWatch() {
     query: "",
     keywordsCsv: "",
     excludeKeywordsCsv: "",
+    priceMin: 0,
+    priceMax: PRICE_SLIDER_MAX,
     marketplaces: []
   };
 }
@@ -31,9 +36,10 @@ export default function AdminPage() {
   const [discordOnlyWhenNew, setDiscordOnlyWhenNew] = useState(true);
   const [scheduleStartHour, setScheduleStartHour] = useState(0);
   const [scheduleIntervalHours, setScheduleIntervalHours] = useState(2);
+  const [uiTheme, setUiTheme] = useState("glass");
+  const [uiThemes, setUiThemes] = useState(["glass", "classic"]);
   const [status, setStatus] = useState("Načítání...");
   const [saving, setSaving] = useState(false);
-  const [clearing, setClearing] = useState(false);
   const [runningNow, setRunningNow] = useState(false);
 
   useEffect(() => {
@@ -72,6 +78,8 @@ export default function AdminPage() {
     setScheduleIntervalHours(
       Number.isInteger(data.schedule?.intervalHours) ? data.schedule.intervalHours : 2
     );
+    setUiTheme(data.uiTheme || "glass");
+    setUiThemes(Array.isArray(data.uiThemes) && data.uiThemes.length > 0 ? data.uiThemes : ["glass", "classic"]);
     setStatus("Konfigurace načtena.");
   }
 
@@ -164,7 +172,8 @@ export default function AdminPage() {
         schedule: {
           startHour: scheduleStartHour,
           intervalHours: scheduleIntervalHours
-        }
+        },
+        uiTheme
       })
     });
 
@@ -194,42 +203,10 @@ export default function AdminPage() {
     setScheduleIntervalHours(
       Number.isInteger(data.schedule?.intervalHours) ? data.schedule.intervalHours : 2
     );
+    setUiTheme(data.uiTheme || "glass");
+    setUiThemes(Array.isArray(data.uiThemes) && data.uiThemes.length > 0 ? data.uiThemes : ["glass", "classic"]);
     setStatus("Uloženo.");
     setSaving(false);
-  }
-
-  async function clearHistory() {
-    const confirmed = window.confirm(
-      "Opravdu chceš vyčistit historii? (běhy, již zobrazené inzeráty, stav)"
-    );
-    if (!confirmed) return;
-
-    setClearing(true);
-    setStatus("Čistím historii...");
-    const headers = { "content-type": "application/json" };
-    if (token) headers["x-admin-token"] = token;
-
-    const res = await fetch("/api/history", {
-      method: "POST",
-      headers,
-      body: JSON.stringify({ action: "clear" })
-    });
-
-    if (res.status === 401) {
-      setStatus("Neplatný token. Čištění zamítnuto.");
-      setClearing(false);
-      return;
-    }
-
-    if (!res.ok) {
-      const error = await res.json().catch(() => ({}));
-      setStatus(`Nepodařilo se vyčistit historii. ${error.error || ""}`.trim());
-      setClearing(false);
-      return;
-    }
-
-    setStatus("Historie vyčištěna.");
-    setClearing(false);
   }
 
   async function runWorkflowNow() {
@@ -259,6 +236,18 @@ export default function AdminPage() {
 
     setStatus("Workflow spuštěn. Výsledek sleduj v GitHub Actions.");
     setRunningNow(false);
+  }
+
+  function formatPriceRangeLabel(min, max) {
+    const safeMin = Math.max(0, Number(min) || 0);
+    const safeMax = Math.max(safeMin, Number(max) || safeMin);
+    return `${new Intl.NumberFormat("cs-CZ").format(safeMin)} Kč - ${new Intl.NumberFormat("cs-CZ").format(safeMax)} Kč`;
+  }
+
+  function themeLabel(theme) {
+    if (theme === "glass") return "Sklo";
+    if (theme === "classic") return "Klasický";
+    return theme;
   }
 
   function removeWatch(index) {
@@ -302,7 +291,11 @@ export default function AdminPage() {
         : "Discord: odesílá se vždy.";
 
   return (
-    <main className="page dashboardPage adminPage">
+    <main
+      className={`page dashboardPage adminPage ${
+        uiTheme === "classic" ? "themeClassic" : "themeGlass"
+      }`}
+    >
       <section className="panel dashboardPanel heroPanel adminHeroPanel">
         <h1>Administrace hlídačky</h1>
         <p>Vyber bazary, zadej co hledat a ulož konfiguraci.</p>
@@ -490,6 +483,51 @@ export default function AdminPage() {
               </label>
             </div>
 
+            <div className="priceFilterWrap">
+              <label>Cenový filtr</label>
+              <div className="priceFilterValue">
+                {formatPriceRangeLabel(watch.priceMin ?? 0, watch.priceMax ?? PRICE_SLIDER_MAX)}
+              </div>
+              <div className="priceSliders">
+                <div className="priceSliderRow">
+                  <span>Od</span>
+                  <input
+                    type="range"
+                    min={0}
+                    max={PRICE_SLIDER_MAX}
+                    step={PRICE_SLIDER_STEP}
+                    value={Math.min(Number(watch.priceMin) || 0, Number(watch.priceMax) || PRICE_SLIDER_MAX)}
+                    onChange={(e) => {
+                      const nextMin = Number(e.target.value);
+                      const currentMax = Number(watch.priceMax) || PRICE_SLIDER_MAX;
+                      updateWatch(index, {
+                        priceMin: Math.min(nextMin, currentMax),
+                        priceMax: Math.max(currentMax, nextMin)
+                      });
+                    }}
+                  />
+                </div>
+                <div className="priceSliderRow">
+                  <span>Do</span>
+                  <input
+                    type="range"
+                    min={0}
+                    max={PRICE_SLIDER_MAX}
+                    step={PRICE_SLIDER_STEP}
+                    value={Math.max(Number(watch.priceMax) || PRICE_SLIDER_MAX, Number(watch.priceMin) || 0)}
+                    onChange={(e) => {
+                      const nextMax = Number(e.target.value);
+                      const currentMin = Number(watch.priceMin) || 0;
+                      updateWatch(index, {
+                        priceMin: Math.min(currentMin, nextMax),
+                        priceMax: Math.max(nextMax, currentMin)
+                      });
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+
             <div className="marketplaces">
               <span>Bazary:</span>
               {marketplaces.map((marketplace) => (
@@ -516,24 +554,30 @@ export default function AdminPage() {
 
       <section className="panel dashboardPanel adminPanel">
         <div className="adminActions">
-          <button type="button" onClick={saveConfig} disabled={saving || clearing || runningNow}>
+          <button type="button" onClick={saveConfig} disabled={saving || runningNow}>
             {saving ? "Ukládám..." : "Uložit konfiguraci"}
           </button>
           <button
             type="button"
             onClick={runWorkflowNow}
-            disabled={saving || clearing || runningNow}
+            disabled={saving || runningNow}
           >
             {runningNow ? "Spouštím..." : "Spustit kontrolu teď"}
           </button>
-          <button
-            type="button"
-            className="dangerBtn"
-            onClick={clearHistory}
-            disabled={saving || clearing || runningNow}
-          >
-            {clearing ? "Čistím..." : "Vyčistit historii"}
-          </button>
+          <label className="themeSelectWrap">
+            <span>Styl:</span>
+            <select
+              value={uiTheme}
+              onChange={(e) => setUiTheme(e.target.value)}
+              disabled={saving || runningNow}
+            >
+              {uiThemes.map((theme) => (
+                <option key={theme} value={theme}>
+                  {themeLabel(theme)}
+                </option>
+              ))}
+            </select>
+          </label>
         </div>
       </section>
     </main>
