@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-06T11:17:35.473Z",
+  "updatedAt": "2026-03-06T14:06:02.810Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix",
+        "price": "7 000 Kč",
+        "link": "https://sport.bazos.cz/inzerat/215869908/garmin-fenix.php",
+        "firstSeenAt": "2026-03-06T14:06:02.810Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -531,15 +540,6 @@
         "title": "Garmin Epix (Gen 2) Sapphire",
         "price": "5 900 Kč",
         "link": "https://mobil.bazos.cz/inzerat/215796266/garmin-epix-gen-2-sapphire.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 47mm",
-        "price": "17 500 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/215797311/garmin-fenix-8-47mm.php",
         "firstSeenAt": "2026-03-05T20:17:35.318Z"
       }
     ]
