@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-03-06T00:02:06.267Z",
+  "updatedAt": "2026-03-06T05:16:40.695Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 51mm OLED",
+        "price": "14 900 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215844827/garmin-fenix-8-51mm-oled.php",
+        "firstSeenAt": "2026-03-06T05:16:40.695Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "GARMIN Fenix 7x solar",
+        "price": "10 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215215319/garmin-fenix-7x-solar.php",
+        "firstSeenAt": "2026-03-06T05:16:40.695Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -522,24 +540,6 @@
         "title": "Garmin Fenix 8 47mm",
         "price": "17 500 Kč",
         "link": "https://mobil.bazos.cz/inzerat/215797311/garmin-fenix-8-47mm.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 PRO AMOLED 51mm PREMIUM – týden staré",
-        "price": "24 500 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/215457836/garmin-fenix-8-amoled-51mm-sapphire-titanium-tyden-stare.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 Amoled 47 Premium",
-        "price": "22 000 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/215819080/garmin-fenix-8-amoled-47-premium.php",
         "firstSeenAt": "2026-03-05T20:17:35.318Z"
       }
     ]
