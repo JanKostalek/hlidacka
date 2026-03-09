@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-08T22:52:41.887Z",
+  "updatedAt": "2026-03-09T05:13:07.148Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Xiaomi watch S1 black",
+        "price": "1 500 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/215962535/xiaomi-watch-s1-black.php",
+        "firstSeenAt": "2026-03-09T05:13:07.148Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -531,15 +540,6 @@
         "title": "Garmin Fenix 8 AMOLED 51mm PREMIUM + voucher Topo Czech",
         "price": "19 000 Kč",
         "link": "https://mobil.bazos.cz/inzerat/215636873/garmin-fenix-8-amoled-51mm-premium-voucher-topo-czech.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fénix 8 ,51mm",
-        "price": "19 500 Kč",
-        "link": "https://sport.bazos.cz/inzerat/215669792/garmin-fenix-8-51mm.php",
         "firstSeenAt": "2026-03-05T20:17:35.318Z"
       }
     ]
