@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-03-10T07:57:29.535Z",
+  "updatedAt": "2026-03-10T10:06:28.532Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Sbazar",
+        "title": "Garmin Fenix 8 47mm AMOLED Slate Gray Steel/Black",
+        "price": "14 900 Kč",
+        "link": "https://www.sbazar.cz/inzerat/226723615-garmin-fenix-8-47mm-amoled-slate-gray-steelblack",
+        "firstSeenAt": "2026-03-10T10:06:28.532Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Prodám hodinky Garmin Fenix 8 Amoled Sapphire",
+        "price": "20 000 Kč",
+        "link": "https://obleceni.bazos.cz/inzerat/215327240/prodam-hodinky-garmin-fenix-8-amoled-sapphire.php",
+        "firstSeenAt": "2026-03-10T10:06:28.532Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -522,24 +540,6 @@
         "title": "Vyměním",
         "price": "Dohodou",
         "link": "https://mobil.bazos.cz/inzerat/215430546/vymenim.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Koupím Garmin Fenix 8 AMOLED Sapphire 51mm",
-        "price": "Nabídněte",
-        "link": "https://mobil.bazos.cz/inzerat/215503958/koupim-garmin-fenix-8-amoled-sapphire-51mm.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Vyměním Garmin Fenix 8 51 Amoled za MIP",
-        "price": "Dohodou",
-        "link": "https://mobil.bazos.cz/inzerat/215557136/vymenim-garmin-fenix-8-51-amoled-za-mip.php",
         "firstSeenAt": "2026-03-05T20:17:35.318Z"
       }
     ]
