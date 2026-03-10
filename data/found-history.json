@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-03-10T14:35:25.194Z",
+  "updatedAt": "2026-03-10T18:08:09.078Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 47mm AMOLED Titanium Sapphire/CarbonGrey EU",
+        "price": "15 900 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216041329/garmin-fenix-8-47mm-amoled-titanium-sapphirecarbongrey-eu.php",
+        "firstSeenAt": "2026-03-10T18:08:09.078Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin fenix 8 47mm",
+        "price": "17 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216043633/garmin-fenix-8-47mm.php",
+        "firstSeenAt": "2026-03-10T18:08:09.078Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -522,24 +540,6 @@
         "title": "Garmin Fenix 8 47mm AMOLED Sapphire Carbon Grey",
         "price": "16 000 Kč",
         "link": "https://mobil.bazos.cz/inzerat/214933463/garmin-fenix-8-47mm-amoled-sapphire-carbon-grey.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Nylonový řemínek Ricardo QF22 mm pro Garmin",
-        "price": "450 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/215276752/nylonovy-reminek-ricardo-qf22-mm-pro-garmin.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "GARMIN FENIX 8 Pro 47mm Amoled, Sapphire, Carbon Grey",
-        "price": "Nabídněte",
-        "link": "https://mobil.bazos.cz/inzerat/215348912/garmin-fenix-8-pro-47mm-amoled-sapphire-carbon-grey.php",
         "firstSeenAt": "2026-03-05T20:17:35.318Z"
       }
     ]
