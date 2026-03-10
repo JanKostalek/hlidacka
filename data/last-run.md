@@ -1,4 +1,4 @@
-# Hlídačka bazarů - 2026-03-10T10:06:28.532Z
+# Hlídačka bazarů - 2026-03-10T14:35:25.194Z
 
 - Kontrolováno dotazů: **1**
 - Kontrolováno zdrojů: **2**
@@ -7,5 +7,5 @@
 
 ## Garmin Solar (2)
 
-- [Prodám hodinky Garmin Fenix 8 Amoled Sapphire](https://obleceni.bazos.cz/inzerat/215327240/prodam-hodinky-garmin-fenix-8-amoled-sapphire.php) | 20 000 Kč | Bazos
-- [Garmin Fenix 8 47mm AMOLED Slate Gray Steel/Black](https://www.sbazar.cz/inzerat/226723615-garmin-fenix-8-47mm-amoled-slate-gray-steelblack) | 14 900 Kč | Sbazar
+- [Garmin Fenix 8 47mm](https://elektro.bazos.cz/inzerat/216030509/garmin-fenix-8-47mm.php) | 14 000 Kč | Bazos
+- [Garmin Fenix 8 47mm](https://www.sbazar.cz/inzerat/228537995-garmin-fenix-8-47mm) | 14 000 Kč | Sbazar
