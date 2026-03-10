@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-10T21:02:44.103Z",
+  "updatedAt": "2026-03-10T22:58:13.438Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fénix 7s Sapphire solar",
+        "price": "8 990 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216052811/garmin-fenix-7s-sapphire-solar.php",
+        "firstSeenAt": "2026-03-10T22:58:13.438Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -531,15 +540,6 @@
         "title": "Coros Apex 4 46mm",
         "price": "9 500 Kč",
         "link": "https://mobil.bazos.cz/inzerat/215204534/coros-apex-4-46mm.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 47mm AMOLED Sapphire Carbon Grey",
-        "price": "16 000 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/214933463/garmin-fenix-8-47mm-amoled-sapphire-carbon-grey.php",
         "firstSeenAt": "2026-03-05T20:17:35.318Z"
       }
     ]
