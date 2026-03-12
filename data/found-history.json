@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-12T10:09:34.910Z",
+  "updatedAt": "2026-03-12T14:37:46.330Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin fenix 8 amoled saphire 43mm",
+        "price": "18 500 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216122817/garmin-fenix-8-amoled-saphire-43mm.php",
+        "firstSeenAt": "2026-03-12T14:37:46.330Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -531,15 +540,6 @@
         "title": "Fenix 8, 6x, 7x, tah, řemínek, pásek 26mm černo/červený",
         "price": "Dohodou",
         "link": "https://mobil.bazos.cz/inzerat/215056660/fenix-8-6x-7x-tah-reminek-pasek-26mm-cernocerveny.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Ochranné tvrzené sklo Garmin Fenix 7x, 8",
-        "price": "Dohodou",
-        "link": "https://mobil.bazos.cz/inzerat/215056662/ochranne-tvrzene-sklo-garmin-fenix-7x-8.php",
         "firstSeenAt": "2026-03-05T20:17:35.318Z"
       }
     ]
