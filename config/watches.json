@@ -8,7 +8,7 @@
     "emailEnabled": false,
     "discordWebhook": "https://discordapp.com/api/webhooks/1478768798550196305/yyFCo5aM6Y2GeygSET8dh9xKOXq8LJ5U2wXY8NbXzM1uBhYbT3GN-xaF5gkaGk_44N72",
     "discordOnlyWhenNew": false,
-    "discordEnabled": true
+    "discordEnabled": false
   },
   "watches": [
     {
