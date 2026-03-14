@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-13T22:57:53.117Z",
+  "updatedAt": "2026-03-14T05:02:06.957Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7X sapphire solar",
+        "price": "Dohodou",
+        "link": "https://sport.bazos.cz/inzerat/216164927/garmin-fenix-7x-sapphire-solar.php",
+        "firstSeenAt": "2026-03-14T05:02:06.957Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -531,15 +540,6 @@
         "title": "GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm maskáč",
         "price": "Dohodou",
         "link": "https://mobil.bazos.cz/inzerat/215056653/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm-maskac.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "GARMIN 8, 5x, 6x, 7x tah, řemínek, pásek 26mm",
-        "price": "Dohodou",
-        "link": "https://mobil.bazos.cz/inzerat/215056654/garmin-8-5x-6x-7x-tah-reminek-pasek-26mm.php",
         "firstSeenAt": "2026-03-05T20:17:35.318Z"
       }
     ]
