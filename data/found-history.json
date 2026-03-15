@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-03-15T17:01:42.732Z",
+  "updatedAt": "2026-03-15T19:18:37.879Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Sbazar",
+        "title": "Garmin Fenix 8 47mm AMOLED Sapphire/Carbon Grey",
+        "price": "16 499 Kč",
+        "link": "https://www.sbazar.cz/inzerat/228716537-garmin-fenix-8-47mm-amoled-sapphirecarbon-grey",
+        "firstSeenAt": "2026-03-15T19:18:37.879Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 47mm AMOLED Sapphire/Carbon Grey",
+        "price": "16 499 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216255129/garmin-fenix-8-47mm-amoled-sapphirecarbon-grey.php",
+        "firstSeenAt": "2026-03-15T19:18:37.879Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -522,24 +540,6 @@
         "title": "Garmin fenix 8",
         "price": "17 000 Kč",
         "link": "https://elektro.bazos.cz/inzerat/213836644/garmin-fenix-8.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "NOVÝ ochranný set GARMIN FENIX 8 51 mm (kryt, sklo, záslepka",
-        "price": "200 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/214015422/novy-ochranny-set-garmin-fenix-8-51-mm-kryt-sklo-zaslepka.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fénix 6",
-        "price": "3 000 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/214089276/garmin-fenix-6.php",
         "firstSeenAt": "2026-03-05T20:17:35.318Z"
       }
     ]
