@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-16T12:02:43.655Z",
+  "updatedAt": "2026-03-16T17:39:27.376Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin vívomove Trend - French Grey",
+        "price": "5 500 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216294081/garmin-vivomove-trend-french-grey.php",
+        "firstSeenAt": "2026-03-16T17:39:27.376Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -531,15 +540,6 @@
         "title": "Garmin Fenix 8 51mm ochranné sklo",
         "price": "200 Kč",
         "link": "https://mobil.bazos.cz/inzerat/213630718/garmin-fenix-8-51mm-ochranne-sklo.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fénix 8 (51mm)",
-        "price": "21 000 Kč",
-        "link": "https://obleceni.bazos.cz/inzerat/213773024/garmin-fenix-8-51mm.php",
         "firstSeenAt": "2026-03-05T20:17:35.318Z"
       }
     ]
