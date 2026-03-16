@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-03-16T17:39:27.376Z",
+  "updatedAt": "2026-03-16T19:58:45.070Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 47mm Solar, Titan Sapphire Carbon Gray",
+        "price": "17 490 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216311495/garmin-fenix-8-47mm-solar-titan-sapphire-carbon-gray.php",
+        "firstSeenAt": "2026-03-16T19:58:45.070Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7s sapphire solar",
+        "price": "8 000 Kč",
+        "link": "https://elektro.bazos.cz/inzerat/215654254/garmin-instinkt-2x-solar.php",
+        "firstSeenAt": "2026-03-16T19:58:45.070Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -522,24 +540,6 @@
         "title": "Garmin Fenix 8 51mm silikonový obal",
         "price": "200 Kč",
         "link": "https://mobil.bazos.cz/inzerat/213630716/garmin-fenix-8-51mm-silikonovy-obal.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin pásky 26mm",
-        "price": "200 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/213630717/garmin-pasky-26mm.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 51mm ochranné sklo",
-        "price": "200 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/213630718/garmin-fenix-8-51mm-ochranne-sklo.php",
         "firstSeenAt": "2026-03-05T20:17:35.318Z"
       }
     ]
