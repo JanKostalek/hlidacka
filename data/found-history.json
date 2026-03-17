@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-03-17T08:06:42.905Z",
+  "updatedAt": "2026-03-17T11:58:57.365Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Sbazar",
+        "title": "Garmin FENIX 7 Pro Solar - záruka Datart",
+        "price": "8 499 Kč",
+        "link": "https://www.sbazar.cz/inzerat/228767927-garmin-fenix-7-pro-solar-zaruka-datart",
+        "firstSeenAt": "2026-03-17T11:58:57.365Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 Amoled 47mm",
+        "price": "15 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216336250/garmin-fenix-8-amoled-47mm.php",
+        "firstSeenAt": "2026-03-17T11:58:57.365Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -522,24 +540,6 @@
         "title": "PRODÁM dva řemínky na GARMIN FENIX 8, šířka 22mm",
         "price": "950 Kč",
         "link": "https://mobil.bazos.cz/inzerat/213155874/prodam-dva-reminky-na-garmin-fenix-8-sirka-22mm.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Ochranné pouzdro Garmin Fenix 8, Garmin Forerunner 970",
-        "price": "150 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/213305844/fenix-8-forerunner-979.php",
-        "firstSeenAt": "2026-03-05T20:17:35.318Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 51mm silikonový obal",
-        "price": "200 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/213630716/garmin-fenix-8-51mm-silikonovy-obal.php",
         "firstSeenAt": "2026-03-05T20:17:35.318Z"
       }
     ]
