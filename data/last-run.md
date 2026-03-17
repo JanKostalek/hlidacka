@@ -1,4 +1,4 @@
-# Hlídačka bazarů - 2026-03-17T19:38:34.426Z
+# Hlídačka bazarů - 2026-03-17T21:56:30.557Z
 
 - Kontrolováno dotazů: **1**
 - Kontrolováno zdrojů: **2**
@@ -7,4 +7,4 @@
 
 ## Garmin Solar (1)
 
-- [Garmin Tactix 7Pro Solar Sapphire](https://mobil.bazos.cz/inzerat/216026902/garmin-tactix-7pro-solar-sapphire.php) | 13 999 Kč | Bazos
+- [Garmin Fenix 8 47 Premium](https://mobil.bazos.cz/inzerat/216361214/garmin-fenix-8-47-premium.php) | 20 000 Kč | Bazos
