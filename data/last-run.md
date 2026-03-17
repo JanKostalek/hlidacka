@@ -1,4 +1,4 @@
-# Hlídačka bazarů - 2026-03-17T11:58:57.365Z
+# Hlídačka bazarů - 2026-03-17T15:44:11.708Z
 
 - Kontrolováno dotazů: **1**
 - Kontrolováno zdrojů: **2**
@@ -7,5 +7,5 @@
 
 ## Garmin Solar (2)
 
-- [Garmin Fenix 8 Amoled 47mm](https://mobil.bazos.cz/inzerat/216336250/garmin-fenix-8-amoled-47mm.php) | 15 000 Kč | Bazos
-- [Garmin FENIX 7 Pro Solar - záruka Datart](https://www.sbazar.cz/inzerat/228767927-garmin-fenix-7-pro-solar-zaruka-datart) | 8 499 Kč | Sbazar
+- [Garmin Forerunner 970](https://sport.bazos.cz/inzerat/216349974/garmin-forerunner-970.php) | 12 990 Kč | Bazos
+- [Garmin Venu X1](https://sport.bazos.cz/inzerat/216349836/garmin-venu-x1.php) | 13 000 Kč | Bazos
