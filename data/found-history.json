@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-18T12:03:22.286Z",
+  "updatedAt": "2026-03-18T17:44:32.063Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Prodám Garmin Fenix 8, 47 mm, Amoled, Sapphire",
+        "price": "14 600 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216392974/prodam-garmin-fenix-8-47-mm-amoled-sapphire.php",
+        "firstSeenAt": "2026-03-18T17:44:32.063Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -532,15 +541,6 @@
         "price": "4 499 Kč",
         "link": "https://elektro.bazos.cz/inzerat/215933756/garmin-fenix-6x-pro-blackgorilla-glassprislusenstvi.php",
         "firstSeenAt": "2026-03-08T10:53:44.825Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin fenix 8 pro 47mm sapphire NOVÉ",
-        "price": "V textu",
-        "link": "https://mobil.bazos.cz/inzerat/215904105/garmin-fenix-8-pro-47mm-sapphire-nove.php",
-        "firstSeenAt": "2026-03-07T13:50:55.180Z"
       }
     ]
   }
