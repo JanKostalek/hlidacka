@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-18T17:44:32.063Z",
+  "updatedAt": "2026-03-18T19:55:14.757Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 solar titanium",
+        "price": "Dohodou",
+        "link": "https://sport.bazos.cz/inzerat/216399287/garmin-fenix-8-solar-titanium.php",
+        "firstSeenAt": "2026-03-18T19:55:14.757Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -532,15 +541,6 @@
         "price": "19 000 Kč",
         "link": "https://mobil.bazos.cz/inzerat/215950781/fenix-8-amoled-47mm.php",
         "firstSeenAt": "2026-03-08T19:01:43.774Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 6X Pro – BLACK/GORILLA GLASS/PŘÍSLUŠENSTVÍ",
-        "price": "4 499 Kč",
-        "link": "https://elektro.bazos.cz/inzerat/215933756/garmin-fenix-6x-pro-blackgorilla-glassprislusenstvi.php",
-        "firstSeenAt": "2026-03-08T10:53:44.825Z"
       }
     ]
   }
