@@ -1,7 +1,52 @@
 {
-  "updatedAt": "2026-03-19T05:16:12.810Z",
+  "updatedAt": "2026-03-19T08:00:14.672Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 51mm silikonový obal",
+        "price": "200 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216416791/garmin-fenix-8-51mm-silikonovy-obal.php",
+        "firstSeenAt": "2026-03-19T08:00:14.672Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin pásky 26mm",
+        "price": "200 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216416804/garmin-pasky-26mm.php",
+        "firstSeenAt": "2026-03-19T08:00:14.672Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 51mm ochranné sklo",
+        "price": "200 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216416812/garmin-fenix-8-51mm-ochranne-sklo.php",
+        "firstSeenAt": "2026-03-19T08:00:14.672Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "GARMIN Fenix 6S Pro Sapphire",
+        "price": "5 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216416377/garmin-fenix-6s-pro-sapphire.php",
+        "firstSeenAt": "2026-03-19T08:00:14.672Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 AMOLED Titan/Saphire 51mm",
+        "price": "14 999 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216417083/garmin-fenix-8-amoled-titansaphire-51mm.php",
+        "firstSeenAt": "2026-03-19T08:00:14.672Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -496,51 +541,6 @@
         "price": "20 000 Kč",
         "link": "https://obleceni.bazos.cz/inzerat/215327240/prodam-hodinky-garmin-fenix-8-amoled-sapphire.php",
         "firstSeenAt": "2026-03-10T10:06:28.532Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin fenix 8 51mm, Amoled Sapphire 51mm DLC titanium",
-        "price": "15 500 Kč",
-        "link": "https://elektro.bazos.cz/inzerat/215990831/garmin-fenix-8-51mm-amoled-sapphire-51mm-dlc-titanium.php",
-        "firstSeenAt": "2026-03-09T14:39:57.551Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 AMOLED 47mm",
-        "price": "15 490 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/215980494/garmin-fenix-8-amoled-47mm.php",
-        "firstSeenAt": "2026-03-09T11:51:22.610Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 47mm AMOLED Titanium Sapphire/Carbon EU",
-        "price": "18 900 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/215985824/garmin-fenix-8-47mm-amoled-titanium-sapphirecarbon-eu.php",
-        "firstSeenAt": "2026-03-09T11:51:22.610Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Xiaomi watch S1 black",
-        "price": "1 500 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/215962535/xiaomi-watch-s1-black.php",
-        "firstSeenAt": "2026-03-09T05:13:07.148Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 51mm AMOLED Sapphire Spark Orange/Graphite",
-        "price": "16 500 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/215955410/garmin-fenix-8-51mm-amoled-sapphire-spark-orangegraphite.php",
-        "firstSeenAt": "2026-03-08T20:52:57.828Z"
       }
     ]
   }
