@@ -1,4 +1,4 @@
-# Hlídačka bazarů - 2026-03-20T10:04:17.889Z
+# Hlídačka bazarů - 2026-03-20T14:31:28.314Z
 
 - Kontrolováno dotazů: **1**
 - Kontrolováno zdrojů: **2**
@@ -7,4 +7,4 @@
 
 ## Garmin Solar (1)
 
-- [Hodinky Garmin Fénix 8 43mm Amoled](https://sport.bazos.cz/inzerat/216462359/hodinky-garmin-fenix-8-43mm-amoled.php) | 17 000 Kč | Bazos
+- [Garmin Fenix 8 Pro LTE 47mm AMOLED Sapphire](https://mobil.bazos.cz/inzerat/216471165/garmin-fenix-8-pro-lte-47mm-amoled-sapphire.php) | 19 000 Kč | Bazos
