@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-22T20:55:52.038Z",
+  "updatedAt": "2026-03-22T22:56:35.913Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Forerunner 970 Black/Amp Yellow",
+        "price": "13 500 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216577218/garmin-forerunner-970-blackamp-yellow.php",
+        "firstSeenAt": "2026-03-22T22:56:35.913Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -531,15 +540,6 @@
         "title": "Garmin Fenix 8 AMOLED sapphire 51mm",
         "price": "17 500 Kč",
         "link": "https://mobil.bazos.cz/inzerat/216097322/garmin-fenix-8-amoled-sapphire-51mm.php",
-        "firstSeenAt": "2026-03-11T22:53:16.778Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 51mm AMOLED",
-        "price": "15 000 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/216097412/garmin-fenix-8-51mm-amoled.php",
         "firstSeenAt": "2026-03-11T22:53:16.778Z"
       }
     ]
