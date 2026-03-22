@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-22T05:12:36.887Z",
+  "updatedAt": "2026-03-22T07:51:53.082Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 47mm",
+        "price": "15 000 Kč",
+        "link": "https://ostatni.bazos.cz/inzerat/216540584/garmin-fenix-8-47mm.php",
+        "firstSeenAt": "2026-03-22T07:51:53.082Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -532,15 +541,6 @@
         "price": "18 500 Kč",
         "link": "https://mobil.bazos.cz/inzerat/216097435/garmin-fenix-8-amoled-sapphire-51mm.php",
         "firstSeenAt": "2026-03-11T22:53:16.778Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Sbazar",
-        "title": "krytka snímače šedá pro Garmin Fenix 8/Tactix",
-        "price": "",
-        "link": "https://www.sbazar.cz/inzerat/228587339-krytka-snimace-seda-pro-garmin-fenix-8tactix",
-        "firstSeenAt": "2026-03-11T21:02:40.617Z"
       }
     ]
   }
