@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-22T10:56:57.262Z",
+  "updatedAt": "2026-03-22T13:55:11.470Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Nylonový řemínek Ricardo QF22 mm pro Garmin",
+        "price": "450 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216555825/nylonovy-reminek-ricardo-qf22-mm-pro-garmin.php",
+        "firstSeenAt": "2026-03-22T13:55:11.470Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -531,15 +540,6 @@
         "title": "Garmin Fenix 8 51mm AMOLED",
         "price": "15 000 Kč",
         "link": "https://mobil.bazos.cz/inzerat/216097412/garmin-fenix-8-51mm-amoled.php",
-        "firstSeenAt": "2026-03-11T22:53:16.778Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 AMOLED Sapphire 51mm",
-        "price": "18 500 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/216097435/garmin-fenix-8-amoled-sapphire-51mm.php",
         "firstSeenAt": "2026-03-11T22:53:16.778Z"
       }
     ]
