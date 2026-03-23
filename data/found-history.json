@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-03-23T11:57:56.179Z",
+  "updatedAt": "2026-03-23T15:40:24.693Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 AMOLED 47 mm",
+        "price": "20 500 Kč",
+        "link": "https://elektro.bazos.cz/inzerat/216614296/garmin-fenix-8-amoled-47-mm.php",
+        "firstSeenAt": "2026-03-23T15:40:24.693Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 47mm",
+        "price": "15 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216614700/garmin-fenix-8-47mm.php",
+        "firstSeenAt": "2026-03-23T15:40:24.693Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -523,24 +541,6 @@
         "price": "4 590 Kč",
         "link": "https://obleceni.bazos.cz/inzerat/215322514/hodinky-garmin-fenix-6x-pro-sapphire.php",
         "firstSeenAt": "2026-03-13T14:29:37.989Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Ochranné pouzdro Garmin Fenix 8, Garmin Forerunner 970",
-        "price": "150 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/216140549/fenix-8-forerunner-979.php",
-        "firstSeenAt": "2026-03-13T05:05:34.677Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 AMOLED 51mm, Sapphire Carbon Gray DLC",
-        "price": "15 500 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/216134366/garmin-fenix-8-amoled-51mm-sapphire-carbon-gray-dlc.php",
-        "firstSeenAt": "2026-03-12T21:05:39.155Z"
       }
     ]
   }
