@@ -1,4 +1,4 @@
-# Hlídačka bazarů - 2026-03-23T08:38:23.250Z
+# Hlídačka bazarů - 2026-03-23T11:57:56.179Z
 
 - Kontrolováno dotazů: **1**
 - Kontrolováno zdrojů: **2**
@@ -7,4 +7,4 @@
 
 ## Garmin Solar (1)
 
-- [Garmin Fenix 8 47mm Amoled Titan Saphire Top cena](https://mobil.bazos.cz/inzerat/216596783/garmin-fenix-8-47mm-amoled-titan-saphire-top-cena.php) | 13 990 Kč | Bazos
+- [Garmin Fénix 8, 47mm, Titanium, Sapphire, super stav](https://sport.bazos.cz/inzerat/216598319/garmin-fenix-8-47mm-titanium-sapphire-super-stav.php) | 15 900 Kč | Bazos
