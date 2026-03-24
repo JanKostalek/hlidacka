@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-24T12:00:18.191Z",
+  "updatedAt": "2026-03-24T17:32:57.103Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7X Solar Sapphire 51mm+ Garmin HRM-Pro Plus",
+        "price": "13 000 Kč",
+        "link": "https://elektro.bazos.cz/inzerat/216635205/garmin-fenix-7x-solar-sapphire-51mm-garmin-hrm-pro-plus.php",
+        "firstSeenAt": "2026-03-24T17:32:57.103Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -532,15 +541,6 @@
         "price": "55 000 Kč",
         "link": "https://sport.bazos.cz/inzerat/216212836/ramova-sada-canyon-lux-cfr-world-cup.php",
         "firstSeenAt": "2026-03-14T19:16:55.951Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Sbazar",
-        "title": "Garmin Fenix 7s Solar / záruka!",
-        "price": "6 800 Kč",
-        "link": "https://www.sbazar.cz/inzerat/228617024-garmin-fenix-7s-solar-zaruka",
-        "firstSeenAt": "2026-03-14T13:56:58.899Z"
       }
     ]
   }

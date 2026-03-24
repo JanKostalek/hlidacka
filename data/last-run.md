@@ -1,4 +1,4 @@
-# Hlídačka bazarů - 2026-03-24T12:00:18.191Z
+# Hlídačka bazarů - 2026-03-24T17:32:57.103Z
 
 - Kontrolováno dotazů: **1**
 - Kontrolováno zdrojů: **2**
@@ -7,4 +7,4 @@
 
 ## Garmin Solar (1)
 
-- [Garmin Fenix 8 AMOLED Sappphire záruka](https://mobil.bazos.cz/inzerat/216647405/garmin-fenix-8-amoled-sappphire-zaruka.php) | 17 500 Kč | Bazos
+- [Garmin Fenix 7X Solar Sapphire 51mm+ Garmin HRM-Pro Plus](https://elektro.bazos.cz/inzerat/216635205/garmin-fenix-7x-solar-sapphire-51mm-garmin-hrm-pro-plus.php) | 13 000 Kč | Bazos
