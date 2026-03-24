@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-24T08:07:28.177Z",
+  "updatedAt": "2026-03-24T12:00:18.191Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 AMOLED Sappphire záruka",
+        "price": "17 500 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216647405/garmin-fenix-8-amoled-sappphire-zaruka.php",
+        "firstSeenAt": "2026-03-24T12:00:18.191Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -532,15 +541,6 @@
         "price": "6 800 Kč",
         "link": "https://www.sbazar.cz/inzerat/228617024-garmin-fenix-7s-solar-zaruka",
         "firstSeenAt": "2026-03-14T13:56:58.899Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 7X sapphire solar",
-        "price": "Dohodou",
-        "link": "https://sport.bazos.cz/inzerat/216164927/garmin-fenix-7x-sapphire-solar.php",
-        "firstSeenAt": "2026-03-14T05:02:06.957Z"
       }
     ]
   }
