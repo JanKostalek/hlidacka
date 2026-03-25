@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-25T08:05:55.053Z",
+  "updatedAt": "2026-03-25T11:59:49.007Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 AMOLED Sapphire 47mm",
+        "price": "16 500 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216695484/garmin-fenix-8-amoled-sapphire-47mm.php",
+        "firstSeenAt": "2026-03-25T11:59:49.007Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -531,15 +540,6 @@
         "title": "Garmin Fenix 6X / 5X / 3 růžový QuickFit 26mm",
         "price": "180 Kč",
         "link": "https://www.sbazar.cz/inzerat/122784421-garmin-fenix-6x-5x-3-ruzovy-quickfit-26mm",
-        "firstSeenAt": "2026-03-15T07:56:00.653Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Sbazar",
-        "title": "Garmin Fenix 6X / 5X žlutý QF 26mm",
-        "price": "180 Kč",
-        "link": "https://www.sbazar.cz/inzerat/153942289-garmin-fenix-6x-5x-zluty-qf-26mm",
         "firstSeenAt": "2026-03-15T07:56:00.653Z"
       }
     ]
