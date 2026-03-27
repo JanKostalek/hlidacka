@@ -1,4 +1,4 @@
-# Hlídačka bazarů - 2026-03-27T10:42:23.254Z
+# Hlídačka bazarů - 2026-03-27T12:55:07.651Z
 
 - Kontrolováno dotazů: **1**
 - Kontrolováno zdrojů: **2**
@@ -7,4 +7,4 @@
 
 ## Garmin Solar (1)
 
-- [Garmin fenix 8 Amoled 47mm](https://www.sbazar.cz/inzerat/229059239-garmin-fenix-8-amoled-47mm) | 14 500 Kč | Sbazar
+- [Garmin Fenix 7x Sapphire Solar](https://www.sbazar.cz/inzerat/228838034-garmin-fenix-7x-sapphire-solar) | 8 000 Kč | Sbazar
