@@ -1,4 +1,4 @@
-# Hlídačka bazarů - 2026-03-27T18:49:49.874Z
+# Hlídačka bazarů - 2026-03-27T20:33:18.590Z
 
 - Kontrolováno dotazů: **1**
 - Kontrolováno zdrojů: **2**
@@ -7,4 +7,4 @@
 
 ## Garmin Solar (1)
 
-- [Garmin Fenix 8 Pro 51mm AMOLED Sapphire Titanium Graphite](https://mobil.bazos.cz/inzerat/216796224/garmin-fenix-8-pro-51mm-amoled-sapphire-titanium-graphite.php) | 19 000 Kč | Bazos
+- [Garmin Fenix 8 Sapphire 47 mm, jako nové + TOPO CZECH V5 PRO](https://sport.bazos.cz/inzerat/216798801/garmin-fenix-8-sapphire-47-mm-jako-nove-topo-czech-v5-pro.php) | 18 000 Kč | Bazos

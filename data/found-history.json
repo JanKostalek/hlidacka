@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-27T18:49:49.874Z",
+  "updatedAt": "2026-03-27T20:33:18.590Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 Sapphire 47 mm, jako nové + TOPO CZECH V5 PRO",
+        "price": "18 000 Kč",
+        "link": "https://sport.bazos.cz/inzerat/216798801/garmin-fenix-8-sapphire-47-mm-jako-nove-topo-czech-v5-pro.php",
+        "firstSeenAt": "2026-03-27T20:33:18.590Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -532,15 +541,6 @@
         "price": "5 500 Kč",
         "link": "https://mobil.bazos.cz/inzerat/216294081/garmin-vivomove-trend-french-grey.php",
         "firstSeenAt": "2026-03-16T17:39:27.376Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 51mm AMOLED, Titan Sapphire Carbon Gray",
-        "price": "14 500 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/216282489/garmin-fenix-8-51mm-amoled-titan-sapphire-carbon-gray.php",
-        "firstSeenAt": "2026-03-16T09:46:53.129Z"
       }
     ]
   }
