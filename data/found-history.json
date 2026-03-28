@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-03-28T08:33:41.891Z",
+  "updatedAt": "2026-03-28T10:26:59.461Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 51mm AMOLED",
+        "price": "14 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216816232/garmin-fenix-8-51mm-amoled.php",
+        "firstSeenAt": "2026-03-28T10:26:59.461Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fénix 6",
+        "price": "3 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216819098/garmin-fenix-6.php",
+        "firstSeenAt": "2026-03-28T10:26:59.461Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -523,24 +541,6 @@
         "price": "17 490 Kč",
         "link": "https://mobil.bazos.cz/inzerat/216311495/garmin-fenix-8-47mm-solar-titan-sapphire-carbon-gray.php",
         "firstSeenAt": "2026-03-16T19:58:45.070Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 7s sapphire solar",
-        "price": "8 000 Kč",
-        "link": "https://elektro.bazos.cz/inzerat/215654254/garmin-instinkt-2x-solar.php",
-        "firstSeenAt": "2026-03-16T19:58:45.070Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin vívomove Trend - French Grey",
-        "price": "5 500 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/216294081/garmin-vivomove-trend-french-grey.php",
-        "firstSeenAt": "2026-03-16T17:39:27.376Z"
       }
     ]
   }
