@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-30T09:06:09.692Z",
+  "updatedAt": "2026-03-30T10:57:19.098Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 47mm Amoled",
+        "price": "14 500 Kč",
+        "link": "https://elektro.bazos.cz/inzerat/216918052/garmin-fenix-8-47mm-amoled.php",
+        "firstSeenAt": "2026-03-30T10:57:19.098Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -532,15 +541,6 @@
         "price": "13 999 Kč",
         "link": "https://mobil.bazos.cz/inzerat/216026902/garmin-tactix-7pro-solar-sapphire.php",
         "firstSeenAt": "2026-03-17T19:38:34.426Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Venu X1",
-        "price": "13 000 Kč",
-        "link": "https://sport.bazos.cz/inzerat/216349836/garmin-venu-x1.php",
-        "firstSeenAt": "2026-03-17T15:44:11.708Z"
       }
     ]
   }
