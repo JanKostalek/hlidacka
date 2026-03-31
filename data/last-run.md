@@ -1,4 +1,4 @@
-# Hlídačka bazarů - 2026-03-31T01:56:19.077Z
+# Hlídačka bazarů - 2026-03-31T04:35:15.054Z
 
 - Kontrolováno dotazů: **1**
 - Kontrolováno zdrojů: **2**
@@ -7,4 +7,4 @@
 
 ## Garmin Solar (1)
 
-- [Garmin Fenix 8 51 Amoled + příslušenství](https://www.sbazar.cz/inzerat/226572490-garmin-fenix-8-51-amoled-prislusenstvi) | 18 999 Kč | Sbazar
+- [Fenix 7X Sapphire Solar Mineral blue](https://obleceni.bazos.cz/inzerat/216947635/fenix-7x-sapphire-solar-mineral-blue.php) | 6 000 Kč | Bazos

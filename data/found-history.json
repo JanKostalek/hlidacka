@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-03-31T01:56:19.077Z",
+  "updatedAt": "2026-03-31T04:35:15.054Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Fenix 7X Sapphire Solar Mineral blue",
+        "price": "6 000 Kč",
+        "link": "https://obleceni.bazos.cz/inzerat/216947635/fenix-7x-sapphire-solar-mineral-blue.php",
+        "firstSeenAt": "2026-03-31T04:35:15.054Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -531,15 +540,6 @@
         "title": "Vyměním Samsung Galaxy S23 Ultra 12Gb/512Gb zelený + Garmin",
         "price": "V textu",
         "link": "https://mobil.bazos.cz/inzerat/215958912/vymenim-samsung-galaxy-s23-ultra-12gb512gb-zeleny-garmin.php",
-        "firstSeenAt": "2026-03-18T12:03:22.286Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 7X Pro Sapphire Solar - bez poškození",
-        "price": "13 000 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/216251116/garmin-fenix-7x-pro-sapphire-solar-bez-poskozeni.php",
         "firstSeenAt": "2026-03-18T12:03:22.286Z"
       }
     ]
