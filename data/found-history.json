@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-03-31T04:35:15.054Z",
+  "updatedAt": "2026-03-31T07:06:14.761Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Mix vybavení- Patizon D290 Pro, Garmin Fenix 7X SS, péřovky-",
+        "price": "900 Kč",
+        "link": "https://sport.bazos.cz/inzerat/216942413/mix-vybaveni-patizon-d290-pro-garmin-fenix-7x-ss-perovky.php",
+        "firstSeenAt": "2026-03-31T07:06:14.761Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 7 x Pro Solar",
+        "price": "8 400 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/216950853/garmin-fenix-7-x-pro-solar.php",
+        "firstSeenAt": "2026-03-31T07:06:14.761Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -522,24 +540,6 @@
         "title": "Garmin Fenix 8 51 mm Amoled",
         "price": "17 000 Kč",
         "link": "https://sport.bazos.cz/inzerat/216378265/garmin-fenix-8-51-mm-amoled.php",
-        "firstSeenAt": "2026-03-18T12:03:22.286Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 47mm AMOLED Sapphire",
-        "price": "16 500 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/216381823/garmin-fenix-8-47mm-amoled-sapphire.php",
-        "firstSeenAt": "2026-03-18T12:03:22.286Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Vyměním Samsung Galaxy S23 Ultra 12Gb/512Gb zelený + Garmin",
-        "price": "V textu",
-        "link": "https://mobil.bazos.cz/inzerat/215958912/vymenim-samsung-galaxy-s23-ultra-12gb512gb-zeleny-garmin.php",
         "firstSeenAt": "2026-03-18T12:03:22.286Z"
       }
     ]
