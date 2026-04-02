@@ -1,10 +1,6 @@
-# Hlídačka bazarů - 2026-04-02T10:47:28.471Z
+# Hlídačka bazarů - 2026-04-02T13:01:30.105Z
 
 - Kontrolováno dotazů: **1**
 - Kontrolováno zdrojů: **2**
-- Nalezeno nových inzerátů: **1**
+- Nalezeno nových inzerátů: **0**
 - Chyby: **0**
-
-## Garmin Solar (1)
-
-- [GARMIN TACTIX Delta Sapphire – originální balení](https://sport.bazos.cz/inzerat/215958013/garmin-tactix-delta-sapphire-originalni-baleni.php) | 6 300 Kč | Bazos
