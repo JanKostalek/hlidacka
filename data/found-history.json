@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-04-02T08:50:54.236Z",
+  "updatedAt": "2026-04-02T10:47:28.471Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "GARMIN TACTIX Delta Sapphire – originální balení",
+        "price": "6 300 Kč",
+        "link": "https://sport.bazos.cz/inzerat/215958013/garmin-tactix-delta-sapphire-originalni-baleni.php",
+        "firstSeenAt": "2026-04-02T10:47:28.471Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -531,15 +540,6 @@
         "title": "Garmin Fenix 8 51 mm Amoled",
         "price": "17 000 Kč",
         "link": "https://www.sbazar.cz/inzerat/228806423-garmin-fenix-8-51-mm-amoled",
-        "firstSeenAt": "2026-03-18T12:03:22.286Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 47mm Amoled - 24 měsíců záruka",
-        "price": "15 700 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/214139475/garmin-fenix-8-47mm-amoled-24-mesicu-zaruka.php",
         "firstSeenAt": "2026-03-18T12:03:22.286Z"
       }
     ]
