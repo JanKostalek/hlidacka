@@ -1,11 +1,10 @@
-# Hlídačka bazarů - 2026-04-03T14:38:57.398Z
+# Hlídačka bazarů - 2026-04-03T16:34:16.392Z
 
 - Kontrolováno dotazů: **1**
 - Kontrolováno zdrojů: **2**
-- Nalezeno nových inzerátů: **2**
+- Nalezeno nových inzerátů: **1**
 - Chyby: **0**
 
-## Garmin Solar (2)
+## Garmin Solar (1)
 
-- [Garmin Fenix 8 47mm Amoled Sapphire](https://sport.bazos.cz/inzerat/217097256/garmin-fenix-8-47mm-amoled-sapphire.php) | 17 500 Kč | Bazos
-- [Garmin fenix 8 pro 51mm amoled](https://mobil.bazos.cz/inzerat/217096055/garmin-fenix-8-pro-51mm-amoled.php) | 19 990 Kč | Bazos
+- [Garmin Fenix 8 51mm vyměním za Apple Watch Ultra3](https://www.sbazar.cz/inzerat/229352924-garmin-fenix-8-51mm-vymenim-za-apple-watch-ultra3) | 17 500 Kč | Sbazar
