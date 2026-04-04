@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-04-04T16:29:36.225Z",
+  "updatedAt": "2026-04-04T18:34:53.978Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fénix 8 51mm",
+        "price": "18 000 Kč",
+        "link": "https://sport.bazos.cz/inzerat/217144871/garmin-fenix-8-51mm.php",
+        "firstSeenAt": "2026-04-04T18:34:53.978Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Enduro",
+        "price": "5 500 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/217145365/garmin-enduro.php",
+        "firstSeenAt": "2026-04-04T18:34:53.978Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -523,24 +541,6 @@
         "price": "11 500 Kč",
         "link": "https://mobil.bazos.cz/inzerat/216097276/garmin-fenix-7x-pro-solar-sapphire.php",
         "firstSeenAt": "2026-03-20T07:58:44.425Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenox 8 51mm AMOLED",
-        "price": "16 999 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/216422983/garmin-fenox-8-51mm.php",
-        "firstSeenAt": "2026-03-19T10:09:27.185Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 51mm silikonový obal",
-        "price": "200 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/216416791/garmin-fenix-8-51mm-silikonovy-obal.php",
-        "firstSeenAt": "2026-03-19T08:00:14.672Z"
       }
     ]
   }
