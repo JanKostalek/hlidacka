@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-04-04T14:29:26.854Z",
+  "updatedAt": "2026-04-04T16:29:36.225Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garnin fenix 8 51mm amoled",
+        "price": "17 500 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/217141421/garnin-fenix-8-51mm-amoled.php",
+        "firstSeenAt": "2026-04-04T16:29:36.225Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -531,15 +540,6 @@
         "title": "Garmin Fenix 8 51mm silikonový obal",
         "price": "200 Kč",
         "link": "https://mobil.bazos.cz/inzerat/216416791/garmin-fenix-8-51mm-silikonovy-obal.php",
-        "firstSeenAt": "2026-03-19T08:00:14.672Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin pásky 26mm",
-        "price": "200 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/216416804/garmin-pasky-26mm.php",
         "firstSeenAt": "2026-03-19T08:00:14.672Z"
       }
     ]
