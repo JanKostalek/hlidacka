@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-04-06T05:56:19.614Z",
+  "updatedAt": "2026-04-06T07:27:01.238Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 AMOLED 51mm Slate Gray + Topo Maps (Nerozbale",
+        "price": "18 500 Kč",
+        "link": "https://elektro.bazos.cz/inzerat/217190783/garmin-fenix-8-amoled-51mm-slate-gray-topo-maps-nerozbale.php",
+        "firstSeenAt": "2026-04-06T07:27:01.238Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 51mm",
+        "price": "16 000 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/217193324/garmin-fenix-8-51mm.php",
+        "firstSeenAt": "2026-04-06T07:27:01.238Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -523,24 +541,6 @@
         "price": "21 000 Kč",
         "link": "https://obleceni.bazos.cz/inzerat/216493052/garmin-fenix-8-51mm.php",
         "firstSeenAt": "2026-03-21T07:46:20.669Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 Pro LTE 47mm AMOLED Sapphire",
-        "price": "19 000 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/216471165/garmin-fenix-8-pro-lte-47mm-amoled-sapphire.php",
-        "firstSeenAt": "2026-03-20T14:31:28.314Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Hodinky Garmin Fénix 8 43mm Amoled",
-        "price": "17 000 Kč",
-        "link": "https://sport.bazos.cz/inzerat/216462359/hodinky-garmin-fenix-8-43mm-amoled.php",
-        "firstSeenAt": "2026-03-20T10:04:17.889Z"
       }
     ]
   }
