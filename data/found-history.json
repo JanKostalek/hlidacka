@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-04-06T18:51:31.213Z",
+  "updatedAt": "2026-04-06T20:33:36.540Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Hodinky Garmin Fenix 7X Sapphire Solar",
+        "price": "7 500 Kč",
+        "link": "https://sport.bazos.cz/inzerat/217220064/hodinky-garmin-fenix-7x-sapphire-solar.php",
+        "firstSeenAt": "2026-04-06T20:33:36.540Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -532,15 +541,6 @@
         "price": "25 400 Kč",
         "link": "https://mobil.bazos.cz/inzerat/216521371/garmin-fenix8-pro.php",
         "firstSeenAt": "2026-03-21T16:58:43.281Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 AMOLED SAPPHIRE 51mm černé",
-        "price": "16 500 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/216509778/garmin-fenix-8-amoled-sapphire-51mm-cerne.php",
-        "firstSeenAt": "2026-03-21T10:55:46.821Z"
       }
     ]
   }
