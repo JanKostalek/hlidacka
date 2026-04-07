@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-04-07T10:51:15.657Z",
+  "updatedAt": "2026-04-07T13:08:41.205Z",
   "byWatch": {
     "garmin-solar": [
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin Fenix 8 47mm",
+        "price": "14 500 Kč",
+        "link": "https://mobil.bazos.cz/inzerat/217259081/garmin-fenix-8-47mm.php",
+        "firstSeenAt": "2026-04-07T13:08:41.205Z"
+      },
+      {
+        "watchId": "garmin-solar",
+        "watchName": "Garmin Solar",
+        "sourceName": "Bazos",
+        "title": "Garmin fenix 8 Pro 47 mm AMOLED Sapphire CZ záruka",
+        "price": "22 000 Kč",
+        "link": "https://obleceni.bazos.cz/inzerat/217259683/garmin-fenix-8-pro-47-mm-amoled-sapphire-cz-zaruka.php",
+        "firstSeenAt": "2026-04-07T13:08:41.205Z"
+      },
       {
         "watchId": "garmin-solar",
         "watchName": "Garmin Solar",
@@ -523,24 +541,6 @@
         "price": "450 Kč",
         "link": "https://mobil.bazos.cz/inzerat/216555825/nylonovy-reminek-ricardo-qf22-mm-pro-garmin.php",
         "firstSeenAt": "2026-03-22T13:55:11.470Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix 8 47mm",
-        "price": "15 000 Kč",
-        "link": "https://ostatni.bazos.cz/inzerat/216540584/garmin-fenix-8-47mm.php",
-        "firstSeenAt": "2026-03-22T07:51:53.082Z"
-      },
-      {
-        "watchId": "garmin-solar",
-        "watchName": "Garmin Solar",
-        "sourceName": "Bazos",
-        "title": "Garmin Fenix8 Pro",
-        "price": "25 400 Kč",
-        "link": "https://mobil.bazos.cz/inzerat/216521371/garmin-fenix8-pro.php",
-        "firstSeenAt": "2026-03-21T16:58:43.281Z"
       }
     ]
   }
