@@ -10,38 +10,5 @@
     "discordOnlyWhenNew": false,
     "discordEnabled": false
   },
-  "watches": [
-    {
-      "id": "garmin-solar",
-      "name": "Garmin Solar",
-      "query": "Garmin",
-      "keywords": [
-        "Fenix",
-        "8"
-      ],
-      "excludeKeywords": [],
-      "priceMin": null,
-      "priceMax": null,
-      "sources": [
-        {
-          "id": "bazos",
-          "name": "Bazos",
-          "url": "https://www.bazos.cz/search.php?hledat=Garmin",
-          "itemSelector": ".inzeraty.inzeratyflex, .inzerat",
-          "titleSelector": ".nadpis",
-          "linkSelector": "a[href]",
-          "priceSelector": ".inzeratycena, .inzeratcena, .cena"
-        },
-        {
-          "id": "sbazar",
-          "name": "Sbazar",
-          "url": "https://www.sbazar.cz/?q=Garmin",
-          "itemSelector": "article",
-          "titleSelector": "h3, h2, a",
-          "linkSelector": "a[href]",
-          "priceSelector": "[class*='price'], [data-e2e*='price']"
-        }
-      ]
-    }
-  ]
+  "watches": []
 }
