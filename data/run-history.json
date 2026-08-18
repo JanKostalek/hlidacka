@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "runAt": "2026-08-18T00:43:35.727Z",
+      "summary": {
+        "totalWatches": 0,
+        "totalSources": 0,
+        "totalFoundItems": 0,
+        "totalNewItems": 0,
+        "errorCount": 0
+      },
+      "watchStats": [],
+      "emailSubject": "Hlídačka (dotaz): žádné nové inzeráty",
+      "emailText": "Hlídačka bazarů - Výsledek vyhledávání\nČas vyhledávání: 2026-08-18T00:43:35.727Z\nNové inzeráty: 0\nChyby: 0\n\nAktivní dotazy:\n\n(žádné dotazy)\n\nŽádné nové inzeráty.\n\nJiž zobrazené inzeráty:\n\nChyby: žádné\n"
+    },
+    {
       "runAt": "2026-08-17T00:44:48.065Z",
       "summary": {
         "totalWatches": 0,
@@ -246,19 +259,6 @@
       "watchStats": [],
       "emailSubject": "Hlídačka (dotaz): žádné nové inzeráty",
       "emailText": "Hlídačka bazarů - Výsledek vyhledávání\nČas vyhledávání: 2026-07-30T01:42:34.876Z\nNové inzeráty: 0\nChyby: 0\n\nAktivní dotazy:\n\n(žádné dotazy)\n\nŽádné nové inzeráty.\n\nJiž zobrazené inzeráty:\n\nChyby: žádné\n"
-    },
-    {
-      "runAt": "2026-07-29T01:50:09.636Z",
-      "summary": {
-        "totalWatches": 0,
-        "totalSources": 0,
-        "totalFoundItems": 0,
-        "totalNewItems": 0,
-        "errorCount": 0
-      },
-      "watchStats": [],
-      "emailSubject": "Hlídačka (dotaz): žádné nové inzeráty",
-      "emailText": "Hlídačka bazarů - Výsledek vyhledávání\nČas vyhledávání: 2026-07-29T01:50:09.636Z\nNové inzeráty: 0\nChyby: 0\n\nAktivní dotazy:\n\n(žádné dotazy)\n\nŽádné nové inzeráty.\n\nJiž zobrazené inzeráty:\n\nChyby: žádné\n"
     }
   ]
 }
